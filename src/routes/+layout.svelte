@@ -55,7 +55,7 @@
 		</a>
 		<a
 			href="https://facebook.com/kienluu.21.10"
-			class="duration-150 hover:text-white"
+			class="duration-100 hover:text-white"
 			target="_blank"
 		>
 			<Icon icon={GithubIcon} height={40} />
