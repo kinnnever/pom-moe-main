@@ -87,22 +87,22 @@
 <Title>Settings</Title>
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 	<div class="rounded-md bg-black bg-opacity-30 p-4 ring-1 ring-white/5">
-		<p class="mb-1 font-bold text-white">Profiles</p>
-		<p class="mb-4 text-gray-200">If you have multiple accounts, you can separate them here</p>
+		<p class="mb-1 font-bold text-white">Hồ sơ</p>
+		<p class="mb-4 text-gray-200">Nếu bạn có nhiều tài khoản, bạn có thể tách chúng ở đây</p>
 
 		<p class="text-purple-300">Server</p>
 		<Select
 			options={servers}
 			bind:selected={currentServer}
-			placeholder="Select Server"
+			placeholder="Chọn Server"
 			on:change={changeServer}
 		/>
-		<p class="mt-2 text-purple-300">Current Profile</p>
+		<p class="mt-2 text-purple-300">Hồ sơ hiện tại</p>
 		<Select options={profiles} bind:selected={currentProfile} placeholder="Select Profile" />
 		<div class="mt-2 flex justify-end gap-2">
-			<Button disabled>Delete</Button>
-			<Button disabled>Add</Button>
-			<Button disabled>Rename</Button>
+			<Button disabled>Xóa</Button>
+			<Button disabled>Thêm vào</Button>
+			<Button disabled>Đổi tên</Button>
 		</div>
 	</div>
 	<div class="rounded-md bg-black bg-opacity-30 p-4 ring-1 ring-white/5">
