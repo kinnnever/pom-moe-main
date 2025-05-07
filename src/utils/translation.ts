@@ -3,19 +3,8 @@ import i18n from 'sveltekit-i18n';
 import type { Config } from 'sveltekit-i18n';
 
 export const languages: KeyValueObject = {
-	'zh-CN': '中文(简体)',
-	'zh-Hant': '中文(繁體)',
 	en: 'English',
-	fr: 'Français',
-	de: 'Deutsch',
-	ja: '日本語',
-	ko: '한국어',
-	th: 'ภาษาไทย',
-	vi: 'Tiếng Việt',
-	id: 'Indonesia',
-	es: 'Español',
-	pt: 'Português',
-	ru: 'Русский'
+	vi: 'Tiếng Việt'
 };
 
 type Params = {
