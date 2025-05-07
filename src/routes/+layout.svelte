@@ -11,6 +11,7 @@
 	import Icon from '@iconify/svelte';
 	import GithubIcon from '@iconify-icons/mdi/github';
 	import FacebookIcon from '@iconify-icons/mdi/facebook';
+	import YoutubeIcon from '@iconify-icons/mdi/youtube';
 
 	onMount(() => {
 		const lang = getLocalStorageItem('locale');
@@ -46,19 +47,32 @@
 				Honkai: Star Rail, nội dung và tài liệu trò chơi là thương hiệu và bản quyền của HoYoverse.
 			</p>
 		</div>
-		<a
-			href="https://github.com/kinnnever/pom-moe-main"
-			class="duration-150 hover:text-white"
-			target="_blank"
-		>
-			<Icon icon={GithubIcon} height={40} />
-		</a>
-		<a
-			href="https://facebook.com/kienluu.21.10"
-			class="duration-140 hover:text-white"
-			target="_blank"
-		>
-			<Icon icon={FacebookIcon} height={40} />
-		</a>
+		<div class="flex items-center gap-4 text-sm text-white/40">
+			<a
+				href="https://github.com/kinnnever/pom-moe-main"
+				class="duration-150 hover:text-white"
+				target="_blank"
+			>
+				<Icon icon={GithubIcon} height={40} />
+			</a>
+			<a
+				href="https://facebook.com/kienluu.21.10"
+				class="duration-150 hover:text-white"
+				target="_blank"
+			>
+				<Icon icon={FacebookIcon} height={40} />
+			</a>
+			<a
+				href="https://youtube.com/@kien_nghien"
+				class="duration-150 hover:text-white"
+				target="_blank"
+			>
+				<Icon icon={FacebookIcon} height={40} />
+			</a>
+			<div class="flex flex-col items-start ml-2 leading-tight">
+			<span>Email: kienluu.211004@gmail.com</span>
+			<span>Điện thoại: 0354884521</span>
+		</div>
+		</div>
 	</footer>
 </div>
