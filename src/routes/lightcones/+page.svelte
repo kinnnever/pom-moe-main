@@ -68,7 +68,7 @@
 </script>
 
 <svelte:head>
-	<title>Pom.moe - Light Cone</title>
+	<title>Pom.moe - Nón ánh sáng</title>
 </svelte:head>
 
 <Title>{$t('common.lightcone')}</Title>
