@@ -12,16 +12,16 @@
 	import WarningIcon from '@iconify-icons/mdi/warning';
 	import Icon from '@iconify/svelte';
 
-	let currentProfile: Option<string> = { value: 'default', label: 'default' };
+	let currentProfile: Option<string> = { value: '', label: '' };
 	let profiles: Option<string>[] = [currentProfile];
 	let fileinput: HTMLInputElement;
 	let file: File | null = null;
 	let confirm = false;
 
 	let servers: Option<number>[] = [
-		{ value: 8, label: 'Asia / China' },
-		{ value: 1, label: 'Europe' },
-		{ value: -5, label: 'America' }
+		{ value: 8, label: 'Asia / Trung Quốc' },
+		{ value: 1, label: 'Châu Âu' },
+		{ value: -5, label: 'Châu Mỹ' }
 	];
 	let currentServer = servers[0];
 
@@ -39,7 +39,7 @@
 
 	async function exportData() {
 		const data = await exportAll();
-		const name = `pom-moe-export-${dayjs().format('YYYYMMDD')}`;
+		const name = `pompom-export-${dayjs().format('YYYYMMDD')}`;
 		downloadData(JSON.stringify(data), name);
 	}
 
