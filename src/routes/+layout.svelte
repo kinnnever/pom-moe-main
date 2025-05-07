@@ -10,6 +10,7 @@
 	import { fly } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
 	import GithubIcon from '@iconify-icons/mdi/github';
+	import FacebookIcon from '@iconify-icons/mdi/facebook';
 
 	onMount(() => {
 		const lang = getLocalStorageItem('locale');
@@ -47,6 +48,13 @@
 		</div>
 		<a
 			href="https://github.com/kinnnever/pom-moe-main"
+			class="duration-150 hover:text-white"
+			target="_blank"
+		>
+			<Icon icon={GithubIcon} height={40} />
+		</a>
+		<a
+			href="https://facebook.com/kienluu.21.10"
 			class="duration-150 hover:text-white"
 			target="_blank"
 		>
