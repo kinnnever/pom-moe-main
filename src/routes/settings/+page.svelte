@@ -87,7 +87,7 @@
 <Title>Settings</Title>
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 	<div class="rounded-md bg-black bg-opacity-30 p-4 ring-1 ring-white/5">
-		<p class="mb-1 font-bold text-white">Hồ sơ</p>
+		<p class="mb-1 font-bold text-white">HỒ SƠ NGƯỜI DÙNG</p>
 		<p class="mb-4 text-gray-200">Nếu bạn có nhiều tài khoản, bạn có thể tách chúng ở đây</p>
 
 		<p class="text-purple-300">Server</p>
@@ -106,7 +106,7 @@
 		</div>
 	</div>
 	<div class="rounded-md bg-black bg-opacity-30 p-4 ring-1 ring-white/5">
-		<p class="mb-4 font-bold text-white">Export & Import</p>
+		<p class="mb-4 font-bold text-white">NHẬP & XUẤT DỮ LIỆU</p>
 		<Button on:click={exportData} class="text-lg"
 			><Icon class="mr-2" icon={DownloadIcon} /> Download Data</Button
 		>
@@ -118,7 +118,7 @@
 			>
 			{#if confirm}
 				<p class="rounded-md bg-red-400/40 p-4 text-white">
-					<Icon class="mr-2 inline text-xl" icon={WarningIcon} /> This will replace current data!!!
+					<Icon class="mr-2 inline text-xl" icon={WarningIcon} /> Dữ liệu này sẽ thay thế dữ liệu hiện tại!!!
 				</p>
 			{/if}
 		</div>
