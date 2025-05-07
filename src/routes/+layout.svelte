@@ -46,7 +46,7 @@
 			</p>
 		</div>
 		<a
-			href="https://github.com/MadeBaruna/pom-moe"
+			href="https://github.com/kinnnever/pom-moe-main"
 			class="duration-150 hover:text-white"
 			target="_blank"
 		>
