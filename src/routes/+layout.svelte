@@ -67,7 +67,7 @@
 				class="duration-150 hover:text-white"
 				target="_blank"
 			>
-				<Icon icon={FacebookIcon} height={40} />
+				<Icon icon={YoutubeIcon} height={40} />
 			</a>
 			<div class="flex flex-col items-start ml-2 leading-tight">
 			<span>Email: kienluu.211004@gmail.com</span>
