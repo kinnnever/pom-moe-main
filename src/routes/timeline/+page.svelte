@@ -33,7 +33,7 @@
 	let browserTimezone = '';
 	let browserUtcOffset = 8;
 	let utcOffset = 8;
-	let server = 'Asia/China';
+	let server = 'Châu Á/Trung Quốc';
 	let hourDiffFromAsia = 0;
 	let hourDiffLocal = 0;
 
@@ -120,7 +120,7 @@
 </script>
 
 <svelte:head>
-	<title>Pom.moe - Timeline</title>
+	<title>Pom.moe - Dòng thời gian</title>
 </svelte:head>
 
 <div class="flex justify-center">
