@@ -55,10 +55,10 @@
 		</a>
 		<a
 			href="https://facebook.com/kienluu.21.10"
-			class="duration-100 hover:text-white"
+			class="duration-140 hover:text-white"
 			target="_blank"
 		>
-			<Icon icon={GithubIcon} height={40} />
+			<Icon icon={FacebookIcon} height={40} />
 		</a>
 	</footer>
 </div>
