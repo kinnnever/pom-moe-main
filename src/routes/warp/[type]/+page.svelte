@@ -128,7 +128,7 @@
 		class="mt-4 flex w-full max-w-xl items-center rounded-md border-2 border-dashed border-purple-300/50 bg-purple-300/5 px-8 py-4 text-white"
 	>
 		<img src="/images/quest.png" alt="" class="mr-2 inline h-8 w-8" />
-		<p class="leading-none">This banner history is empty</p>
+		<p class="leading-none">Lịch sử trống trơn :D</p>
 	</div>
 	<p class="pl-8 text-lg text-white/80" />
 {:else}
