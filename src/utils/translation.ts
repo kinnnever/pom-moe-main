@@ -3,8 +3,8 @@ import i18n from 'sveltekit-i18n';
 import type { Config } from 'sveltekit-i18n';
 
 export const languages: KeyValueObject = {
-	en: 'English',
-	vi: 'Tiếng Việt'
+	vi: 'Tiếng Việt',
+	en: 'English'
 };
 
 type Params = {
