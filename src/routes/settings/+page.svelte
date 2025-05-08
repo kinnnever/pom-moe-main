@@ -11,6 +11,10 @@
 		{ name: 'Đỗ Trọng Giáp', role: 'Thành viên', mission: '' },
 	];
 </script>
+
+<svelte:head>
+	<title>Pom.moe - Nhóm</title>
+</svelte:head>
 <h1 class="mb-6 text-2xl font-bold text-white">DANH SÁCH THÀNH VIÊN</h1>
 
 <div class="overflow-x-auto rounded-md bg-black bg-opacity-30 p-4 ring-1 ring-white/5">
