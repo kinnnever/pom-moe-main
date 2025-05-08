@@ -122,7 +122,7 @@
 </div>
 
 {#if loading}
-	<p class="text-white/80">Loading warp history...</p>
+	<p class="text-white/80">Đang tải lịch sử...</p>
 {:else if filtered.length === 0}
 	<div
 		class="mt-4 flex w-full max-w-xl items-center rounded-md border-2 border-dashed border-purple-300/50 bg-purple-300/5 px-8 py-4 text-white"
