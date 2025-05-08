@@ -45,7 +45,7 @@
 			>
 			<span
 				class="absolute -right-14 top-2 z-20 ml-5 rounded-md bg-yellow-100 px-1 text-xs text-black"
-				>Thử Nghiệm</span
+				>BETA</span
 			>
 		</a>
 		<div class="flex-1" />
@@ -79,8 +79,8 @@
 		</div>
 		<div class="relative">
 			<HeaderButton label={$t('menu.planner')} icon="planner.png" target="/planner" />
-			<span class="absolute right-0 top-0 rounded-sm bg-yellow-100/60 px-1 text-xs leading-none"
-				>Đang Phát Triển</span
+			<span class="absolute right-0 top-0 rounded-sm bg-yellow-100/70 px-1 text-xs leading-none"
+				>SOON</span
 			>
 		</div>
 		<LocalePicker />
