@@ -3,12 +3,12 @@
 	import Icon from '@iconify/svelte';
 
 	let members = [
-		{ name: 'Lưu Thế Kiên', role: 'Trưởng nhóm', mission: 'Code chính, Word phụ, PowerPoint phụ' },
-		{ name: 'Thùng Việt Hoàn', role: 'Thành viên', mission: '' },
+		{ name: 'Lưu Thế Kiên', role: 'Trưởng nhóm', mission: 'Code chính, Nội dung' },
+		{ name: 'Thùng Việt Hoàn', role: 'Thành viên', mission: 'Thuyết trình, PowerPoint phụ' },
 		{ name: 'Phạm Thành Long', role: 'Thành viên', mission: 'Word chính, PowerPoint chính' },
-		{ name: 'Nguyễn Thành Trung', role: 'Thành viên', mission: 'Word phụ' },
-		{ name: 'Dương Tuấn Huy', role: 'Thành viên', mission: '' },
-		{ name: 'Đỗ Trọng Giáp', role: 'Thành viên', mission: '' },
+		{ name: 'Nguyễn Thành Trung', role: 'Thành viên', mission: 'Word phụ, Nội dung' },
+		{ name: 'Dương Tuấn Huy', role: 'Thành viên', mission: 'Word phụ' },
+		{ name: 'Đỗ Trọng Giáp', role: 'Thành viên', mission: 'PowerPoint phụ, Nội dung' },
 	];
 </script>
 
