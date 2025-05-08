@@ -42,10 +42,8 @@
 		class="mt-4 flex w-full max-w-screen-xl items-center justify-between px-3 py-4 text-white/40"
 	>
 		<div>
-			<p>Pom.moe không liên kết với HoYoverse.</p>
-			<p>
-				Honkai: Star Rail, nội dung và tài liệu trò chơi là thương hiệu và bản quyền của HoYoverse.
-			</p>
+			<p>Bài tập lớn môn Lập trình Web.</p>
+			<p>Đây là dự án lâu dài, sẽ tiếp tục phát triển trong tương lai.</p>
 		</div>
 		<div class="flex items-center gap-4 text-sm text-white/40">
 			<a
