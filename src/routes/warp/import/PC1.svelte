@@ -110,7 +110,7 @@
 	<div class="flex w-full max-w-xl rounded-md bg-blue-300/5 p-8 text-white">
 		<p class="leading-none">
 			<Icon icon={LoadingIcon} class="mr-4 inline" height={32} />
-			Checking the Warp History URL #{loading}
+			Đang kiểm tra URL lịch sử Gacha #{loading}
 		</p>
 	</div>
 {:else}
@@ -144,18 +144,18 @@
 <input class="hidden" type="file" bind:this={fileinput} on:change={handleInput} />
 <p class="relative mb-2 mt-6 w-fit text-lg font-medium leading-none text-white">
 	<img class="mr-1 inline h-6 w-6" src="/images/quest.png" alt="" />
-	Where to find data_2 file?
+	Tìm file data_2 ở đâu?
 	<span class="absolute bottom-[2px] right-0 h-[1px] w-[calc(100%-30px)] bg-space" />
 </p>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">1.</span>
-	<p class="mt-2">Open the Warp History in the game first!</p>
+	<p class="mt-2">Trước tiên hãy mở lịch sử Gacha trong trò chơi!</p>
 </div>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">2.</span>
-	<p class="mt-2">After that open File Explorer, then go to:</p>
+	<p class="mt-2">Sau đó mở File Explorer rồi đi tới:</p>
 	<p class="highlighted">
-		<span>StarRail Install Folder</span>\Games\StarRail_Data\webCaches\2.15.0.0\Cache\Cache_Data
+		<span>StarRail Install Folder</span>\Games\StarRail_Data\webCaches\2.xx.0.0\Cache\Cache_Data
 	</p>
 	<img
 		class="mt-4 w-full max-w-xl rounded-md duration-150 hover:max-w-3xl"
@@ -165,7 +165,7 @@
 </div>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">3.</span>
-	<p class="mt-2">Then drag and drop data_2 file to the box above</p>
+	<p class="mt-2">Sau đó kéo và thả tệp data_2 vào hộp phía trên</p>
 </div>
 
 <style lang="postcss">
