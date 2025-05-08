@@ -106,10 +106,6 @@
 			</Button>
 		</div>
 	</div>
-	<img
-		class="mb-4 mt-4 w-full max-w-lg rounded-md duration-150 hover:max-w-3xl"
-		alt="Example"
-	/>
 </div>
 
 <style lang="postcss">
