@@ -12,7 +12,6 @@
 
 	let url = '';
 	let scriptUrl = `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex "&{$((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/MadeBaruna/e017637fbc6c72d47d72ba42dfb2477b/raw/hsr_getlink.ps1'))}"`;
-	let scriptSource = 'https://gist.github.com/MadeBaruna/e017637fbc6c72d47d72ba42dfb2477b';
 
 	let copied = false;
 	let error = '';
@@ -107,13 +106,6 @@
 			</Button>
 		</div>
 	</div>
-	<p class="text-sm text-white/70">
-		※ You can review the script <a
-			target="_blank"
-			class="text-blue-300/70 hover:text-blue-300"
-			href={scriptSource}>here</a
-		>
-	</p>
 	<img
 		class="mb-4 mt-4 w-full max-w-lg rounded-md duration-150 hover:max-w-3xl"
 		src="/images/import/powershell.png"
