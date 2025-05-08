@@ -3,9 +3,9 @@
 	import Icon from '@iconify/svelte';
 
 	let members = [
-		{ name: 'Lưu Thế Kiên', role: 'Trưởng nhóm', mission: 'Code chính' },
-		{ name: 'Thùng Việt Hoàn', role: 'Thành viên', mission: 'Code phụ' },
-		{ name: 'Phạm Thành Long', role: 'Thành viên', mission: 'Word chính' },
+		{ name: 'Lưu Thế Kiên', role: 'Trưởng nhóm', mission: 'Code chính, Word phụ, PowerPoint phụ' },
+		{ name: 'Thùng Việt Hoàn', role: 'Thành viên', mission: '' },
+		{ name: 'Phạm Thành Long', role: 'Thành viên', mission: 'Word chính, PowerPoint chính' },
 		{ name: 'Nguyễn Thành Trung', role: 'Thành viên', mission: 'Word phụ' },
 		{ name: 'Dương Tuấn Huy', role: 'Thành viên', mission: '' },
 		{ name: 'Đỗ Trọng Giáp', role: 'Thành viên', mission: '' },
