@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Pom.moe - Warp Counter</title>
+	<title>Pom.moe - Lịch sử Roll</title>
 </svelte:head>
 
 <div class="flex items-center">
@@ -17,7 +17,7 @@
 	<a href="/warp/import">
 		<Button class="ml-4 mt-1 text-2xl">
 			<img class="mr-2 h-6 w-6" src="/icons/warp.png" alt="" />
-			Import History</Button
+			Tải lên lịch sử</Button
 		>
 	</a>
 </div>
