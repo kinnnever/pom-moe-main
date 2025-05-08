@@ -54,7 +54,7 @@
 
 <div class="relative h-[116px] w-full max-w-xl">
 	<textarea
-		placeholder="Paste the Warp History URL here..."
+		placeholder="Dán URL lịch sử Gacha tại đây..."
 		class="h-full w-full resize-none rounded-md border-2 border-dashed border-gray-600 bg-blue-300/5 p-4 text-white hover:border-gray-400"
 		bind:value={url}
 		on:input={checkUrl}
@@ -78,16 +78,16 @@
 {/if}
 <p class="relative mb-2 mt-6 w-fit text-lg font-medium leading-none text-white">
 	<img class="mr-1 inline h-6 w-6" src="/images/quest.png" alt="" />
-	How to get the Warp History URL?
+	Làm cách nào để lấy URL lịch sử Gacha?
 	<span class="absolute bottom-[2px] right-0 h-[1px] w-[calc(100%-30px)] bg-space" />
 </p>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">1.</span>
-	<p class="mt-2">Open the Warp History in the game first!</p>
+	<p class="mt-2">Mở lịch sử Gacha trong game trước!</p>
 </div>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">2.</span>
-	<p class="highlighted mt-2">Open Start, then search for <span>PowerShell</span></p>
+	<p class="highlighted mt-2">Mở Start, và tìm <span>PowerShell</span></p>
 	<img
 		class="mb-4 mt-4 w-full max-w-xs rounded-md duration-150 hover:max-w-xl"
 		src="/images/import/start.png"
@@ -96,7 +96,7 @@
 </div>
 <div class="relative flex flex-col pl-8 text-white">
 	<span class="absolute left-0 top-2 ml-2 font-bold">3.</span>
-	<p class="mt-2">Copy & paste the script below to the PowerShell window, then press Enter</p>
+	<p class="mt-2">Sao chép và dán đoạn mã bên dưới vào cửa sổ PowerShell, sau đó nhấn Enter</p>
 	<div class="relative max-w-3xl">
 		<pre
 			class="whitespace-pre-wrap break-all rounded-md border-2 border-dashed border-gray-600 bg-blue-300/5 px-2 py-1 pr-28 text-xs text-gray-300">{scriptUrl}</pre>
