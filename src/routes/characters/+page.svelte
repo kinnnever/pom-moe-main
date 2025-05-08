@@ -81,7 +81,7 @@
 </script>
 
 <svelte:head>
-	<title>Pompom - Nhân vật</title>
+	<title>Pom.moe - Nhân vật</title>
 </svelte:head>
 
 <Title>{$t('common.character')}</Title>
