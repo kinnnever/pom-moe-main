@@ -159,28 +159,7 @@
 					</div>
 				{/each}
 			</div>
-//			<div class="relative">
-//				{#each timeline as row, i}
-//					<div class="flex">
-//						{#each row as event, j}
-//							<Item
-//								prev={j > 0 ? row[j - 1] : null}
-//								next={j < row.length - 1 ? row[j + 1] : null}
-//								{now}
-//								{event}
-//								{width}
-//								{height}
-//								{margin}
-//								{start}
-//								{offset}
-//								{hourDiffFromAsia}
-//								{hourDiffLocal}
-//								row={i}
-//							/>
-//						{/each}
-//					</div>
-//				{/each}
-//			</div>
+
 			<div class="absolute top-0 h-full w-[1px] bg-gray-200" style:left="{nowOffset}px">
 				<span
 					class="absolute -right-8 w-16 rounded-md bg-gray-200 text-center text-sm leading-tight"
