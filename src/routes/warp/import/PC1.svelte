@@ -68,7 +68,7 @@
 		try {
 			strings = await file.text();
 		} catch (err) {
-			error = 'Error when reading the file!';
+			error = 'Lỗi khi đọc file!';
 			console.error(err);
 			loading = 0;
 			return;
