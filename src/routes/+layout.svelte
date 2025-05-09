@@ -39,7 +39,7 @@
 	</div>
 	<div class="flex-1" />
 	<footer
-		class="mt-4 flex w-full max-w-screen-xl items-center justify-between px-3 py-4 text-white/5"
+		class="mt-4 flex w-full max-w-screen-xl items-center justify-between px-3 py-4 text-white/40"
 	>
 		<div>
 			<p>Bài tập lớn môn Lập trình Web.</p>
