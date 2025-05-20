@@ -52,7 +52,7 @@
 					<th class="p-2 border border-white/20">ATK</th>
 					<th class="p-2 border border-white/20">DEF</th>
 					<th class="p-2 border border-white/20">SPD <!-- ⚠ CỐ ĐỊNH --></th>
-					<th class="p-2 border border-white/20">Khiêu khích <!-- ⚠ CỐ ĐỊNH --></th>
+					<th class="p-2 border border-white/20">AGGRO <!-- ⚠ CỐ ĐỊNH --></th>
 				</tr>
 			</thead>
 			<tbody>
