@@ -8,10 +8,20 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: null,
+			fallback: 200.html,
 			precompress: false,
 			strict: true
 		}),
+		prerender: {
+			entries: [
+				'/',
+				'/characters',
+				'/characters/acheron',
+				'/characters/march-7th',
+				'/characters/dan-heng'
+				// ✅ thêm từng nhân vật có .svelte riêng
+			]
+		},
 		alias: {
 			$components: 'src/components',
 			$utils: 'src/utils',
