@@ -8,8 +8,7 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			// @ts-ignore
-			fallback: null,
+			fallback: '200.html',
 			precompress: false,
 			strict: true
 		}),
