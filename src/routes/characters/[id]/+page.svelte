@@ -14,6 +14,16 @@
 	$: skills = $skillList[id];
 
 	const stat = stats[id];
+	const statTable = [
+		{ breakthrough: 0, levels: [1, 20] },
+		{ breakthrough: 1, levels: [20, 30] },
+		{ breakthrough: 2, levels: [30, 40] },
+		{ breakthrough: 3, levels: [40, 50] },
+		{ breakthrough: 4, levels: [50, 60] },
+		{ breakthrough: 5, levels: [60, 70] },
+		{ breakthrough: 6, levels: [70, 80] },
+		{ breakthrough: 6, levels: [80, 90] }
+	];
 	const ascension = ascensions[id];
 </script>
 
