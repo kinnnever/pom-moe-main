@@ -1,114 +1,130 @@
-<script>
-	const SPD = 100;         // ⚠ CỐ ĐỊNH - Tốc độ
-	const AGGRO = 100;       // ⚠ CỐ ĐỊNH - Khiêu khích
-
-	const stats = [
-		{ dp: 0, levels: [1, 20], hp: [1020, 2646], atk: [27, 69], def: [60, 154] },
-		{ dp: 1, levels: [20, 30], hp: [2646, 3521], atk: [69, 92], def: [154, 205] },
-		{ dp: 2, levels: [30, 40], hp: [3521, 4943], atk: [92, 129], def: [205, 288] },
-		{ dp: 3, levels: [40, 50], hp: [4943, 6364], atk: [129, 167], def: [288, 370] },
-		{ dp: 4, levels: [50, 60], hp: [6364, 7786], atk: [167, 204], def: [370, 453] },
-		{ dp: 5, levels: [60, 70], hp: [7786, 9207], atk: [204, 241], def: [453, 535] },
-		{ dp: 6, levels: [70, 80], hp: [9207, 10629], atk: [241, 278], def: [535, 618] },
-		{ dp: 6, levels: [80, 90], hp: [10629, 12050], atk: [278, 316], def: [618, 700] }
-	];
+<script lang="ts">
+  const character = {
+    id: 'acheron',
+    name: 'Acheron',
+    element: 'Lightning',
+    path: 'Nihility'
+  };
 </script>
 
-<svelte:head>
-	<title>Acheron - Pom.moe</title>
-</svelte:head>
+<div class="character-page">
+  <div class="layout">
+    <img
+      src={`/images/characters-full/${character.id}.png`}
+      alt={character.name}
+      class="character-image"
+    />
 
-<div class="flex flex-col gap-8 md:flex-row md:items-start">
-	<!-- Hình ảnh -->
-	<div class="md:w-1/2 flex justify-center">
-		<img
-			src="/images/characters-full/acheron.png"
-			alt="Acheron"
-			class="max-h-[80vh] object-contain"
-		/>
-	</div>
+    <div class="info">
+      <h1>{character.name}</h1>
+      <p><strong>Nguyên tố:</strong> ⚡ {character.element}</p>
+      <p><strong>Vận mệnh:</strong> {character.path}</p>
 
-	<!-- Thông tin nhân vật -->
-	<div class="md:w-1/2 space-y-6">
-		<h1 class="text-4xl font-bold text-white">Acheron</h1>
+      <h2>Chỉ số cơ bản</h2>
+      <ul>
+        <li><strong>HP:</strong> <!-- Nhập tay HP gốc --></li>
+        <li><strong>ATK:</strong> <!-- Nhập tay ATK gốc --></li>
+        <li><strong>DEF:</strong> <!-- Nhập tay DEF gốc --></li>
+        <li><strong>SPD:</strong> <!-- Nhập tay SPD gốc --></li>
+      </ul>
+    </div>
+  </div>
 
-		<!-- Chỉ số cơ bản -->
-		<div class="grid grid-cols-2 gap-4 text-white">
-			<div><strong>HP:</strong> 1020</div>
-			<div><strong>ATK:</strong> 27</div>
-			<div><strong>DEF:</strong> 60</div>
-			<div><strong>SPD:</strong> {SPD} <!-- ⚠ CỐ ĐỊNH --></div>
-			<div><strong>AGGRO:</strong> {AGGRO} <!-- ⚠ CỐ ĐỊNH --></div>
-		</div>
+  <h2>📊 Bảng chỉ số theo mốc Đột Phá</h2>
+  <table>
+    <thead>
+      <tr><th>ĐP</th><th>Lv</th><th>HP</th><th>ATK</th><th>DEF</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>Lv1–20</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>1</td><td>20–30</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>2</td><td>30–40</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>3</td><td>40–50</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>4</td><td>50–60</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>5</td><td>60–70</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+      <tr><td>6</td><td>70–80</td><td><!-- nhập HP --></td><td><!-- nhập ATK --></td><td><!-- nhập DEF --></td></tr>
+    </tbody>
+  </table>
 
-		<!-- Bảng chỉ số -->
-		<h2 class="mt-4 text-xl font-semibold text-white">Chỉ số theo cấp & đột phá</h2>
-		<table class="w-full text-white border-collapse text-sm">
-			<thead>
-				<tr class="bg-white/10">
-					<th class="p-2 border border-white/20">ĐP</th>
-					<th class="p-2 border border-white/20">LVL</th>
-					<th class="p-2 border border-white/20">HP</th>
-					<th class="p-2 border border-white/20">ATK</th>
-					<th class="p-2 border border-white/20">DEF</th>
-					<th class="p-2 border border-white/20">SPD <!-- ⚠ CỐ ĐỊNH --></th>
-					<th class="p-2 border border-white/20">AGGRO <!-- ⚠ CỐ ĐỊNH --></th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each stats as row}
-					<tr>
-						<td class="p-2 border border-white/20 text-center" rowspan="2">{row.dp}</td>
-						<td class="p-2 border border-white/20">{row.levels[0]}</td>
-						<td class="p-2 border border-white/20">{row.hp[0]}</td>
-						<td class="p-2 border border-white/20">{row.atk[0]}</td>
-						<td class="p-2 border border-white/20">{row.def[0]}</td>
-						<td class="p-2 border border-white/20">{SPD}</td>     <!-- ⚠ CỐ ĐỊNH -->
-						<td class="p-2 border border-white/20">{AGGRO}</td>  <!-- ⚠ CỐ ĐỊNH -->
-					</tr>
-					<tr>
-						<td class="p-2 border border-white/20">{row.levels[1]}</td>
-						<td class="p-2 border border-white/20">{row.hp[1]}</td>
-						<td class="p-2 border border-white/20">{row.atk[1]}</td>
-						<td class="p-2 border border-white/20">{row.def[1]}</td>
-						<td class="p-2 border border-white/20">{SPD}</td>     <!-- ⚠ CỐ ĐỊNH -->
-						<td class="p-2 border border-white/20">{AGGRO}</td>  <!-- ⚠ CỐ ĐỊNH -->
-					</tr>
-				{/each}
-			</tbody>
-		</table>
-	</div>
+  <h2>✨ Kỹ năng</h2>
+
+  <div class="skill-block">
+    <h3>1. Đòn đánh thường: <!-- Tên kỹ năng --></h3>
+    <p><!-- Mô tả kỹ năng --></p>
+    <table>
+      <thead><tr><th>Lv</th><th>Hiệu ứng</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><!-- nhập --> </td></tr>
+        <tr><td>2</td><td><!-- nhập --> </td></tr>
+        <!-- ... -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="skill-block">
+    <h3>2. Chiêu kỹ năng: <!-- Tên kỹ năng --></h3>
+    <p><!-- Mô tả kỹ năng --></p>
+    <!-- Bảng cấp độ tương tự -->
+  </div>
+
+  <div class="skill-block">
+    <h3>3. Tuyệt kỹ: <!-- Tên tuyệt kỹ --></h3>
+    <p><!-- Mô tả tuyệt kỹ --></p>
+    <!-- Bảng cấp độ tương tự -->
+  </div>
+
+  <h2>🔮 Vết tích</h2>
+  <!-- Mô tả vết tích và hiệu ứng khi mở -->
+
+  <h2>💡 Nón Ánh Sáng Thích Hợp</h2>
+  <!-- Gợi ý nón ánh sáng -->
+
+  <h2>⚙️ Di Vật và Phụ Kiện</h2>
+  <!-- Gợi ý 2 hoặc 4 mảnh -->
+
+  <h2>👥 Đội Hình Đề Xuất</h2>
+  <!-- Tên đồng đội, lý do phù hợp -->
 </div>
 
-<!-- THÔNG TIN KHÁC -->
-<div class="mt-12 text-white space-y-8">
-	<section>
-		<h2 class="text-2xl font-bold mb-2">🌀 Kỹ năng</h2>
-		<p><!-- Viết kỹ năng tại đây --></p>
-	</section>
+<style>
+  .layout {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
 
-	<section>
-		<h2 class="text-2xl font-bold mb-2">🌟 Vết tích</h2>
-		<p><!-- Viết vết tích tại đây --></p>
-	</section>
+  .character-image {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
 
-	<section>
-		<h2 class="text-2xl font-bold mb-2">🧬 Tinh hồn</h2>
-		<p><!-- Viết tinh hồn tại đây --></p>
-	</section>
+  .info {
+    flex: 1;
+  }
 
-	<section>
-		<h2 class="text-2xl font-bold mb-2">💡 Nón ánh sáng phù hợp</h2>
-		<p><!-- Viết tên nón tại đây --></p>
-	</section>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
 
-	<section>
-		<h2 class="text-2xl font-bold mb-2">🛡️ Di vật & Phụ kiện</h2>
-		<p><!-- Viết gợi ý di vật tại đây --></p>
-	</section>
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
 
-	<section>
-		<h2 class="text-2xl font-bold mb-2">🧩 Đội hình phù hợp</h2>
-		<p><!-- Viết gợi ý đội hình tại đây --></p>
-	</section>
-</div>
+  th {
+    background-color: #f0f0f0;
+  }
+
+  .skill-block {
+    margin-top: 1.5rem;
+  }
+
+  .skill-block table {
+    margin-top: 0.5rem;
+  }
+</style>
