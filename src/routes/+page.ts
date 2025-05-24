@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
-export const load = () => {
-	throw redirect(307, '/characters');
+export const entries = [
+	'/characters-pages/acheron';
 };
