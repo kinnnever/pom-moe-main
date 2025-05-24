@@ -3,7 +3,7 @@
 	import { t } from '$utils/translation';
 	import Icon from '@iconify/svelte';
 	import XIcon from '@iconify-icons/mdi/multiply';
-	import character from '$data/characters';
+	import characters from '$data/characters';
 
 	export let character: Character;
 	export let showTotal = false;
