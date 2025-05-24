@@ -1,8 +1,8 @@
 import type { Ascension, Character, Skills, Stat } from '$types';
 import { addTranslations, locale } from '$utils/translation';
 import { writable } from 'svelte/store';
-import defaulCharacterJson from './characters/en.json';
-import defaultSkillJson from './characters/skills/en.json';
+import defaulCharacterJson from './characters/vi.json';
+import defaultSkillJson from './characters/skills/vi.json';
 import statsJson from './characters/stats/stats.json';
 import ascensionJson from './characters/ascensions/ascensions.json';
 
