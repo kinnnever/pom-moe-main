@@ -23,10 +23,7 @@
 		height={512}
 	/>
 	<span
-		class="absolute bottom-1 left-0 right-0 text-center text-lg font-semibold leading-none text-white"
-		>{$t(`character.${character.id}`)}</span
-	>
-	{#if character.id !== 'trailblazer'}
+		class="absolute bottom-1 left-0 right-0 text-center text-lg font-semibold leading-none text-white">{$t(`character.${character.id}`)}</span>
 		<img
 			src="/images/elements/{character.element}.png"
 			alt={character.element}
@@ -37,7 +34,6 @@
 			alt={character.path}
 			class="absolute left-1 top-9 h-6 w-6 rounded-full bg-black/20"
 		/>
-	{/if}
 	{#if total > 0}
 		<span class="absolute right-1 top-1 font-medium text-white/80"
 			><Icon class="mb-0.5 inline" icon={XIcon} />{total}</span

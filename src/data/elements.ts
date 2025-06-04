@@ -8,7 +8,7 @@ const elements = writable<Element[]>(Object.values(defaultJson));
 
 locale.subscribe(async (value) => {
 	if (value === undefined) return;
-	const localeJson: Elements = (await import(`./elements/${value}.json`)).default;
+	const localeJson: Elements = (await import(`./elements/vi.json`)).default;
 	elements.set(Object.values(localeJson));
 });
 

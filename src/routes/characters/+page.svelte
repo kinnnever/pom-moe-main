@@ -26,19 +26,12 @@
 
 	let showTotal = false;
 	let total: Record<string, number> = {
-		trailblazer: 7,
-		'dan-heng': 1,
-		'march-7th': 1,
-		serval: 1,
-		natasha: 1,
-		asta: 1,
-		herta: 1,
-		qingue: 1
+		
 	};
 
 	function filterList() {
 		list = $characters.filter(
-			(c) => (filter.elements[c.element] && filter.paths[c.path]) || c.id === 'trailblazer'
+			(c) => (filter.elements[c.element] && filter.paths[c.path])
 		);
 	}
 

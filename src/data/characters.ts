@@ -1,7 +1,7 @@
 import type { Ascension, Character, Skills, Stat } from '$types';
 import { addTranslations, locale } from '$utils/translation';
 import { writable } from 'svelte/store';
-import defaulCharacterJson from './characters/en.json';
+import defaulCharacterJson from './characters/vi.json';
 import defaultSkillJson from './characters/skills/en.json';
 import statsJson from './characters/stats/stats.json';
 import ascensionJson from './characters/ascensions/ascensions.json';
@@ -14,7 +14,7 @@ const skills = writable<{ [name: string]: Skills }>(defaultSkillJson);
 const stats: { [name: string]: Stat } = statsJson;
 const ascensions: { [name: string]: Ascension } = ascensionJson;
 
-let currentLocale = 'en';
+let currentLocale = 'vi';
 
 function load(json: CharacterJson, locale: string) {
 	const list = Object.values(json).sort((a, b) => a.name.localeCompare(b.name));
@@ -33,19 +33,15 @@ function load(json: CharacterJson, locale: string) {
 	);
 }
 
-load(defaultLocale, 'en');
+load(defaultLocale, 'vi');
 
 locale.subscribe(async (value) => {
 	if (value === undefined || value === currentLocale) return;
 	currentLocale = value;
 
-	const localeJson: CharacterJson = (await import(`./characters/${value}.json`)).default;
+	const localeJson: CharacterJson = (await import(`./characters/vi.json`)).default;
 	load(localeJson, value);
 
-	const localeSkillJson: { [name: string]: Skills } = (
-		await import(`./characters/skills/${value}.json`)
-	).default;
-	skills.set(localeSkillJson);
 });
 
 export default characters;

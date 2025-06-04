@@ -1,7 +1,7 @@
 import type { Achievements } from '$types';
 import { locale } from '$utils/translation';
 import { writable } from 'svelte/store';
-import defaultJson from './achievements/en.json';
+import defaultJson from './achievements/vi.json';
 
 const achievements = writable<Achievements>(defaultJson);
 

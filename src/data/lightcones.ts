@@ -1,13 +1,13 @@
 import type { Lightcone } from '$types';
 import { addTranslations, locale } from '$utils/translation';
 import { writable } from 'svelte/store';
-import defaultLocaleJson from './lightcones/en.json';
+import defaultLocaleJson from './lightcones/vi.json';
 
 type LightconeJson = { [key: string]: Lightcone };
 const defaultLocale: LightconeJson = defaultLocaleJson;
 
 const lightcones = writable<Lightcone[]>([]);
-let currentLocale = 'en';
+let currentLocale = 'vi';
 
 function load(json: LightconeJson, locale: string) {
 	const list = Object.values(json).sort((a, b) => a.name.localeCompare(b.name));
@@ -26,13 +26,13 @@ function load(json: LightconeJson, locale: string) {
 	);
 }
 
-load(defaultLocale, 'en');
+load(defaultLocale, 'vi');
 
 locale.subscribe(async (value) => {
 	if (value === undefined || value === currentLocale) return;
 	currentLocale = value;
 
-	const localeJson: LightconeJson = (await import(`./lightcones/${value}.json`)).default;
+	const localeJson: LightconeJson = (await import(`./lightcones/vi.json`)).default;
 
 	load(localeJson, value);
 });

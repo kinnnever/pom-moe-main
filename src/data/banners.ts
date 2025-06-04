@@ -1,5 +1,5 @@
 import type { Banner, BannerLocale, BannerType } from '$types';
-import defaultJson from './banners/en.json';
+import defaultJson from './banners/vi.json';
 import { addTranslations, locale } from '$utils/translation';
 
 export const bannerTypes = ['character', 'lightcone', 'standard', 'beginner'] as const;

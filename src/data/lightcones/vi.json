@@ -125,6 +125,18 @@
     "path": "erudition",
     "rarity": 3
   },
+  "reminiscence": {
+    "id": "reminiscence",
+    "name": "Tìm Về Ký Ức",
+    "path": "remembrance",
+    "rarity": 3
+  },
+  "shadowburn": {
+    "id": "shadowburn",
+    "name": "Thiêu Đốt Ảo Ảnh",
+    "path": "remembrance",
+    "rarity": 3
+  },
   "post-op-conversation": {
     "id": "post-op-conversation",
     "name": "Buổi Trò Chuyện Hậu Phẫu",
@@ -419,6 +431,24 @@
     "path": "harmony",
     "rarity": 4
   },
+  "victory-in-a-blink":{
+    "id":"victory-in-a-blink",
+    "name": "Chiến Thắng Trong Chớp Mắt",
+    "path": "remembrance",
+    "rarity": 4
+  },
+  "geniuses-greetings": {
+    "id":"geniuses-greetings",
+    "name": "Lời Chào Hỏi Của Thiên Tài",
+    "path": "remembrance",
+    "rarity": 4
+  },
+  "sweat-now-cry-less": {
+    "id":"sweat-now-cry-less",
+    "name": "Đổ Mồ Hôi Nhiều, Rơi Nước Mắt Ít",
+    "path": "remembrance",
+    "rarity": 4
+  },
   "night-on-the-milky-way": {
     "id": "night-on-the-milky-way",
     "name": "Chuyến Tàu Đêm Trên Dải Ngân Hà",
@@ -621,6 +651,30 @@
     "id": "eternal-calculus",
     "name": "Ngoại Suy Vô Tận",
     "path": "erudition",
+    "rarity": 5
+  },
+  "long-may-rainbows-adorn-the-sky": {
+    "id":"long-may-rainbows-adorn-the-sky",
+    "name": "Mong Cầu Vồng Mãi Ở Trên Bầu Trời",
+    "path": "remembrance",
+    "rarity": 5
+  },
+  "make-farewells-more-beautiful": {
+    "id":"make-farewells-more-beautiful",
+    "name": "Để Lời Từ Biệt Đẹp Đẽ Hơn",
+    "path": "remembrance",
+    "rarity": 5
+  },
+  "time-woven-into-gold": {
+    "id":"time-woven-into-gold",
+    "name": "Dệt Thời Gian Thành Vàng",
+    "path": "remembrance",
+    "rarity": 5
+  },
+  "memory-s-curtain-never-falls": {
+    "id":"memory-s-curtain-never-falls",
+    "name": "Ký Ức Không Bao Giờ Hạ Màn",
+    "path": "remembrance",
     "rarity": 5
   }
 }

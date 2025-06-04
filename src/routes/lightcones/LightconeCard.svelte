@@ -26,7 +26,7 @@
 	/>
 	<span
 		class="absolute bottom-1 left-0 right-0 px-1 text-center text-sm font-semibold leading-none text-white"
-		>{$t(`lightcone.${lightcone.id}`)}</span
+		>{lightcone.name}</span
 	>
 	<img
 		src="/images/paths/{lightcone.path}.png"
