@@ -1,18 +1,14 @@
-import type { Ascension, Character, Skills, Stat } from '$types';
+import type { Character} from '$types';
 import { addTranslations, locale } from '$utils/translation';
 import { writable } from 'svelte/store';
 import defaulCharacterJson from './characters/vi.json';
-import defaultSkillJson from './characters/skills/en.json';
-import statsJson from './characters/stats/stats.json';
-import ascensionJson from './characters/ascensions/ascensions.json';
+
 
 type CharacterJson = { [key: string]: Character };
 const defaultLocale: CharacterJson = defaulCharacterJson;
 
 const characters = writable<Character[]>([]);
-const skills = writable<{ [name: string]: Skills }>(defaultSkillJson);
-const stats: { [name: string]: Stat } = statsJson;
-const ascensions: { [name: string]: Ascension } = ascensionJson;
+
 
 let currentLocale = 'vi';
 
@@ -45,4 +41,3 @@ locale.subscribe(async (value) => {
 });
 
 export default characters;
-export { skills, stats, ascensions };
