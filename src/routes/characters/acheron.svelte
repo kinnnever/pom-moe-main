@@ -7,6 +7,7 @@
 	import LightconesBlock from '$components/LightconesBlock.svelte';
 	import RelicsBlock from '$components/relicsBlock.svelte';
 	import TeamBlock from '$components/TeamBlock.svelte';
+	import ProsConsBlock from  '$components/ProsConsBlock.svelte';
 
   const character = {
     id: 'acheron',
@@ -92,9 +93,7 @@
     		/>
 		
 	</div>
-</div>
-
-
+	</div>
 		<!-- Bảng chỉ số -->
 		<table class="w-full text-white border-collapse text-sm table-fixed">
 			<thead>
@@ -704,11 +703,26 @@
 	</section>
 
 	<section>
-		<Title>TƯ BẢN</Title> 
-		<div class="text-xl font-bold mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
+		<Title>TIPS & TRICKS</Title> 
+		<ProsConsBlock 
+			pros=" 
+				Gây toàn bộ Sát thương lên cả đơn mục tiêu và cả diện rộng, sự kết hợp hoàn hảo giữa Săn Bắn và Tri Thức.
+				Tự cung cấp Buff cho bản thân khi trên sân có 2 đồng minh vận mệnh Hư Vô, và 90% Sát Thương trong Tuyệt Kỹ.
+				Bỏ qua Điểm Yếu và 20% Kháng trong Tuyệt Kỹ.
+				Dọn quái nhỏ ngoài map cực nhanh mà không cần vào trận chiến.
+			"
+			cons="
+				Yêu cầu bắt buộc phải có 2 đồng đội Hư Vô để tối đa sức mạnh, rất khó để có thể đi cùng Hòa Hợp khi slot cuối phải là nhân vật Bảo Hộ hoặc Trù Phú (trừ khi bạn có E2 Acheron hoặc muốn chơi 3 nô).
+				Tùy chọn Nón Ánh Sáng miễn phí rất hạn chế, và Trấn cách biệt sức mạnh quá lớn.
+				Nếu không có Jiaoqiu, Acheron cảm thấy hơi yếu trong thời điểm hiện tại vì Jiaoqiu hoàn toàn đáp ứng được mọi nhu cầu của Acheron và đưa Acheron trở lại Meta.
+			"
+		/>
+
+
+		<div class="text-xl font-bold mt-4 mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
 			<span class="text-3xl font-bold mb-1 mt-3 pl-2">
 				<span style="color: {character.elementColor}">S1</span> &nbsp &gt &nbsp
-				<span style="color: #FF5555">Jiaoqiu</span> &nbsp &gt &nbsp
+				<span style="color: #DA472D">Jiaoqiu</span> &nbsp &gt &nbsp
 				<span style="color: {character.elementColor}">E2</span> &nbsp &gt &nbsp 
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
@@ -724,5 +738,19 @@
 				<span class="font-bold text-amber-400 pl-4">E2: </span>Điểm dừng tốt, tiền đâu mà đầu tư lắm. 
 			</p>
 		</div>
+
+		<div class="mt-8 w-full flex justify-center">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/qOXC1cVV8AM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="rounded-lg shadow-lg"
+  ></iframe>
+</div>
+
 	</section>
 </div>

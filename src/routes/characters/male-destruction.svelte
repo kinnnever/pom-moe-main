@@ -13,7 +13,7 @@
     name: 'Nhà Khai Phá - Hủy Diệt',
     element: 'physical',
     path: 'destruction',
-	elementColor: '#FFFFFF'
+	elementColor: '#CFCFCF'
   };
 
   let lightconeNames: string[] = [];
