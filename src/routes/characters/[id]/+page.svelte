@@ -20,5 +20,5 @@
 {:else if error}
   <h1 class="text-white text-center mt-10">{error}</h1>
 {:else}
-  <p class="text-white text-center mt-10">Đang tải...</p>
+  <p class="text-white text-center mt-10">Đợi xíu, Pom đang tìm...</p>
 {/if}
