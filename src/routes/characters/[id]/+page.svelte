@@ -2,18 +2,23 @@
   export let data;
   const { id } = data;
 
-  import Acheron from '../acheron.svelte';
-  import Maledestruction from '../male-destruction.svelte';
+  let Component = null;
+  let error = '';
 
-      const componentMap: Record<string, any> = {
-      acheron: Acheron,
-      'male-destruction': Maledestruction 
-  };
-   const Component = componentMap[id] ?? null;
+  // Tự động import file theo id
+  import(`../${id}.svelte`)
+    .then((module) => {
+      Component = module.default;
+    })
+    .catch(() => {
+      error = 'Không tìm thấy nhân vật';
+    });
 </script>
 
 {#if Component}
   <svelte:component this={Component} />
+{:else if error}
+  <h1 class="text-white text-center mt-10">{error}</h1>
 {:else}
-  <h1>Không tìm thấy nhân vật</h1>
+  <p class="text-white text-center mt-10">Đang tải...</p>
 {/if}

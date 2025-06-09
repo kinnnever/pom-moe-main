@@ -1,12 +1,17 @@
-import characters from '$data/characters';
 import { error } from '@sveltejs/kit';
-import { get } from 'svelte/store';
 
-export const load = ({ params }) => {
+const modules = import.meta.glob('../*.svelte'); // lấy tất cả các file nhân vật
+
+export const load = async ({ params }) => {
 	const id = params.id;
-	const validIds = ['acheron','male-destruction'];
-	if (!validIds.includes(id)) throw error(404, 'Not found');
+	const path = `../${id}.svelte`;
+
+	// Nếu không tồn tại file svelte tương ứng, trả về 404
+	if (!(path in modules)) {
+		throw error(404, 'Not found');
+	}
 
 	return { id };
 };
-export const prerender = false;
+
+export const prerender = false; // nếu bạn đang dùng dynamic import thì nên để false

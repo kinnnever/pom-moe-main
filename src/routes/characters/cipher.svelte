@@ -10,11 +10,11 @@
 	import ProsConsBlock from  '$components/ProsConsBlock.svelte';
 
   const character = {
-    id: 'acheron',
-    name: 'Acheron',
-    element: 'lightning',
+    id: 'cipher',
+    name: 'Cipher',
+    element: 'quantum',
     path: 'nihility',
-	elementColor: '#E26CFF'
+	elementColor: '#8CA6E6'
   };
 
   let lightconeNames: string[] = [];
@@ -25,37 +25,33 @@
   let NormalLevel = 1;
 
   const skillAttack = [
-	['80%','88%','96%','104%','112%','120%','130%','140%','150%','160%','168%','176%','184%','192%','200%'],
-  	['30%','33%','36%','39%','42%','45%','48.75%','52.5%','56.25%','60%','63%','66%','69%','72%','75%']
+	['100%','110%','120%','130%','140%','150%','162.5%','175%','187.5%','200%','210%','220%','230%','240%','250%'],
+  	['50%','55%','60%','65%','70%','75%','81.25%','87.5%','93.75%','1000%','105%','110%','115%','120%','125%']
   ];
   let SkillLevel = 1;
 
   const ultimateAttack = [
-	['223.2%','238.08%','252.96%','267.84%','282.72%','297.6%','316.2%','334.8%','353.4%','372%','386.88%','401.76%','416.64%','431.52%',"446.4%"],
-  	['180%','192%','204%','216%','228%','240%','255%','270%','285%','300%','312%','324%','336%','348%','360%'],
-	['14.4%','15.36%','16.32%','17.28%','18.24%','19.2%','20.4%','21.6%','22.8%','24%','24.96%','25.92%','26.88%','27.84%','28.8%'],
-	['9%','9.6%','10.2%','10.8%','11.4%','12%','12.75%','13.5%','14.25%','15%','15.6%','16.2%','16.8%','17.4%','18%'],
-	['36%','38.4%','40.8%','43.2%','45.6%','48%','51%','54%','57%','60%','62.4%','64.8%','67.2%','69.6%','72%'],
-	['72%','76.8%','81.6%','86.4%','91.2%','96%','102%','108%','114%','120%','124.8%','129.6%','134.4%','139.2%','144%']
+	['60%','66%','72%','78%','84%','90%','97.5%','105%','112.5%','120%','126%','132%','138%','144%','150%'],
+  	['20%','22%','24%','26%','28%','30%','32.5%','35%','37.5%','40%','42%','44%','46%','48%','50%']
   ];
   let UltimateLevel = 1;
 
   const talent = [
-  	['10%','11%','12%','13%','14%','15%','16.25%','17.5%','18.75%','20%','21%','22%','23%','24%','25%']
+  	['75%','82.5%','90%','97.5%','105%','112.5%','121.88%','131.25%','140.63%','150%','157.5%','165%','172.5%','180%','187.5%']
   ]
   let TalentLevel = 1;
 
-	const SPD = 101;         // ⚠ CỐ ĐỊNH - Tốc độ
+	const SPD = 106;         // ⚠ CỐ ĐỊNH - Tốc độ
 	const AGGRO = 100;       // ⚠ CỐ ĐỊNH - Khiêu khích
 
 	const stats = [
-		{ dp: 0, levels: [1, 20], hp: [153, 298], atk: [95, 185], def: [59, 115] },
-		{ dp: 1, levels: [20, 30], hp: [359, 436], atk: [223, 270], def: [139, 169] },
-		{ dp: 2, levels: [30, 40], hp: [497, 574], atk: [308, 356], def: [193, 222] },
-		{ dp: 3, levels: [40, 50], hp: [635, 712], atk: [394, 441], def: [246, 276] },
-		{ dp: 4, levels: [50, 60], hp: [773, 849], atk: [479, 527], def: [299, 329] },
-		{ dp: 5, levels: [60, 70], hp: [911, 987], atk: [565, 613], def: [353, 383] },
-		{ dp: 6, levels: [70, 80], hp: [1048, 1125], atk: [651, 698], def: [406, 436] }
+		{ dp: 0, levels: [1, 20], hp: [126, 247], atk: [87, 169], def: [69, 135] },
+		{ dp: 1, levels: [20, 30], hp: [297, 361], atk: [204, 248], def: [162, 197] },
+		{ dp: 2, levels: [30, 40], hp: [411, 475], atk: [283, 326], def: [225, 259] },
+		{ dp: 3, levels: [40, 50], hp: [525, 589], atk: [361, 405], def: [287, 322] },
+		{ dp: 4, levels: [50, 60], hp: [639, 703], atk: [439, 483], def: [349, 384] },
+		{ dp: 5, levels: [60, 70], hp: [753, 817], atk: [518, 561], def: [412, 446] },
+		{ dp: 6, levels: [70, 80], hp: [868, 931], atk: [596, 640], def: [474, 509] }
 	];
 </script>
 
@@ -71,8 +67,8 @@
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<div class="absolute bottom-6 left-16 bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md">
-    		<p style="text-shadow: 1px 1px 1px black">Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.</p>
+		<div class="absolute bottom-4 left-16 bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md">
+    		<p style="text-shadow: 1px 1px 1px black">Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"</p>
   		</div>
 	</div>
 
@@ -143,16 +139,16 @@
     		class="h-20 w-20 rounded border border-white/10 object-cover"
   		/>
 		<div class="flex-1">
-  		<h3 class="text-lg font-bold mb-1">Ba Đường Thăng Trầm</h3>
+  		<h3 class="text-lg font-bold mb-1">Ôi Chao, Cá Lọt Lưới</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span> 
 			<span class="text-amber-400 italic">sức bền </span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span>
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
-		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Acheron cho 1 kẻ địch chỉ định.
+		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
+		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Cipher.
 		</p>
 			<div class="flex items-center gap-4 mb-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -170,23 +166,22 @@
     	class="h-20 w-20 rounded border border-white/10 object-cover"
   		/>
 		<div class="flex-1">
-  		<h3 class="text-lg font-bold mb-1">Bát lôi phi bộ</h3>
+  		<h3 class="text-lg font-bold mb-1">Hey, Tay Không Bắt Bạc</h3>
   		<p class="text-sm mb-1">
- 		    <span class="text-amber-400 italic">Khuếch tán </span> | 
+ 		    <span class="text-amber-400 italic">Khuếch Tán </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span>
-			<span class="text-amber-400 italic">sức bền mục tiêu chính,</span> 
-			<span style="color: {character.elementColor}">30</span> 
-			<span class="text-amber-400 italic">sức bền mục tiêu lân cận</span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span>
+			<span class="text-amber-400 italic">sức bền/hit</span> | 
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span>
   		</p>
-  		<p class="text-base">Nhận <span class="text-yellow-400 font-semibold">1</span> điểm 
-			<span class="font-bold underline">Mộng tàn</span>. Gắn
-			<span class="text-yellow-400 font-semibold">1</span> tầng 
-			<span class="font-bold underline">Nút Thắt Đỏ</span> lên 1 kẻ địch chỉ định, gây sát thương 
-			<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> lên kẻ địch này bằng 
-			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Tấn Công của Acheron, đồng thời gây sát thương 
-			<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> cho mục tiêu lân cận kẻ đó bằng 
-			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Acheron.
+  		<p class="text-base">Có <span class="text-yellow-400 font-semibold">120%</span> 
+			<span class="underline">xác suất cơ bản</span>khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
+			<span class="text-yellow-400 font-semibold">10%</span>), khiến tấn công của Cipher tăng  
+			<span class="text-yellow-400 font-semibold">30%</span>, duy trì 
+			<span class="text-yellow-400 font-semibold">2</span> hiệp,  đồng thời gây sát thương 
+			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
+			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Tấn Công của Cipher cho 1 kẻ địch chỉ định, gây sát thương 
+			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
+			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Cipher cho mục tiêu lân cận.
  		</p>
 			<div class="flex items-center gap-4 mb-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -204,45 +199,28 @@
     		class="h-20 w-20 rounded border border-white/10 object-cover"
   			/>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Giấc Mộng Tàn Khuyết, Một Chém Đoạn Tuyệt</h3>
+  			<h3 class="text-lg font-bold mb-1">Mèo Tặc, Kính Bút!</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Đánh lan </span> | 
-				<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">15</span> 
+ 			    <span class="text-amber-400 italic">Khuếch Tán </span> | 
+				<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">90</span> 
 				<span class="text-amber-400 italic">sức bền/hit</span> | 
 				<span class="text-amber-400 italic">Điểm năng lượng</span>
-				<span style="color: {character.elementColor}">9</span> |
+				<span style="color: {character.elementColor}">130</span> |
 				<span class="text-amber-400 italic">Tiêu hao năng lượng </span>
-				<span style="color: {character.elementColor}">9</span> |
-				<span class="text-amber-400 italic">Hồi lại </span><span style="color: {character.elementColor}">0</span>
+				<span style="color: {character.elementColor}">130</span> |
+				<span class="text-amber-400 italic">Hồi lại </span><span style="color: {character.elementColor}">5</span>
   			</p>
-  			<p class="text-base">Lần lượt phát động 3 lần 
-				<span class="font-bold underline">Lưỡi Chém Mưa</span> và 1 lần 
-				<span class="font-bold underline">Hoàng Tuyền Vượt Kiếp</span>, tối đa gây cho 1 kẻ địch chỉ định Sát Thương 
-				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span> Tấn Công của Acheron, tối đa gây cho các mục tiêu khác Sát Thương
-				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[1][UltimateLevel - 1]}</span> Tấn Công của Acheron.
- 			</p>
-			<p class="text-base">
-				<span class="font-bold underline">Lưỡi Chém Mưa:</span> Gây cho 1 kẻ địch chỉ định Sát Thương
-				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[2][UltimateLevel - 1]}</span> Tấn Công của Acheron đồng thời xóa tối đa 3 tầng
-				<span class="font-bold underline">Nút Thắt Đỏ</span> của mục tiêu. Khi xóa
-				<span class="font-bold underline">Nút Thắt Đỏ</span> sẽ lập tức gây cho toàn bộ phe địch Sát Thương
-				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[3][UltimateLevel - 1]}</span> Tấn Công của Acheron, mỗi 1 tầng
-				<span class="font-bold underline">Nút Thắt Đỏ</span> bị xóa sẽ tăng thêm Bội Số Sát Thương lần này, tối đa tăng đến
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[4][UltimateLevel - 1]}</span>
-			</p>
-			<p class="text-base">
-				<span class="font-bold underline">Hoàng Tuyền Vượt Kiếp:</span> Gây cho toàn bộ phe địch Sát Thương 
-				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[5][UltimateLevel - 1]}</span> Tấn Công của Acheron và xóa tất cả 
-				<span class="font-bold underline">Nút Thắt Đỏ</span>.
-			</p>
-			<p class="text-base">Trong thời gian Tuyệt Kỹ không thể gắn thêm
-				<span class="font-bold underline">Nút Thắt Đỏ</span> cho kẻ địch.
-			</p>
+  			<p class="text-base">Gây Sát Thương 
+				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định bằng 
+				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span> Tấn Công của Cipher. Sau đó, gây
+				<span class="underline">Sát Thương Chuẩn</span> bằng 
+				<span class="text-yellow-400 font-semibold">25%</span> giá trị ghi nhận hiện tại của Thiên Phú cho 1 kẻ địch chỉ định, 
+				đồng thời gây cho 1 kẻ địch chỉ định và mục tiêu lân cận Sát Thương 
+				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
+				<span class="text-yellow-400 font-semibold">{ultimateAttack[1][UltimateLevel - 1]}</span> Tấn Công của Cipher và 
+				<span class="underline">Sát Thương Chuẩn</span> tổng cộng bằng 
+				<span class="text-yellow-400 font-semibold">75%</span> giá trị ghi nhận hiện tại của Thiên Phú, 
+				<span class="underline">Sát Thương Chuẩn</span> này sẽ chia đều cho tất cả mục tiêu kỹ năng.
 			<div class="flex items-center gap-4 mb-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
@@ -259,27 +237,31 @@
     		class="h-20 w-20 rounded border border-white/10 object-cover"
   			/>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Mưa Lá Đỏ, Vạn Vật Hóa Hư Không</h3>
+  			<h3 class="text-lg font-bold mb-1">Người Dolos Nhiệt Tình Hiếu Khách</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Cường hóa</span>
+ 			    <span class="text-amber-400 italic">Đánh Đơn</span> |
+				<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span> 
+				<span class="text-amber-400 italic">sức bền</span> | 
+				<span class="text-amber-400 italic">Hồi năng lượng</span> 
+				<span style="color: {character.elementColor}">5</span>
   			</p>
-  			<p class="text-base">Khi
-				<span class="font-bold underline">"Mộng Tàn"</span> đạt 
-				<span class="text-yellow-400 font-semibold">9</span> điểm sẽ có thể kích hoạt Tuyệt Kỹ. Trong thời gian Tuyệt Kỹ có thể 
-				<span class="underline">bỏ qua thuộc tính Điểm yếu</span> làm giảm Sức Bền của kẻ địch, đồng thời giảm 
-				<span class="text-yellow-400 font-semibold">{talent[0][TalentLevel - 1]}</span> Kháng Toàn Thuộc Tính của toàn bộ phe địch, duy trì đến khi kết thúc Tuyệt Kỹ.
+  			<p class="text-base">Khi trong trận không có mục tiêu phe địch rơi vào trạng thái "Khách Quen", 
+				Cipher sẽ lập tức khiến kẻ địch có Giới Hạn HP cao nhất hiện tại trong trận trở thành "Khách Quen". 
+				Khi thi triển Chiến Kỹ và Tuyệt Kỹ, sẽ khiến mục tiêu chính trở thành "Khách Quen". 
+				Trạng thái "Khách Quen" chỉ có hiệu lực với mục tiêu được thi triển mới nhất.
  			</p>
-			<p class="text-base">Trong thời gian đơn vị bất kỳ thi triển kỹ năng khiến kẻ địch rơi vào 
-				<span class="underline">Hiệu Ứng Xấu</span>, Acheron sẽ nhận 1 điểm
-				<span class="font-bold underline">Mộng Tàn</span>, đồng thời gắn 1 tầng 
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> lên mục tiêu, nếu khiến nhiều mục tiêu rơi vào
-				<span class="underline">Hiệu ứng xấu</span>, thì sẽ gắn 1 tầng 
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> lên một mục tiêu địch có nhiều
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> nhất. Hiệu ứng này mỗi lần thi triển kỹ năng tối đa kích hoạt 1 lần.
+			<p class="text-base">Sau khi "Khách Quen" bị mục tiêu khác của phe ta tấn công, Cipher sẽ lập tức phát động 
+				<span class="underline">Đòn Đánh Theo Sau</span>lên "Khách Quen", gây Sát Thương 
+				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
+				<span class="text-yellow-400 font-semibold">{talent[0][TalentLevel - 1]}</span>
+				Tấn Công của Cipher. Hiệu ứng này mỗi hiệp tối đa kích hoạt 
+				<span class="text-yellow-400 font-semibold">1</span> lần, 
+				khi bắt đầu hiệp của Cipher sẽ làm mới số lần có thể kích hoạt.
 			</p>
-			<p class="text-base">Khi Acheron có mặt, kẻ địch rời khỏi trận hoặc bị đơn vị bất kỳ tiêu diệt, 
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> đang có sẽ chuyển sang kẻ địch có nhiều
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> nhất.
+			<p class="text-base">Cipher sẽ ghi nhận lại 
+				<span class="text-yellow-400 font-semibold">12%</span> không phải 
+				<span class="underline">Sát Thương Chuẩn</span> mà mục tiêu phe ta gây ra cho "Khách Quen", 
+				không ghi nhận sát thương dư ra, sau khi thi triển Tuyệt Kỹ sẽ xóa giá trị ghi nhận.
 			</p>
 			<div class="flex items-center gap-4 mb-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -297,28 +279,20 @@
     		class="h-20 w-20 rounded border border-white/10 object-cover"
   			/>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Tứ Tướng Đoạn Ngã</h3>
+  			<h3 class="text-lg font-bold mb-1">Chú Mèo Đi Hia</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Phá vỡ</span>
-				<span style="color: {character.elementColor}">60</span>
+ 			    <span class="text-amber-400 italic">Cường Hóa</span>
   			</p>
-  			<p class="text-base">Lập tức tấn công kẻ địch, khi bắt đầu mỗi đợt sẽ nhận 
-				<span class="font-bold underline">Tứ Tướng Đoạn Ngã</span>, gây Sát Thương
-				<span style="color: {character.elementColor}">Lôi</span> cho tất cả kẻ địch bằng 
-				<span class="text-yellow-400 font-semibold">200%</span> Tấn Công của Acheron, đồng thời
-				<span class="underline">bỏ qua thuộc tính Điểm Yếu</span> và làm giảm Sức Bền của toàn phe địch, 
-				khi phá vỡ Điểm Yếu sẽ kích hoạt hiệu ứng Phá Vỡ Điểm Yếu
-				<span style="color: {character.elementColor}">Lôi</span>.
+  			<p class="text-base">Nhận được "Chúc Phúc Của Zagreus", duy trì 
+				<span class="text-yellow-400 font-semibold">15</span> giây, trong thời gian này, Cipher sẽ không bị kẻ địch phát hiện, 
+				tốc độ di chuyển tăng 50%, khi đến gần kẻ địch trong bản đồ lớn/Vũ Trụ Mô Phỏng/Vũ Trụ Sai Phân, 
+				có thể lập tức nhận Vật Tiêu Hao ngẫu nhiên, mỗi ngày thực tế tối đa nhận
+				<span class="text-yellow-400 font-semibold">50</span> lần.
 			</p>
-			<p class="text-base">
-				<span class="font-bold underline">Tứ Tướng Đoạn Ngã:</span> Sau khi thi triển Tuyệt Kỹ, Acheron nhận
-				<span class="text-yellow-400 font semibold">1</span> điểm 
-				<span class="font-bold underline">Mộng Tàn</span> đồng thời gắn
-				<span class="text-yellow-400 font semibold">1</span> tầng
-				<span class="font-bold underline">"Nút Thắt Đỏ"</span> lên 1 kẻ địch ngẫu nhiên.
-			</p>
-			<p class="text-base">Nếu tấn công kẻ địch bình thường sẽ lập tức 
-				<span class="font-bold">tiêu diệt kẻ đó</span>, không vào chiến đấu. Khi chưa đánh trúng địch sẽ không tiêu hao Điểm Bí Kỹ.
+			<p class="text-base">Vào chiến đấu trong thời gian có "Chúc Phúc Của Zagreus" sẽ gây Sát Thương
+				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho toàn bộ kẻ địch bằng
+				<span class="text-yellow-400 font semibold">100%</span> Tấn Công của Cipher, điểm Cipher ghi nhận được từ lần sát thương này tăng 
+				<span class="text-yellow-400 font semibold">200%</span>.
 			</p>
 		</div>
 	</div>
