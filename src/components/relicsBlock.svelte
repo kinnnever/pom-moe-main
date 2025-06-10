@@ -8,6 +8,7 @@
   export let relicAnalysis = '';
   export let planarAnalysis = '';
   export let statDescriptions = ['', '', '', ''];
+  export let priorityStats = '';
   export let endgameStats = '';
 
   let showRelicAnalysis = false;
@@ -103,8 +104,8 @@
     {/if}
   </div>
 
-  <div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10 mt-8">
-    <h2 class="text-lg font-bold text-white text-center mb-4">Chỉ Số Chính</h2>
+  <div class="flex flex-col bg-black/20 p-4 rounded-lg border border-white/10 mt-8">
+    <h2 class="text-lg font-bold text-white text-center mb-3">Chỉ Số Chính</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {#each [
         { icon: 'body.png', label: 'Thân', description: statDescriptions[0] },
@@ -112,7 +113,7 @@
         { icon: 'sphere.png', label: 'Quả Cầu Vị Diện', description: statDescriptions[2] },
         { icon: 'rope.png', label: 'Dây Liên Kết', description: statDescriptions[3] }
       ] as stat}
-        <div class="flex flex-col items-center p-3 bg-white/5 rounded border border-white/10 mb-8">
+        <div class="flex flex-col items-center p-3 bg-white/5 rounded border border-white/10 mb-4">
           <img src={`/images/icons-vestige/${stat.icon}`} alt={stat.label} class="w-10 h-10 mb-2" />
           <span class="text-white text-opacity-60 text-xs font-semibold mb-1">{stat.label}</span>
           <p class="text-sm text-white text-center font-bold leading-snug mt-1">
@@ -121,8 +122,14 @@
         </div>
       {/each}
     </div>
-    <h2 class="text-lg font-bold text-white text-center">Chỉ Số Tốt Nghiệp Hướng Đến</h2>
-    <div class="flex flex-col p-3 bg-white/5 rounded border border-white/10 mb-8">
+    <h2 class="text-lg font-bold text-white text-center mt-8">Ưu Tiên Dòng Phụ</h2>
+    <div class="flex flex-col w-fit mx-auto p-3 bg-white/5 rounded border border-white/10 items-center mt-2 mb-4">
+      <div class="text-base text-white font-bold" transition:slide>
+        {@html priorityStats}
+      </div>
+    </div>
+    <h2 class="text-lg font-bold text-white text-center mt-8">Chỉ Số Tốt Nghiệp Hướng Đến</h2>
+    <div class="flex flex-col p-3 bg-white/5 rounded border border-white/10 mt-2">
       <div class="text-base text-white mt-3" transition:slide>
         {@html endgameStats}
       </div>

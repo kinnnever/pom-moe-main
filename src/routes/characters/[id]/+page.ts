@@ -1,17 +1,11 @@
+// src/routes/characters/[id]/+page.ts
 import { error } from '@sveltejs/kit';
 
-const modules = import.meta.glob('../*.svelte'); // lấy tất cả các file nhân vật
+export const prerender = false;
 
-export const load = async ({ params }) => {
+export function load({ params }) {
 	const id = params.id;
-	const path = `../${id}.svelte`;
 
-	// Nếu không tồn tại file svelte tương ứng, trả về 404
-	if (!(path in modules)) {
-		throw error(404, 'Not found');
-	}
-
+	// Nếu bạn muốn kiểm tra ID tồn tại, có thể dùng list JSON để check ở đây
 	return { id };
-};
-
-export const prerender = false; // nếu bạn đang dùng dynamic import thì nên để false
+}

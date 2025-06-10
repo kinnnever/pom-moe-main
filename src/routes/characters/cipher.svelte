@@ -142,9 +142,9 @@
   		<h3 class="text-lg font-bold mb-1">Ôi Chao, Cá Lọt Lưới</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
-			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span> 
-			<span class="text-amber-400 italic">sức bền </span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span>
+			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span><span class="text-amber-400 italic"> sức bền</span> | 
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span> |
+			<span class="text-amber-400 italic">Hồi điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
 		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
@@ -171,7 +171,8 @@
  		    <span class="text-amber-400 italic">Khuếch Tán </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span>
 			<span class="text-amber-400 italic">sức bền/hit</span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span>
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span> |
+			<span class="text-amber-400 italic">Tiêu hao điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p class="text-base">Có <span class="text-yellow-400 font-semibold">120%</span> 
 			<span class="underline">xác suất cơ bản</span>khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
@@ -251,7 +252,7 @@
 				Trạng thái "Khách Quen" chỉ có hiệu lực với mục tiêu được thi triển mới nhất.
  			</p>
 			<p class="text-base">Sau khi "Khách Quen" bị mục tiêu khác của phe ta tấn công, Cipher sẽ lập tức phát động 
-				<span class="underline">Đòn Đánh Theo Sau</span>lên "Khách Quen", gây Sát Thương 
+				<span class="underline">Đòn Đánh Theo Sau</span> lên "Khách Quen", gây Sát Thương 
 				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
 				<span class="text-yellow-400 font-semibold">{talent[0][TalentLevel - 1]}</span>
 				Tấn Công của Cipher. Hiệu ứng này mỗi hiệp tối đa kích hoạt 
@@ -296,26 +297,25 @@
 			</p>
 		</div>
 	</div>
-
 	
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Tuyệt Kỹ &gt Thiên Phú = Chiến Kỹ &gt Tấn Công Thường</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Thiên Phú &gt Tuyệt Kỹ &gt Chiến Kỹ = Tấn Công Thường</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-   			<p class="font-bold text-white">Tuyệt kỹ</p>
-  			<p class="text-white/80 text-sm">Phần lớn sát thương của Acheron đến từ Tuyệt Kỹ, nên đây là kỹ năng quan trọng nhất cần tối đa hóa.</p>
+   			<p class="font-bold text-white">Thiên Phú</p>
+  			<p class="text-white/80 text-sm">Mặc dù Sát Thương Chuẩn không tăng theo LV nhưng hãy nâng cấp Kỹ Năng này vì đây là nguồn Sát Thương chính của Cipher nếu bạn muốn Cipher hỗ trợ DMG trong đội hình.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-    		<p class="font-bold text-white">Thiên phú</p>
-    		<p class="text-white/80 text-sm">Thiên phú giảm kháng kẻ địch, tăng trực tiếp sát thương đầu ra từ Tuyệt Kỹ của Acheron.</p>
+    		<p class="font-bold text-white">Tuyệt Kỹ</p>
+    		<p class="text-white/80 text-sm">Nâng cho có DMG chứ vẫn phụ thuộc vào Sát Thương Chuẩn từ Thiên Phú.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Chiến kỹ</p>
-    		<p class="text-white/80 text-sm">Nguồn sát thương chính khi Tuyệt Kỹ chưa sẵn sàng, cũng như là giúp Acheron sạc cho Tuyệt Kỹ.</p>
+    		<p class="text-white/80 text-sm">Dùng cho có thêm Sát Thương.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Tấn công thường</p>
-    		<p class="text-white/80 text-sm">Không cần nâng cấp, vì hầu như Acheron sẽ luôn dùng Chiến Kỹ thay vì Tấn Công Thường.</p>
+    		<p class="text-white/80 text-sm">Nâng đi để tạo Điểm Chiến Kỹ cho đồng đội.</p>
   		</div>
 	</div>
 	</section>
@@ -324,35 +324,32 @@
 		<Title>VẾT TÍCH</Title>
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace1.png"
-		title="Quỷ Đỏ"
-		description="Khi bắt đầu chiến đấu sẽ nhận ngay 
-					<span class='text-yellow-400 font-semibold'>5</span> điểm 
-					<span class='font-bold underline'>Mộng Tàn</span> và gắn cho 1 kẻ địch ngẫu nhiên 
-					<span class='text-yellow-400 font-semibold'>5</span> tầng 
-					<span class='font-bold underline'>Nút Thắt Đỏ</span>. Khi 
-					<span class='font-bold underline'>Mộng Tàn</span> đạt giới hạn, cứ mỗi 1 điểm 
-					<span class='font-bold underline'>Mộng Tàn</span> vượt mức sẽ nhận 1 tầng 
-					<span class='font-bold underline'>Tứ Tướng Đoạn Ngã</span>, khiến 
-					<span class='font-bold underline'>Tứ Tướng Đoạn Ngã</span> tối đa có thể cộng dồn đến 3 tầng."
+		title="Giày Quý Thần Tốc"
+		description="Khi tốc độ của Cipher lớn hơn hoặc bằng 
+					<span class='font-semibold'>140</span>/<span class='font-semibold'>170</span>, 
+					Tỷ Lệ Bạo Kích tăng 
+					<span class='text-yellow-400 font-semibold'>25%</span>/<span class='text-yellow-400 font-semibold'>50%</span>,
+					điểm ghi nhận nhận được tăng 
+					<span class='text-yellow-400 font-semibold'>50%</span>/<span class='text-yellow-400 font-semibold'>100%</span>."
 		unlock="A2"
 		
 		nodes={[
 			{
-      		  	icon: "/images/icons-vestige/CD.png",
-      	  	  	value: "+5.3%",
-      		  	label: "Sát Thương Bạo Kích",
+      		  	icon: "/images/icons-vestige/quantum.png",
+      	  	  	value: "+3.2%",
+      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
       		  	unlock: "A2"
     		},
     		{
-    		  	icon: "/images/icons-vestige/ATK.png",
-    		  	value: "+4%",
-    		  	label: "Tấn Công",
+    		  	icon: "/images/icons-vestige/SPD.png",
+    		  	value: "+2",
+    		  	label: "Tốc Độ",
     		  	unlock: "A3"
     		},
     		{
-    		  	icon: "/images/icons-vestige/lightning.png",
-    		  	value: "+3.2%",
-      		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
+    		  	icon: "/images/icons-vestige/EHR.png",
+    		  	value: "+4%",
+      		  	label: "Chính Xác Hiệu Ứng",
       		  	unlock: "A3"
     		}
 		]}
@@ -360,33 +357,30 @@
 
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace2.png"
-		title="Vực Sâu"
-		description='Khi trong đội phe ta có 
-		<span class="font-bold">1</span> hoặc 
-		<span class="font-bold">2</span> nhân vật Vận Mệnh 
-		<span class="font-bold underline">"Hư Vô"</span> ngoại trừ Acheron, sẽ tăng sát thương gây ra bởi 
-		<span class="font-bold">Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ</span> của Acheron bằng 
-		<span class="text-yellow-400 font-semibold">115%</span> hoặc 
-		<span class="text-yellow-400 font-semibold">160%</span> sát thương ban đầu.'
+		title="300 Hiệp Đạo"
+		description='Cipher sẽ ghi nhận 
+		<span class="text-yellow-400 font-semibold">8%</span> không phải 
+		<span class="underline">Sát Thương Chuẩn</span> 
+		mà mục tiêu phe ta gây ra cho mục tiêu phe địch ngoại trừ "Khách Quen", sát thương vượt mức sẽ không ghi nhận.'
 		unlock="A4"
 
 		nodes={[
 			{
-				icon: "/images/icons-vestige/ATK.png",
-      	  	  	value: "+6%",
-      		  	label: "Tấn Công",
+				icon: "/images/icons-vestige/SPD.png",
+      	  	  	value: "+3",
+      		  	label: "Tốc Độ",
       		  	unlock: "A4"
 			},
 			{
-				icon: "/images/icons-vestige/CD.png",
-      	  	  	value: "+8%",
-      		  	label: "Sát Thương Bạo Kích",
+				icon: "/images/icons-vestige/quantum.png",
+      	  	  	value: "+4.8%",
+      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
       		  	unlock: "A5"
 			},
 			{
-				icon: "/images/icons-vestige/ATK.png",
-      	  	  	value: "+6%",
-      		  	label: "Tấn Công",
+				icon: "/images/icons-vestige/SPD.png",
+      	  	  	value: "+3",
+      		  	label: "Tốc Độ",
       		  	unlock: "A5"
 			}
 		]}
@@ -394,29 +388,24 @@
 
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace3.png"
-		title="Trái Tim Sấm"
-		description='Khi 
-		<span class="font-bold underline">"Lưỡi Chém Mưa"</span> của Tuyệt Kỹ đánh trúng mục tiêu phe địch có 
-		<span class="font-bold underline">"Nút Thắt Đỏ"</span>, sẽ khiến sát thương Acheron gây ra tăng 
-		<span class="text-yellow-400 font-semibold">30%</span>, hiệu ứng này tối đa cộng dồn 
-		<span class="text-yellow-400 font-semibold">3</span> tầng, duy trì 
-		<span class="text-yellow-400 font-semibold">3</span> hiệp, đồng thời khi phát động 
-		<span class="font-bold underline">Hoàng Tuyền Vượt Kiếp</span> sẽ gây thêm 
-		<span class="text-yellow-400 font-semibold">6</span> lần sát thương, mỗi lần sát thương gây cho kẻ địch ngẫu nhiên 
-		Sát Thương <span style="color: {character.elementColor}">Lôi</span> bằng 
-		<span class="text-yellow-400 font-semibold">25%</span> Tấn Công của Acheron, sát thương này được xem là Sát Thương Tuyệt Kỹ.'
+		title="Đổi Trắng Thay Đen"
+		description='Sát Thương Bạo Kích do 
+		<span class="underline">Đòn Đánh Theo Sau</span> của Thiên Phú gây ra tăng 
+		<span class="text-yellow-400 font-semibold">100%</span>.
+		Khi Cipher trong trận, sát thương toàn bộ mục tiêu phe địch phải chịu sẽ tăng 
+		<span class="text-yellow-400 font-semibold">40%</span>.'
 		unlock="A6"
 		nodes={[
 			{
-				icon: "/images/icons-vestige/lightning.png",
-      	  	  	value: "+4.8%",
-      		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
+				icon: "/images/icons-vestige/EHR.png",
+      	  	  	value: "+6%",
+      		  	label: "Chính Xác Hiệu Ứng",
       		  	unlock: "A6"
 			},
 			{
-				icon: "/images/icons-vestige/CD.png",
-      	  	  	value: "+10.7%",
-      		  	label: "Sát Thương Bạo Kích",
+				icon: "/images/icons-vestige/quantum.png",
+      	  	  	value: "+6.4%",
+      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
       		  	unlock: "LV75"
 			}
 		]}
@@ -425,15 +414,15 @@
 	<TraceBlock
 		nodes={[
 			{
-				icon: "/images/icons-vestige/ATK.png",
-      	  	  	value: "+4%",
-      		  	label: "Tấn Công",
+				icon: "/images/icons-vestige/SPD.png",
+      	  	  	value: "+2",
+      		  	label: "Tốc Độ",
       		  	unlock: "LV1"
 			},
 			{
-				icon: "/images/icons-vestige/ATK.png",
-      	  	  	value: "+8%",
-      		  	label: "Tấn Công",
+				icon: "/images/icons-vestige/SPD.png",
+      	  	  	value: "+4",
+      		  	label: "Tốc Độ",
       		  	unlock: "LV80"
 			}
 		]}
@@ -447,30 +436,29 @@
 			<EidolonBlock
   				icon="/images/eidolons/{character.id}/e1.png"
   				number={1}
-  				name="Khởi Đầu Chân Ngôn Cõi Trời Thưa Thớt"
+  				name="Dòm Ngó Kỹ, Bắt Cơ May"
   				elementColor={character.elementColor}
-  				description='Khi gây sát thương cho mục tiêu phe địch có 
-				<span class="underline">Hiệu Ứng Xấu</span>, 
-				<span class="font-bold">Tỷ Lệ Bạo Kích</span> tăng 
-				<span class="text-yellow-400 font-semibold">18%</span>.'
+  				description='Điểm sát thương được ghi nhận của Cipher là 
+				<span class="text-yellow-400 font-semibold">150%</span> điểm ghi nhận ban đầu. Khi thi triển
+				<span class="underline">Đòn Đánh Theo Sau</span>, của Thiên Phú, Tấn Công của Cipher tăng
+				<span class="text-yellow-400 font-semibold">80%</span>, duy trì
+				<span class="text-yellow-400 font-semibold">2</span> hiệp.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e2.png"
   				number={2}
-  				name="Sấm Thinh Lặng, Giông Tố Dừng"
+  				name="Vụng Về Ra Tay, Lấm Lem Ngay"
   				elementColor={character.elementColor}
-  				description='Giảm 1 nhân vật Vận Mệnh 
-				<span class="font-semibold">"Hư Vô"</span> cần thiết để 
-				<span class="font-semibold">Vết Tích <span class="underline"> "Vực Sâu"</span></span> 
-				đạt được hiệu quả cao nhất. Khi hiệp của bản thân bắt đầu sẽ nhận 1 điểm 
-				<span class="font-semibold underline">Mộng Tàn</span>, đồng thời kèm theo 1 tầng 
-				<span class="font-semibold underline">"Nút Thắt Đỏ"</span> cho kẻ địch có nhiều 
-				<span class="font-semibold underline">"Nút Thắt Đỏ"</span> nhất.'
+  				description='Khi Cipher đánh trúng mục tiêu phe địch, có
+				<span class="text-yellow-400 font-semibold">120%</span>
+				<span class="underline">xác suất cơ bản</span> khiến sát thương kẻ địch phải chịu tăng 
+				<span class="text-yellow-400 font-semibold">30%</span>, duy trì
+				<span class="text-yellow-400 font-semibold">2</span> hiệp.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e3.png"
   				number={3}
-  				name="Lạnh Giá Vĩnh Hằng"
+  				name="Gian Ngôn Tráo Thật Giả Bày"
   				elementColor={character.elementColor}
   				description='Cấp 
 				<span class="font-semibold">Tuyệt Kỹ</span> 
@@ -481,17 +469,16 @@
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e4.png"
   				number={4}
-  				name="Hồn Gương Rực Lửa"
+  				name="Lòi Đuôi Vội Vụt Chân Bay"
   				elementColor={character.elementColor}
-  				description='Khi kẻ địch vào chiến đấu, sẽ khiến kẻ đó rơi vào trạng thái 
-				<span class="font-semibold underline">Trọng Thương Tuyệt Kỹ</span>, Sát Thương 
-				<span class="font-semibold">Tuyệt Kỹ</span> phải chịu tăng 
-				<span class="text-yellow-400 font-semibold">8%</span>.'
+  				description='Sau khi "Khách Quen" bị mục tiêu phe ta tấn công, Cipher sẽ gây
+				<span class="underline">Sát Thương Kèm Theo</span> thuộc tính Lượng Tử bằng
+				<span class="text-yellow-400 font-semibold">50%</span> Tấn Công của Cipher cho kẻ đó.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e5.png"
   				number={5}
-  				name="Núi Đá Phân Ly, Thiên Hồn Tiêu Tán"
+  				name="Trốn Thoát Tinh Vi, Giăng Kế Dày"
   				elementColor={character.elementColor}
   				description='Cấp 
 				<span class="font-semibold">Chiến Kỹ</span> 
@@ -502,61 +489,40 @@
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e6.png"
   				number={6}
-  				name="Ngày Tận Thế, Người Giải Phóng"
+  				name="Lừa Cả Thế Giới Chẳng Ai Hay"
   				elementColor={character.elementColor}
   				description='Tăng 
-				<span class="text-yellow-400 font-semibold">20%</span> 
-				<span class="underline">Xuyên Kháng</span> 
-				<span class="font-semibold">Toàn Thuộc Tính</span> mà sát thương 
-				<span class="font-semibold">Tuyệt Kỹ</span> của Acheron gây ra, sát thương của 
-				<span class="font-semibold">Tấn Công Thường</span> và 
-				<span class="font-semibold">Chiến Kỹ</span> gây ra cũng được xem là 
-				<span class="font-semibold">Sát Thương Tuyệt Kỹ</span>, đồng thời bỏ qua thuộc tính 
-				<span class="underline">Điểm Yếu</span> và làm giảm Sức Bền của địch. 
-				Khi phá vỡ Điểm Yếu sẽ kích hoạt hiệu ứng 
-				<span class="font-semibold">Phá Vỡ Điểm Yếu 
-				<span style="color: {character.elementColor}">Lôi</span></span>.'
+				<span class="text-yellow-400 font-semibold">350%</span> sát thương gây ra bởi
+				<span class="underline">Đòn Đánh Theo Sau</span> của Thiên Phú Cipher, khi ghi nhận, sẽ ghi thêm 
+				<span class="text-yellow-400 font-semibold">16%</span>
+				của sát thương gây ra không thuộc phạm trù vượt mức của đòn tấn công này. 
+				Sau khi thi triển Tuyệt Kỹ sẽ xóa điểm ghi nhận, hoàn trả
+				<span class="text-yellow-400 font-semibold">20%</span> điểm ghi nhận bị xóa của lần này.'
 			/>
 			</div>
 
 			<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên đầu tư Tinh Hồn</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">E2 = E6 &gt E1 &gt E4</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Bạn thật sự định đầu tư Tinh Hồn cho con này à? Thôi bỏ đi trước khi bị bác sĩ mắng..</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white"><span style="color: {character.elementColor}">E1</span> 
-			- Khởi Đầu Chân Ngôn Cõi Trời Thưa Thớt</p>
-  			<p class="text-white/80 text-sm">Tăng một lượng khá <span class="underline">Tỉ Lệ Bạo Kích</span>
-				 khi tấn công kẻ địch đang có <span class="font-semibold">Debuff</span> giúp giảm bớt gánh nặng lên Di Vật.</p>
+			- Dòm Ngó Kỹ, Bắt Cơ May</p>
+  			<p class="text-white/80 text-sm">Tăng một lượng khá Tấn Công cho Cipher, nhưng không đáng.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E2</span> 
-			- Sấm Thinh Lặng, Giông Tố Dừng</p>
-    		<p class="text-white/80 text-sm">Điểm dừng tốt nhất cho những bạn muốn đầu tư. 
-				Khi này thay vì phải đi cùng <span class="text-yellow-400 font-bold">2</span> đồng đội
-				<span class="font-semibold">Hư Vô</span> khác, thì giờ Acheron có thể chỉ cần đi cùng 
-				<span class="text-yellow-400 font-bold">1</span> đồng đội
-				<span class="font-semibold">Hư Vô</span> và kèm theo một nhân vật <span class="font-semibold">Hòa Hợp</span>
-				để tối đa hóa Sát Thương.</p>
-				<p class="text-white/80 text-sm">Chưa kể mỗi khi 
-				<span class="underline">đến lượt</span> của Acheron thì sẽ tự động thêm 
-				<span class="text-yellow-400 font-bold">1</span> Stack cho 
-				<span class="font-semibold">Tuyệt Kỹ</span>, giúp Acheron sạc Tuyệt Kỹ nhanh hơn, đặc biệt là khi chơi cùng Hòa Hợp có thể 
-				<span class="font-semibold">Speed Turning</span>.</p>
+			- Vụng Về Ra Tay, Lấm Lem Ngay</p>
+    		<p class="text-white/80 text-sm">+1 Debuff hiếm nhưng không đủ nhiều để đáng đầu tư.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E4</span> 
-			- Hồn Gương Rực Lửa</p>
-    		<p class="text-white/80 text-sm">Kẻ địch sẽ nhận thêm DMG từ Tuyệt Kỹ sau khi vào trận. 
-				Điều này làm cho Acheron trở thành một đơn vị hỗ trợ bán chính thức.</p>
+			- Lòi Đuôi Vội Vụt Chân Bay</p>
+    		<p class="text-white/80 text-sm">Hỗ trợ bồi thêm DMG giống Robin, nhưng tốn tận E4 để bằng Robin?</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E6</span> 
-			- Ngày Tận Thế, Người Giải Phóng</p>
-    		<p class="text-white/80 text-sm">
-				<span class="font-semibold">Tấn Công Thường</span> và 
-				<span class="font-semibold">Chiến Kỹ</span> của Acheron hiện có thể được coi là 
-				<span class="font-semibold">Sát Thương Tuyệt Kỹ</span> 
-				và có thể giảm Sức Bền của kẻ địch bất kể loại yếu điểm của kẻ địch.</p>
+			- Lừa Cả Thế Giới Chẳng Ai Hay</p>
+    		<p class="text-white/80 text-sm">Bạn là Simp Chúa à?</p>
   		</div>
 	</div>
 
@@ -565,7 +531,7 @@
 	<section>
 		<Title>NÓN ÁNH SÁNG</Title>
 		<LightconesBlock
-  			ids={['along-the-passing-shore', 'incessant-rain','good-night-and-sleep-well','boundless-choreo','in-the-name-of-the-world']}
+  			ids={['lies-dance-on-the-breeze', 'resolution-shines-as-pearls-of-sweat','before-the-tutorial-mission-starts','eyes-of-the-prey']}
   			characterName={character.name}
   			exposeNames={(names) => {lightconeNames = names}}
 		/>
@@ -574,24 +540,19 @@
     	  <ol class="list-decimal list-inside space-y-2 text-white/80 text-sm leading-relaxed">
   			<li>
     		<strong class="text-amber-300">{lightconeNames[0]}</strong>: <span class="font-bold">Trấn</span> -
-			Tốt nhất thời điểm hiện tại, ảnh hưởng tới khả năng vận hành.
+			Có thì dùng, không thì các Nón dưới.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[1]}</strong>: 
-			Nón 5 Sao cho <span class="font-bold">Crit Rate</span> tốt.
+			Tích Tầng <span class="text-yellow-400 font-bold">5</span> có tác dụng gần bằng Trấn.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
-			Nón tốt nhất trong trường hợp không có <span class="font-bold">Trấn</span>, 
-			lưu ý nhớ sử dụng cầu <span class="font-bold">ATK</span>.
+			Lấy Chính Xác Hiệu Ứng là chính, Hồi Năng Lượng là mười.
   			</li>
 			<li>
 			<strong class="text-amber-300">{lightconeNames[3]}</strong>:
-			Thay thế nếu không có <span class="font-bold">Chúc Ngủ Ngon</span>.
-			</li>
-			<li>
-			<strong class="text-amber-300">{lightconeNames[4]}</strong>: 
-			"Chắc bạn phải tuyệt vọng lắm mới tìm đến Nón này."
+			Lấy Chính Xác Hiệu Ứng. Hết.
 			</li>
 		  </ol>
   		</div>
@@ -602,44 +563,43 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-  			relicIds={['Pioneer_Diver_of_Dead_Waters', 'Scholar_Lost_in_Erudition', 'Genius_of_Brilliant_Stars']}
-			mixSets={[[],[]]}
-  			planarIds={['Item_Izumo_Gensei_and_Takama_Divine_Realm', 'Item_Inert_Salsotto']}
+			relicIds={['Genius_of_Brilliant_Stars','Pioneer_Diver_of_Dead_Waters']}
+			mixSets={[['Messenger_Traversing_Hackerspace','Sacerdos_Relived_Ordeal'],['Messenger_Traversing_Hackerspace','Genius_of_Brilliant_Stars'],['Musketeer_of_Wild_Wheat','Scholar_Lost_in_Erudition']]}
+  			planarIds={['Item_Firmament_Frontline_Glamoth','Item_Duran_Dynasty_of_Running_Wolves','Item_Inert_Salsotto','Item_Rutilant_Arena','Item_Sprightly_Vonwacq','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Broken_Keel']}
 			relicAnalysis={`
-			<p><span class="text-amber-300 font-semibold">Tiên Phong Trong Nước Chết</span>: 
-			Cung cấp rất nhiều CV cho Acheron khi kích đủ hiệu ứng xấu - một điều mà Team Acheron luôn thừa.</p>
-			<p><span class="text-amber-300 font-semibold">Học Giả Lạc Lối Trong Biển Tri Thức</span>: 
-			Cho một chút CV, một chút STNT, thua <span class="font-semibold">Tiên Phong Trong Nước Chết</span> 
-			khoảng <span class="text-yellow-400 font-semibold">5-7%</span>, nhưng mọi DPS đều có thể dùng set này.</p>
 			<p><span class="text-amber-300 font-semibold">Thiên Tài Xuất Chúng</span>: 
-			Giảm Phòng Thủ là chỉ số duy nhất mà càng nhiều thì hiệu quả từng 
-			<span class="text-yellow-400 font-semibold">%</span> càng cao, 
-			đặc biệt là Acheron phải đi cùng với <span class="font-bold">Hư Vô</span> - 
-			thường có Giảm Thủ để cộng hưởng.</p>
+			Nếu bạn muốn build Cipher thuần DPS thì có thể cân nhắc, nhưng phải đủ 170 tốc.</p>
+			<p><span class="text-amber-300 font-semibold">Tiên Phong Trong Nước Chết</span>: 
+			Cung cấp rất nhiều CV nếu muốn build DPS, nhưng vẫn phải đủ 170 tốc.</p>
+			<p><span class="text-amber-300 font-semibold">MIX 2-2</span>: 
+			Khuyến nghị các bạn nên Mix 2 đồ Tốc để dễ build đủ 170 tốc. 
+			Hoặc Mix Tốc với Sát Thương để hỗ trợ thêm DMG cho DPS.
+			Không khuyến nghị Mix 2 bộ DMG lắm nhưng cứ để vào cho có 🐧.</p>
 			`}
 			planarAnalysis={`
-			<p><span class="text-amber-300 font-semibold">Izumo Hiện Thế Và Thần Quốc Cõi Trời</span>: 
-			Tương tự bộ <span class="font-semibold">Tiên Phong Trong Nước Chết</span>,
-			thiếu CV lẫn ATK thì cái này bù hết, lại còn luôn kích hoạt vì Acheron luôn đi cùng 1 
-			<span class="font-semibold">Hư Vô</span> khác.</p>
-			<p><span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>: 
-			Dùng cũng được nếu có sẵn bộ chỉ số tốt.</p>
+			<p>Cả 3 bộ <span class="text-amber-300 font-semibold">Glamoth, Chiến Tuyến Không Trung</span>, 
+			<span class="text-amber-300 font-semibold">Duran - Vương Triều Sói Hoang</span>,
+			<span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>
+			đều rất hợp với bộ kỹ năng của Cipher nếu bạn có thể build đủ 170 tốc, và tùy bộ nào bạn có đẹp thì mặc.</p>
+			<p>Những bộ còn lại dùng cho Cipher build slave.</p>
 			`}
 			statDescriptions={[
-    		'[CR]Crit Rate &nbsp;&nbsp;>= &nbsp;[CD]Crit Dmg',
-    		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[SPD]Tốc Độ',
-    		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[lightning]Tăng ST Lôi',
+    		'[CD]Crit Dmg &nbsp;&nbsp;&ge; &nbsp;[CR]Crit Rate',
+    		'[SPD]Tốc Độ',
+    		'[quantum]Tăng ST Lượng Tử',
     		'[ATK]Tấn Công'
   			]}
+			priorityStats={
+			'Tốc Độ &gt; Sát Thương Bạo &ge; Tỉ Lệ Bạo &gt; Tấn Công'
+			}
 			endgameStats={`
 			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
-			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">4000+</span> &nbsp;<span class="text-white/70">(Nên dùng Cầu <span class="text-yellow-400">ATK</span> cho đa số trường hợp)</span></p>
-			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">80%+</span> &nbsp;<span class="text-white/70">(Nếu có <span class="text-yellow-400">E1</span> hãy hướng đến: 
-			   <span class="font-bold text-yellow-400">60%</span>)</span></p>
-			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">200%+</span> &nbsp;<span class="text-white/70">(Nếu có <span class="text-yellow-400">E1</span> hãy hướng đến: 
-			   <span class="font-bold text-yellow-400">260%+</span>)</span></p>
-			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">BASE</span> &nbsp;<span class="text-white/70">(Hoặc build Giày SPEED nếu có E2 và combo cùng các nhân vật đẩy lượt (Bronya, Sunday, Robin))</span></p>
+			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">BASE</span> &nbsp;<span class="text-white/70">(Phần lớn Sát Thương của Cipher là <span class="underline">Sát Thương Chuẩn</span> "bú" từ đồng minh)</span></p>
+			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">50%</span> &nbsp;<span class="text-white/70">(Hãy build đủ 170+ tốc để lấy được <span class="text-yellow-400">50%</span> Tỉ Lệ Bạo còn lại)</p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">150%+</span> &nbsp;<span class="text-white/70">(Thực ra thì cũng hơi khó build Sát Thương Bạo cao, nhưng cứ cố đi, không tới được thì thôi)</span></p>
+			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">170+</span></p>
+			<p><span class="text-white/70">Chính Xác Hiệu Ứng:</span>&nbsp; <span class="font-bold">39%</span> &nbsp;<span class="text-white/70">(<span class="text-yellow-400">10%</span> Vết Tích cho sẵn rồi, build <span class="text-yellow-400">29%</span> thôi. Bác Sĩ trong Bệnh viện Lê Bách bảo vậy chứ tôi cũng không biết :v)</span></p>
 			`}
 		/>
 	</section>
@@ -648,30 +608,25 @@
 		<Title>ĐỘI HÌNH</Title>
 		<TeamBlock
 			team={{
-    			dps: ['acheron'],
-    			supportDps: ['cipher','tribbie','black-swan'],
-    			amplifier: ['jiaoqiu','silver-wolf','pela','sunday','bronya','guinaifen'],
-    			sustain: ['aventurine','gallagher','female-preservation','welt']
+    			dps: ['acheron','feixiao','aglaea'],
+    			supportDps: ['cipher','tribbie'],
+    			amplifier: ['robin','ruan-mei'],
+    			sustain: ['aventurine']
   			}}
   			tooltips={{
-				acheron: 'DPS chủ lực, cần đi cùng đồng đội có khả năng gắn <span class="font-semibold">Debuff</span> để sạc Stack cho Tuyệt Kỹ. Hoặc đi cùng nhân vật đẩy lượt để Acheron có Stack Tuyệt Kỹ.',
-				jiaoqiu: 'Gắn <span class="font-semibold">Debuff </span><span class="underline">Trọng Thương</span>, uptime gần 100%. Ngoài ra còn có thể tích stack cho Acheron ngoài lượt hành động.',
-				'silver-wolf': '<p><span class="font-semibold text-yellow-300">Trước khi Buff: </span>Debuff đơn mục tiêu, tần suất gắn thấp.</p><p><span class="font-semibold text-yellow-300">Sau khi Buff: </span>Debuff đa mục tiêu, nạp nhanh không lo năng lượng. Có thêm E2 như vua mặc long bào, Đi ra đường ch.ó nhìn sợ không dám s.ủa. Trưa đua vài lệnh chiều xanh tím. Tối ra phố đi bộ các em gái thì tranh nhau xin chụp hình chung. Hội nyc thì đồng loạt đòi nối lại tình xưa. Bạn bè thì nhìn tôi cũng phải cúi đầu nể 10 phần. Về nhà thì gia đình tự hào, hàng xóm thì ganh tỵ vì biết tôi có Sói Đần E2 🐧</p>',
-				cipher: 'Mặc dù không phải gắn Debuff gì ghê gớm nhưng Cipher có thể <span class="underline">Tích Lũy Sát Thương</span> mà Acheron gây ra và từ đó Cipher có thể hỗ trợ gây thêm Sát Thương cho đội hình.',
-    			tribbie: '<span class="font-semibold">"Giản Dị Lãnh Địa"</span> Debuff <span class="underline">Tăng Sát Thương Phải Nhận</span> uptime gần 100%. Chưa kể còn Buff Xuyên Kháng cho phe ta và hỗ trợ Sát Thương từ Thiên Phú.',
-				pela: '<span class="underline">Giảm Phòng Thủ</span> diện rộng, không uptime 100%, yêu cầu Nón <span class="font-semibold">Sự Quyết Tâm Như Giọt Mồ Hôi Lấp Lánh S4+</span>.',
-    			sunday: 'Yêu cầu Acheron phải có <span class="text-red-600">E2</span> và build 135 tốc, Sunday nên build bằng tốc Acheron -1 để Speed Turning.',
-				bronya: 'Yêu cầu Bronya <span class="text-red-600">E2+</span>, còn lại giống Sunday',
-				guinaifen: 'Giống Jiaoqiu nhưng yếu hơn, không gắn ngoài lượt được.',
-				'black-swan': 'Nếu có <span class="text-red-600">E1</span> thì dùng, còn lại thì không nên.',
-				gallagher: 'Apply Debuff khá nhiều, bảo kê ổn, bào sức bền tốt. Nên có E2+ để chơi ổn định.',
-				welt: 'Yêu cầu bắt buộc phải có <span class="text-red-600">E2</span> Welt và chỉ hữu dụng khi bạn biết mình đang làm gì (team 3 nô). Newbie không nên làm theo.',
-				'female-preservation': 'Có Khiêu Khích là một điểm cộng khi dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Còn nếu đi cùng Jiaoqiu thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
-				aventurine: 'Ưu tiên dùng Trấn <span class="font-semibold">Vận Mệnh Chưa Từng Cân Bằng</span>. Nếu không có thì dùng <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>, nếu có Jiaoqiu trong đội thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
-  			}}
+				acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương.',
+				feixiao: 'Feixiao cần đồng đội hành động gây Sát Thương nhiều và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được cả 2 yêu cầu đó.',
+				aglaea: '',
+				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
+    			tribbie: 'Tương tự Robin nhưng tốt hơn vì có <span class="underline">Đòn Đánh Theo Sau</span>.',
+				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
+				'ruan-mei': 'Giống Robin 🐧.',
+				aventurine: 'Cứ có Sát Thương là được.',
+    			}}
 			notes={{
-				amplifier: 'Các hư vô còn lại: <span class="font-semibold">thật luôn hả?</span>',
-				sustain: 'Tất cả các bảo hộ còn lại nếu dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Nhưng nếu có Jiaoqiu trong đội hình thì thôi, bỏ đi mà làm người.'
+				dps: 'Cứ cho đi cùng nhân vật nào gây ra nhiều Sát Thương là được vì Cipher có tác dụng tương tự Robin/Ruan Mei/Tribbie, \nBuff/Debuff cả team trong thời gian dài.',
+				amplifier: 'Hòa Hợp Buff toàn phe đồng minh là cho đi cùng được.',
+				sustain: 'Nhân vật nào chả được, miễn là có hỗ trợ Sát Thương như Aventurine.'
 			}}
 		/>
 	</section>
@@ -680,50 +635,41 @@
 		<Title>TIPS & TRICKS</Title> 
 		<ProsConsBlock 
 			pros=" 
-				Gây toàn bộ Sát thương lên cả đơn mục tiêu và cả diện rộng, sự kết hợp hoàn hảo giữa Săn Bắn và Tri Thức.
-				Tự cung cấp Buff cho bản thân khi trên sân có 2 đồng minh vận mệnh Hư Vô, và 90% Sát Thương trong Tuyệt Kỹ.
-				Bỏ qua Điểm Yếu và 20% Kháng trong Tuyệt Kỹ.
-				Dọn quái nhỏ ngoài map cực nhanh mà không cần vào trận chiến.
+				Tốc cao tạo điểm chiến kỹ cho team, siêu dương điểm chiến kỹ.
+				Debuff siêu hiếm, không cần tái gắn Debuff.
+				Có thể thay thế SP Hòa Hợp trong một vài đội hình.
 			"
 			cons="
-				Yêu cầu bắt buộc phải có 2 đồng đội Hư Vô để tối đa sức mạnh, rất khó để có thể đi cùng Hòa Hợp khi slot cuối phải là nhân vật Bảo Hộ hoặc Trù Phú (trừ khi bạn có E2 Acheron hoặc muốn chơi 3 nô).
-				Tùy chọn Nón Ánh Sáng miễn phí rất hạn chế, và Trấn cách biệt sức mạnh quá lớn.
-				Nếu không có Jiaoqiu, Acheron cảm thấy hơi yếu trong thời điểm hiện tại vì Jiaoqiu hoàn toàn đáp ứng được mọi nhu cầu của Acheron và đưa Acheron trở lại Meta.
+				Quá phụ thuộc vào Sát Thương mà DPS và đồng đội gây ra.
+				Không thể thay thế DPS truyền thống nhưng cũng không thể thay thế SP hoàn toàn được.
+				Ra mắt ngay trước Banner Aeon Animation 🐧.
 			"
 		/>
 
 
 		<div class="text-xl font-bold mt-4 mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
 			<span class="text-3xl font-bold mb-1 mt-3 pl-2">
-				<span style="color: {character.elementColor}">S1</span> &nbsp &gt &nbsp
-				<span style="color: #DA472D">Jiaoqiu</span> &nbsp &gt &nbsp
-				<span style="color: {character.elementColor}">E2</span> &nbsp &gt &nbsp 
+				<span style="color: {character.elementColor}">S1</span> &nbsp &gt &nbsp 
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid bg-black/20 border border-white/50 rounded-lg mt-3">
-			<p class="text-lg mt-2 ">
-				<span class="font-bold text-amber-400 pl-4">S1: </span>Cải thiện vận hành.
+		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
+			<p class="text-lg mt-2">Yep, bạn chỉ cần mỗi cái <span class="font-semibold text-amber-400">S1</span> là quá đủ rồi.
 			</p>
-			<p class="text-lg mt-2 ">
-				<span class="font-bold text-amber-400 pl-4">Jiaoqiu: </span>Nhân vật hỗ trợ tốt nhất cho Acheron ở thời điểm hiện tại.
-			</p>
-			<p class="text-lg mt-2 mb-1">
-				<span class="font-bold text-amber-400 pl-4">E2: </span>Điểm dừng tốt, tiền đâu mà đầu tư lắm. 
-			</p>
+			<p class="text-lg mt-2 ">Mà thực ra bạn chỉ cần roll mỗi xác thôi là đủ rồi.</p>
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">
-  <iframe
+  <!-- <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/qOXC1cVV8AM"
+    src="https://www.youtube.com/embed/"
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
     class="rounded-lg shadow-lg"
-  ></iframe>
+  ></iframe> -->
 </div>
 
 	</section>

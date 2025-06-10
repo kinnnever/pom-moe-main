@@ -1,24 +1,38 @@
 <script lang="ts">
-  export let data;
-  const { id } = data;
+  import { page } from '$app/stores';
+  import { onDestroy } from 'svelte';
+  import { writable } from 'svelte/store';
 
-  let Component = null;
-  let error = '';
+  const component = writable(null);
+  const error = writable('');
+  const loading = writable(true);
 
-  // Tự động import file theo id
-  import(`../${id}.svelte`)
-    .then((module) => {
-      Component = module.default;
-    })
-    .catch(() => {
-      error = 'Không tìm thấy nhân vật';
-    });
+  // SvelteKit sẽ reactive với page.params.id
+  $: id = $page.params.id;
+
+  $: if (id) {
+    component.set(null);
+    error.set('');
+    loading.set(true);
+
+    import(`../${id}.svelte`)
+      .then((mod) => {
+        component.set(mod.default);
+        loading.set(false);
+      })
+      .catch(() => {
+        error.set('Không tìm thấy nhân vật');
+        loading.set(false);
+      });
+  }
 </script>
 
-{#if Component}
-  <svelte:component this={Component} />
-{:else if error}
-  <h1 class="text-white text-center mt-10">{error}</h1>
+{#if $loading}
+  <img src={`/images/pommoe0.png`} alt="" class="h-40 w-40 object-contain mx-auto"/>
+  <p class="text-white text-center mt-10">Chờ xíu, Pom đang tìm cho bạn...</p>
+{:else if $component}
+  <svelte:component this={$component} />
 {:else}
-  <p class="text-white text-center mt-10">Đợi xíu, Pom đang tìm...</p>
+  <img src={`/images/pommoe1.png`} alt="" class="h-40 w-40 object-contain mx-auto"/>
+  <h1 class="text-white text-center mt-10">{$error}</h1>
 {/if}

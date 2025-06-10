@@ -146,9 +146,9 @@
   		<h3 class="text-lg font-bold mb-1">Ba Đường Thăng Trầm</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
-			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span> 
-			<span class="text-amber-400 italic">sức bền </span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span>
+			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span><span class="text-amber-400 italic"> sức bền </span> | 
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span> |
+			<span class="text-amber-400 italic">Hồi điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
 		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
@@ -177,7 +177,8 @@
 			<span class="text-amber-400 italic">sức bền mục tiêu chính,</span> 
 			<span style="color: {character.elementColor}">30</span> 
 			<span class="text-amber-400 italic">sức bền mục tiêu lân cận</span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span>
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span> |
+			<span class="text-amber-400 italic">Tiêu hao điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p class="text-base">Nhận <span class="text-yellow-400 font-semibold">1</span> điểm 
 			<span class="font-bold underline">Mộng tàn</span>. Gắn
@@ -657,6 +658,9 @@
     		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[lightning]Tăng ST Lôi',
     		'[ATK]Tấn Công'
   			]}
+			priorityStats={
+			'Tỉ Lệ Bạo &ge; Sát Thương Bạo &gt; Tấn Công &gt; Tốc Độ'
+			}
 			endgameStats={`
 			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
@@ -727,15 +731,15 @@
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p class="text-lg mt-2 ">
-				<span class="font-bold text-amber-400 pl-4">S1: </span>Cải thiện vận hành.
+				<span class="font-bold text-amber-400">S1: </span>Cải thiện vận hành.
 			</p>
 			<p class="text-lg mt-2 ">
-				<span class="font-bold text-amber-400 pl-4">Jiaoqiu: </span>Nhân vật hỗ trợ tốt nhất cho Acheron ở thời điểm hiện tại.
+				<span class="font-bold text-amber-400">Jiaoqiu: </span>Nhân vật hỗ trợ tốt nhất cho Acheron ở thời điểm hiện tại.
 			</p>
 			<p class="text-lg mt-2 mb-1">
-				<span class="font-bold text-amber-400 pl-4">E2: </span>Điểm dừng tốt, tiền đâu mà đầu tư lắm. 
+				<span class="font-bold text-amber-400">E2: </span>Điểm dừng tốt, tiền đâu mà đầu tư lắm. 
 			</p>
 		</div>
 
