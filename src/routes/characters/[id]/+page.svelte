@@ -1,35 +1,22 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { onDestroy } from 'svelte';
-  import { tick } from 'svelte';
-  import { derived } from 'svelte/store';
+  export let data;
+  export let id = data.id;
 
-  let Component = null;
+  let Component;
   let error = '';
-  let unsubscribe: () => void;
 
-  const idStore = derived(page, ($page) => $page.params.id);
-
-  // Mỗi khi id thay đổi → load lại component
-  unsubscribe = idStore.subscribe(async (id) => {
+  $: {
     Component = null;
     error = '';
-
-    try {
-      // wait next tick để đảm bảo update đúng
-      await tick();
-      const module = await import(`../${id}.svelte`);
-      Component = module.default;
-    } catch (e) {
-      error = 'Không tìm thấy nhân vật';
-    }
-  });
-
-  onDestroy(() => {
-    unsubscribe?.();
-  });
+    import(`../${id}.svelte`)
+      .then((mod) => {
+        Component = mod.default;
+      })
+      .catch(() => {
+        error = 'Không tìm thấy nhân vật';
+      });
+  }
 </script>
-
 {#if Component}
   <svelte:component this={Component} />
 {:else if error}
