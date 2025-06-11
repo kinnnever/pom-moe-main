@@ -42,9 +42,7 @@
             <div class="relative group">
               <CharacterCard character={getCharacter(id)} class="scale-[0.6]" />
               {#if tooltips[id]}
-                <div
-                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-none text-center"
-                >
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-none text-center">
                   {@html tooltips[id]}
                 </div>
               {/if}

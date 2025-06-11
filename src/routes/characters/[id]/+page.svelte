@@ -1,38 +1,40 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { onDestroy } from 'svelte';
-  import { writable } from 'svelte/store';
+  import { tick } from 'svelte';
+  import { derived } from 'svelte/store';
 
-  const component = writable(null);
-  const error = writable('');
-  const loading = writable(true);
+  let Component = null;
+  let error = '';
+  let unsubscribe: () => void;
 
-  // SvelteKit sẽ reactive với page.params.id
-  $: id = $page.params.id;
+  const idStore = derived(page, ($page) => $page.params.id);
 
-  $: if (id) {
-    component.set(null);
-    error.set('');
-    loading.set(true);
+  // Mỗi khi id thay đổi → load lại component
+  unsubscribe = idStore.subscribe(async (id) => {
+    Component = null;
+    error = '';
 
-    import(`../${id}.svelte`)
-      .then((mod) => {
-        component.set(mod.default);
-        loading.set(false);
-      })
-      .catch(() => {
-        error.set('Không tìm thấy nhân vật');
-        loading.set(false);
-      });
-  }
+    try {
+      // wait next tick để đảm bảo update đúng
+      await tick();
+      const module = await import(`../${id}.svelte`);
+      Component = module.default;
+    } catch (e) {
+      error = 'Không tìm thấy nhân vật';
+    }
+  });
+
+  onDestroy(() => {
+    unsubscribe?.();
+  });
 </script>
 
-{#if $loading}
-  <img src={`/images/pommoe0.png`} alt="" class="h-40 w-40 object-contain mx-auto"/>
-  <p class="text-white text-center mt-10">Chờ xíu, Pom đang tìm cho bạn...</p>
-{:else if $component}
-  <svelte:component this={$component} />
+{#if Component}
+  <svelte:component this={Component} />
+{:else if error}
+  <h1 class="text-white text-center mt-10">{error}</h1>
 {:else}
-  <img src={`/images/pommoe1.png`} alt="" class="h-40 w-40 object-contain mx-auto"/>
-  <h1 class="text-white text-center mt-10">{$error}</h1>
+  <img src={`/images/pommoe0.png`} alt="" class="h-40 w-40 object-contain mx-auto" />
+  <p class="text-white text-center mt-10">Chờ xíu, Pom đang tìm cho bạn...</p>
 {/if}
