@@ -10,11 +10,11 @@
 	import ProsConsBlock from  '$components/ProsConsBlock.svelte';
 
   const character = {
-    id: 'cipher',
-    name: 'Cipher',
-    element: 'quantum',
-    path: 'nihility',
-	elementColor: '#8CA6E6'
+    id: 'aglaea',
+    name: 'Aglaea',
+    element: 'lightning',
+    path: 'remembrance',
+	elementColor: '#E26CFF'
   };
 
   let lightconeNames: string[] = [];
@@ -614,10 +614,10 @@
     			sustain: ['aventurine']
   			}}
   			tooltips={{
-				acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương. Nhưng Cipher vẫn nên có Trấn để cải thiện vận hành trong đội hình này.',
-				feixiao: 'Feixiao cần đồng đội Hành Động và gây Sát Thương nhiều, và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được tất cả yêu cầu đó.',
+				acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương.',
+				feixiao: 'Feixiao cần đồng đội hành động gây Sát Thương nhiều và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được cả 2 yêu cầu đó.',
 				'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
-				aglaea: 'Nhiều tốc, Hành Động nhiều, gây Sát Thương nhiều, Cipher rất yêu.',
+				aglaea: 'Có nhiều DMG là được.',
 				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
     			tribbie: 'Tương tự Robin nhưng tốt hơn vì có <span class="underline">Đòn Đánh Theo Sau</span>.',
 				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
@@ -659,7 +659,7 @@
 		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p class="text-lg mt-2">Yep, bạn chỉ cần mỗi cái <span class="font-semibold text-amber-400">S1</span> là quá đủ rồi.
 			</p>
-			<p class="text-lg mt-2 ">Mà thực ra bạn chỉ cần roll mỗi xác thôi là được rồi, còn lại để DPS lo.</p>
+			<p class="text-lg mt-2 ">Mà thực ra bạn chỉ cần roll mỗi xác thôi là đủ rồi.</p>
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">

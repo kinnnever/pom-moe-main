@@ -12,6 +12,7 @@
 
 <a
 	href={`/characters/${character.id}`}
+	sveltekit:prefetch
 	class={`rarity relative cursor-pointer ${character.rarity === 5
 		? 'rarity-5' : 'rarity-4'} ${showTotal && total === 0 ? 'brightness-50' : ''}`}
 >

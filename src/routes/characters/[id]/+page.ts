@@ -1,8 +1,7 @@
-// characters/[id]/+page.ts
-export const prerender = false;
+export const load = ({ params }) => {
+	return {
+		id: params.id
+	};
+};
 
-export function load({ params }) {
-  return {
-    id: params.id
-  };
-}
+export const prerender = false;

@@ -124,13 +124,13 @@
     </div>
     <h2 class="text-lg font-bold text-white text-center mt-8">Ưu Tiên Dòng Phụ</h2>
     <div class="flex flex-col w-fit mx-auto p-3 bg-white/5 rounded border border-white/10 items-center mt-2 mb-4">
-      <div class="text-base text-white font-bold" transition:slide>
+      <div class="text-base text-white font-bold">
         {@html priorityStats}
       </div>
     </div>
     <h2 class="text-lg font-bold text-white text-center mt-8">Chỉ Số Tốt Nghiệp Hướng Đến</h2>
     <div class="flex flex-col p-3 bg-white/5 rounded border border-white/10 mt-2">
-      <div class="text-base text-white mt-3" transition:slide>
+      <div class="text-base text-white mt-3">
         {@html endgameStats}
       </div>
     </div>

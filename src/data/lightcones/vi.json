@@ -676,5 +676,11 @@
     "name": "Ký Ức Không Bao Giờ Hạ Màn",
     "path": "remembrance",
     "rarity": 5
+  },
+  "lies-dance-on-the-breeze": {
+    "id": "lies-dance-on-the-breeze",
+    "name": "Lời Nói Dối Bay Trong Gió",
+    "path": "nihility",
+    "rarity": 5
   }
 }
