@@ -65,13 +65,17 @@
 
 <div class="flex flex-col gap-8 md:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex justify-center">
+	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<div class="absolute bottom-6 left-16 bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md">
+		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+			Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.
+  		</p>
+		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md
+              absolute bottom-20 left-16">
     		<p style="text-shadow: 1px 1px 1px black">Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.</p>
   		</div>
 	</div>
@@ -91,11 +95,10 @@
     			alt={character.path}
     			class="h-10 w-10"
     		/>
-		
-	</div>
-	</div>
+		</div>
+		</div>
 		<!-- Bảng chỉ số -->
-		<table class="w-full text-white border-collapse text-sm table-fixed">
+		<table class="w-full text-white border-collapse text-sm table-fixed break-words">
 			<thead>
 				<tr class="bg-white/10">
 					<th class="p-2 border border-white/40">ĐP</th>
@@ -154,7 +157,7 @@
 		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
 		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Acheron cho 1 kẻ địch chỉ định.
 		</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
@@ -189,7 +192,7 @@
 			<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> cho mục tiêu lân cận kẻ đó bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Acheron.
  		</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
@@ -244,7 +247,7 @@
 			<p class="text-base">Trong thời gian Tuyệt Kỹ không thể gắn thêm
 				<span class="font-bold underline">Nút Thắt Đỏ</span> cho kẻ địch.
 			</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
@@ -282,7 +285,7 @@
 				<span class="font-bold underline">"Nút Thắt Đỏ"</span> đang có sẽ chuyển sang kẻ địch có nhiều
 				<span class="font-bold underline">"Nút Thắt Đỏ"</span> nhất.
 			</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />

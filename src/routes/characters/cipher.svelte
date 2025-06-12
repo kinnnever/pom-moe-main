@@ -61,13 +61,17 @@
 
 <div class="flex flex-col gap-8 md:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex justify-center">
+	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<div class="absolute bottom-4 left-16 bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md">
+		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+			Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"
+  		</p>
+		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md
+              absolute bottom-20 left-16">
     		<p style="text-shadow: 1px 1px 1px black">Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"</p>
   		</div>
 	</div>
@@ -87,11 +91,10 @@
     			alt={character.path}
     			class="h-10 w-10"
     		/>
-		
-	</div>
-	</div>
+		</div>
+		</div>
 		<!-- Bảng chỉ số -->
-		<table class="w-full text-white border-collapse text-sm table-fixed">
+		<table class="w-full text-white border-collapse text-sm table-fixed break-words">
 			<thead>
 				<tr class="bg-white/10">
 					<th class="p-2 border border-white/40">ĐP</th>
@@ -150,7 +153,7 @@
 		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
 		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Cipher.
 		</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
@@ -184,7 +187,7 @@
 			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Cipher cho mục tiêu lân cận.
  		</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
@@ -222,7 +225,7 @@
 				<span class="underline">Sát Thương Chuẩn</span> tổng cộng bằng 
 				<span class="text-yellow-400 font-semibold">75%</span> giá trị ghi nhận hiện tại của Thiên Phú, 
 				<span class="underline">Sát Thương Chuẩn</span> này sẽ chia đều cho tất cả mục tiêu kỹ năng.
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
@@ -264,7 +267,7 @@
 				<span class="underline">Sát Thương Chuẩn</span> mà mục tiêu phe ta gây ra cho "Khách Quen", 
 				không ghi nhận sát thương dư ra, sau khi thi triển Tuyệt Kỹ sẽ xóa giá trị ghi nhận.
 			</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />
@@ -629,7 +632,7 @@
 			notes={{
 				dps: 'Cứ cho đi cùng nhân vật nào gây ra nhiều Sát Thương là được vì Cipher có tác dụng tương tự Robin/Ruan Mei/Tribbie, \nBuff/Debuff cả team trong thời gian dài.',
 				amplifier: 'Hòa Hợp Buff toàn phe đồng minh là cho đi cùng được.',
-				sustain: 'Nhân vật nào chả được, miễn là có hỗ trợ Sát Thương như Aventurine.'
+				sustain: 'Nhân vật nào chả được, miễn là có hỗ trợ Sát Thương như Aventurine, hoặc đi cùng Robin và có nhiều kỹ năng gây DMG lên mục tiêu địch.'
 			}}
 		/>
 	</section>
@@ -640,11 +643,12 @@
 			pros=" 
 				Tốc cao tạo điểm chiến kỹ cho team, siêu dương điểm chiến kỹ.
 				Debuff siêu hiếm, không cần tái gắn Debuff.
-				Có thể thay thế SP Hòa Hợp trong một vài đội hình.
+				Có thể vừa làm Sub DPS, vừa thay thế SP Hòa Hợp trong một vài đội hình.
 			"
 			cons="
 				Quá phụ thuộc vào Sát Thương mà DPS và đồng đội gây ra.
-				Không thể thay thế DPS truyền thống nhưng cũng không thể thay thế SP hoàn toàn được.
+				Không thể thay thế DPS truyền thống nhưng cũng không thể thay thế SP hoàn toàn được. Chỉ có thể build slave cho các DPS khác.
+				Thời điểm hiện tại chưa có DPS phát huy tối đa sức mạnh Cipher được.
 				Ra mắt ngay trước Banner Aeon Animation 🐧.
 			"
 		/>

@@ -61,19 +61,23 @@
 
 <div class="flex flex-col gap-8 md:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex justify-center">
+	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<div class="absolute bottom-4 left-16 bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md">
-    		<p style="text-shadow: 1px 1px 1px black">Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"</p>
+		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+			Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.
+  		</p>
+		<div class="hidden md:block bg-gradient-to-l from-black/70 to-black/0 text-white text-base p-2 rounded-lg max-w-md
+              absolute bottom-24 left-[-40px]">
+    		<p style="text-shadow: 1px 1px 1px black">Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.</p>
   		</div>
 	</div>
 
 	<!-- Thông tin nhân vật -->
-	<div class="md:w-2/4 space-y-6">
+		<div class="md:w-2/4 space-y-">
 		<div class="flex items-left gap-4 mb-4">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
@@ -87,11 +91,10 @@
     			alt={character.path}
     			class="h-10 w-10"
     		/>
-		
-	</div>
-	</div>
+		</div>
+		</div>
 		<!-- Bảng chỉ số -->
-		<table class="w-full text-white border-collapse text-sm table-fixed">
+		<table class="w-full text-white border-collapse text-sm table-fixed break-words">
 			<thead>
 				<tr class="bg-white/10">
 					<th class="p-2 border border-white/40">ĐP</th>
@@ -150,7 +153,7 @@
 		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
 		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Cipher.
 		</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
@@ -184,12 +187,12 @@
 			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Cipher cho mục tiêu lân cận.
  		</p>
-			<div class="flex items-center gap-4 mb-2">
-  				<!-- svelte-ignore a11y-label-has-associated-control -->
-  				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
-  				<span class="text-sm text-white/40">Lv{SkillLevel}</span>
-			</div>
+		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
+  			<!-- svelte-ignore a11y-label-has-associated-control -->
+  			<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
+  			<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
+  			<span class="text-sm text-white/40">Lv{SkillLevel}</span>
+		</div>
 		</div>
 	</div>
 
@@ -222,7 +225,8 @@
 				<span class="underline">Sát Thương Chuẩn</span> tổng cộng bằng 
 				<span class="text-yellow-400 font-semibold">75%</span> giá trị ghi nhận hiện tại của Thiên Phú, 
 				<span class="underline">Sát Thương Chuẩn</span> này sẽ chia đều cho tất cả mục tiêu kỹ năng.
-			<div class="flex items-center gap-4 mb-2">
+			</p>
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
@@ -264,7 +268,7 @@
 				<span class="underline">Sát Thương Chuẩn</span> mà mục tiêu phe ta gây ra cho "Khách Quen", 
 				không ghi nhận sát thương dư ra, sau khi thi triển Tuyệt Kỹ sẽ xóa giá trị ghi nhận.
 			</p>
-			<div class="flex items-center gap-4 mb-2">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
   				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />

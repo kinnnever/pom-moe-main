@@ -32,15 +32,15 @@
     { label: 'AMPLIFIER', key: 'amplifier' },
     { label: 'SUSTAIN', key: 'sustain' }
   ] as role}
-    <div class="p-4 flex flex-col">
+    <div class="p-4 flex flex-col break-words">
       <div class={`font-bold text-xl mb-3 border-b border-white/30 w-full text-center pb-1 ${roleStyles[role.key]}`}>
         {role.label}
       </div>
-      <div class="flex flex-wrap justify-start ml-1 gap-x-5 gap-y-2 w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 justify-items-center w-full truncate">
         {#each team[role.key] as id}
           {#if getCharacter(id)}
             <div class="relative group">
-              <CharacterCard character={getCharacter(id)} class="scale-[0.6]" />
+              <CharacterCard character={getCharacter(id)}/>
               {#if tooltips[id]}
                 <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-none text-center">
                   {@html tooltips[id]}
@@ -59,10 +59,3 @@
   {/each}
 </div>
 
-<style>
-  /* CharacterCard scale */
-  .scale-\[0\.6\] {
-    transform: scale(0.6);
-    transform-origin: top center;
-  }
-</style>
