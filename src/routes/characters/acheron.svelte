@@ -20,7 +20,7 @@
   let lightconeNames: string[] = [];
 
   const normalAttack = [
-    '50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%'
+    ['50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%']
   ]; 
   let NormalLevel = 1;
 
@@ -74,8 +74,8 @@
 		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
 			Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.
   		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md
-              absolute bottom-20 left-16">
+		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+              absolute bottom-24 left-0">
     		<p style="text-shadow: 1px 1px 1px black">Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.</p>
   		</div>
 	</div>
@@ -140,38 +140,44 @@
 	<section>
 		<Title>KỸ NĂNG</Title>
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    		src="/images/skills/{character.id}/attack.png"
-   			alt="Tấn công thường"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/attack.png"
+   				alt="Tấn công thường"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Tấn Công Thường</span>
+		</div>
 		<div class="flex-1">
   		<h3 class="text-lg font-bold mb-1">Ba Đường Thăng Trầm</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span><span class="text-amber-400 italic"> sức bền </span> | 
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span> |
-			<span class="text-amber-400 italic">Hồi điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+			<span class="text-amber-400 italic">Hồi Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
 		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng 
-		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Acheron cho 1 kẻ địch chỉ định.
+		<span class="text-yellow-400 font-semibold">{normalAttack[0][NormalLevel - 1]}</span> Tấn Công của Acheron cho 1 kẻ địch chỉ định.
 		</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{NormalLevel}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    	src="/images/skills/{character.id}/skill.png"
-   		alt="Chiến kỹ"
-    	class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/skill.png"
+   				alt="Chiến Kỹ"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Chiến Kỹ</span>
+		</div>
 		<div class="flex-1">
   		<h3 class="text-lg font-bold mb-1">Bát lôi phi bộ</h3>
   		<p class="text-sm mb-1">
@@ -181,7 +187,7 @@
 			<span style="color: {character.elementColor}">30</span> 
 			<span class="text-amber-400 italic">sức bền mục tiêu lân cận</span> | 
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span> |
-			<span class="text-amber-400 italic">Tiêu hao điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+			<span class="text-amber-400 italic">Tiêu hao Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p class="text-base">Nhận <span class="text-yellow-400 font-semibold">1</span> điểm 
 			<span class="font-bold underline">Mộng tàn</span>. Gắn
@@ -195,18 +201,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{SkillLevel}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+			<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/ultimate.png"
-   			alt="Tuyệt kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/ultimate.png"
+   				alt="Tuyệt Kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Tuyệt Kỹ</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Giấc Mộng Tàn Khuyết, Một Chém Đoạn Tuyệt</h3>
   			<p class="text-sm mb-1">
@@ -250,18 +259,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{UltimateLevel}</span>
 			</div>
 </div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+			<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/talent.png"
-   			alt="Thiên phú"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/talent.png"
+   				alt="Thiên Phú"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Thiên Phú</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Mưa Lá Đỏ, Vạn Vật Hóa Hư Không</h3>
   			<p class="text-sm mb-1">
@@ -288,18 +300,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{TalentLevel}</span>
 			</div>
 </div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+			<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/technique.png"
-   			alt="Bí kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/technique.png"
+   				alt="Bí kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Bí Kỹ</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Tứ Tướng Đoạn Ngã</h3>
   			<p class="text-sm mb-1">
@@ -655,12 +670,12 @@
 			<p><span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>: 
 			Dùng cũng được nếu có sẵn bộ chỉ số tốt.</p>
 			`}
-			statDescriptions={[
+			statDescriptions={[[
     		'[CR]Crit Rate &nbsp;&nbsp;>= &nbsp;[CD]Crit Dmg',
     		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[SPD]Tốc Độ',
-    		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[lightning]Tăng ST Lôi',
+    		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[lightning]<span style="color: #E26CFF">Tăng ST Lôi</span>',
     		'[ATK]Tấn Công'
-  			]}
+			]]}
 			priorityStats={
 			'Tỉ Lệ Bạo &ge; Sát Thương Bạo &gt; Tấn Công &gt; Tốc Độ'
 			}

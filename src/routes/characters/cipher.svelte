@@ -20,7 +20,7 @@
   let lightconeNames: string[] = [];
 
   const normalAttack = [
-    '50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%'
+    ['50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%']
   ]; 
   let NormalLevel = 1;
 
@@ -70,8 +70,8 @@
 		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
 			Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"
   		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-lg max-w-md
-              absolute bottom-20 left-16">
+		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+              absolute bottom-24 left-0">
     		<p style="text-shadow: 1px 1px 1px black">Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"</p>
   		</div>
 	</div>
@@ -136,38 +136,44 @@
 	<section>
 		<Title>KỸ NĂNG</Title>
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    		src="/images/skills/{character.id}/attack.png"
-   			alt="Tấn công thường"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/attack.png"
+   				alt="Tấn công thường"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Tấn Công Thường</span>
+		</div>
 		<div class="flex-1">
   		<h3 class="text-lg font-bold mb-1">Ôi Chao, Cá Lọt Lưới</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span><span class="text-amber-400 italic"> sức bền</span> | 
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span> |
-			<span class="text-amber-400 italic">Hồi điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+			<span class="text-amber-400 italic">Hồi Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
 		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
-		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Cipher.
+		<span class="text-yellow-400 font-semibold">{normalAttack[0][NormalLevel - 1]}</span> Tấn Công của Cipher.
 		</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{NormalLevel}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    	src="/images/skills/{character.id}/skill.png"
-   		alt="Chiến kỹ"
-    	class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/skill.png"
+   				alt="Chiến Kỹ"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Chiến Kỹ</span>
+		</div>
 		<div class="flex-1">
   		<h3 class="text-lg font-bold mb-1">Hey, Tay Không Bắt Bạc</h3>
   		<p class="text-sm mb-1">
@@ -175,7 +181,7 @@
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span>
 			<span class="text-amber-400 italic">sức bền/hit</span> | 
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span> |
-			<span class="text-amber-400 italic">Tiêu hao điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+			<span class="text-amber-400 italic">Tiêu hao Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p class="text-base">Có <span class="text-yellow-400 font-semibold">120%</span> 
 			<span class="underline">xác suất cơ bản</span>khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
@@ -190,18 +196,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{SkillLevel}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/ultimate.png"
-   			alt="Tuyệt kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/ultimate.png"
+   				alt="Tuyệt Kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Tuyệt Kỹ</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Mèo Tặc, Kính Bút!</h3>
   			<p class="text-sm mb-1">
@@ -228,18 +237,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{UltimateLevel}</span>
 			</div>
 </div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/talent.png"
-   			alt="Thiên phú"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/talent.png"
+   				alt="Thiên Phú"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Thiên Phú</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Người Dolos Nhiệt Tình Hiếu Khách</h3>
   			<p class="text-sm mb-1">
@@ -270,18 +282,21 @@
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{TalentLevel}</span>
 			</div>
 </div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/technique.png"
-   			alt="Bí kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/technique.png"
+   				alt="Bí kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Bí Kỹ</span>
+		</div>
 			<div class="flex-1">
   			<h3 class="text-lg font-bold mb-1">Chú Mèo Đi Hia</h3>
   			<p class="text-sm mb-1">
@@ -304,6 +319,8 @@
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
 		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Thiên Phú &gt Tuyệt Kỹ &gt Chiến Kỹ = Tấn Công Thường</p>
+		<p class="text-white/40">(thực ra không nâng cũng được, chỉ cần nâng hết mấy Vết Tích lớn và mấy điểm Tốc thôi)</p>
+		
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white">Thiên Phú</p>
   			<p class="text-white/80 text-sm">Mặc dù Sát Thương Chuẩn không tăng theo LV nhưng hãy nâng cấp Kỹ Năng này vì đây là nguồn Sát Thương chính của Cipher nếu bạn muốn Cipher hỗ trợ DMG trong đội hình.</p>
@@ -534,7 +551,7 @@
 	<section>
 		<Title>NÓN ÁNH SÁNG</Title>
 		<LightconesBlock
-  			ids={['lies-dance-on-the-breeze', 'resolution-shines-as-pearls-of-sweat','before-the-tutorial-mission-starts','eyes-of-the-prey']}
+  			ids={['lies-dance-on-the-breeze','resolution-shines-as-pearls-of-sweat','patience-is-all-you-need','before-the-tutorial-mission-starts','eyes-of-the-prey']}
   			characterName={character.name}
   			exposeNames={(names) => {lightconeNames = names}}
 		/>
@@ -549,12 +566,16 @@
     		<strong class="text-amber-300">{lightconeNames[1]}</strong>: 
 			Tích Tầng <span class="text-yellow-400 font-bold">5</span> có tác dụng gần bằng Trấn.
   			</li>
+			<li>
+			<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
+			Có Speed là bú.
+  			</li>
   			<li>
-    		<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
+    		<strong class="text-amber-300">{lightconeNames[3]}</strong>: 
 			Lấy Chính Xác Hiệu Ứng là chính, Hồi Năng Lượng là mười.
   			</li>
 			<li>
-			<strong class="text-amber-300">{lightconeNames[3]}</strong>:
+			<strong class="text-amber-300">{lightconeNames[4]}</strong>:
 			Lấy Chính Xác Hiệu Ứng. Hết.
 			</li>
 		  </ol>
@@ -567,42 +588,79 @@
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
 			relicIds={['Genius_of_Brilliant_Stars','Pioneer_Diver_of_Dead_Waters']}
-			mixSets={[['Messenger_Traversing_Hackerspace','Sacerdos_Relived_Ordeal'],['Messenger_Traversing_Hackerspace','Genius_of_Brilliant_Stars'],['Musketeer_of_Wild_Wheat','Scholar_Lost_in_Erudition']]}
-  			planarIds={['Item_Firmament_Frontline_Glamoth','Item_Duran_Dynasty_of_Running_Wolves','Item_Inert_Salsotto','Item_Rutilant_Arena','Item_Sprightly_Vonwacq','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Broken_Keel']}
+			mixSets={[['Messenger_Traversing_Hackerspace','Sacerdos_Relived_Ordeal'],['Messenger_Traversing_Hackerspace','Genius_of_Brilliant_Stars']]}
+  			planarIds={['Item_Firmament_Frontline_Glamoth','Item_Duran_Dynasty_of_Running_Wolves','Item_Inert_Salsotto','Item_Sprightly_Vonwacq','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Broken_Keel','Item_Fleet_of_the_Ageless']}
 			relicAnalysis={`
+			<p class="text-xl font-bold pl-3" style="color: #EC4D37">Build Sub-DPS</p>
 			<p><span class="text-amber-300 font-semibold">Thiên Tài Xuất Chúng</span>: 
 			Nếu bạn muốn build Cipher thuần DPS thì có thể cân nhắc, nhưng phải đủ 170 tốc.</p>
 			<p><span class="text-amber-300 font-semibold">Tiên Phong Trong Nước Chết</span>: 
 			Cung cấp rất nhiều CV nếu muốn build DPS, nhưng vẫn phải đủ 170 tốc.</p>
-			<p><span class="text-amber-300 font-semibold">MIX 2-2</span>: 
-			Khuyến nghị các bạn nên Mix 2 đồ Tốc để dễ build đủ 170 tốc. 
-			Hoặc Mix Tốc với Sát Thương để hỗ trợ thêm DMG cho DPS.
-			Không khuyến nghị Mix 2 bộ DMG lắm nhưng cứ để vào cho có 🐧.</p>
+
+			<p class="text-xl font-bold pl-3 mt-3"style="color: #EC4D37">Build Support</p>
+			<p><span class="text-amber-300 font-semibold">MIX 2-2 Tốc+Tốc</span>: 
+			Lấy 12% Tốc từ 2 bộ sao cho đủ 170+ Tốc là được.</p>
+			<p><span class="text-amber-300 font-semibold">MIX 2-2 Tốc+DMG</span>: 
+			Mix này chỉ để hỗ trợ thêm tí DMG cho đội.</p>
 			`}
 			planarAnalysis={`
-			<p>Cả 3 bộ <span class="text-amber-300 font-semibold">Glamoth, Chiến Tuyến Không Trung</span>, 
-			<span class="text-amber-300 font-semibold">Duran - Vương Triều Sói Hoang</span>,
-			<span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>
-			đều rất hợp với bộ kỹ năng của Cipher nếu bạn có thể build đủ 170 tốc, và tùy bộ nào bạn có đẹp thì mặc.</p>
-			<p>Những bộ còn lại dùng cho Cipher build slave.</p>
+			<p class="text-xl font-bold pl-3" style="color: #EC4D37">Build Sub-DPS</p>
+			<p><span class="text-amber-300 font-semibold">Glamoth, Chiến Tuyến Không Trung</span>: 
+			Tăng Sát Thương cho Cipher khi cô nàng đủ Tốc, mà Cipher lại có nhiều Tốc hơn thế.</p> 
+			<span class="text-amber-300 font-semibold">Duran - Vương Triều Sói Hoang</span>:
+			Tăng Sát Thương cho <span class="underline">Đòn Đánh Theo Sau</span> từ Thiên Phú và thêm chút CV.</p>
+			<span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>:
+			Tăng chút CV, tăng Sát Thương Tuyệt Kỹ và Thiên Phú gây ra.</p>
+
+			<p class="text-xl font-bold pl-3 mt-3"style="color: #EC4D37">Build Support</p>
+			<p><span class="text-amber-300 font-semibold">Vonwacq Hoạt Bát</span>: 
+			Tăng Hiệu Suất Nạp và ưu tiên hành động khi bắt đầu trận đấu.</p> 
+			<p><span class="text-amber-300 font-semibold">Biển Lục Địa Chìm Lushaka</span>: 
+			Mạnh khi hỗ trợ một nhân vật DPS dựa trên ATK và tăng Hiệu Suất Nạp rất hữu ích. Chung chung hơn hầu hết các tùy chọn khác.</p> 
+			<p><span class="text-amber-300 font-semibold">Penacony, Vùng Đất Của Những Giấc Mơ</span>: 
+			Lựa chọn hàng đầu khi hỗ trợ một hoặc nhiều đồng đội cùng nguyên tố với người mặc và tăng Hiệu Suất Nạp rất hữu ích. (Chỉ sử dụng với DPS Lượng Tử)
+			<p><span class="text-amber-300 font-semibold">Bộ Khung Bị Gãy</span>:
+			Tăng Kháng cho bản thân, tăng CV cho toàn đội.
+			<p><span class="text-amber-300 font-semibold">Xianzhou Không Có Tuổi</span>:
+			Lý tưởng cho các nhân vật có tỷ lệ HP%/ATK% và hoặc khi hỗ trợ các đội hưởng lợi từ ATK%. (Hữu ích để giúp Cipher trở nên trâu bò hơn một chút)
 			`}
 			statDescriptions={[
-    		'[CD]Crit Dmg &nbsp;&nbsp;&ge; &nbsp;[CR]Crit Rate',
-    		'[SPD]Tốc Độ',
-    		'[quantum]Tăng ST Lượng Tử',
-    		'[ATK]Tấn Công'
-  			]}
-			priorityStats={
-			'Tốc Độ &gt; Sát Thương Bạo &ge; Tỉ Lệ Bạo &gt; Tấn Công'
-			}
+			  [
+    			'[CD]Crit Dmg &nbsp;&nbsp;&ge; &nbsp;[CR]Crit Rate',
+    			'[SPD]Tốc Độ',
+    			'[quantum]<span style="color: #8CA6E6">Tăng ST Lượng Tử</span> &nbsp;&nbsp;= &nbsp;[ATK]Tấn Công',
+    			'[ATK]Tấn Công &nbsp;&nbsp;= &nbsp; [ERR]Hiệu Suất Hồi Năng Lượng'
+			  ],
+			  [
+				'[HP]HP &nbsp;&nbsp;=&nbsp;&nbsp; [DEF]DEF',
+				'[SPD]Tốc Độ',
+				'[HP]HP &nbsp;&nbsp;=&nbsp;&nbsp; [DEF]DEF',
+				'[ERR]Hiệu Suất Hồi Năng Lượng &nbsp;&nbsp;&ge;&nbsp;&nbsp; [HP]HP &nbsp;&nbsp;=&nbsp;&nbsp; [DEF]DEF'
+			  ]
+			]}
+			
+			priorityStats={[
+			'Tốc Độ &gt; Sát Thương Bạo &ge; Tỉ Lệ Bạo &gt; Tấn Công <span class="text-white/50">&nbsp;(Hoặc)&nbsp;</span> Tốc Độ &gt; Chính Xác Hiệu Ứng &ge; HP = DEF'
+			]}
 			endgameStats={`
+			<p class="text-yellow-300 text-xl font-extrabold">BUILD SUB-DPS</p>
 			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
-			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">BASE</span> &nbsp;<span class="text-white/70">(Phần lớn Sát Thương của Cipher là <span class="underline">Sát Thương Chuẩn</span> "bú" từ đồng minh)</span></p>
-			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">50%</span> &nbsp;<span class="text-white/70">(Hãy build đủ 170+ tốc để lấy được <span class="text-yellow-400">50%</span> Tỉ Lệ Bạo còn lại)</p>
-			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">180%+</span> &nbsp;<span class="text-white/70">(Thực ra thì cũng hơi khó build Sát Thương Bạo cao, nhưng cứ cố đi, không tới được thì thôi)</span></p>
+			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">3000+</span></p>
+			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">50%</span></p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">180%+</span></p>
 			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">170+</span></p>
-			<p><span class="text-white/70">Chính Xác Hiệu Ứng:</span>&nbsp; <span class="font-bold">39%</span> &nbsp;<span class="text-white/70">(<span class="text-yellow-400">10%</span> Vết Tích cho sẵn rồi, build <span class="text-yellow-400">29%</span> thôi. Bác Sĩ trong Bệnh viện Lê Bách bảo vậy chứ tôi cũng không biết :v)</span></p>
+			<p><span class="text-white/70">Chính Xác Hiệu Ứng:</span>&nbsp; <span class="font-bold">39%</span></p>
+
+			<p class="text-yellow-300 text-xl font-extrabold mt-4">BUILD SUPPORT</p>
+			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">3000 ~ 4500+</span></p>
+			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">1000 ~ 2000+</span></p>
+			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">BASE</span></p>
+			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">BASE</span></p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">BASE</span></p>
+			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">170+</span></p>
+			<p><span class="text-white/70">Chính Xác Hiệu Ứng:</span>&nbsp; <span class="font-bold">39%</span></p>
+			<p><span class="text-white/70">Hiệu Suất Hồi Năng Lượng:</span>&nbsp; <span class="font-bold">119.44%+</span></p>
 			`}
 		/>
 	</section>
@@ -622,7 +680,7 @@
 				'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
 				aglaea: 'Nhiều tốc, Hành Động nhiều, gây Sát Thương nhiều, Cipher rất yêu.',
 				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
-    			tribbie: 'Tương tự Robin nhưng tốt hơn vì có <span class="underline">Đòn Đánh Theo Sau</span>.',
+    			tribbie: 'Cipher có thể thay thế Tribbie trong một vài đội hình, nhưng đâu có nghĩa 2 nhân vật này không thể cùng một đội, cho hết vào để Cipher tích Thiên Phú nào.',
 				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
 				'ruan-mei': 'Giống Robin.',
 				'silver-wolf': 'Giảm Def, tăng Sát Thương mà đồng đội gây ra, gián tiếp giúp Cipher tích nhanh Thiên Phú.',
@@ -641,14 +699,19 @@
 		<Title>TIPS & TRICKS</Title> 
 		<ProsConsBlock 
 			pros=" 
-				Tốc cao tạo điểm chiến kỹ cho team, siêu dương điểm chiến kỹ.
+				Tốc cao tạo Điểm Chiến Kỹ cho team, siêu dương Điểm Chiến Kỹ.
 				Debuff siêu hiếm, không cần tái gắn Debuff.
 				Có thể vừa làm Sub DPS, vừa thay thế SP Hòa Hợp trong một vài đội hình.
+				Lưu trữ sát thương của đội để gây ra cho một đòn tấn công Sát Thương Chuẩn.
+				Không phụ thuộc vào chỉ số tấn công vì hầu hết sát thương đến từ Thiên Phú.
+				Được xây dựng cho tương lai với nhiều tiềm năng để tối ưu hóa.
 			"
 			cons="
 				Quá phụ thuộc vào Sát Thương mà DPS và đồng đội gây ra.
+				Yêu cầu SPD rất cao để mở khóa toàn bộ sức mạnh.
 				Không thể thay thế DPS truyền thống nhưng cũng không thể thay thế SP hoàn toàn được. Chỉ có thể build slave cho các DPS khác.
 				Thời điểm hiện tại chưa có DPS phát huy tối đa sức mạnh Cipher được.
+				Không thể chơi Auto.
 				Ra mắt ngay trước Banner Aeon Animation 🐧.
 			"
 		/>

@@ -36,13 +36,13 @@
       <div class={`font-bold text-xl mb-3 border-b border-white/30 w-full text-center pb-1 ${roleStyles[role.key]}`}>
         {role.label}
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 justify-items-center w-full truncate">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 justify-items-center w-full ">
         {#each team[role.key] as id}
           {#if getCharacter(id)}
             <div class="relative group">
               <CharacterCard character={getCharacter(id)}/>
               {#if tooltips[id]}
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 pointer-events-none text-center">
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 pointer-events-none text-center">
                   {@html tooltips[id]}
                 </div>
               {/if}

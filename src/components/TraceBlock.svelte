@@ -20,9 +20,9 @@
   
   <div class="flex items-start gap-4">
      {#if title && icon}
-    <div class="flex-none text-center">
+    <div class="flex flex-col items-center break-words w-28 text-center">
       <img src={icon} alt={title} class="w-20 h-20 mx-auto mb-1" />
-      <div class="text-sm font-bold text-white">{title}</div>
+      <div class="text-sm font-bold text-white text-center break-words">{title}</div>
       <div class="text-xs text-white/60">{unlock}</div>
     </div>
     {/if}

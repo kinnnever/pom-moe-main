@@ -5,9 +5,9 @@
   export let relicIds: string[] = [];
   export let planarIds: string[] = [];
   export let mixSets: [string, string][] = []; 
+  export let statDescriptions: string[][] = [] ;
   export let relicAnalysis = '';
   export let planarAnalysis = '';
-  export let statDescriptions = ['', '', '', ''];
   export let priorityStats = '';
   export let endgameStats = '';
 
@@ -21,6 +21,13 @@
   const planars = planarIds
     .map((id) => relicsData[id])
     .filter((item) => item?.type === 'planar');
+
+  const slots = [
+    { icon: 'body.png', label: 'Thân'},
+    { icon: 'feet.png', label: 'Chân'},
+    { icon: 'sphere.png', label: 'Quả Cầu Vị Diện'},
+    { icon: 'rope.png', label: 'Dây Liên Kết'}
+  ]
 </script>
 
 <div class="relics-block mb-8">
@@ -106,22 +113,24 @@
 
   <div class="flex flex-col bg-black/20 p-4 rounded-lg border border-white/10 mt-8">
     <h2 class="text-lg font-bold text-white text-center mb-3">Chỉ Số Chính</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {#each [
-        { icon: 'body.png', label: 'Thân', description: statDescriptions[0] },
-        { icon: 'feet.png', label: 'Chân', description: statDescriptions[1] },
-        { icon: 'sphere.png', label: 'Quả Cầu Vị Diện', description: statDescriptions[2] },
-        { icon: 'rope.png', label: 'Dây Liên Kết', description: statDescriptions[3] }
-      ] as stat}
-        <div class="flex flex-col items-center p-3 bg-white/5 rounded border border-white/10 mb-4">
-          <img src={`/images/icons-vestige/${stat.icon}`} alt={stat.label} class="w-10 h-10 mb-2" />
-          <span class="text-white text-opacity-60 text-xs font-semibold mb-1">{stat.label}</span>
-          <p class="text-sm text-white text-center font-bold leading-snug mt-1">
-            {@html stat.description.replace(/\[(.*?)\]/g, (_, name) => 
-            `<img src='/images/icons-vestige/${name}.png' alt='${name}' class='inline w-5 h-5 mt-1 align-text-bottom' />`)}</p>
-        </div>
-      {/each}
-    </div>
+    {#each statDescriptions as group, groupIndex}
+      {#if groupIndex > 0}
+        <p class="text-white/60 italic text-center mb-3">(hoặc)</p>
+      {/if}
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {#each slots as slot, i}
+          <div class="flex flex-col items-center p-3 bg-white/5 rounded border border-white/10">
+            <img src={`/images/icons-vestige/${slot.icon}`} alt={slot.label} class="w-10 h-10 mb-2" />
+            <span class="text-white text-opacity-60 text-xs font-semibold mb-1">{slot.label}</span>
+            <p class="text-sm text-white text-center font-bold leading-snug mt-1">
+              {@html group[i].replace(/\[(.*?)\]/g, (_, name) =>
+              `<img src='/images/icons-vestige/${name}.png' alt='${name}' class='inline w-5 h-5 mt-1 align-text-bottom' />`)}
+            </p>
+          </div>
+        {/each}
+      </div>
+    {/each}
     <h2 class="text-lg font-bold text-white text-center mt-8">Ưu Tiên Dòng Phụ</h2>
     <div class="flex flex-col w-fit mx-auto p-3 bg-white/5 rounded border border-white/10 items-center mt-2 mb-4">
       <div class="text-base text-white font-bold">

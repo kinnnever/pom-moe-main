@@ -8,6 +8,7 @@
 	import RelicsBlock from '$components/relicsBlock.svelte';
 	import TeamBlock from '$components/TeamBlock.svelte';
 	import ProsConsBlock from  '$components/ProsConsBlock.svelte';
+	import TielePet from '$components/titlePet.svelte';
 
   const character = {
     id: 'aglaea',
@@ -20,26 +21,39 @@
   let lightconeNames: string[] = [];
 
   const normalAttack = [
-    '50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%'
+    ['50%', '60%', '70%', '80%', '90%', '100%', '110%', '120%', '130%', '140%'],
+	['100%','120%','140%','160%','180%','200%','220%','240%','260%','280%'],
+	['45%','54%','63%','72%','81%','90%','99%','108%','117%','126%']
   ]; 
   let NormalLevel = 1;
 
   const skillAttack = [
-	['100%','110%','120%','130%','140%','150%','162.5%','175%','187.5%','200%','210%','220%','230%','240%','250%'],
-  	['50%','55%','60%','65%','70%','75%','81.25%','87.5%','93.75%','1000%','105%','110%','115%','120%','125%']
+	['25%','27.5%','30%','32.5%','35%','37.5%','40.63%','43.75%','46.88%','50%','52.5%','55%','57.5%','60%','62.5%']
   ];
   let SkillLevel = 1;
 
   const ultimateAttack = [
-	['60%','66%','72%','78%','84%','90%','97.5%','105%','112.5%','120%','126%','132%','138%','144%','150%'],
-  	['20%','22%','24%','26%','28%','30%','32.5%','35%','37.5%','40%','42%','44%','46%','48%','50%']
+	['10%','10.5%','11%','11.5%','12%','12.5%','13.13%','13.75%','14.38%','15%','15.5%','16%','16.5%','17%','17.5%']
   ];
   let UltimateLevel = 1;
 
   const talent = [
-  	['75%','82.5%','90%','97.5%','105%','112.5%','121.88%','131.25%','140.63%','150%','157.5%','165%','172.5%','180%','187.5%']
+  	['44%','46.75%','49.5%','52.25%','55%','57.2%','59.4%','61.6%','63.8%','66%','68.2%','70.4%','72.6%','74.8%','77%'],
+	['180','248','315','383','450','504','558','612','666','720','774','828','882','936','990'],
+	['12%','13.8%','15.6%','17.4%','19.2%','21%','23.25%','25.5%','27.75%','30%','31.8%','33.6%','35.4%','37.2%','39%']
   ]
   let TalentLevel = 1;
+
+  const skillPet = [
+	['55%','66%','77%','88%','99%','110%','121%','132%','143%','154%'],
+	['33%','39,6%','46,2%','52,8%','59,4%','66%','72,6%','79,2%','85,8%','92,4%']
+  ]
+  let SkillPetLevel = 1;
+
+  const talentPet = [
+	['44','46','48','51','53','55','57','59','62','64']
+  ]
+  let talentPetLevel =1;
 
 	const SPD = 106;         // ⚠ CỐ ĐỊNH - Tốc độ
 	const AGGRO = 100;       // ⚠ CỐ ĐỊNH - Khiêu khích
@@ -70,8 +84,8 @@
 		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
 			Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.
   		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/70 to-black/0 text-white text-base p-2 rounded-lg max-w-md
-              absolute bottom-24 left-[-40px]">
+		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+              absolute bottom-24 left-0">
     		<p style="text-shadow: 1px 1px 1px black">Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.</p>
   		</div>
 	</div>
@@ -136,190 +150,294 @@
 	<section>
 		<Title>KỸ NĂNG</Title>
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    		src="/images/skills/{character.id}/attack.png"
-   			alt="Tấn công thường"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/attack.png"
+   				alt="Tấn công thường"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Tấn Công Thường</span>
+		</div>
+		
 		<div class="flex-1">
-  		<h3 class="text-lg font-bold mb-1">Ôi Chao, Cá Lọt Lưới</h3>
+  		<h3 class="text-lg font-bold mb-1">Mật Hoa Có Gai</h3>
 		<p class="text-sm mb-1">
 		    <span class="text-amber-400 italic">Đánh Đơn </span> | 
 			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">30</span><span class="text-amber-400 italic"> sức bền</span> | 
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span> |
-			<span class="text-amber-400 italic">Hồi điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+			<span class="text-amber-400 italic">Hồi Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
 		</p>
 		<p class="text-base">Gây Sát Thương 
-		<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định tương đương 
-		<span class="text-yellow-400 font-semibold">{normalAttack[NormalLevel - 1]}</span> Tấn Công của Cipher.
+		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> cho 1 kẻ địch chỉ định tương đương 
+		<span class="text-yellow-400 font-semibold">{normalAttack[0][NormalLevel - 1]}</span> Tấn Công của Aglaea.
 		</p>
-			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
-  				<!-- svelte-ignore a11y-label-has-associated-control -->
-  				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10" />
-  				<span class="text-sm text-white/40">Lv{NormalLevel}</span>
-			</div>
+
+		<h3 class="text-lg font-bold mb-1 mt-2">「Ngàn Nụ Hôn Trên Lưỡi Kiếm」</h3>
+		<p class="text-sm mb-1">
+		    <span class="text-amber-400 italic">Khuếch Tán</span> | 
+			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span><span class="text-amber-400 italic"> sức bền/hit</span> | 
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span> |
+			<span class="text-amber-400 italic">Hồi Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">0</span>
+		</p>
+		<p class="text-base">Aglaea và Thợ May thi triển 
+		<span class="underline">Tấn Công Phối Hợp</span> ên mục tiêu, lần lượt gây cho mục tiêu Sát Thương Lôi bằng
+		<span class="text-yellow-400 font-semibold">{normalAttack[1][NormalLevel - 1]}</span> Tấn Công của Aglaea và
+		<span class="text-yellow-400 font-semibold">{normalAttack[1][NormalLevel - 1]}</span> Tấn Công của Thợ May. Đồng thời gây cho mục tiêu lân cận Sát Thương
+		<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng
+		<span class="text-yellow-400 font-semibold">{normalAttack[2][NormalLevel - 1]}</span> Tấn Công của Aglaea và
+		<span class="text-yellow-400 font-semibold">{normalAttack[2][NormalLevel - 1]}</span> Tấn Công của Thợ May.
+		</p>
+		<p class="text-base">Ngàn Nụ Hôn Trên Lưỡi Kiếm không thể Hồi Điểm Chiến Kỹ.</p>
+
+		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
+  			<!-- svelte-ignore a11y-label-has-associated-control -->
+			<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
+			<input type="range" min="1" max="10" bind:value={NormalLevel} class="w-48 accent-white/10 opacity-80" />
+  			<span class="text-sm text-white/40">Lv{NormalLevel}</span>
+		</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
-		<img
-    	src="/images/skills/{character.id}/skill.png"
-   		alt="Chiến kỹ"
-    	class="h-20 w-20 rounded border border-white/10 object-cover"
-  		/>
+		<div class="flex flex-col items-center break-words w-20 text-center">
+			<img
+    			src="/images/skills/{character.id}/skill.png"
+   				alt="Chiến Kỹ"
+    			class="h-20 w-20 object-cover"
+  			/>
+			<span class="text-sm text-white/80 mt-2">Chiến Kỹ</span>
+		</div>
 		<div class="flex-1">
-  		<h3 class="text-lg font-bold mb-1">Hey, Tay Không Bắt Bạc</h3>
+  		<h3 class="text-lg font-bold mb-1">Lên Nào, Danh Tiếng Thăng Hoa</h3>
   		<p class="text-sm mb-1">
- 		    <span class="text-amber-400 italic">Khuếch Tán </span> | 
-			<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span>
-			<span class="text-amber-400 italic">sức bền/hit</span> | 
-			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span> |
-			<span class="text-amber-400 italic">Tiêu hao điểm chiến kỹ </span><span style="color: {character.elementColor}">1</span>
+ 		    <span class="text-amber-400 italic">Triệu Hồi</span> | 
+			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">20</span> |
+			<span class="text-amber-400 italic">Tiêu hao Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
-  		<p class="text-base">Có <span class="text-yellow-400 font-semibold">120%</span> 
-			<span class="underline">xác suất cơ bản</span>khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
-			<span class="text-yellow-400 font-semibold">10%</span>), khiến tấn công của Cipher tăng  
-			<span class="text-yellow-400 font-semibold">30%</span>, duy trì 
-			<span class="text-yellow-400 font-semibold">2</span> hiệp,  đồng thời gây sát thương 
-			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
-			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Tấn Công của Cipher cho 1 kẻ địch chỉ định, gây sát thương 
-			<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
-			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Cipher cho mục tiêu lân cận.
- 		</p>
+  		<p class="text-base">Giúp Thợ May Hồi HP bằng
+			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Giới Hạn HP của mình. Nếu Thợ May không ở trong trận, thì sẽ 
+			<span class="undeline">triệu hồi Linh Hồn Ký Ức</span> Thợ May, và khiến bản thân lập tức hành động.
+			</p>
 		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   			<!-- svelte-ignore a11y-label-has-associated-control -->
   			<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  			<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10" />
+  			<input type="range" min="1" max="15" bind:value={SkillLevel} class="w-48 accent-white/10 opacity-80" />
   			<span class="text-sm text-white/40">Lv{SkillLevel}</span>
 		</div>
 		</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/ultimate.png"
-   			alt="Tuyệt kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/ultimate.png"
+   				alt="Tuyệt Kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Tuyệt Kỹ</span>
+		</div>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Mèo Tặc, Kính Bút!</h3>
+  			<h3 class="text-lg font-bold mb-1">Cùng Nhảy Múa Nào, Thợ May Định Mệnh</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Khuếch Tán </span> | 
-				<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">90</span> 
-				<span class="text-amber-400 italic">sức bền/hit</span> | 
+ 			    <span class="text-amber-400 italic">Cường Hóa</span> | 
 				<span class="text-amber-400 italic">Điểm năng lượng</span>
-				<span style="color: {character.elementColor}">130</span> |
+				<span style="color: {character.elementColor}">350</span> |
 				<span class="text-amber-400 italic">Tiêu hao năng lượng </span>
-				<span style="color: {character.elementColor}">130</span> |
+				<span style="color: {character.elementColor}">350</span> |
 				<span class="text-amber-400 italic">Hồi lại </span><span style="color: {character.elementColor}">5</span>
   			</p>
-  			<p class="text-base">Gây Sát Thương 
-				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho 1 kẻ địch chỉ định bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span> Tấn Công của Cipher. Sau đó, gây
-				<span class="underline">Sát Thương Chuẩn</span> bằng 
-				<span class="text-yellow-400 font-semibold">25%</span> giá trị ghi nhận hiện tại của Thiên Phú cho 1 kẻ địch chỉ định, 
-				đồng thời gây cho 1 kẻ địch chỉ định và mục tiêu lân cận Sát Thương 
-				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
-				<span class="text-yellow-400 font-semibold">{ultimateAttack[1][UltimateLevel - 1]}</span> Tấn Công của Cipher và 
-				<span class="underline">Sát Thương Chuẩn</span> tổng cộng bằng 
-				<span class="text-yellow-400 font-semibold">75%</span> giá trị ghi nhận hiện tại của Thiên Phú, 
-				<span class="underline">Sát Thương Chuẩn</span> này sẽ chia đều cho tất cả mục tiêu kỹ năng.
+  			<p class="text-base"><span class="underline">Triệu hồi Linh Hồn Ký Ức</span> 
+				Thợ May, nếu Thợ May đã ở trong trận, thì sẽ hồi HP của đối tượng này đến mức tối đa. Aglaea vào trạng thái 
+				<span class="font-semibold">Tư Thế Tối Cao</span> và khiến bản thân lập tức hành động.
+			</p>
+			<p>
+				Ở trạng thái <span class="font-semibold">Tư Thế Tối Cao</span>, 
+				Aglaea sẽ nhận được số tầng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức Thợ May, mỗi tầng khiến Tốc Độ của bản thân tăng
+				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span> , Cường Hóa Tấn Công Thường thành 
+				<span class="font-bold">Ngàn Nụ Hôn Trên Lưỡi Kiếm</span> và không thể thi triển Chiến Kỹ, Thợ May miễn dịch 
+				<span class="underline">Hiệu Ứng Xấu loại khống chế</span>.
+			</p>
+			<p>
+				Thời gian đếm ngược xuất hiện trên thứ tự hành động, cố định là 
+				<span class="text-yellow-400 font-semibold">100</span> Tốc Độ, 
+				trong thời gian vẫn còn đếm ngược nếu thi triển Tuyệt Kỹ lần nữa sẽ tái lập đếm ngược, Thợ May sẽ tự hủy khi bắt đầu hiệp. 
+				Khi Thợ May biến mất, Aglaea sẽ giải trừ trạng thái Tư Thế Tối Cao.
 			</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={UltimateLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{UltimateLevel}</span>
 			</div>
 </div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/talent.png"
-   			alt="Thiên phú"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/talent.png"
+   				alt="Thiên Phú"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Thiên Phú</span>
+		</div>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Người Dolos Nhiệt Tình Hiếu Khách</h3>
+  			<h3 class="text-lg font-bold mb-1">Ngón Tay Hoa Hồng Vàng</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Đánh Đơn</span> |
-				<span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span> 
-				<span class="text-amber-400 italic">sức bền</span> | 
+ 			    <span class="text-amber-400 italic">Cường Hóa</span> | 
 				<span class="text-amber-400 italic">Hồi năng lượng</span> 
-				<span style="color: {character.elementColor}">5</span>
+				<span style="color: {character.elementColor}">10</span>
   			</p>
-  			<p class="text-base">Khi trong trận không có mục tiêu phe địch rơi vào trạng thái "Khách Quen", 
-				Cipher sẽ lập tức khiến kẻ địch có Giới Hạn HP cao nhất hiện tại trong trận trở thành "Khách Quen". 
-				Khi thi triển Chiến Kỹ và Tuyệt Kỹ, sẽ khiến mục tiêu chính trở thành "Khách Quen". 
-				Trạng thái "Khách Quen" chỉ có hiệu lực với mục tiêu được thi triển mới nhất.
- 			</p>
-			<p class="text-base">Sau khi "Khách Quen" bị mục tiêu khác của phe ta tấn công, Cipher sẽ lập tức phát động 
-				<span class="underline">Đòn Đánh Theo Sau</span> lên "Khách Quen", gây Sát Thương 
-				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> bằng 
+  			<p class="text-base">Linh Hồn Ký Ức Thợ May ban đầu có Tốc Độ bằng
+				<span class="text-yellow-400 font-semibold">35%</span>
+				Tốc Độ của Aglaea và Giới Hạn HP bằng 
 				<span class="text-yellow-400 font-semibold">{talent[0][TalentLevel - 1]}</span>
-				Tấn Công của Cipher. Hiệu ứng này mỗi hiệp tối đa kích hoạt 
-				<span class="text-yellow-400 font-semibold">1</span> lần, 
-				khi bắt đầu hiệp của Cipher sẽ làm mới số lần có thể kích hoạt.
-			</p>
-			<p class="text-base">Cipher sẽ ghi nhận lại 
-				<span class="text-yellow-400 font-semibold">12%</span> không phải 
-				<span class="underline">Sát Thương Chuẩn</span> mà mục tiêu phe ta gây ra cho "Khách Quen", 
-				không ghi nhận sát thương dư ra, sau khi thi triển Tuyệt Kỹ sẽ xóa giá trị ghi nhận.
+				Giới Hạn HP của Aglaea 
+				+<span class="text-yellow-400 font-semibold">{talent[1][TalentLevel - 1]}</span>
+				. Khi Thợ May trong trận, Aglaea tấn công sẽ khiến mục tiêu rơi vào trạng thái Đường Khâu, 
+				sau khi tấn công kẻ địch ở trạng thái Đường Khâu sẽ gây thêm 
+				<span class="underlien">Sát Thương Kèm Theo</span> thuộc tính
+				<span style="color: {character.elementColor}" class="font-bold">Lôi</span> bằng 
+				<span class="text-yellow-400 font-semibold">{talent[2][TalentLevel - 1]}</span> Tấn Công của Aglaea.
+ 			</p>
+			<p class="text-base">Đường Khâu chỉ có hiệu lực với mục tiêu được thi triển mới nhất.
 			</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   				<!-- svelte-ignore a11y-label-has-associated-control -->
   				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
-  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10" />
+  				<input type="range" min="1" max="15" bind:value={TalentLevel} class="w-48 accent-white/10 opacity-80" />
   				<span class="text-sm text-white/40">Lv{TalentLevel}</span>
 			</div>
-</div>
+			</div>
 	</div>
 
 	<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+		<div class="flex flex-col items-center break-words w-20 text-center">
 			<img
-    		src="/images/skills/{character.id}/technique.png"
-   			alt="Bí kỹ"
-    		class="h-20 w-20 rounded border border-white/10 object-cover"
+    			src="/images/skills/{character.id}/technique.png"
+   				alt="Bí kỹ"
+    			class="h-20 w-20 object-cover"
   			/>
+			<span class="text-sm text-white/80 mt-2">Bí Kỹ</span>
+		</div>
 			<div class="flex-1">
-  			<h3 class="text-lg font-bold mb-1">Chú Mèo Đi Hia</h3>
+  			<h3 class="text-lg font-bold mb-1">Ngôi Sao Vụn Vỡ</h3>
   			<p class="text-sm mb-1">
- 			    <span class="text-amber-400 italic">Cường Hóa</span>
+ 			    <span class="text-amber-400 italic">Phá vỡ </span><span style="color: {character.elementColor}">60</span><span class="text-amber-400 italic"> sức bền</span>
   			</p>
-  			<p class="text-base">Nhận được "Chúc Phúc Của Zagreus", duy trì 
-				<span class="text-yellow-400 font-semibold">15</span> giây, trong thời gian này, Cipher sẽ không bị kẻ địch phát hiện, 
-				tốc độ di chuyển tăng 50%, khi đến gần kẻ địch trong bản đồ lớn/Vũ Trụ Mô Phỏng/Vũ Trụ Sai Phân, 
-				có thể lập tức nhận Vật Tiêu Hao ngẫu nhiên, mỗi ngày thực tế tối đa nhận
-				<span class="text-yellow-400 font-semibold">50</span> lần.
-			</p>
-			<p class="text-base">Vào chiến đấu trong thời gian có "Chúc Phúc Của Zagreus" sẽ gây Sát Thương
-				<span style="color: {character.elementColor}; font-weight: bold">Lượng Tử</span> cho toàn bộ kẻ địch bằng
-				<span class="text-yellow-400 font semibold">100%</span> Tấn Công của Cipher, điểm Cipher ghi nhận được từ lần sát thương này tăng 
-				<span class="text-yellow-400 font semibold">200%</span>.
+  			<p class="text-base">
+				<span class="underline">Triệu hồi Linh Hồn Ký Ức</span> Thợ May và cùng tấn công về phía trước. Sau khi vào chiến đấu, hồi 
+				<span class="text-yellow-400 font-semibold">30</span> điểm Năng Lượng, đồng thời gây Sát Thương
+				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> bằng
+				<span class="text-yellow-400 font-semibold">100%</span> Tấn Công của Aglaea cho toàn bộ mục tiêu phe địch, sau đó khiến mục tiêu ngẫu nhiên của phe địch rơi vào trạng thái "Đường Khâu".
 			</p>
 		</div>
 	</div>
+	<section>
+		<TielePet 
+			text="Thợ May" 
+			elementColor={character.elementColor} 
+			icon={`/images/skills/${character.id}/pet.png`}
+		/>
+		
+		<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+			<div class="flex flex-col items-center break-words w-20 text-center">
+				<img
+    				src="/images/skills/{character.id}/skill_memosprite.png"
+   					alt="Chiến Kỹ"
+    				class="h-20 w-20 object-cover"
+  				/>
+				<span class="text-sm text-white/80 mt-2">Chiến Kỹ</span>
+			</div>
+			<div class="flex-1">
+				<h3 class="text-lg font-bold mb-1">Bẫy Gai</h3>
+				<p class="text-sm mb-1">
+		    		<span class="text-amber-400 italic">Khuếch Tán</span>
+				</p>
+			<p class="text-base">Gây cho 1 kẻ địch Sát Thương
+				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> tương đương
+				<span class="text-yellow-400 font-semibold">{skillPet[0][SkillPetLevel - 1]}</span> Tấn Công, gây cho mục tiêu lân cận Sát Thương
+				<span style="color: {character.elementColor}; font-weight: bold">Lôi</span> tương đương
+				<span class="text-yellow-400 font-semibold">{skillPet[1][SkillPetLevel - 1]}</span> Tấn Công
+			</p>
+			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
+  				<!-- svelte-ignore a11y-label-has-associated-control -->
+  				<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
+  				<input type="range" min="1" max="10" bind:value={SkillPetLevel} class="w-48 accent-white/10 opacity-80" />
+  				<span class="text-sm text-white/40">Lv{SkillPetLevel}</span>
+			</div>
+			</div>
+		</div>
+
+		<div class="mb-4 border p-4 rounded-lg bg-black/20 flex gap-4 items-start">
+			<div class="flex flex-col items-center break-words w-20 text-center">
+				<img
+    				src="/images/skills/{character.id}/talent_memosprite.png"
+   					alt="Thiên Phú"
+    				class="h-20 w-20 object-cover"
+  				/>
+				<span class="text-sm text-white/80 mt-2">Thiên Phú</span>
+			</div>
+			<div class="flex-1">
+				<h3 class="text-lg font-bold mb-1">Thân Thể Rèn Từ Nước Mắt</h3>
+				<p class="text-sm mb-1 text-amber-400 italic">Cường Hóa</p>
+				<p class="text-base">Sau khi tấn công kẻ địch ở trạng thái 
+					<span class="font-bold">Đường Khâu</span>, sẽ khiến Tốc Độ của bản thân tăng
+					<span class="text-yellow-400 font-semibold">{talentPet[0][talentPetLevel - 1]}</span>
+					điểm, hiệu ứng này tối đa cộng dồn
+					<span class="text-yellow-400 font-semibold">6</span> tầng. Khi Thợ May hành động sẽ tự động thi triển Bẫy Gai, 
+					ưu tiên tấn công kẻ địch ở trạng thái Đường Khâu.				
+				</p>
+
+				<h3 class="text-lg font-bold mb-1 mt-2">「Mùa Hè Lao Vun Vút」</h3>
+				<p class="text-sm mb-1 text-amber-400 italic">Cường Hóa</p>
+				<p class="text-base">Khi Thợ May được triệu hồi, khiến bản thân
+					<span class="underline">Ưu Tiên Hành Động</span>
+					<span class="text-yellow-400 font-semibold">100%</span>
+				</p>
+
+				<h3 class="text-lg font-bold mb-1 mt-2">「Cỏ Khô Nở Hoa」</h3>
+				<p class="text-sm mb-1 text-amber-400 italic">Cường Hóa</p>
+				<p class="text-base">Khi Thợ May biến mất, khiến Aglaea hồi
+					<span class="text-yellow-400 font-semibold">20</span> điểm Năng Lượng.
+				</p>
+				
+				<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
+  					<!-- svelte-ignore a11y-label-has-associated-control -->
+  					<label class="text-sm text-white/40">Cấp độ kỹ năng:</label>
+  					<input type="range" min="1" max="10" bind:value={talentPetLevel} class="w-48 accent-white/10 opacity-80" />
+  					<span class="text-sm text-white/40">Lv{talentPetLevel}</span>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Thiên Phú &gt Tuyệt Kỹ &gt Chiến Kỹ = Tấn Công Thường</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Tấn Công Thường &ge; Tuyệt Kỹ &gt; Chiến Kỹ (Linh Hồn Ký Ức) &ge; Thiên Phú (Linh Hồn Ký Ức) &gt Thiên Phú &gt Chiến Kỹ</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-   			<p class="font-bold text-white">Thiên Phú</p>
-  			<p class="text-white/80 text-sm">Mặc dù Sát Thương Chuẩn không tăng theo LV nhưng hãy nâng cấp Kỹ Năng này vì đây là nguồn Sát Thương chính của Cipher nếu bạn muốn Cipher hỗ trợ DMG trong đội hình.</p>
+   			<p class="font-bold text-white">Tấn Công Thường</p>
+  			<p class="text-white/80 text-sm">Nguồn Sát Thương chính của Aglaea.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Tuyệt Kỹ</p>
-    		<p class="text-white/80 text-sm">Nâng cho có DMG chứ vẫn phụ thuộc vào Sát Thương Chuẩn từ Thiên Phú.</p>
+    		<p class="text-white/80 text-sm">Giúp Aglaea đạt được lượng Tốc Độ cần thiết.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-    		<p class="font-bold text-white">Chiến kỹ</p>
-    		<p class="text-white/80 text-sm">Dùng cho có thêm Sát Thương.</p>
+    		<p class="font-bold text-white">Chiến Kỹ <span style="color: {character.elementColor}">(Linh Hồn Ký Ức)</span></p>
+    		<p class="text-white/80 text-sm">Gây DMG cùng Aglaea, không nhiều nhưng là có.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-    		<p class="font-bold text-white">Tấn công thường</p>
-    		<p class="text-white/80 text-sm">Nâng đi để tạo Điểm Chiến Kỹ cho đồng đội.</p>
+    		<p class="font-bold text-white">Thiên Phú (Linh Hồn Ký Ức)</p>
+    		<p class="text-white/80 text-sm">Nguồn SPD chính của Linh Hồn Ký Ức và cũng như là Aglaea khi cô sử dụng Tuyệt Kỹ.</p>
+  		</div>
+		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
+    		<p class="font-bold text-white">Thiên Phú</p>
+    		<p class="text-white/80 text-sm">Tăng thêm tí HP cho "bao cát thứ 5" trong đội và thêm tí DMG mỗi khi Linh Hồn Ký Ức hành động.</p>
+  		</div>
+		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
+    		<p class="font-bold text-white">Chiến Kỹ</p>
+    		<p class="text-white/80 text-sm">Nếu tôi nhận được 1000vnđ mỗi khi có ai dùng kỹ năng này 2 lần trong một trận đấu, thì tôi sẽ có 0vnđ. Đùa, ai lại dùng kỹ năng này trong trạng thái Tuyệt Kỹ chứ, hay bạn làm mất trạng thái Tuyệt Kỹ?</p>
   		</div>
 	</div>
 	</section>
@@ -328,63 +446,47 @@
 		<Title>VẾT TÍCH</Title>
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace1.png"
-		title="Giày Quý Thần Tốc"
-		description="Khi tốc độ của Cipher lớn hơn hoặc bằng 
-					<span class='font-semibold'>140</span>/<span class='font-semibold'>170</span>, 
-					Tỷ Lệ Bạo Kích tăng 
-					<span class='text-yellow-400 font-semibold'>25%</span>/<span class='text-yellow-400 font-semibold'>50%</span>,
-					điểm ghi nhận nhận được tăng 
-					<span class='text-yellow-400 font-semibold'>50%</span>/<span class='text-yellow-400 font-semibold'>100%</span>."
+		title="Trừng Phạt Tầm Nhìn Hạn Hẹp"
+		description="Khi ở trạng thái Tư Thế Tối Cao, Tấn Công của Aglaea và Thợ May tăng. Mức tăng bằng
+					<span class='text-yellow-400 font-semibold'>720%</span> Tốc Độ của Aglaea +
+					<span class='text-yellow-400 font-semibold'>360%</span> Tốc Độ của Thợ May."
 		unlock="A2"
 		
 		nodes={[
 			{
-      		  	icon: "/images/icons-vestige/quantum.png",
-      	  	  	value: "+3.2%",
-      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
-      		  	unlock: "A2"
-    		},
-    		{
-    		  	icon: "/images/icons-vestige/SPD.png",
-    		  	value: "+2",
-    		  	label: "Tốc Độ",
-    		  	unlock: "A3"
-    		},
-    		{
-    		  	icon: "/images/icons-vestige/EHR.png",
-    		  	value: "+4%",
-      		  	label: "Chính Xác Hiệu Ứng",
+      		  	icon: "/images/icons-vestige/DEF.png",
+      	  	  	value: "+5%",
+      		  	label: "Phòng Thủ",
       		  	unlock: "A3"
+    		},
+    		{
+    		  	icon: "/images/icons-vestige/lightning.png",
+    		  	value: "+4.8%",
+    		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
+    		  	unlock: "A4"
     		}
 		]}
 	/>
 
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace2.png"
-		title="300 Hiệp Đạo"
-		description='Cipher sẽ ghi nhận 
-		<span class="text-yellow-400 font-semibold">8%</span> không phải 
-		<span class="underline">Sát Thương Chuẩn</span> 
-		mà mục tiêu phe ta gây ra cho mục tiêu phe địch ngoại trừ "Khách Quen", sát thương vượt mức sẽ không ghi nhận.'
+		title="Kết Thúc Dệt Vận Mệnh"
+		description='Khi Thợ May biến mất, số tầng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức tối đa bảo lưu
+		<span class="text-yellow-400 font-semibold">1</span> tầng. 
+		Khi Thợ May bị triệu hồi lần nữa, sẽ nhận được hiệu ứng tăng Tốc Độ số tầng tương ứng.'
 		unlock="A4"
 
 		nodes={[
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+3",
-      		  	label: "Tốc Độ",
-      		  	unlock: "A4"
-			},
-			{
-				icon: "/images/icons-vestige/quantum.png",
-      	  	  	value: "+4.8%",
-      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
+				icon: "/images/icons-vestige/CR.png",
+      	  	  	value: "+4%",
+      		  	label: "Tỉ Lệ Bạo Kích",
       		  	unlock: "A5"
 			},
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+3",
-      		  	label: "Tốc Độ",
+				icon: "/images/icons-vestige/lightning.png",
+    		  	value: "+4.8%",
+    		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
       		  	unlock: "A5"
 			}
 		]}
@@ -392,25 +494,29 @@
 
 	<TraceBlock
 		icon="/images/skills/{character.id}/trace3.png"
-		title="Đổi Trắng Thay Đen"
-		description='Sát Thương Bạo Kích do 
-		<span class="underline">Đòn Đánh Theo Sau</span> của Thiên Phú gây ra tăng 
-		<span class="text-yellow-400 font-semibold">100%</span>.
-		Khi Cipher trong trận, sát thương toàn bộ mục tiêu phe địch phải chịu sẽ tăng 
-		<span class="text-yellow-400 font-semibold">40%</span>.'
+		title="Mặt Trời Lao Vun Vút"
+		description='Khi bắt đầu chiến đấu, nếu Năng Lượng của bản thân không đủ 
+		<span class="text-yellow-400 font-semibold">50%</span>, sẽ hồi Năng Lượng của bản thân đến
+		<span class="text-yellow-400 font-semibold">50%</span>.'
 		unlock="A6"
 		nodes={[
 			{
-				icon: "/images/icons-vestige/EHR.png",
-      	  	  	value: "+6%",
-      		  	label: "Chính Xác Hiệu Ứng",
+				icon: "/images/icons-vestige/DEF.png",
+      	  	  	value: "+7.5%",
+      		  	label: "Phòng Thủ",
       		  	unlock: "A6"
 			},
 			{
-				icon: "/images/icons-vestige/quantum.png",
-      	  	  	value: "+6.4%",
-      		  	label: "Tăng Sát Thương <span style='color:#8CA6E6'>Lượng Tử</span>",
+				icon: "/images/icons-vestige/CR.png",
+      	  	  	value: "+5.3%",
+      		  	label: "Tỉ Lệ Bạo Kích",
       		  	unlock: "LV75"
+			},
+			{
+				icon: "/images/icons-vestige/lightning.png",
+    		  	value: "+6.4%",
+    		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
+      		  	unlock: "LV80"
 			}
 		]}
 	/>
@@ -418,16 +524,22 @@
 	<TraceBlock
 		nodes={[
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+2",
-      		  	label: "Tốc Độ",
+				icon: "/images/icons-vestige/lightning.png",
+    		  	value: "+3.2%",
+    		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
       		  	unlock: "LV1"
 			},
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+4",
-      		  	label: "Tốc Độ",
-      		  	unlock: "LV80"
+				icon: "/images/icons-vestige/CR.png",
+      	  	  	value: "+2.7%",
+      		  	label: "Tỉ Lệ Bạo Kích",
+      		  	unlock: "A2"
+			},
+			{
+				icon: "/images/icons-vestige/lightning.png",
+    		  	value: "+3.2%",
+    		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
+      		  	unlock: "A3"
 			}
 		]}
 	/>
@@ -440,93 +552,86 @@
 			<EidolonBlock
   				icon="/images/eidolons/{character.id}/e1.png"
   				number={1}
-  				name="Dòm Ngó Kỹ, Bắt Cơ May"
+  				name="Trôi Dạt Theo Sao Kim"
   				elementColor={character.elementColor}
-  				description='Điểm sát thương được ghi nhận của Cipher là 
-				<span class="text-yellow-400 font-semibold">150%</span> điểm ghi nhận ban đầu. Khi thi triển
-				<span class="underline">Đòn Đánh Theo Sau</span>, của Thiên Phú, Tấn Công của Cipher tăng
-				<span class="text-yellow-400 font-semibold">80%</span>, duy trì
-				<span class="text-yellow-400 font-semibold">2</span> hiệp.'
+  				description='Sát thương mà kẻ địch ở trạng thái Đường Khâu phải chịu tăng
+				<span class="text-yellow-400 font-semibold">15%</span>, 
+				Aglaea hoặc Thợ May sau khi tấn công mục tiêu này, sẽ hồi thêm
+				<span class="text-yellow-400 font-semibold">20</span> điểm Năng Lượng.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e2.png"
   				number={2}
-  				name="Vụng Về Ra Tay, Lấm Lem Ngay"
+  				name="Du Hành Trên Mi Mắt Vận Mệnh"
   				elementColor={character.elementColor}
-  				description='Khi Cipher đánh trúng mục tiêu phe địch, có
-				<span class="text-yellow-400 font-semibold">120%</span>
-				<span class="underline">xác suất cơ bản</span> khiến sát thương kẻ địch phải chịu tăng 
-				<span class="text-yellow-400 font-semibold">30%</span>, duy trì
-				<span class="text-yellow-400 font-semibold">2</span> hiệp.'
+  				description='Khi Aglaea hoặc Thợ May hành động, Sát Thương gây ra của Aglaea và Thợ May sẽ bỏ qua
+				<span class="text-yellow-400 font-semibold">14%</span> Phòng Thủ của mục tiêu, hiệu ứng này tối đa cộng dồn
+				<span class="text-yellow-400 font-semibold">3</span> tầng, 
+				duy trì đến khi đơn vị bất kỳ ngoại trừ bản thân và Thợ May chủ động thi triển kỹ năng.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e3.png"
   				number={3}
-  				name="Gian Ngôn Tráo Thật Giả Bày"
+  				name="Món Quà Sương Đọng"
   				elementColor={character.elementColor}
-  				description='Cấp 
-				<span class="font-semibold">Tuyệt Kỹ</span> 
-				<span class="text-yellow-400 font-semibold">+2</span>, tối đa không quá cấp 15, cấp 
-				<span class="font-semibold">Tấn Công Thường</span> 
-				<span class="text-yellow-400 font-semibold">+1</span>, tối đa không quá cấp 10.'
+  				description='Cấp Chiến Kỹ +2, tối đa không quá cấp 15; 
+				Cấp Tấn Công Thường +1, tối đa không quá cấp 10; 
+				Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp 10.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e4.png"
   				number={4}
-  				name="Lòi Đuôi Vội Vụt Chân Bay"
+  				name="Sự Lấp Lánh Trong Đá Cẩm Thạch"
   				elementColor={character.elementColor}
-  				description='Sau khi "Khách Quen" bị mục tiêu phe ta tấn công, Cipher sẽ gây
-				<span class="underline">Sát Thương Kèm Theo</span> thuộc tính Lượng Tử bằng
-				<span class="text-yellow-400 font-semibold">50%</span> Tấn Công của Cipher cho kẻ đó.'
+  				description='Giới hạn số tầng hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức tăng
+				<span class="text-yellow-400 font-semibold">1</span> tầng. 
+				Sau khi Aglaea thi triển tấn công cũng có thể khiến Thợ May nhận được hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e5.png"
   				number={5}
-  				name="Trốn Thoát Tinh Vi, Giăng Kế Dày"
+  				name="Thợ Dệt Khổ Nạn Tăm Tối"
   				elementColor={character.elementColor}
-  				description='Cấp 
-				<span class="font-semibold">Chiến Kỹ</span> 
-				<span class="text-yellow-400 font-semibold">+2</span>, tối đa không quá cấp 15, cấp 
-				<span class="font-semibold">Thiên Phú</span> 
-				<span class="text-yellow-400 font-semibold">+2</span>, tối đa không quá cấp 15.'
+  				description='Cấp Tuyệt Kỹ +2, tối đa không quá cấp 15; 
+				Cấp Thiên Phú +2, tối đa không quá cấp 15; 
+				Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp 10.'
 			/>
 			<EidolonBlock
 				icon="/images/eidolons/{character.id}/e6.png"
   				number={6}
-  				name="Lừa Cả Thế Giới Chẳng Ai Hay"
+  				name="Tơ Vàng Đầy Khuyết Vô Thường"
   				elementColor={character.elementColor}
-  				description='Tăng 
-				<span class="text-yellow-400 font-semibold">350%</span> sát thương gây ra bởi
-				<span class="underline">Đòn Đánh Theo Sau</span> của Thiên Phú Cipher, khi ghi nhận, sẽ ghi thêm 
-				<span class="text-yellow-400 font-semibold">16%</span>
-				của sát thương gây ra không thuộc phạm trù vượt mức của đòn tấn công này. 
-				Sau khi thi triển Tuyệt Kỹ sẽ xóa điểm ghi nhận, hoàn trả
-				<span class="text-yellow-400 font-semibold">20%</span> điểm ghi nhận bị xóa của lần này.'
+  				description='Khi Aglaea ở trạng thái Tư Thế Tối Cao, 				
+				<span class="underline">Xuyên Kháng</span> Lôi của bản thân và Thợ May tăng 
+				<span class="text-yellow-400 font-semibold">20%</span>. 
+				Khi Aglaea và Thợ May có tốc độ cao hơn 160/240/320 điểm, sát thương gây ra bởi 
+				<span class="underline">Tấn Công Phối Hợp</span> sẽ tăng 
+				<span class="text-yellow-400 font-semibold">10%</span>/<span class="text-yellow-400 font-semibold">30%</span>/<span class="text-yellow-400 font-semibold">60%</span>.'
 			/>
 			</div>
 
 			<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên đầu tư Tinh Hồn</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Bạn thật sự định đầu tư Tinh Hồn cho con này à? Thôi bỏ đi trước khi bị bác sĩ mắng..</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">E1 &gt; E2 &ge; E6 &gt; E4</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white"><span style="color: {character.elementColor}">E1</span> 
-			- Dòm Ngó Kỹ, Bắt Cơ May</p>
-  			<p class="text-white/80 text-sm">Tăng một lượng khá Tấn Công cho Cipher, nhưng không đáng.</p>
+			- Trôi Dạt Theo Sao Kim</p>
+  			<p class="text-white/80 text-sm">Cải thiện vận hành nhất cho Aglaea.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E2</span> 
-			- Vụng Về Ra Tay, Lấm Lem Ngay</p>
-    		<p class="text-white/80 text-sm">+1 Debuff hiếm nhưng không đủ nhiều để đáng đầu tư.</p>
+			- Du Hành Trên Mi Mắt Vận Mệnh</p>
+    		<p class="text-white/80 text-sm">Bỏ qua DEF lên tới 42%, một chỉ số lớn và bá trong con game này.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E4</span> 
-			- Lòi Đuôi Vội Vụt Chân Bay</p>
-    		<p class="text-white/80 text-sm">Hỗ trợ bồi thêm DMG giống Robin, nhưng tốn tận E4 để bằng Robin?</p>
+			- Sự Lấp Lánh Trong Đá Cẩm Thạch</p>
+    		<p class="text-white/80 text-sm">Tăng thêm 1 tầng Tốc Độ, nhưng ở tận mốc Tinh Hồn này thì không đáng. </p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E6</span> 
-			- Lừa Cả Thế Giới Chẳng Ai Hay</p>
-    		<p class="text-white/80 text-sm">Bạn không phải <span class="font-semibold">"ngài Da Ky"</span>, đừng làm gì dại dột.</p>
+			- Tơ Vàng Đầy Khuyết Vô Thường</p>
+    		<p class="text-white/80 text-sm">Tăng cực mạnh lượng Sát Thương đầu ra.</p>
   		</div>
 	</div>
 
@@ -535,7 +640,7 @@
 	<section>
 		<Title>NÓN ÁNH SÁNG</Title>
 		<LightconesBlock
-  			ids={['lies-dance-on-the-breeze', 'resolution-shines-as-pearls-of-sweat','before-the-tutorial-mission-starts','eyes-of-the-prey']}
+  			ids={['time-woven-into-gold','sweat-now-cry-less','reminiscence','geniuses-greetings']}
   			characterName={character.name}
   			exposeNames={(names) => {lightconeNames = names}}
 		/>
@@ -544,19 +649,19 @@
     	  <ol class="list-decimal list-inside space-y-2 text-white/80 text-sm leading-relaxed">
   			<li>
     		<strong class="text-amber-300">{lightconeNames[0]}</strong>: <span class="font-bold">Trấn</span> -
-			Có thì dùng, không thì các Nón dưới.
+			Tốt nhất ở thời điểm hiện tại.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[1]}</strong>: 
-			Tích Tầng <span class="text-yellow-400 font-bold">5</span> có tác dụng gần bằng Trấn.
+			Trấn 4 Sao tuy nhiên phải nạp BattelPass nên không khuyến khích.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
-			Lấy Chính Xác Hiệu Ứng là chính, Hồi Năng Lượng là mười.
+			Trấn 3 Sao.
   			</li>
 			<li>
 			<strong class="text-amber-300">{lightconeNames[3]}</strong>:
-			Lấy Chính Xác Hiệu Ứng. Hết.
+			Không còn gì thì dùng tạm.
 			</li>
 		  </ol>
   		</div>
@@ -567,43 +672,44 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Genius_of_Brilliant_Stars','Pioneer_Diver_of_Dead_Waters']}
-			mixSets={[['Messenger_Traversing_Hackerspace','Sacerdos_Relived_Ordeal'],['Messenger_Traversing_Hackerspace','Genius_of_Brilliant_Stars'],['Musketeer_of_Wild_Wheat','Scholar_Lost_in_Erudition']]}
-  			planarIds={['Item_Firmament_Frontline_Glamoth','Item_Duran_Dynasty_of_Running_Wolves','Item_Inert_Salsotto','Item_Rutilant_Arena','Item_Sprightly_Vonwacq','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Broken_Keel']}
+			relicIds={['Hero_of_Triumphant_Song','Musketeer_of_Wild_Wheat']}
+			mixSets={[[]]}
+  			planarIds={['Item_The_Wondrous_BananAmusement_Park','Item_Rutilant_Arena','Item_Firmament_Frontline_Glamoth']}
 			relicAnalysis={`
-			<p><span class="text-amber-300 font-semibold">Thiên Tài Xuất Chúng</span>: 
-			Nếu bạn muốn build Cipher thuần DPS thì có thể cân nhắc, nhưng phải đủ 170 tốc.</p>
-			<p><span class="text-amber-300 font-semibold">Tiên Phong Trong Nước Chết</span>: 
-			Cung cấp rất nhiều CV nếu muốn build DPS, nhưng vẫn phải đủ 170 tốc.</p>
-			<p><span class="text-amber-300 font-semibold">MIX 2-2</span>: 
-			Khuyến nghị các bạn nên Mix 2 đồ Tốc để dễ build đủ 170 tốc. 
-			Hoặc Mix Tốc với Sát Thương để hỗ trợ thêm DMG cho DPS.
-			Không khuyến nghị Mix 2 bộ DMG lắm nhưng cứ để vào cho có 🐧.</p>
+			<p><span class="text-amber-300 font-semibold">Anh Hùng Ca Khúc Khải Hoàn</span>: 
+			Bộ di vật phù hợp với bộ kit của Aglaea.</p>
+			<p><span class="text-amber-300 font-semibold">Thiện Xạ Bông Lúa</span>: 
+			Giống bộ Anh Hùng Ca Khúc Khải Hoàn nhưng yếu hơn chút.</p>
 			`}
 			planarAnalysis={`
-			<p>Cả 3 bộ <span class="text-amber-300 font-semibold">Glamoth, Chiến Tuyến Không Trung</span>, 
-			<span class="text-amber-300 font-semibold">Duran - Vương Triều Sói Hoang</span>,
-			<span class="text-amber-300 font-semibold">Salsotto Dừng Xoay</span>
-			đều rất hợp với bộ kỹ năng của Cipher nếu bạn có thể build đủ 170 tốc, và tùy bộ nào bạn có đẹp thì mặc.</p>
-			<p>Những bộ còn lại dùng cho Cipher build slave.</p>
+			<p><span class="text-amber-300 font-semibold">Công Viên Chuối Kỳ Ảo</span>:
+			Tăng rất nhiều CV cho aglaea.</p>
+			<span class="text-amber-300 font-semibold">Đấu Trường Ngôi Sao</span>:
+			Tăng Tỉ Lệ Bạo và Sát Thương Tấn Công Thường cho Aglaea.</p>
+			<span class="text-amber-300 font-semibold">Glamoth, Chiến Tuyến Không Trung</span>:
+			Tăng Sát Thương gây ra khi người dùng có đủ Tốc, một chỉ số mà Aglaea có rất nhiều trong thực chiến.</p>
 			`}
-			statDescriptions={[
-    		'[CD]Crit Dmg &nbsp;&nbsp;&ge; &nbsp;[CR]Crit Rate',
+			statDescriptions={[[
+    		'[CR]Crit Rate &nbsp;&nbsp;&ge;&nbsp; [CD]Crit Dmg',
     		'[SPD]Tốc Độ',
-    		'[quantum]Tăng ST Lượng Tử',
-    		'[ATK]Tấn Công'
-  			]}
+    		'[lightning]<span style="color: #E26CFF">Tăng ST Lôi</span>',
+    		'[ERR]Hiệu Suất Hồi Năng Lượng'
+			]]}
 			priorityStats={
-			'Tốc Độ &gt; Sát Thương Bạo &ge; Tỉ Lệ Bạo &gt; Tấn Công'
+			'Tốc Độ &gt; Tỉ Lệ Bạo &ge; Sát Thương Bạo &gt; Tấn Công'
 			}
 			endgameStats={`
 			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
-			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">BASE</span> &nbsp;<span class="text-white/70">(Phần lớn Sát Thương của Cipher là <span class="underline">Sát Thương Chuẩn</span> "bú" từ đồng minh)</span></p>
-			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">50%</span> &nbsp;<span class="text-white/70">(Hãy build đủ 170+ tốc để lấy được <span class="text-yellow-400">50%</span> Tỉ Lệ Bạo còn lại)</p>
-			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">180%+</span> &nbsp;<span class="text-white/70">(Thực ra thì cũng hơi khó build Sát Thương Bạo cao, nhưng cứ cố đi, không tới được thì thôi)</span></p>
-			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">170+</span></p>
-			<p><span class="text-white/70">Chính Xác Hiệu Ứng:</span>&nbsp; <span class="font-bold">39%</span> &nbsp;<span class="text-white/70">(<span class="text-yellow-400">10%</span> Vết Tích cho sẵn rồi, build <span class="text-yellow-400">29%</span> thôi. Bác Sĩ trong Bệnh viện Lê Bách bảo vậy chứ tôi cũng không biết :v)</span></p>
+			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">2000+</span> &nbsp;<span class="text-white/70">(ATK của Aglaea phụ thuộc vào Tốc của cô nàng, Tốc càng cao thì ATK cũng cao theo)</span></p>
+			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">90%+</span>&nbsp;<span class="text-white/70">(<span class="font-semibold">80%</span> nếu đi cùng Sunday)</span></p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">150%+</span></p>
+			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">?</span> &nbsp;
+			<span class="text-white/70">(Không có mốc Speed cố định hướng tới dành cho Aglaea do lượng Speed tự buff lớn. 
+			Tuy nhiên sau khi tìm hiểu từ nhiều nguồn <span class="text-white/40">(cụ thể là Reddit)</span> thì tôi khuyến nghị bạn nên
+			build Aglaea <span class="font-bold">~155 Tốc</span> nếu dùng trấn và 
+			<span class="font-bold">158 Tốc</span> SPD nếu dùng nón khác và đi cùng Sunday 161 SPD)</span></p>
+			<p><span class="text-white/70">Hiệu Suất Hồi Năng Lượng:</span>&nbsp; <span class="font-bold">119.44%</span></p>
 			`}
 		/>
 	</section>
@@ -612,28 +718,20 @@
 		<Title>ĐỘI HÌNH</Title>
 		<TeamBlock
 			team={{
-    			dps: ['acheron','feixiao','aglaea','dr-ratio'],
-    			supportDps: ['cipher','tribbie'],
-    			amplifier: ['robin','ruan-mei','silver-wolf','pela'],
-    			sustain: ['aventurine']
+    			dps: ['aglaea'],
+    			supportDps: [],
+    			amplifier: ['sunday','bronya','robin','tingyun'],
+    			sustain: ['huohuo']
   			}}
   			tooltips={{
-				acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương.',
-				feixiao: 'Feixiao cần đồng đội hành động gây Sát Thương nhiều và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được cả 2 yêu cầu đó.',
-				'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
-				aglaea: 'Có nhiều DMG là được.',
-				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
-    			tribbie: 'Tương tự Robin nhưng tốt hơn vì có <span class="underline">Đòn Đánh Theo Sau</span>.',
-				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
-				'ruan-mei': 'Giống Robin.',
-				'silver-wolf': 'Giảm Def, tăng Sát Thương mà đồng đội gây ra, gián tiếp giúp Cipher tích nhanh Thiên Phú.',
-				pela: 'Giống Sói Bạc.',
-				aventurine: 'Cứ có Sát Thương là được.',
+				aglaea: 'Tốc cao, hành động nhiều, nên đi cùng những nhân vật Hỗ Trợ <span class="underline">Kéo Lượt</span> để hành động nhiều hơn nữa, và nên đi cùng những Hỗ Trợ có khả năng Hồi Năng Lượng cho đồng minh.',
+				sunday: 'Ưu tiên hành động 100% cho Aglaea và cả Linh Hồn Ký Ức của cô, có Hồi Năng Lượng cho đồng mình. "Core" Team Aglaea.',
+				bronya: 'Bản litte của Sunday. Có thể build 160 Tốc để làm nole kéo lượt Sunday, sau đó để Sunday kéo Aglaea tiếp (Sunday nên có Trấn để dễ vận hành).',
+				robin: 'Có thể thay thế Bronya. Hoặc đi team 3 nô siêu kéo lượt (không khuyến khích newbie làm theo).',
+				tingyu: 'S5 Múa Múa Múa, bản supper ultra litte của Sunday.',
+				huohuo: 'Bảo Kê duy nhất có khả năng hồi năng lượng cho đồng minh.'
     			}}
 			notes={{
-				dps: 'Cứ cho đi cùng nhân vật nào gây ra nhiều Sát Thương là được vì Cipher có tác dụng tương tự Robin/Ruan Mei/Tribbie, \nBuff/Debuff cả team trong thời gian dài.',
-				amplifier: 'Hòa Hợp Buff toàn phe đồng minh là cho đi cùng được.',
-				sustain: 'Nhân vật nào chả được, miễn là có hỗ trợ Sát Thương như Aventurine.'
 			}}
 		/>
 	</section>
@@ -642,14 +740,18 @@
 		<Title>TIPS & TRICKS</Title> 
 		<ProsConsBlock 
 			pros=" 
-				Tốc cao tạo điểm chiến kỹ cho team, siêu dương điểm chiến kỹ.
-				Debuff siêu hiếm, không cần tái gắn Debuff.
-				Có thể thay thế SP Hòa Hợp trong một vài đội hình.
+				Dễ chơi, spam đánh thường đến c.hết.
+				Lượng sát thương đầu ra lớn.
+				Không tiêu hao nhiều Điểm Chiến Kỹ.
+				Tấn Công Phối Hợp kích hoạt hiệu ứng on-hit hai lần (bao gồm cả Tuyệt Kỹ của Robin).
+				Tăng mạnh SPD và ATK cho bản thân.
 			"
 			cons="
-				Quá phụ thuộc vào Sát Thương mà DPS và đồng đội gây ra.
-				Không thể thay thế DPS truyền thống nhưng cũng không thể thay thế SP hoàn toàn được.
-				Ra mắt ngay trước Banner Aeon Animation 🐧.
+				Điểm Năng Lượng quá lớn, tận 350.
+				Sát thương ngoài Tuyệt Kỹ không ấn tượng.
+				Đồng đội có thể đi tốt đều là 5 Sao, không F2P chút nào.
+				Phụ thuộc nhiều vào Sunday để đạt hiệu quả tốt nhất (Aglaea rất yếu nếu không đi cùng Sunday).
+				Phải giải quyết vấn đề bằng tiền (cụ thể là E1 và Trấn).
 			"
 		/>
 
