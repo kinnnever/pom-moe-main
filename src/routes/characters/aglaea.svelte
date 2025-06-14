@@ -389,14 +389,14 @@
 					ưu tiên tấn công kẻ địch ở trạng thái Đường Khâu.				
 				</p>
 
-				<h3 class="text-lg font-bold mb-1 mt-2">「Mùa Hè Lao Vun Vút」</h3>
+				<h3 class="text-lg font-bold mb-1 mt-4">「Mùa Hè Lao Vun Vút」</h3>
 				<p class="text-sm mb-1 text-amber-400 italic">Cường Hóa</p>
 				<p class="text-base">Khi Thợ May được triệu hồi, khiến bản thân
 					<span class="underline">Ưu Tiên Hành Động</span>
 					<span class="text-yellow-400 font-semibold">100%</span>
 				</p>
 
-				<h3 class="text-lg font-bold mb-1 mt-2">「Cỏ Khô Nở Hoa」</h3>
+				<h3 class="text-lg font-bold mb-1 mt-4">「Cỏ Khô Nở Hoa」</h3>
 				<p class="text-sm mb-1 text-amber-400 italic">Cường Hóa</p>
 				<p class="text-base">Khi Thợ May biến mất, khiến Aglaea hồi
 					<span class="text-yellow-400 font-semibold">20</span> điểm Năng Lượng.

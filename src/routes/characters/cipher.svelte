@@ -527,7 +527,7 @@
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white"><span style="color: {character.elementColor}">E1</span> 
 			- Dòm Ngó Kỹ, Bắt Cơ May</p>
-  			<p class="text-white/80 text-sm">Tăng một lượng khá Tấn Công cho Cipher, nhưng không đáng.</p>
+  			<p class="text-white/80 text-sm">Tăng 50% lượng Sát Thương Chuẩn, nhưng mà thế vẫn là quá ít với E1 SP hiện nay (cụ thể là Hòa Hợp).</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E2</span> 
