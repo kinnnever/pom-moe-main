@@ -758,28 +758,40 @@
 
 		<div class="text-xl font-bold mt-4 mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
 			<span class="text-3xl font-bold mb-1 mt-3 pl-2">
+				<span style="color: #FFD75E">Sunday</span> &nbsp &gt &nbsp 
+				<span style="color: {character.elementColor}">E1</span> &nbsp &ge; &nbsp 
+				<span style="color: #1FE7A5">Huohuo</span> &nbsp &gt &nbsp 
 				<span style="color: {character.elementColor}">S1</span> &nbsp &gt &nbsp 
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
 		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
-			<p class="text-lg mt-2">Yep, bạn chỉ cần mỗi cái <span class="font-semibold text-amber-400">S1</span> là quá đủ rồi.
+			<p>
+				<span class="font-semibold text-amber-400 text-lg mt-2">Sunday</span>: "Core" team Aglaea. Aglaea không Sunday, Aglaea nhót.
 			</p>
-			<p class="text-lg mt-2 ">Mà thực ra bạn chỉ cần roll mỗi xác thôi là đủ rồi.</p>
+			<p>
+				<span class="font-semibold text-amber-400 text-lg mt-2">E1</span>: Cải thiện cực nhiều vận hành cho Aglaea trong thực chiến. Nếu chưa có Sunday thì nên có E1.
+			</p>
+			<p>
+				<span class="font-semibold text-amber-400 text-lg mt-2">Huohuo</span>: Bảo kê tốt, hồi 20% Năng Lượng tối đa cho toàn team (tức 70 điểm cho Aglaea), cực tốt cho Aglaea khi kẹp cùng Sunday, còn tăng ATK nữa. 
+			</p>
+			<p>
+				<span class="font-semibold text-amber-400 text-lg mt-2">S1</span>: Tăng SPD trực tiếp vào chỉ số <span class="underline">Tốc Độ Cơ Bản</span> giúp giảm nhẹ gánh nặng lên di vật khi build Tốc cao.
+			</p>
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">
-  <!-- <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="rounded-lg shadow-lg"
-  ></iframe> -->
-</div>
+  			<!-- <iframe
+    			width="448"
+    			height="252"
+    			src="https://www.youtube.com/embed/b7E4FdrXUEA"
+    			title="YouTube video player"
+    			frameborder="0"
+    			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    			allowfullscreen
+    			class="rounded-lg shadow-lg"
+  			></iframe> -->
+		</div>
 
 	</section>
 </div>

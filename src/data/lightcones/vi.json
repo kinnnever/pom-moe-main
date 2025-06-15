@@ -682,5 +682,11 @@
     "name": "Lời Nói Dối Bay Trong Gió",
     "path": "nihility",
     "rarity": 5
+  },
+  "into-the-unreachable-veil": {
+    "id": "into-the-unreachable-veil",
+    "name": "Hướng Về Điều Không Thể Truy Hỏi",
+    "path": "erudition",
+    "rarity": 5
   }
 }

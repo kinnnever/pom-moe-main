@@ -669,7 +669,7 @@
 		<Title>ĐỘI HÌNH</Title>
 		<TeamBlock
 			team={{
-    			dps: ['acheron','feixiao','aglaea','dr-ratio'],
+    			dps: ['acheron','feixiao','aglaea','castorice','dr-ratio'],
     			supportDps: ['cipher','tribbie'],
     			amplifier: ['robin','ruan-mei','silver-wolf','pela'],
     			sustain: ['aventurine']
@@ -679,6 +679,7 @@
 				feixiao: 'Feixiao cần đồng đội Hành Động và gây Sát Thương nhiều, và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được tất cả yêu cầu đó.',
 				'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
 				aglaea: 'Nhiều tốc, Hành Động nhiều, gây Sát Thương nhiều, Cipher rất yêu.',
+				castorice: 'Cipher có thể hoạt động tốt với DPS diện rộng không yêu cầu thêm thủ thuật nào khác ngoài việc chỉ khuếch đại DMG thô. Hệ số nhân "hiếm" của cô ấy khiến cô ấy có lợi thế hơn so với các hỗ trợ cung cấp chỉ số pha loãng như ATK/HP hoặc CritDMG.',
 				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
     			tribbie: 'Cipher có thể thay thế Tribbie trong một vài đội hình, nhưng đâu có nghĩa 2 nhân vật này không thể cùng một đội, cho hết vào để Cipher tích Thiên Phú nào.',
 				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
@@ -730,17 +731,17 @@
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">
-  <!-- <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="rounded-lg shadow-lg"
-  ></iframe> -->
-</div>
+  			<!-- <iframe
+    			width="448"
+    			height="252"
+    			src="https://www.youtube.com/embed/kf2Z2mOiiu4"
+    			title="YouTube video player"
+    			frameborder="0"
+    			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    			allowfullscreen
+    			class="rounded-lg shadow-lg"
+  			></iframe> -->
+		</div>
 
 	</section>
 </div>

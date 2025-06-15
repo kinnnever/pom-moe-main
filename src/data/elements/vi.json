@@ -1,30 +1,37 @@
 {
   "physical": {
     "id": "physical",
-    "name": "Vật Lý"
+    "name": "Vật Lý",
+    "color": "#CFCFCF"
   },
   "fire": {
     "id": "fire",
-    "name": "Hỏa"
+    "name": "Hỏa",
+    "color": "#DA472D"
   },
   "ice": {
     "id": "ice",
-    "name": "Băng"
+    "name": "Băng",
+    "color": "#5CD6FF"
   },
   "lightning": {
     "id": "lightning",
-    "name": "Lôi"
+    "name": "Lôi",
+    "color": "#E26CFF"
   },
   "wind": {
     "id": "wind",
-    "name": "Phong"
+    "name": "Phong",
+    "color": "#1FE7A5"
   },
   "quantum": {
     "id": "quantum",
-    "name": "Lượng Tử"
+    "name": "Lượng Tử",
+    "color": "#8CA6E6"
   },
   "imaginary": {
     "id": "imaginary",
-    "name": "Số Ảo"
+    "name": "Số Ảo",
+    "color": "#FFD75E"
   }
 }

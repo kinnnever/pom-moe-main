@@ -761,18 +761,27 @@
 			</p>
 		</div>
 
-		<div class="mt-8 w-full flex justify-center">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/qOXC1cVV8AM"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="rounded-lg shadow-lg"
-  ></iframe>
-</div>
-
+		<div class="mt-8 w-full flex justify-center gap-4">
+ 			<iframe
+    			width="448"
+    			height="252"
+    			src="https://www.youtube.com/embed/qOXC1cVV8AM"
+    			title="YouTube video player"
+    			frameborder="0"
+    			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    			allowfullscreen
+    			class="rounded-lg shadow-lg"
+  			></iframe>
+			<!-- <iframe
+    			width="448"
+    			height="252"
+    			src="https://www.youtube.com/embed/_YhA3HEviSk"
+    			title="YouTube video player"
+    			frameborder="0"
+    			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    			allowfullscreen
+    			class="rounded-lg shadow-lg"
+  			></iframe> -->
+		</div>
 	</section>
 </div>
