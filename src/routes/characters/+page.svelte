@@ -9,7 +9,11 @@
 	import { db } from '$utils/db';
 
 	let list = $characters;
-	let filter: { elements: { [key: string]: boolean }; paths: { [key: string]: boolean } } = {
+	let filter: { 
+			elements: { [key: string]: boolean }; 
+			paths: { [key: string]: boolean } 
+			rarity: { [key: string]: boolean };
+	} = {
 		elements: {
 			...$elements.reduce<{ [key: string]: boolean }>((prev, cur) => {
 				prev[cur.id] = true;
@@ -21,6 +25,10 @@
 				prev[cur.id] = true;
 				return prev;
 			}, {})
+		},
+		rarity: {
+			4: true,
+			5: true
 		}
 	};
 
@@ -31,11 +39,38 @@
 
 	function filterList() {
 		list = $characters.filter(
-			(c) => (filter.elements[c.element] && filter.paths[c.path])
+			(c) => (
+				filter.rarity[c.rarity.toString()] &&
+				filter.elements[c.element] && 
+				filter.paths[c.path]
+			)
 		);
 	}
 
-	function toggleFilter(type: 'elements' | 'paths', id: string) {
+	function toggleRarity(r: string) {
+		const others = r === '5' ? '4' : '5';
+
+		// Nếu đang bật cả hai → bật riêng cái vừa click, tắt cái còn lại
+		if (filter.rarity['4'] && filter.rarity['5']) {
+			filter.rarity[r] = true;
+			filter.rarity[others] = false;
+		}
+		// Nếu chỉ đang bật cái vừa click → bật lại cả hai
+		else if (filter.rarity[r] && !filter.rarity[others]) {
+			filter.rarity['4'] = true;
+			filter.rarity['5'] = true;
+		}
+		// Nếu đang bật cái còn lại → bật cái vừa click, tắt cái kia
+		else {
+			filter.rarity[r] = true;
+			filter.rarity[others] = false;
+		}
+
+		filterList();
+	}
+
+
+	function toggleFilter(type: 'elements' | 'paths' | 'rarity', id: string) {
 		const current = Object.values(filter[type]);
 		const trueCount = current.filter((e) => e).length;
 
@@ -50,9 +85,10 @@
 				filter[type][key] = true;
 			}
 		}
-
+		
 		filterList();
 	}
+	
 
 	async function getCount() {
 		const count = await db.items.toArray();
@@ -79,6 +115,22 @@
 
 <Title>{$t('common.character')}</Title>
 <div class="mb-4 flex flex-col gap-8 md:flex-row">
+	<div class="flex justify-center gap-2 md:justify-normal">
+		{#each ['5', '4'] as r}
+			<button
+				class="duration-150 hover:opacity-80 {filter.rarity[r] ? '' : 'opacity-30'}"
+				on:click={() => toggleRarity(r)}
+			>
+				<img
+					class="inline-block h-8 w-8"
+					src={`/images/rarity${r}.png`}
+					alt="Rarity {r}"
+					width={32}
+					height={32}
+				/>
+			</button>
+		{/each}
+	</div>
 	<div class="flex justify-center gap-2 md:justify-normal">
 		{#each $elements as element}
 			<button

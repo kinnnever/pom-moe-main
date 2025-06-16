@@ -699,7 +699,7 @@
     			dps: ['acheron'],
     			supportDps: ['cipher','tribbie','black-swan'],
     			amplifier: ['jiaoqiu','silver-wolf','pela','sunday','bronya','guinaifen'],
-    			sustain: ['aventurine','gallagher','female-preservation','welt']
+    			sustain: ['aventurine','gallagher','female-preservation','welt','hyacine']
   			}}
   			tooltips={{
 				acheron: 'DPS chủ lực, cần đi cùng đồng đội có khả năng gắn <span class="font-semibold">Debuff</span> để sạc Stack cho Tuyệt Kỹ. Hoặc đi cùng nhân vật đẩy lượt để Acheron có Stack Tuyệt Kỹ.',
@@ -716,7 +716,8 @@
 				welt: 'Yêu cầu bắt buộc phải có <span class="text-red-600">E2</span> Welt và chỉ hữu dụng khi bạn biết mình đang làm gì (team 3 nô). Newbie không nên làm theo.',
 				'female-preservation': 'Có Khiêu Khích là một điểm cộng khi dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Còn nếu đi cùng Jiaoqiu thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
 				aventurine: 'Ưu tiên dùng Trấn <span class="font-semibold">Vận Mệnh Chưa Từng Cân Bằng</span>. Nếu không có thì dùng <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>, nếu có Jiaoqiu trong đội thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
-  			}}
+				hyacine: 'Bắt buộc phải có Trấn nếu muốn chơi cùng Acheron, nếu không thì thôi, dùng Gallagher cho rẻ.',
+			}}
 			notes={{
 				amplifier: 'Các hư vô còn lại: <span class="font-semibold">thật luôn hả?</span>',
 				sustain: 'Tất cả các bảo hộ còn lại nếu dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Nhưng nếu có Jiaoqiu trong đội hình thì thôi, bỏ đi mà làm người.'

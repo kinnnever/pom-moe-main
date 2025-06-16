@@ -643,7 +643,7 @@
     			dps: ['therta'],
     			supportDps: ['anaxa','jade','tribbie'],
     			amplifier: ['herta','serval','argenti','female-remembrance','robin'],
-    			sustain: ['lingsha','aventurine']
+    			sustain: ['lingsha','aventurine','hyacine','gallagher']
   			}}
   			tooltips={{
 				therta: 'Lệnh sứ Tri Thức, kẻ cứu rỗi Tri Thức thật sự, vị vua không ngai với cái mũ to của mình 🐧',
@@ -656,7 +656,9 @@
 				'female-remembrance': '<span class="underline">Sát Thương Chuẩn</span> + <span class="underline">Kéo Lượt</span> + 10% Crit Rate + khả năng Sạc Năng Lượng cho Đại Herta.',
 				robin: 'Lựa chọn tuyệt vời cho Đại Herta và đồng đội của cô ấy. Robin là một nhân vật buff cho toàn đội, nghĩa là cả Đại Herta và cộng sự Tri Thức nole của cô ấy đều được buff và có khả năng gây nhiều sát thương hơn. Trên thực tế là các Sát Thương Kèm Theo từ Tuyệt Kỹ Robin cũng có thể cấp cho Đại Herta Năng Lượng và stack.',
 				lingsha: 'Mọi kỹ năng của cô nàng đều gây sát thương cho kẻ địch, bạn hiểu điều đó là gì mà, Năng Lượng + stack bú đẫm.',
-				aventurine: 'Tương tự Lingsha ngoại trừ Chiến Kỹ, nhưng bù lại có Debuff tăng Crit DMG phải chịu, rất phù hợp với một DPS chơi Crit thuần như Đại Herta.'
+				aventurine: 'Tương tự Lingsha ngoại trừ Chiến Kỹ, nhưng bù lại có Debuff tăng Crit DMG phải chịu, rất phù hợp với một DPS chơi Crit thuần như Đại Herta.',
+				hyacine: 'Một bảo kê lý tưởng có thể dùng nếu bạn chưa sở hữu Lingsha.',
+				gallagher: 'Rẻ, khỏe, bảo kê tốt, dương Điểm Chiến Kỹ, mỗi tội tích stack và nạp cho Đại Herta không nhanh bằng Lingsha.',
 			}}
 			notes={{
 			}}

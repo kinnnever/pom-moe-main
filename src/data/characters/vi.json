@@ -566,5 +566,19 @@
     "path": "remembrance",
     "element": "wind",
     "rarity": 5
+  },
+  "march-7th-the-hunt": {
+    "id": "march-7th-the-hunt",
+    "name": "March 7th - Săn Bắn",
+    "path": "the-hunt",
+    "element": "imaginary",
+    "rarity": 4
+  },
+  "moze": {
+    "id": "moze",
+    "name": "Moze",
+    "path": "the-hunt",
+    "element": "lightning",
+    "rarity": 4
   }
 }
