@@ -12,7 +12,7 @@
         {#each pros.trim().split('\n') as line}
             <div class="pl-4 text-justify relative mb-1">
                 <span class="absolute left-0 top-0 text-green-300">•</span>
-                    {line}
+                    {@html line}
             </div>
         {/each}
     </div>
@@ -26,7 +26,7 @@
         {#each cons.trim().split('\n') as line}
             <div class="pl-4 text-justify relative mb-1">
                 <span class="absolute left-0 top-0 text-red-300">•</span>
-                    {line}
+                    {@html line}
             </div>
         {/each}
     </div>

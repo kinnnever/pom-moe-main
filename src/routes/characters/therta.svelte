@@ -12,7 +12,7 @@
 
   const character = {
     id: 'therta',
-    name: 'The Herta',
+    name: 'Đại Herta',
     element: 'ice',
     path: 'erudition',
 	elementColor: '#5CD6FF'
@@ -169,7 +169,7 @@
 		</p>
 		<p class="text-base">Gây Sát Thương 
 		<span style="color: {character.elementColor}; font-weight: bold">Băng</span> cho 1 kẻ địch chỉ định tương đương 
-		<span class="text-yellow-400 font-semibold">{normalAttack[0][NormalLevel - 1]}</span> Tấn Công của Aglaea.
+		<span class="text-yellow-400 font-semibold">{normalAttack[0][NormalLevel - 1]}</span> Tấn Công của Đại Herta.
 		</p>
 
 		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
