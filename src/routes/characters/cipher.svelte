@@ -739,16 +739,17 @@
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">
-  			<iframe
-    			width="448"
-    			height="252"
-    			src="https://www.youtube.com/embed/kf2Z2mOiiu4"
-    			title="YouTube video player"
-    			frameborder="0"
-    			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    			allowfullscreen
-    			class="rounded-lg shadow-lg"
-  			></iframe>
+			<p class="text-white/10 font-bold">
+				Nguồn Guide:
+				<a
+				href="https://discord.gg/W8g3nqu2p9" 
+				class="hover:text-white/60 transition-colors "
+				target="_blank"
+				rel="noopener noreferrer"
+				>
+				Bệnh viện Lê Bách
+				</a>
+			</p>
 		</div>
 
 	</section>

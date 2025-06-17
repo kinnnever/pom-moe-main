@@ -45,7 +45,7 @@
 	<!-- Trái -->
 	<div class="hidden md:block text-left">
 		<p>Trạm Dữ Liệu Star Rail.</p>
-		<p>Được hỗ trợ bởi các Bác sĩ trong Bệnh viện Lê Bách,</p>
+		<p>Nội dung Guide được hỗ trợ bởi các Bác sĩ trong Bệnh viện Lê Bách,</p>
 		<p>Và kênh Chunpomer.</p>
 	</div>
 
