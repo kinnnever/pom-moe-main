@@ -789,7 +789,7 @@
 		</div>
 
 		<div class="mt-8 w-full flex justify-center">
-  			<!-- <iframe
+  			<iframe
     			width="448"
     			height="252"
     			src="https://www.youtube.com/embed/b7E4FdrXUEA"
@@ -798,7 +798,7 @@
     			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     			allowfullscreen
     			class="rounded-lg shadow-lg"
-  			></iframe> -->
+  			></iframe>
 		</div>
 
 	</section>

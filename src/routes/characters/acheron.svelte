@@ -781,7 +781,7 @@
     			allowfullscreen
     			class="rounded-lg shadow-lg"
   			></iframe>
-			<!-- <iframe
+			<iframe
     			width="448"
     			height="252"
     			src="https://www.youtube.com/embed/_YhA3HEviSk"
@@ -790,7 +790,7 @@
     			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     			allowfullscreen
     			class="rounded-lg shadow-lg"
-  			></iframe> -->
+  			></iframe>
 		</div>
 	</section>
 </div>
