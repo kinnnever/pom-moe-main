@@ -29,11 +29,6 @@
     "name": "Thiên Tài Xuất Chúng",
     "type": "cavern"
   },
-  "Giant_Tree_of_Rapt_Brooding": {
-    "id": "Item_Giant_Tree_of_Rapt_Brooding",
-    "name": "Đại Thụ Trầm Tư",
-    "type": "planar"
-  },
   "Guard_of_Wuthering_Snow": {
     "id": "Guard_of_Wuthering_Snow",
     "name": "Thiết Vệ Bão Tuyết",
@@ -57,6 +52,11 @@
   "Item_Belobog_of_the_Architects": {
     "id": "Item_Belobog_of_the_Architects",
     "name": "Belobog Của Đấng Kiến Tạo",
+    "type": "planar"
+  },
+  "Item_Giant_Tree_of_Rapt_Brooding": {
+    "id": "Item_Giant_Tree_of_Rapt_Brooding",
+    "name": "Đại Thụ Trầm Tư",
     "type": "planar"
   },
   "Item_Broken_Keel": {

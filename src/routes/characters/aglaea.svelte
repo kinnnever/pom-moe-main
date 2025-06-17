@@ -216,7 +216,7 @@
   		</p>
   		<p class="text-base">Giúp Thợ May Hồi HP bằng
 			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Giới Hạn HP của mình. Nếu Thợ May không ở trong trận, thì sẽ 
-			<span class="undeline">triệu hồi Linh Hồn Ký Ức</span> Thợ May, và khiến bản thân lập tức hành động.
+			<span class="underline">triệu hồi Linh Hồn Ký Ức</span> Thợ May, và khiến bản thân lập tức hành động.
 			</p>
 		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
   			<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -414,7 +414,9 @@
 	
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Tấn Công Thường &ge; Tuyệt Kỹ &gt; Chiến Kỹ (Linh Hồn Ký Ức) &ge; Thiên Phú (Linh Hồn Ký Ức) &gt Thiên Phú &gt Chiến Kỹ</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">
+			Tấn Công Thường &ge; Tuyệt Kỹ &gt; Chiến Kỹ (Linh Hồn Ký Ức) &ge; Thiên Phú (Linh Hồn Ký Ức) &gt Thiên Phú &gt Chiến Kỹ
+		</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white">Tấn Công Thường</p>
   			<p class="text-white/80 text-sm">Nguồn Sát Thương chính của Aglaea.</p>
@@ -428,7 +430,7 @@
     		<p class="text-white/80 text-sm">Gây DMG cùng Aglaea, không nhiều nhưng là có.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
-    		<p class="font-bold text-white">Thiên Phú (Linh Hồn Ký Ức)</p>
+    		<p class="font-bold text-white">Thiên Phú <span style="color: {character.elementColor}">(Linh Hồn Ký Ức)</p>
     		<p class="text-white/80 text-sm">Nguồn SPD chính của Linh Hồn Ký Ức và cũng như là Aglaea khi cô sử dụng Tuyệt Kỹ.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
@@ -724,13 +726,19 @@
     			sustain: ['huohuo']
   			}}
   			tooltips={{
-				aglaea: 'Tốc cao, hành động nhiều, nên đi cùng những nhân vật Hỗ Trợ <span class="underline">Kéo Lượt</span> để hành động nhiều hơn nữa, và nên đi cùng những Hỗ Trợ có khả năng Hồi Năng Lượng cho đồng minh.',
-				sunday: 'Ưu tiên hành động 100% cho Aglaea và cả Linh Hồn Ký Ức của cô, có Hồi Năng Lượng cho đồng mình. "Core" Team Aglaea.',
-				bronya: 'Bản litte của Sunday. Có thể build 160 Tốc để làm nole kéo lượt Sunday, sau đó để Sunday kéo Aglaea tiếp (Sunday nên có Trấn để dễ vận hành).',
-				robin: 'Có thể thay thế Bronya. Hoặc đi team 3 nô siêu kéo lượt (không khuyến khích newbie làm theo).',
-				tingyu: 'S5 Múa Múa Múa, bản supper ultra litte của Sunday.',
-				huohuo: 'Bảo Kê duy nhất có khả năng hồi năng lượng cho đồng minh.'
-    			}}
+				dps: {
+					aglaea: 'Tốc cao, hành động nhiều, nên đi cùng những nhân vật Hỗ Trợ <span class="underline">Kéo Lượt</span> để hành động nhiều hơn nữa, và nên đi cùng những Hỗ Trợ có khả năng Hồi Năng Lượng cho đồng minh.',
+				},
+				amplifier: {
+					sunday: 'Ưu tiên hành động 100% cho Aglaea và cả Linh Hồn Ký Ức của cô, có Hồi Năng Lượng cho đồng mình. "Core" Team Aglaea.',
+					bronya: 'Bản litte của Sunday. Có thể build 160 Tốc để làm nole kéo lượt Sunday, sau đó để Sunday kéo Aglaea tiếp (Sunday nên có Trấn để dễ vận hành).',
+					robin: 'Có thể thay thế Bronya. Hoặc đi team 3 nô siêu kéo lượt (không khuyến khích newbie làm theo).',
+					tingyu: 'S5 Múa Múa Múa, bản supper ultra lite của Sunday.',
+				},
+				sustain: {
+					huohuo: 'Bảo Kê duy nhất ở thời điểm hiện tại có khả năng hồi Năng Lượng cho đồng minh.'
+				}
+			}}
 			notes={{
 			}}
 		/>

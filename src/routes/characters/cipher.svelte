@@ -675,19 +675,27 @@
     			sustain: ['aventurine']
   			}}
   			tooltips={{
-				acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương. Nhưng Cipher vẫn nên có Trấn để cải thiện vận hành trong đội hình này.',
-				feixiao: 'Feixiao cần đồng đội Hành Động và gây Sát Thương nhiều, và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được tất cả yêu cầu đó.',
-				'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
-				aglaea: 'Nhiều tốc, Hành Động nhiều, gây Sát Thương nhiều, Cipher rất yêu.',
-				castorice: 'Cipher có thể hoạt động tốt với DPS diện rộng không yêu cầu thêm thủ thuật nào khác ngoài việc chỉ khuếch đại DMG thô. Hệ số nhân "hiếm" của cô ấy khiến cô ấy có lợi thế hơn so với các hỗ trợ cung cấp chỉ số pha loãng như ATK/HP hoặc CritDMG.',
-				cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
-    			tribbie: 'Cipher có thể thay thế Tribbie trong một vài đội hình, nhưng đâu có nghĩa 2 nhân vật này không thể cùng một đội, cho hết vào để Cipher tích Thiên Phú nào.',
-				robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
-				'ruan-mei': 'Giống Robin.',
-				'silver-wolf': 'Giảm Def, tăng Sát Thương mà đồng đội gây ra, gián tiếp giúp Cipher tích nhanh Thiên Phú.',
-				pela: 'Giống Sói Bạc.',
-				aventurine: 'Cứ có Sát Thương là được.',
-    			}}
+				dps: {
+					acheron: 'Acheron cần đi cùng đồng đội là Hư Vô, trùng hợp thay Cipher cũng là Hư Vô và Cipher có thể hỗ trợ Sát Thương cho Acheron phòng trường hợp thiếu chút Sát Thương. Nhưng Cipher vẫn nên có Trấn để cải thiện vận hành trong đội hình này.',
+					feixiao: 'Feixiao cần đồng đội Hành Động và gây Sát Thương nhiều, và cần đi cùng Robin, vừa hay Cipher có thể đáp ứng được tất cả yêu cầu đó.',
+					'dr-ratio': 'Ông thầy này cần Debuff để chơi, và Cipher có Debuff mà không cần gắn lại.',
+					aglaea: 'Nhiều tốc, Hành Động nhiều, gây Sát Thương nhiều, Cipher rất yêu.',
+					castorice: 'Cipher có thể hoạt động tốt với DPS diện rộng không yêu cầu thêm thủ thuật nào khác ngoài việc chỉ khuếch đại DMG thô. Hệ số nhân "hiếm" của cô ấy khiến cô ấy có lợi thế hơn so với các hỗ trợ cung cấp chỉ số pha loãng như ATK/HP hoặc CritDMG.',
+				},	
+				supportDps:{	
+					cipher: 'Nên đi cùng với DPS có thể gây Sát Thương lớn để "bú" ké Sát Thương Chuẩn, và có thể đi cùng các Hòa Hợp Buff cho toàn phe mình để tích lũy Sát Thương cho Thiên Phú.',
+					tribbie: 'Cipher có thể thay thế Tribbie trong một vài đội hình, nhưng đâu có nghĩa 2 nhân vật này không thể cùng một đội, cho hết vào để Cipher tích Thiên Phú nào.',
+				},
+				amplifier:{	
+					robin: 'Buff cả team, có <span class="underline">Sát Thương Kèm Theo</span> giúp Cipher tích điểm Thiên Phú.',
+					'ruan-mei': 'Giống Robin.',
+					'silver-wolf': 'Giảm Def, tăng Sát Thương mà đồng đội gây ra, gián tiếp giúp Cipher tích nhanh Thiên Phú.',
+					pela: 'Giống Sói Bạc.',
+				},
+				sustain: {	
+					aventurine: 'Cứ có Sát Thương là được.',
+				}
+			}}
 			notes={{
 				dps: 'Cứ cho đi cùng nhân vật nào gây ra nhiều Sát Thương là được vì Cipher có tác dụng tương tự Robin/Ruan Mei/Tribbie, \nBuff/Debuff cả team trong thời gian dài.',
 				amplifier: 'Hòa Hợp Buff toàn phe đồng minh là cho đi cùng được.',

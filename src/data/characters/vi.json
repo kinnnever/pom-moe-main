@@ -393,7 +393,7 @@
   },
   "male-destruction": {
     "id": "male-destruction",
-    "name": "Nhà Khai Phá - Hủy Diệt",
+    "name": "Nhà Khai Phá",
     "path": "destruction",
     "element": "physical",
     "rarity": 5,
@@ -401,7 +401,7 @@
   },
   "female-destruction": {
     "id": "female-destruction",
-    "name": "Nhà Khai Phá - Hủy Diệt",
+    "name": "Nhà Khai Phá",
     "path": "destruction",
     "element": "physical",
     "rarity": 5,
@@ -409,7 +409,7 @@
   },
   "male-preservation": {
     "id": "male-preservation",
-    "name": "Nhà Khai Phá - Bảo Hộ",
+    "name": "Nhà Khai Phá",
     "path": "preservation",
     "element": "fire",
     "rarity": 5,
@@ -417,7 +417,7 @@
   },
   "female-preservation": {
     "id": "female-preservation",
-    "name": "Nhà Khai Phá - Bảo Hộ",
+    "name": "Nhà Khai Phá",
     "path": "preservation",
     "element": "fire",
     "rarity": 5,
@@ -425,7 +425,7 @@
   },
   "male-harmony": {
     "id": "male-harmony",
-    "name": "Nhà Khai Phá - Hòa Hợp",
+    "name": "Nhà Khai Phá",
     "path": "harmony",
     "element": "imaginary",
     "rarity": 5,
@@ -433,7 +433,7 @@
   },
   "female-harmony": {
     "id": "female-harmony",
-    "name": "Nhà Khai Phá - Hòa Hợp",
+    "name": "Nhà Khai Phá",
     "path": "harmony",
     "element": "imaginary",
     "rarity": 5,
@@ -441,7 +441,7 @@
   },
   "male-remembrance": {
     "id": "male-remembrance",
-    "name": "Nhà Khai Phá - Ký Ức",
+    "name": "Nhà Khai Phá",
     "path": "remembrance",
     "element": "ice",
     "rarity": 5,
@@ -449,7 +449,7 @@
   },
   "female-remembrance": {
     "id": "female-remembrance",
-    "name": "Nhà Khai Phá - Ký Ức",
+    "name": "Nhà Khai Phá",
     "path": "remembrance",
     "element": "ice",
     "rarity": 5,
@@ -569,7 +569,7 @@
   },
   "march-7th-the-hunt": {
     "id": "march-7th-the-hunt",
-    "name": "March 7th - Săn Bắn",
+    "name": "March 7th",
     "path": "the-hunt",
     "element": "imaginary",
     "rarity": 4

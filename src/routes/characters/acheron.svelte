@@ -702,21 +702,29 @@
     			sustain: ['aventurine','gallagher','female-preservation','welt','hyacine']
   			}}
   			tooltips={{
-				acheron: 'DPS chủ lực, cần đi cùng đồng đội có khả năng gắn <span class="font-semibold">Debuff</span> để sạc Stack cho Tuyệt Kỹ. Hoặc đi cùng nhân vật đẩy lượt để Acheron có Stack Tuyệt Kỹ.',
-				jiaoqiu: 'Gắn <span class="font-semibold">Debuff </span><span class="underline">Trọng Thương</span>, uptime gần 100%. Ngoài ra còn có thể tích stack cho Acheron ngoài lượt hành động.',
-				'silver-wolf': '<p><span class="font-semibold text-yellow-300">Trước khi Buff: </span>Debuff đơn mục tiêu, tần suất gắn thấp.</p><p><span class="font-semibold text-yellow-300">Sau khi Buff: </span>Debuff đa mục tiêu, nạp nhanh không lo năng lượng. Có thêm E2 như vua mặc long bào, Đi ra đường ch.ó nhìn sợ không dám s.ủa. Trưa đua vài lệnh chiều xanh tím. Tối ra phố đi bộ các em gái thì tranh nhau xin chụp hình chung. Hội nyc thì đồng loạt đòi nối lại tình xưa. Bạn bè thì nhìn tôi cũng phải cúi đầu nể 10 phần. Về nhà thì gia đình tự hào, hàng xóm thì ganh tỵ vì biết tôi có Sói Đần E2 🐧</p>',
-				cipher: 'Có Debuff, có <span class="underline">Tích Lũy Sát Thương</span> mà Acheron gây ra và từ đó Cipher có thể hỗ trợ gây thêm Sát Thương cho đội hình.',
-    			tribbie: '<span class="font-semibold">"Giản Dị Lãnh Địa"</span> Debuff <span class="underline">Tăng Sát Thương Phải Nhận</span> uptime gần 100%. Chưa kể còn Buff Xuyên Kháng cho phe ta và hỗ trợ Sát Thương từ Thiên Phú.',
-				pela: '<span class="underline">Giảm Phòng Thủ</span> diện rộng, không uptime 100%, yêu cầu Nón <span class="font-semibold">Sự Quyết Tâm Như Giọt Mồ Hôi Lấp Lánh S4+</span>.',
-    			sunday: 'Yêu cầu Acheron phải có <span class="text-red-600">E2</span> và build 135 tốc, Sunday nên build bằng tốc Acheron -1 để Speed Turning.',
-				bronya: 'Yêu cầu Bronya <span class="text-red-600">E2+</span>, còn lại giống Sunday',
-				guinaifen: 'Giống Jiaoqiu nhưng yếu hơn, không gắn ngoài lượt được.',
-				'black-swan': 'Nếu có <span class="text-red-600">E1</span> thì dùng, còn lại thì không nên.',
-				gallagher: 'Apply Debuff khá nhiều, bảo kê ổn, bào sức bền tốt. Nên có E2+ để chơi ổn định.',
-				welt: 'Yêu cầu bắt buộc phải có <span class="text-red-600">E2</span> Welt và chỉ hữu dụng khi bạn biết mình đang làm gì (team 3 nô). Newbie không nên làm theo.',
-				'female-preservation': 'Có Khiêu Khích là một điểm cộng khi dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Còn nếu đi cùng Jiaoqiu thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
-				aventurine: 'Ưu tiên dùng Trấn <span class="font-semibold">Vận Mệnh Chưa Từng Cân Bằng</span>. Nếu không có thì dùng <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>, nếu có Jiaoqiu trong đội thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
-				hyacine: 'Bắt buộc phải có Trấn nếu muốn chơi cùng Acheron, nếu không thì thôi, dùng Gallagher cho rẻ.',
+				dps: {
+					acheron: 'DPS chủ lực, cần đi cùng đồng đội có khả năng gắn <span class="font-semibold">Debuff</span> để sạc Stack cho Tuyệt Kỹ. Hoặc đi cùng nhân vật đẩy lượt để Acheron có Stack Tuyệt Kỹ.',
+				},
+				supportDps: {
+					cipher: 'Có Debuff, có <span class="underline">Tích Lũy Sát Thương</span> mà Acheron gây ra và từ đó Cipher có thể hỗ trợ gây thêm Sát Thương cho đội hình.',
+					tribbie: '<span class="font-semibold">"Giản Dị Lãnh Địa"</span> Debuff <span class="underline">Tăng Sát Thương Phải Nhận</span> uptime gần 100%. Chưa kể còn Buff Xuyên Kháng cho phe ta và hỗ trợ Sát Thương từ Thiên Phú.',
+					'black-swan': 'Nếu có <span class="text-red-600">E1</span> thì dùng, còn lại thì không nên.',
+				},
+				amplifier: {
+					jiaoqiu: 'Gắn <span class="font-semibold">Debuff </span><span class="underline">Trọng Thương</span>, uptime gần 100%. Ngoài ra còn có thể tích stack cho Acheron ngoài lượt hành động.',
+					'silver-wolf': '<p><span class="font-semibold text-yellow-300">Trước khi Buff: </span>Debuff đơn mục tiêu, tần suất gắn thấp.</p><p><span class="font-semibold text-yellow-300">Sau khi Buff: </span>Debuff đa mục tiêu, nạp nhanh không lo năng lượng. Có thêm E2 như vua mặc long bào, Đi ra đường ch.ó nhìn sợ không dám s.ủa. Trưa đua vài lệnh chiều xanh tím. Tối ra phố đi bộ các em gái thì tranh nhau xin chụp hình chung. Hội nyc thì đồng loạt đòi nối lại tình xưa. Bạn bè thì nhìn tôi cũng phải cúi đầu nể 10 phần. Về nhà thì gia đình tự hào, hàng xóm thì ganh tỵ vì biết tôi có Sói Đần E2 🐧</p>',
+					pela: '<span class="underline">Giảm Phòng Thủ</span> diện rộng, không uptime 100%, yêu cầu Nón <span class="font-semibold">Sự Quyết Tâm Như Giọt Mồ Hôi Lấp Lánh S4+</span>.',
+					sunday: 'Yêu cầu Acheron phải có <span class="text-red-600">E2</span> và build 135 tốc, Sunday nên build bằng tốc Acheron -1 để Speed Turning.',
+					bronya: 'Yêu cầu Bronya <span class="text-red-600">E2+</span>, còn lại giống Sunday',
+					guinaifen: 'Giống Jiaoqiu nhưng yếu hơn, không gắn ngoài lượt được.',
+				},
+				sustain: {
+					gallagher: 'Apply Debuff khá nhiều, bảo kê ổn, bào sức bền tốt. Nên có E2+ để chơi ổn định.',
+					welt: 'Yêu cầu bắt buộc phải có <span class="text-red-600">E2</span> Welt và chỉ hữu dụng khi bạn biết mình đang làm gì (team 3 nô). Newbie không nên làm theo.',
+					'female-preservation': 'Có Khiêu Khích là một điểm cộng khi dùng nón <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>. Còn nếu đi cùng Jiaoqiu thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
+					aventurine: 'Ưu tiên dùng Trấn <span class="font-semibold">Vận Mệnh Chưa Từng Cân Bằng</span>. Nếu không có thì dùng <span class="font-semibold">Xu Hướng Thị Trường Vũ Trụ S4+</span>, nếu có Jiaoqiu trong đội thì không nên dùng nón này mà nên dùng nón khác tăng nhiều DEF.',
+					hyacine: 'Bắt buộc phải có Trấn nếu muốn chơi cùng Acheron, nếu không thì thôi, dùng Gallagher cho rẻ.',
+				}
 			}}
 			notes={{
 				amplifier: 'Các hư vô còn lại: <span class="font-semibold">thật luôn hả?</span>',
