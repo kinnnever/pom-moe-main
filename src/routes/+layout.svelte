@@ -86,19 +86,17 @@
 		<div class="h-px w-full bg-white/40 md:h-10 md:w-px md:mx-2"></div>
 
 		<!-- các icon cá nhân -->
-		<div class="flex items-center gap-4">
-			<a href="https://github.com/kinnnever/pom-moe-main" class="duration-150 hover:text-white" target="_blank">
-				<Icon icon={GithubIcon} height={40} />
-			</a>
-			<a href="https://facebook.com/kienluu.21.10" class="duration-150 hover:text-white" target="_blank">
-				<Icon icon={FacebookIcon} height={40} />
-			</a>
-		</div>
-
-		<!-- thông tin liên hệ cá nhân-->
-		<div class="flex flex-col items-center text-center md:text-left leading-tight">
-			<span>Email: kienluu.211004@gmail.com</span>
-			<span>Điện thoại: 0354884521</span>
+		<div class="flex items-center gap-2">
+			<div class="flex flex-col items-center gap-2">
+			<span class="font-bold">Mã Nguồn</span>
+			<div class="flex gap-4">
+				<a href="https://github.com/kinnnever/pom-moe-main" class="duration-150 hover:text-white" target="_blank">
+					<Icon icon={GithubIcon} height={40} />
+				</a>
+				<a href="https://facebook.com/kienluu.21.10" class="duration-150 hover:text-white" target="_blank">
+					<Icon icon={FacebookIcon} height={40} />
+				</a>
+			</div>
 		</div>
 	</div>
 </footer>

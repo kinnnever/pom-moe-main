@@ -13,6 +13,7 @@
   let basis = '49%';
   if (nodes.length === 3) basis = '32.3%';
   else if (nodes.length === 4) basis = '23.8%';
+  else if (nodes.length === 1) basis = '98.8%';
 </script>
 
 <div class="trace-block relative flex flex-col gap-2 p-4 border rounded-lg bg-black/20 mb-4">

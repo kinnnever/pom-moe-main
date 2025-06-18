@@ -44,17 +44,6 @@
   ]
   let TalentLevel = 1;
 
-  const skillPet = [
-	['55%','66%','77%','88%','99%','110%','121%','132%','143%','154%'],
-	['33%','39.5%','46.2%','52,8%','59.4%','66%','72.5%','79.2%','85,8%','92.4%']
-  ]
-  let SkillPetLevel = 1;
-
-  const talentPet = [
-	['44','46','48','51','53','55','57','59','62','64']
-  ]
-  let talentPetLevel =1;
-
 	const SPD = 99;         // ⚠ CỐ ĐỊNH - Tốc độ
 	const AGGRO = 75;       // ⚠ CỐ ĐỊNH - Khiêu khích
 
@@ -259,7 +248,7 @@
 				<span class="text-amber-400 italic">Hồi lại </span><span style="color: {character.elementColor}">5</span>
   			</p>
 			<p class="text-base">Sắp xếp lại số tầng Diễn Giải của toàn bộ phe địch, Diễn Giải có số tầng tương đối cao sẽ ưu tiên chuyển đến mục tiêu cấp Tinh Anh trở lên, đồng thời gây Sát Thương
-				<span style="color: {character.elementColor}">Băng</span> bằng
+				<span style="color: {character.elementColor}" class="font-bold">Băng</span> bằng
 				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span>
 				Tấn Công của Đại Herta cho toàn bộ phe địch. Khi thi triển Tuyệt Kỹ, khiến Tấn Công của Đại Herta tăng
 				<span class="text-yellow-400 font-semibold">{ultimateAttack[1][UltimateLevel - 1]}</span>, duy trì
@@ -646,19 +635,27 @@
     			sustain: ['lingsha','aventurine','hyacine','gallagher']
   			}}
   			tooltips={{
-				therta: 'Lệnh sứ Tri Thức, kẻ cứu rỗi Tri Thức thật sự, vị vua không ngai với cái mũ to của mình 🐧',
-				anaxa: 'Anaxa là nhân vật tốt nhất cho vai trò slave cho Đại Herta. Kỹ năng của anh ta có thể đánh trúng tất cả kẻ thù và tung ra hai lần mỗi lượt, kết hợp với Tuyệt Kỹ diện rộng của anh ta, giúp hồi một lượng lớn Năng Lượng và tích stack Thiên Phú cho Herta đồng thời cũng đáp ứng yêu cầu đồng đội Tri Thức của cô ấy, cung cấp 50% tăng DMG toàn đội, mang lại lượng sát thương đáng kể và tuyệt vời nhất là gắn tất cả 7 điểm yếu vào tất cả kẻ thù.',
-    			jade: 'Cung cấp cho Đại Herta một số stack và hồi Năng Lượng nhất định và thường xuyên nhất trong tất cả các tùy chọn Tri Thức của cô ấy; ngoài ra còn cấp cho cô ấy 30 Tốc nhờ Kỹ năng của cô ấy (nếu có Lingsha hoặc Tribbie trong đội thì nên dùng cho họ). Jade cũng có thể gây ra lượng sát thương rất đáng kể, đặc biệt là trong Kể Chuyện Hư Cấu.',
-				herta: '"Mini Herta" là một lựa chọn thay thế hợp lý cho Jade trong các chế độ có kẻ thù yếu hoặc có thể hồi sinh để cô ấy kích hoạt Thiên Phú <span class="underline">Đòn Đánh Theo Sau</span> của mình như trong Kể Chuyện Hư Cấu. Thật không may, các đòn tiếp theo của Mini Herta chỉ được tính một lần cho mục đích tích stack và hồi Năng Lượng của Herta bất kể cô ấy quay bao nhiêu lần liên tiếp, khiến cô ấy chủ yếu phù hợp với Kể Chuyện Hư Cấu hoặc cho những người không còn sự lựa chọn nhân vật nào khác.',
-				serval: 'Chơi như một noledaden chuyên dùng để tích stack và hồi Năng Lượng cho Đại Herta. Dùng nón <span class="font-bold">Chìa Khóa Linh Hồn S5</span> và di vật bộ 4 <span class="font-bold">Chim Ưng Ranh Giới Ngày Đêm</span> + dây Hiệu Suất Hồi Năng Lượng.',
-				argenti: 'Tương tự Serval.',
-				tribbie: 'Herta tự buff rất mạnh, khiến buff khác kém hiệu quả, nhưng xuyên kháng và % "sát thương phải chịu" của Tribbie vẫn hữu dụng. Tribbie còn giúp Herta hồi Năng Lượng tốt và tăng sát thương AoE qua “Lãnh Địa”, rất hợp lối đánh của Herta.',
-				'female-remembrance': '<span class="underline">Sát Thương Chuẩn</span> + <span class="underline">Kéo Lượt</span> + 10% Crit Rate + khả năng Sạc Năng Lượng cho Đại Herta.',
-				robin: 'Lựa chọn tuyệt vời cho Đại Herta và đồng đội của cô ấy. Robin là một nhân vật buff cho toàn đội, nghĩa là cả Đại Herta và cộng sự Tri Thức nole của cô ấy đều được buff và có khả năng gây nhiều sát thương hơn. Trên thực tế là các Sát Thương Kèm Theo từ Tuyệt Kỹ Robin cũng có thể cấp cho Đại Herta Năng Lượng và stack.',
-				lingsha: 'Mọi kỹ năng của cô nàng đều gây sát thương cho kẻ địch, bạn hiểu điều đó là gì mà, Năng Lượng + stack bú đẫm.',
-				aventurine: 'Tương tự Lingsha ngoại trừ Chiến Kỹ, nhưng bù lại có Debuff tăng Crit DMG phải chịu, rất phù hợp với một DPS chơi Crit thuần như Đại Herta.',
-				hyacine: 'Một bảo kê lý tưởng có thể dùng nếu bạn chưa sở hữu Lingsha.',
-				gallagher: 'Rẻ, khỏe, bảo kê tốt, dương Điểm Chiến Kỹ, mỗi tội tích stack và nạp cho Đại Herta không nhanh bằng Lingsha.',
+				dps: {
+					therta: 'Lệnh sứ Tri Thức, kẻ cứu rỗi Tri Thức thật sự, vị vua không ngai với cái mũ to của mình 🐧',
+				},
+				supportDps: {	
+					anaxa: 'Anaxa là nhân vật tốt nhất cho vai trò slave cho Đại Herta. Kỹ năng của anh ta có thể đánh trúng tất cả kẻ thù và tung ra hai lần mỗi lượt, kết hợp với Tuyệt Kỹ diện rộng của anh ta, giúp hồi một lượng lớn Năng Lượng và tích stack Thiên Phú cho Herta đồng thời cũng đáp ứng yêu cầu đồng đội Tri Thức của cô ấy, cung cấp 50% tăng DMG toàn đội, mang lại lượng sát thương đáng kể và tuyệt vời nhất là gắn tất cả 7 điểm yếu vào tất cả kẻ thù.',
+					jade: 'Cung cấp cho Đại Herta một số stack và hồi Năng Lượng nhất định và thường xuyên nhất trong tất cả các tùy chọn Tri Thức của cô ấy; ngoài ra còn cấp cho cô ấy 30 Tốc nhờ Kỹ năng của cô ấy (nếu có Lingsha hoặc Tribbie trong đội thì nên dùng cho họ). Jade cũng có thể gây ra lượng sát thương rất đáng kể, đặc biệt là trong Kể Chuyện Hư Cấu.',
+					tribbie: 'Herta tự buff rất mạnh, khiến buff khác kém hiệu quả, nhưng xuyên kháng và % "sát thương phải chịu" của Tribbie vẫn hữu dụng. Tribbie còn giúp Herta hồi Năng Lượng tốt và tăng sát thương AoE qua “Lãnh Địa”, rất hợp lối đánh của Herta.',
+				},
+				amplifier: {
+					herta: '"Mini Herta" là một lựa chọn thay thế hợp lý cho Jade trong các chế độ có kẻ thù yếu hoặc có thể hồi sinh để cô ấy kích hoạt Thiên Phú <span class="underline">Đòn Đánh Theo Sau</span> của mình như trong Kể Chuyện Hư Cấu. Thật không may, các đòn tiếp theo của Mini Herta chỉ được tính một lần cho mục đích tích stack và hồi Năng Lượng của Herta bất kể cô ấy quay bao nhiêu lần liên tiếp, khiến cô ấy chủ yếu phù hợp với Kể Chuyện Hư Cấu hoặc cho những người không còn sự lựa chọn nhân vật nào khác.',
+					serval: 'Chơi như một noledaden chuyên dùng để tích stack và hồi Năng Lượng cho Đại Herta. Dùng nón <span class="font-bold">Chìa Khóa Linh Hồn S5</span> và di vật bộ 4 <span class="font-bold">Chim Ưng Ranh Giới Ngày Đêm</span> + dây Hiệu Suất Hồi Năng Lượng.',
+					argenti: 'Tương tự Serval.',
+					'female-remembrance': '<span class="underline">Sát Thương Chuẩn</span> + <span class="underline">Kéo Lượt</span> + 10% Crit Rate + khả năng Sạc Năng Lượng cho Đại Herta.',
+					robin: 'Lựa chọn tuyệt vời cho Đại Herta và đồng đội của cô ấy. Robin là một nhân vật buff cho toàn đội, nghĩa là cả Đại Herta và cộng sự Tri Thức nole của cô ấy đều được buff và có khả năng gây nhiều sát thương hơn. Trên thực tế là các Sát Thương Kèm Theo từ Tuyệt Kỹ Robin cũng có thể cấp cho Đại Herta Năng Lượng và stack.',
+				},
+				sustain: {	
+					lingsha: 'Mọi kỹ năng của cô nàng đều gây sát thương cho kẻ địch, bạn hiểu điều đó là gì mà, Năng Lượng + stack bú đẫm.',
+					aventurine: 'Tương tự Lingsha ngoại trừ Chiến Kỹ, nhưng bù lại có Debuff tăng Crit DMG phải chịu, rất phù hợp với một DPS chơi Crit thuần như Đại Herta.',
+					hyacine: 'Một bảo kê lý tưởng có thể dùng nếu bạn chưa sở hữu Lingsha.',
+					gallagher: 'Rẻ, khỏe, bảo kê tốt, dương Điểm Chiến Kỹ, mỗi tội tích stack và nạp cho Đại Herta không nhanh bằng Lingsha.',
+				}
 			}}
 			notes={{
 			}}

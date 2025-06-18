@@ -688,5 +688,11 @@
     "name": "Hướng Về Điều Không Thể Truy Hỏi",
     "path": "erudition",
     "rarity": 5
+  },
+  "flame-of-blood-blaze-my-path": {
+      "id": "flame-of-blood-blaze-my-path",
+      "name": "Huyết Hỏa, Hãy Thiêu Đốt Con Đường Phía Trước",
+      "path": "destruction",
+      "rarity": 5
   }
 }
