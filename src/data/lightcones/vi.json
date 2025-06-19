@@ -700,5 +700,11 @@
     "name": "Nhẫn Sự Lục - Săn Bắn Âm Luật",
     "path": "destruction",
     "rarity": 4
+  },
+  "if-time-were-a-flower": {
+    "id": "if-time-were-a-flower",
+    "name": "Nếu Thời Gian Là Một Đóa Hoa",
+    "path": "harmony",
+    "rarity": 5
   }
 }

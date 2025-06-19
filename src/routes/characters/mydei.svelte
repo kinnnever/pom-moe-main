@@ -613,7 +613,7 @@
 			`}
 			statDescriptions={[[
     		'[HP]HP &nbsp;&nbsp;&ge;&nbsp; [CD]Crit Dmg',
-    		'[SPD]Tấn Công &nbsp;&nbsp;&ge;&nbsp; [HP]HP',
+    		'[SPD]Tốc Độ &nbsp;&nbsp;&ge;&nbsp; [HP]HP',
     		'[HP]HP &nbsp;&nbsp;&ge;&nbsp; [imaginary]<span style="color: #FADA7A">Tăng ST Số Ảo</span>',
     		'[HP]HP'
 			]]}

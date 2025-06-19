@@ -13,6 +13,21 @@
   export let tooltips: Record<string, Record<string, string>> = {};
   export let notes: Record<string, string> = {};
 
+  let showTooltip = false;
+  let timeout: any;
+
+  function handleTouchStart() {
+    timeout = setTimeout(() => {
+      showTooltip = true;
+    }, 200); 
+  }
+
+  function handleTouchEnd() {
+    clearTimeout(timeout);
+    setTimeout(() => {
+      showTooltip = false;
+    });
+  }
 
   const characters = get(charactersStore);
   const getCharacter = (id: string) => characters.find(c => c.id === id);
@@ -25,7 +40,7 @@
   };
 </script>
 
-<div class="grid grid-cols-4 divide-x divide-white/20 bg-black/20 border border-white/80 rounded-lg">
+<div class="flex flex-col md:grid md:grid-cols-4 md:divide-x divide-white/20 bg-black/20 border border-white/80 rounded-lg">
   {#each [
     { label: 'DPS', key: 'dps' },
     { label: 'SUPPORT DPS', key: 'supportDps' },
@@ -36,19 +51,30 @@
       <div class={`font-bold text-xl mb-3 border-b border-white/30 w-full text-center pb-1 ${roleStyles[role.key]}`}>
         {role.label}
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 justify-items-center w-full ">
-        {#each team[role.key] as id}
-          {#if getCharacter(id)}
-            <div class="relative group">
-              <CharacterCard character={getCharacter(id)}/>
-              {#if tooltips[role.key]?.[id]}
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 pointer-events-none text-center">
-                  {@html tooltips[role.key][id]}
-                </div>
-              {/if}
-            </div>
-          {/if}
-        {/each}
+      <div class="w-full overflow-x-auto md:overflow-visible">
+        <div class="flex md:grid md:grid-cols-2 gap-3 md:justify-items-center min-w-max md:min-w-0">
+          {#each team[role.key] as id}
+            {#if getCharacter(id)}
+              <div 
+                class="relative group shrink-0 w-24 md:w-full flex justify-center"
+                on:touchstart={handleTouchStart}
+                on:touchend={handleTouchEnd}
+              >
+                <CharacterCard character={getCharacter(id)}/>
+                {#if tooltips[role.key]?.[id]}
+                  <div
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 text-sm p-2 rounded border border-white/80 text-center z-50
+                    transition-opacity duration-200
+                    opacity-0 group-hover:opacity-100
+                    {showTooltip ? 'opacity-100' : ''}"
+                  >                      
+                    {@html tooltips[role.key][id]}
+                  </div>
+                {/if}
+              </div>
+            {/if}
+          {/each}
+        </div>
       </div>
       {#if notes[role.key]}
         <p class="mt-3 text-sm text-white/70 text-center mt-6">
