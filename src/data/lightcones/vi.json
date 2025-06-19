@@ -694,5 +694,11 @@
       "name": "Huyết Hỏa, Hãy Thiêu Đốt Con Đường Phía Trước",
       "path": "destruction",
       "rarity": 5
+  },
+  "ninja-record-sound-hunt": {
+    "id": "ninja-record-sound-hunt",
+    "name": "Nhẫn Sự Lục - Săn Bắn Âm Luật",
+    "path": "destruction",
+    "rarity": 4
   }
 }

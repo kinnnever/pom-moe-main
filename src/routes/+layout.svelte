@@ -45,8 +45,7 @@
 	<!-- Trái -->
 	<div class="hidden md:block text-left">
 		<p>Trạm Dữ Liệu Star Rail.</p>
-		<p>Nội dung Guide được hỗ trợ bởi các Bác sĩ trong Bệnh viện Lê Bách,</p>
-		<p>Và kênh Chunpomer.</p>
+		<p>Nội dung Guide được hỗ trợ bởi các Bác sĩ trong Bệnh viện Lê Bách</p>
 	</div>
 
 	<!-- Phải -->
@@ -68,23 +67,6 @@
 
 		<div class="h-px w-full bg-white/40 md:h-10 md:w-px md:mx-2"></div>
 
-		<div class="flex flex-col items-center gap-2">
-			<span class="font-bold">Chunpomer</span>
-			<div class="flex gap-4">
-				<a href="https://discord.gg/M7yUBGsJYJ" class="duration-150 hover:text-white" target="_blank">
-					<Icon icon={DiscordIcon} height={36} />
-				</a>
-				<a href="https://www.facebook.com/chunpomer/" class="duration-150 hover:text-white" target="_blank">
-					<Icon icon={FacebookIcon} height={40} />
-				</a>
-				<a href="https://www.youtube.com/@chunpomer" class="duration-150 hover:text-white" target="_blank">
-					<Icon icon={YoutubeIcon} height={40} />
-				</a>
-			</div>
-		</div>
-
-		<div class="h-px w-full bg-white/40 md:h-10 md:w-px md:mx-2"></div>
-
 		<!-- các icon cá nhân -->
 		<div class="flex items-center gap-2">
 			<div class="flex flex-col items-center gap-2">
@@ -95,6 +77,9 @@
 				</a>
 				<a href="https://facebook.com/kienluu.21.10" class="duration-150 hover:text-white" target="_blank">
 					<Icon icon={FacebookIcon} height={40} />
+				</a>
+				<a href="https://www.youtube.com/@kien_nghien" class="duration-150 hover:text-white" target="_blank">
+					<Icon icon={YoutubeIcon} height={40} />
 				</a>
 			</div>
 		</div>

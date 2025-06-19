@@ -346,18 +346,18 @@
 	
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Chiến Kỹ &gt; Tuyệt Kỹ &gt; Thiên Phú &gt; Tấn Công Thường</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Chiến Kỹ = Tuyệt Kỹ &gt; Thiên Phú &gt; Tấn Công Thường</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white">Chiến Kỹ</p>
-  			<p class="text-white/80 text-sm">Nguồn Sát Thương chủ đạo của Mydei. Đặc biệt là không tiêu hao Điểm Chiến Kỹ.</p>
+  			<p class="text-white/80 text-sm">Nguồn DMG chính, không tiêu hao Điểm Chiến Kỹ, và máy tự dụng kỹ năng này cho bạn.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Tuyệt Kỹ</p>
-    		<p class="text-white/80 text-sm">Nguồn phụ trợ Sát Thương và phụ trợ Trị Liệu tốt. Nên nâng cấp nếu dư giả tài nguyên.</p>
+    		<p class="text-white/80 text-sm">Hỗ trợ thêm tí DMG, chủ yếu là dùng để sinh tồn.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Thiên Phú</p>
-    		<p class="text-white/80 text-sm">Chỉ tăng nhẹ lượng trị liệu khi vào Huyết Thù, không thật sự cần bận tâm. Nhưng nếu bạn chơi team 3 nô không bảo kê thì nên cân nhắc lại.</p>
+    		<p class="text-white/80 text-sm">Ngoài khả năng hồi HP khi vào trạng thái thì còn lại coi như vứt. Nhưng nếu chơi team 3 nô thì cân nhắc nên nâng.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white">Tấn Công Thường</p>
@@ -538,22 +538,22 @@
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white"><span style="color: {character.elementColor}">E1</span> 
 			- Gió Lạnh Khắc Nên Xương Sống Bất Khuất</p>
-  			<p class="text-white/80 text-sm">Lượng Sát Thương cải thiện không thật sự đáng kể, nhưng có thể giúp anh chàng có màn thể hiện ổn định trong nhiều dạng ải đấu khác nhau.</p>
+  			<p class="text-white/80 text-sm">Không đáng đầu tư.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E2</span> 
 			- Phân Tranh Chứng Kiến Tiếng Gào Của Thi Thể</p>
-    		<p class="text-white/80 text-sm">Tăng gần 9% Sát Thương đầu ra, nhưng nếu đi cùng hỗ trợ bảo kê hồi máu tốt thì là lên tới 20%.</p>
+    		<p class="text-white/80 text-sm">Mạnh và dễ chơi hơn nhiều so với E0 hay E1.</p>
   		</div>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E4</span> 
 			- Kèn Lệnh Đánh Thức Con Sư Tử Trầm Mặc</p>
-    		<p class="text-white/80 text-sm">Tăng chút CV không đáng, nhưng hồi HP mỗi khi bị tấn công thì khác, nhưng lại quá phụ thuộc vào tần suất tấn công của kẻ địch.</p>
+    		<p class="text-white/80 text-sm">Kết hợp với E2 tốt, nhưng vẫn phụ thuộc vào tần xuất tấn công của kẻ địch.</p>
   		</div>
 		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
     		<p class="font-bold text-white"><span style="color: {character.elementColor}">E6</span> 
 			- Quá Khứ Đạp Lên Ngọn Núi Máu</p>
-    		<p class="text-white/80 text-sm">"Cút ra góc phòng chơi, chúng tôi không nói chuyện với Cá Voi". Đấy là ai nói thế chứ ở đây, Mydei ngay lập tức vào trạng thái mạnh nhất ngay khi vừa vào chiến đấu, còn tăng mạnh tần suất hành động, và nhờ E1 mà Mydei trở thành con quái vật đúng nghĩa.</p>
+    		<p class="text-white/80 text-sm">"Cút ra góc phòng chơi, chúng tôi không nói chuyện với Cá Voi". Đấy là ai nói thế chứ ở đây, Mydei ngay lập tức vào trạng thái mạnh nhất ngay khi vừa vào chiến đấu, còn tăng mạnh tần suất hành động, và kết hợp với E2 thì Mydei trở thành con quái vật đúng nghĩa.</p>
   		</div>
 	</div>
 
@@ -562,7 +562,7 @@
 	<section>
 		<Title>NÓN ÁNH SÁNG</Title>
 		<LightconesBlock
-  			ids={['flame-of-blood-blaze-my-path','the-unreachable-side','a-secret-vow']}
+  			ids={['flame-of-blood-blaze-my-path','the-unreachable-side','a-secret-vow','ninja-record-sound-hunt']}
   			characterName={character.name}
   			exposeNames={(names) => {lightconeNames = names}}
 		/>
@@ -571,16 +571,20 @@
     	  <ol class="list-decimal list-inside space-y-2 text-white/80 text-sm leading-relaxed">
   			<li>
     		<strong class="text-amber-300">{lightconeNames[0]}</strong>: <span class="font-bold">Trấn</span> -
-			Cách biệt sức mạnh rất lớn so với các Nón Ánh Sáng khác. Đẩy mạnh HP dòng phụ, có thể sử dụng Cầu Số Ảo để tối ưu hóa Sát Thương
+			Tốt nhất về Stats Base.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[1]}</strong>: <span class="font-bold">
-			5 Sao stat tốt.
+			Lỏ hơn Trấn xíu.
   			</li>
   			<li>
     		<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
-			Nón cho F2P, nên dùng Thân và Cầu HP để bù lại chỉ số.
+			Tốt nhất nếu không có 2 nón 5 sao.
   			</li>
+			<li>
+			<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
+			Free Event, Stats Base tốt, không còn gì thì xài tạm.
+			</li>
 		  </ol>
   		</div>
 		{/if}
@@ -597,7 +601,7 @@
 			<p><span class="text-amber-300 font-semibold">Học Giả Lạc Lối Trong Biển Tri Thức</span>: 
 			Bộ di vật tốt nhất cho Mydei nhờ cung cấp Tỷ Lệ Bạo Kích và khả năng khuếch đại Sát Thương Chiến Kỹ.</p>
 			<p><span class="text-amber-300 font-semibold">Môn Đồ Trường Thọ</span>: 
-			Tăng HP và chút Tỉ Lệ Bạo, có thể dùng tạm trước khi có bộ Học Giả Lạc Lối Trong Biển Tri Thức đủ tốt.</p>
+			Tăng HP và chút Tỉ Lệ Bạo, có thể dùng tạm trước khi có bộ Trấn đủ tốt.</p>
 			<p><span class="text-amber-300 font-semibold">Mix 2-2</span>:
 			Nếu bạn không thể kiếm được bộ 4 được đề xuất với các chỉ số chính/phụ đẹp, hãy Mix tạm 2 bộ trên lại với nhau.
 			`}
@@ -605,24 +609,24 @@
 			<p><span class="text-amber-300 font-semibold">Vùng Đất Nhặt Hài Cốt Tĩnh Lặng</span>:
 			Best in Slot với hiệu quả tăng cường Giới Hạn HP và Bạo Kích.</p>
 			<span class="text-amber-300 font-semibold">Đấu Trường Ngôi Sao</span>:
-			Tuy không cung cấp HP, đồng thời không thăng cường Sát Thương Tuyệt Kỹ, nhưng với 20% DMG BOnus giá trị vẫn có khả năng khuếch đại Sát Thương Chiến Kỹ rất tốt.</p>
+			Tuy không cung cấp HP, nhưng tăng DMG Chiến Kỹ thì vẫn dùng tốt.</p>
 			`}
 			statDescriptions={[[
     		'[HP]HP &nbsp;&nbsp;&ge;&nbsp; [CD]Crit Dmg',
     		'[SPD]Tấn Công &nbsp;&nbsp;&ge;&nbsp; [HP]HP',
-    		'[imaginary]<span style="color: #FADA7A">Tăng ST Số Ảo</span> &nbsp;&nbsp;&gt;&nbsp; [HP]HP',
+    		'[HP]HP &nbsp;&nbsp;&ge;&nbsp; [imaginary]<span style="color: #FADA7A">Tăng ST Số Ảo</span>',
     		'[HP]HP'
 			]]}
 			priorityStats={
-			'HP &ge; Sát Thương Bạo Kích &ge;  Tỷ Lệ Bạo Kích = Tốc Độ '
+			'HP <span class="text-white/20">(Đủ 8000 HP thì dừng lại)</span> &ge; Sát Thương Bạo Kích &ge;  Tỷ Lệ Bạo Kích = Tốc Độ '
 			}
 			endgameStats={`
-			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">8000</span> &nbsp;<span class="text-white/70">(8000 HP ngoài màn hình chờ là để tối đa hiệu quả khuếch đại số của kỹ năng)</span></p>
+			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">8000</span> &nbsp;<span class="text-white/70">(Đây là chỉ số ngoài màn hình chờ)</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">BASE</span></p>
-			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">37%</span> &nbsp;<span class="text-white/70">(Nếu bạn build đủ 8000 HP thì khi vào trận bạn sẽ có 100% Tỷ Lệ Bạo với chỉ số này)</span></p>
-			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">160%+</span> &nbsp;<span class="text-white/70">(Build được càng cao càng tốt)</span></p>
-			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">134</span> &nbsp;<span class="text-white/70">(Thường là để đi cùng SP Speed Turning, nhưng nếu đi cùng SP tốc cao như Sparkle hay Sunday 160+ Tốc thì các bạn có để để Mydei BASE tốc để đầu tư HP)</span></p>
+			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">40%+</span> &nbsp;<span class="text-white/70">(Nếu bạn build đủ 8000 HP thì khi vào trận bạn sẽ có free 48% Tỷ Lệ Bạo, có thể giảm nếu bạn kẹp Sunday hay bất kỳ nguồn tăng Tỷ Lệ Bạo nào khác)</span></p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">150%+</span> &nbsp;<span class="text-white/70">(Build được càng cao càng tốt)</span></p>
+			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">?</span> &nbsp;<span class="text-white/70">(Có thể build Speed Turning là 134/135 Tốc, nhưng nếu đi cùng SP tốc cao như Sparkle hay Sunday 160+ Tốc thì để Mydei Tốc BASE cho dễ đầu tư HP)</span></p>
 			`}
 		/>
 	</section>
@@ -634,7 +638,7 @@
     			dps: ['mydei'],
     			supportDps: ['tribbie','jade'],
     			amplifier: ['sunday','male-remembrance','sparkle','bronya','ruan-mei'],
-    			sustain: ['gallagher','luocha','lynx','huohuo']
+    			sustain: ['gallagher','luocha','lynx']
   			}}
   			tooltips={{
 				dps: {
@@ -655,7 +659,6 @@
                     gallagher: 'Hồi HP khi Mydei tấn công, gần như luôn duy trì HP Mydei trên 50%.',
                     luocha: 'Tương tự Gallagher nhưng có hiệu quả cả khi ngoài hiệp.',
                     lynx: 'Tăng HP Tối Đa và tăng chỉ số <span class="underline">Khiêu Khích</span> của Mydei.',
-                    huohuo: 'Hồi HP cho Mydei mỗi lần anh chàng được "Kéo Lượt".',
                 }
 			}}
 			notes={{
@@ -685,8 +688,8 @@
 		<div class="text-xl font-bold mt-4 mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
 			<span class="text-3xl font-bold mb-1 mt-3 pl-2">
 				<span style="color: {character.elementColor}">S1</span> &nbsp &gt; &nbsp 
-				<span style="color: {character.elementColor}">E2</span> &nbsp &gt; &nbsp 
-				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
+				<span style="color: {character.elementColor}">E2</span> &nbsp
+				<span class="text-white/70 text-2xl">(Hoặc)</span> &nbsp Skip
 				
 			</span>
 		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
@@ -696,20 +699,6 @@
 			<p>
 				<span class="font-semibold text-amber-400">E2</span>: Tương tự Trấn nhưng đắt tiền hơn.
 			</p>		
-		</div>
-
-		<div class="mt-8 w-full flex justify-center">
-			<p class="text-white/10 font-bold">
-				Nguồn Guide:
-				<a
-				href="https://www.youtube.com/@chunpomer" 
-				class="hover:text-white/60 transition-colors "
-				target="_blank"
-				rel="noopener noreferrer"
-				>
-				Kênh Chunpomer
-				</a>
-			</p>
 		</div>
 
 	</section>
