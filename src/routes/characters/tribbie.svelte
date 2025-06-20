@@ -631,7 +631,8 @@
                 }
 			}}
 			notes={{
-                dps: 'Tribbie là một Hòa Hợp với những Buff và Debuff hiếm, có kiêm luôn khả năng hỗ trợ gây Sát Thương nên Tribbie có thể đi được cùng hầu hết DPS chơi Crit thuần, đặc biệt tốt với những chủ lực có kỹ năng gây Sát Thương AoE.'
+                dps: 'Tribbie là một Hòa Hợp với những Buff và Debuff hiếm, có kiêm luôn khả năng hỗ trợ gây Sát Thương nên Tribbie có thể đi được cùng hầu hết DPS chơi Crit thuần, đặc biệt tốt với những chủ lực có kỹ năng gây Sát Thương AoE.',
+                sustain: 'abcxyz'
 			}}
 		/>
 	</section>
