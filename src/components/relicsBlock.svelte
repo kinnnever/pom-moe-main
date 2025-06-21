@@ -1,5 +1,5 @@
 <script lang="ts">
-  import relicsData from '$data/relics/relics.json';
+  import relicsData from '$data/relics/vi.json';
   import { slide } from 'svelte/transition';
 
   export let relicIds: string[] = [];

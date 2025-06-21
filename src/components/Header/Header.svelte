@@ -58,7 +58,7 @@
 				<span class="pl-2 font-semibold text-white">Database</span>
 				<Icon class="inline text-white" icon={ChevronDown} />
 			</div>
-			{#if ['lightcones', 'achievements'].includes($page.url.pathname.split('/')[1])}
+			{#if ['lightcones', 'relics', 'achievements'].includes($page.url.pathname.split('/')[1])}
 				<div class="absolute -right-2 bottom-2 h-4 w-[1px] rounded-full bg-yellow-100" />
 				<div
 					class="absolute -right-2 bottom-2 h-[1px] w-full max-w-[calc(100%-4rem)] rounded-full bg-gradient-to-r from-blue-300 via-purple-300 to-yellow-100"
@@ -69,16 +69,13 @@
 					class="flex w-[140%] flex-col items-start gap-2 rounded-md border border-white/5 bg-dark/30 py-2 font-semibold backdrop-blur-md"
 				>
 					<HeaderButton label={$t('common.lightcone')} icon="lightcone.png" target="/lightcones" />
-					<HeaderButton
-						label={$t('common.achievement')}
-						icon="achievement.png"
-						target="/achievements"
-					/>
+					<HeaderButton label={$t('common.relic')} icon="relics.png" target="/relics" />
+					<HeaderButton label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
 				</div>
 			</div>
 		</div>
 		<div class="relative">
-			<HeaderButton label={$t('menu.planner')} icon="planner.png" target="/planner" />
+			<HeaderButton label='Kế Hoạch' icon="planner.png" target="/planner" />
 			<span class="absolute right-0 top-0 rounded-sm bg-yellow-100/70 px-1 text-xs leading-none"
 				>SOON</span
 			>
@@ -107,26 +104,13 @@
 {#if open}
 	<div class="fixed top-24 z-50 flex flex-col justify-start gap-4 px-8">
 		<HeaderButton {close} label={$t('common.warp')} icon="warp.png" target="/warp" />
-		<HeaderButton
-			{close}
-			label={$t('common.character')}
-			icon="character.png"
-			target="/characters"
-		/>
+		<HeaderButton {close} label={$t('common.character')} icon="character.png" target="/characters" />
 		<HeaderButton {close} label={$t('menu.timeline')} icon="timeline.png" target="/timeline" />
-		<HeaderButton
-			{close}
-			label={$t('common.lightcone')}
-			icon="lightcone.png"
-			target="/lightcones"
-		/>
-		<HeaderButton
-			{close}
-			label={$t('common.achievement')}
-			icon="achievement.png"
-			target="/achievements"
-		/>
-		<HeaderButton {close} label={$t('common.settings')} icon="settings.png" target="/settings" />
+		<HeaderButton {close} label={$t('common.lightcone')} icon="lightcone.png" target="/lightcones" />
+		<HeaderButton {close} label={$t('common.relic')} icon="relics.png" target="/relics" />
+		<HeaderButton {close} label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
+		<HeaderButton {close} label='Kế Hoạch' icon="planner.png" target="/planner" />
+		<HeaderButton {close} label='Settings' icon="settings.png" target="/settings" />
 		<LocalePicker />
 	</div>
 {/if}

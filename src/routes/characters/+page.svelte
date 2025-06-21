@@ -131,7 +131,7 @@
 			</button>
 		{/each}
 	</div>
-	<div class="flex justify-center gap-2 md:justify-normal">
+	<div class="flex flex-wrap justify-center gap-2 md:justify-normal">
 		{#each $elements as element}
 			<button
 				class="duration-150 hover:opacity-80 {filter.elements[element.id] ? '' : 'opacity-30'}"
@@ -148,7 +148,7 @@
 		{/each}
 	</div>
 
-	<div class="flex flex-wrap justify-center gap-3 md:justify-normal">
+	<div class="flex flex-wrap justify-center gap-2 lg:gap-3 md:justify-normal">
 		{#each $paths as path}
 			<button
 				class="duration-150 hover:opacity-80 {filter.paths[path.id] ? '' : 'opacity-30'}"
@@ -161,12 +161,12 @@
 					src="/images/paths/{path.id}.png"
 					alt={path.name}
 				/>
-				<span class="hidden md:block inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
+				<span class="block inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
 			</button>
 		{/each}
 	</div>
 	</div>
-<div class="flex flex-wrap justify-center gap-2 md:justify-normal md:gap-3">
+<div class="flex flex-wrap justify-center gap-2 md:gap-3 md:justify-normal">
 	{#each list as character (character.id)}
 		<CharacterCard {character} {showTotal} total={total[character.id] ?? 0} />
 	{/each}

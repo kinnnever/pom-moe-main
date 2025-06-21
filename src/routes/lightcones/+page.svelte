@@ -71,8 +71,8 @@
 	<title>Pom.moe - Nón ánh sáng</title>
 </svelte:head>
 
-<Title>{$t('common.lightcone')}</Title>
-<div class="mb-8 flex flex-wrap justify-center gap-2 md:justify-normal">
+<Title>Nón Ánh Sáng</Title>
+<div class="mb-8 flex flex-wrap justify-center gap-3 md:justify-normal">
 	{#each $paths as path}
 		<button
 			class="duration-150 hover:opacity-80 {filter.paths[path.id] ? '' : 'opacity-30'}"
