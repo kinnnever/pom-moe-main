@@ -60,18 +60,18 @@
 	<title>{character.name} - Pom.moe</title>
 </svelte:head>
 
-<div class="flex flex-col gap-8 md:flex-row md:items-start">
+<div class="flex flex-col gap-8 lg:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
+	<div class="lg:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+		<p class="text-white text-base mt-4 text-center px-4 lg:hidden italic" style="text-shadow: 1px 1px 1px black">
 			Từ thánh địa được Lời Sấm Truyền Tam Thần ban phước, vị tín sứ tự chia mình thành hàng ngàn thân thể và bắt đầu bước lên cuộc hành trình xa xôi. Thánh nữ của Janusopolis, Tribios, Hậu Duệ Chrysos đã đánh cắp Ngọn Lửa của Cánh Cổng, bôn ba vì chúng sinh, mang thông điệp cứu thế đến muôn nơi. Tìm kiếm những người con mang dòng máu vàng thần thánh đó, phá vỡ bóng tối bao trùm thế gian, tiến tới một ngày mai trăng sao soi sáng.
   		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
               absolute bottom-7 left-0">
     		<p style="text-shadow: 1px 1px 1px black">
                 Từ thánh địa được Lời Sấm Truyền Tam Thần ban phước, vị tín sứ tự chia mình thành hàng ngàn thân thể và bắt đầu bước lên cuộc hành trình xa xôi. Thánh nữ của Janusopolis, Tribios, Hậu Duệ Chrysos đã đánh cắp Ngọn Lửa của Cánh Cổng, bôn ba vì chúng sinh, mang thông điệp cứu thế đến muôn nơi. Tìm kiếm những người con mang dòng máu vàng thần thánh đó, phá vỡ bóng tối bao trùm thế gian, tiến tới một ngày mai trăng sao soi sáng.
@@ -80,8 +80,8 @@
 	</div>
 
 	<!-- Thông tin nhân vật -->
-		<div class="md:w-2/4 space-y-">
-		<div class="flex items-left gap-4 mb-4">
+	<div class="lg:w-2/4 space-y-">
+		<div class="flex justify-center lg:justify-start gap-4 mb-4">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img

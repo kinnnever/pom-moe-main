@@ -62,26 +62,26 @@
 	<title>{character.name} - Pom.moe</title>
 </svelte:head>
 
-<div class="flex flex-col gap-8 md:flex-row md:items-start">
+<div class="flex flex-col gap-8 lg:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
+	<div class="lg:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+		<div class="text-white text-base mt-4 text-center px-4 lg:hidden italic" style="text-shadow: 1px 1px 1px black">
 			Thành viên tôn quý #83 của Câu Lạc Bộ Thiên Tài, loài người, giới tính nữ, trẻ tuổi, xinh đẹp, dễ thương. Người ta nói rằng cô ấy ẩn cư ở rìa vũ trụ, hầu như không bao giờ bước ra khỏi đó, lần xuất hiện này... Chắc chắn là vì một vấn đề nào đó buộc phải đích thân ra tay nhỉ?
-  		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+		</div>
+		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
               absolute bottom-24 left-0">
     		<p style="text-shadow: 1px 1px 1px black">Thành viên tôn quý #83 của Câu Lạc Bộ Thiên Tài, loài người, giới tính nữ, trẻ tuổi, xinh đẹp, dễ thương. Người ta nói rằng cô ấy ẩn cư ở rìa vũ trụ, hầu như không bao giờ bước ra khỏi đó, lần xuất hiện này... Chắc chắn là vì một vấn đề nào đó buộc phải đích thân ra tay nhỉ?</p>
   		</div>
 	</div>
 
 	<!-- Thông tin nhân vật -->
-		<div class="md:w-2/4 space-y-">
-		<div class="flex items-left gap-4 mb-4">
+	<div class="lg:w-2/4 space-y-6">
+		<div class="flex justify-center lg:justify-start gap-4 mb-4">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img

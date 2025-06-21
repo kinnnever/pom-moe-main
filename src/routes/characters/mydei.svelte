@@ -65,26 +65,26 @@
 	<title>{character.name} - Pom.moe</title>
 </svelte:head>
 
-<div class="flex flex-col gap-8 md:flex-row md:items-start">
+<div class="flex flex-col gap-8 lg:flex-row md:items-start">
 	<!-- Hình ảnh -->
-	<div class="md:w-2/3 flex flex-col items-center justify-center relative">
+	<div class="lg:w-2/3 flex flex-col items-center justify-center relative">
 		<img
 			src="/images/characters-full/{character.id}.png"
 			alt="{character.name}"
 			class="max-h-[100vh] object-contain"
 		/>
-		<p class="text-white text-base mt-4 text-center px-4 md:hidden" style="text-shadow: 1px 1px 1px black">
+		<p class="text-white text-base mt-4 text-center px-4 lg:hidden italic" style="text-shadow: 1px 1px 1px black">
 			Kremnos, thành bang chìm trong sương mù, thành bang của hỗn loạn và chiến tranh! Hoàng tộc của nó mang dòng máu sát hại thân thích, thần linh của nó mang tên gọi Tai Ương. Mydeimos bất tử, con sư tử xa bầy, Hậu Duệ Chrysos săn lùng Ngọn Lửa "Phân Tranh". Chịu đựng cái chết hàng vạn lần, tắm máu để trở về quê hương, một mình gánh vác số mệnh điên rồ — Giết vua để trở thành vua, diệt thần để trở thành thần. Vó sắt của chiến tranh đạp qua hoang mạc, cuối cùng cũng phải nhuốm máu quê hương.
   		</p>
-		<div class="hidden md:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-7 left-0">
+		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
+              absolute bottom-24 left-0">
     		<p style="text-shadow: 1px 1px 1px black">Kremnos, thành bang chìm trong sương mù, thành bang của hỗn loạn và chiến tranh! Hoàng tộc của nó mang dòng máu sát hại thân thích, thần linh của nó mang tên gọi Tai Ương. Mydeimos bất tử, con sư tử xa bầy, Hậu Duệ Chrysos săn lùng Ngọn Lửa "Phân Tranh". Chịu đựng cái chết hàng vạn lần, tắm máu để trở về quê hương, một mình gánh vác số mệnh điên rồ — Giết vua để trở thành vua, diệt thần để trở thành thần. Vó sắt của chiến tranh đạp qua hoang mạc, cuối cùng cũng phải nhuốm máu quê hương.</p>
   		</div>
 	</div>
 
 	<!-- Thông tin nhân vật -->
-		<div class="md:w-2/4 space-y-">
-		<div class="flex items-left gap-4 mb-4">
+		<div class="lg:w-2/4 space-y-">
+		<div class="flex items-left justify-center lg:justify-start gap-4 mb-4">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img
