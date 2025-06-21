@@ -25,7 +25,7 @@
 		height={512}
 	/>
 	<span
-		class="absolute bottom-1 left-0 right-0 text-center text-lg font-semibold leading-none text-white">{$t(`character.${character.id}`)}</span>
+		class="absolute bottom-1 left-0 right-0 text-center text-xl font-semibold leading-none text-white">{$t(`character.${character.id}`)}</span>
 		<img
 			src="/images/elements/{character.element}.png"
 			alt={character.element}

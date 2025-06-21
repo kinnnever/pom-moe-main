@@ -43,9 +43,10 @@
               <div class="relative group shrink-0 w-24 md:w-full flex justify-center">
                 <CharacterCard character={getCharacter(id)} class="scale-75 md:scale-100" />
                 {#if tooltips[role.key]?.[id]}
-                  <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-black/90 text-white/80 
-                              text-xs md:text-sm p-2 rounded border border-white/80 opacity-0 group-hover:opacity-100 
-                              transition-opacity duration-200 z-50 pointer-events-none text-center">
+                  <div class="absolute bottom-full left-1/2 -translate-x-1/2 transform-gpu mb-2 w-56 max-w-[calc(100vw-16px)]
+                              bg-black/90 text-white/80 text-xs md:text-sm p-2 rounded border border-white/80
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50
+                              pointer-events-none text-center">
                     {@html tooltips[role.key][id]}
                   </div>
                 {/if}

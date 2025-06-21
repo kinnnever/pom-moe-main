@@ -114,11 +114,11 @@
 </svelte:head>
 
 <Title>{$t('common.character')}</Title>
-<div class="mb-4 flex flex-col gap-8 md:flex-row">
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-4">
 	<div class="flex justify-center gap-2 md:justify-normal">
 		{#each ['5', '4'] as r}
 			<button
-				class="duration-150 hover:opacity-80 {filter.rarity[r] ? '' : 'opacity-30'}"
+				class="duration-150 hover:opacity-80 border md:border-0 border-white/60 rounded-md {filter.rarity[r] ? '' : 'opacity-30'}"
 				on:click={() => toggleRarity(r)}
 			>
 				<img
@@ -147,7 +147,8 @@
 			</button>
 		{/each}
 	</div>
-	<div class="flex flex-wrap justify-center gap-2 md:justify-normal">
+
+	<div class="flex flex-wrap justify-center gap-3 md:justify-normal">
 		{#each $paths as path}
 			<button
 				class="duration-150 hover:opacity-80 {filter.paths[path.id] ? '' : 'opacity-30'}"
@@ -160,11 +161,11 @@
 					src="/images/paths/{path.id}.png"
 					alt={path.name}
 				/>
-				<span class="inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
+				<span class="hidden md:block inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
 			</button>
 		{/each}
 	</div>
-</div>
+	</div>
 <div class="flex flex-wrap justify-center gap-2 md:justify-normal md:gap-3">
 	{#each list as character (character.id)}
 		<CharacterCard {character} {showTotal} total={total[character.id] ?? 0} />
