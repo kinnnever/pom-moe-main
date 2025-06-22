@@ -560,7 +560,7 @@
 			Bộ tập trung vào khả năng Sát Thương tốt nhất cho Tribbie nhưng buộc cô ấy phải chơi chậm. Điều này rất đáng để đánh đổi, vì đóng góp Sát Thương của Tribbie lên các mục tiêu ưu tiên trong giao tranh là đáng kể và chắc chắn đáng để đầu tư.</p>
 			<p><span class="text-amber-300 font-semibold">Môn Đồ Trường Thọ</span>: 
 			Không mạnh bằng bộ trên nhưng là một lựa chọn thay thế khả thi cũng như là một lựa chọn khi chơi Tribbie đi nhanh.</p>
-            <p><span class="text-amber-300 font-semibold">Chim Ưng Chạng Vạng</span>:
+            <p><span class="text-amber-300 font-semibold">Chim Ưng Ranh Giới Ngày Đêm</span>:
             Chỉ dùng khi bạn đã có hiểu biết về game và biết mình đang làm gì.
 			<p><span class="text-amber-300 font-semibold">Mix 2-2</span>:
 			Nếu bạn không thể kiếm được bộ 4 được đề xuất với các chỉ số chính/phụ đẹp, hãy Mix tạm với bộ Học Giả để có đủ chỉ số.</p>
@@ -641,34 +641,36 @@
 		<Title>TIPS & TRICKS</Title> 
 		<ProsConsBlock 
 			pros=' 
-				Lượng Sát Thương đầu ra khổng lồ.
-				"Từ Chối Tử Thần" 3 lần.
-				Có lượng HP lớn và chỉ số scale theo HP.
-				"Muốn động vào đồng đội ta thì phải bước qua xá.c ta trước, hoặc DMG AoE" (Khiêu khích thường xuyên và liên tục).
-				Hồi năng lượng nhanh di liên tục bị tấn công.
-				Đội hình linh hoạt và có nhiều biến thể.
-				Vô não khi chơi.
+				Hòa Hợp khủng bố.
+				Buff hiếm.
+				Kiểm soát Điểm Chiến Kỹ tốt.
+				Đòn Đánh Theo Sau liên tục.
+				Rất tốt khi đi cùng động đội có DMG AoE.
+				Có thể cho vào bất kỳ đội hình nào (hầu hết là vậy :v).
+				Dễ chơi.
+				Cute.
+				Loli hợp pháp.
 			'
 			cons='
-				Nón F2P khá hạn chế.
-				Máy chơi hay hơn bạn.
+				Cần đầu tư nhiều vào farm đồ để có khả năng gây Sát Thương cao.
+				Hơi phụ thuộc vào đồng mình có kỹ năng AoE để hồi Năng Lượng cho Tuyệt Kỹ.
+				
 			'
 		/>
 
 
 		<div class="text-xl font-bold mt-4 mb-2">Định Hướng Đầu Tư Cho <span style="color: {character.elementColor}">{character.name}</span>:</div>
 			<span class="text-3xl font-bold mb-1 mt-3 pl-2">
-				<span style="color: {character.elementColor}">S1</span> &nbsp &gt; &nbsp 
-				<span style="color: {character.elementColor}">E2</span> &nbsp
-				<span class="text-white/70 text-2xl">(Hoặc)</span> &nbsp Skip
+				<span style="color: {character.elementColor}">E1</span> &nbsp &gt; &nbsp 
+				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
 		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p>
-				<span class="font-semibold text-amber-400">S1</span>: Tăng khả năng vận hành và tăng Sát Thương đầu ra.
+				<span class="font-semibold text-amber-400">E1</span>: Sát Thương Chuẩn siêu phá game.
 			</p>
 			<p>
-				<span class="font-semibold text-amber-400">E2</span>: Tương tự Trấn nhưng đắt tiền hơn.
+				Có tiền thì đầu tư vào Tinh Hồn ý, Nón Ánh Sáng thì dùng nón "Múa, Múa, Múa" S5 là được rồi.
 			</p>		
 		</div>
 

@@ -4,11 +4,6 @@
     "name": "Ban Nhạc Sizzling Thunder",
     "type": "cavern"
   },
-  "Item_Bone_Collection_s_Serene_Demesne": {
-    "id": "Item_Bone_Collection_s_Serene_Demesne",
-    "name": "Vùng Đất Nhặt Hài Cốt Tĩnh Lặng",
-    "type": "planar"
-  },
   "Champion_of_Streetwise_Boxing": {
     "id": "Champion_of_Streetwise_Boxing",
     "name": "Quyền Vương Đường Phố",
@@ -16,7 +11,7 @@
   },
   "Eagle_of_Twilight_Line": {
     "id": "Eagle_of_Twilight_Line",
-    "name": "Chim Ưng Chạng Vạng",
+    "name": "Chim Ưng Ranh Giới Ngày Đêm",
     "type": "cavern"
   },
   "Firesmith_of_Lava_-_Forging": {
@@ -47,6 +42,91 @@
   "Iron_Cavalry_Against_the_Scourge": {
     "id": "Iron_Cavalry_Against_the_Scourge",
     "name": "Thiết Kỵ Diệt Trừ Tai Họa",
+    "type": "cavern"
+  },
+  "Knight_of_Purity_Palace": {
+    "id": "Knight_of_Purity_Palace",
+    "name": "Thánh Kỵ Sĩ Giáo Hoàng Tịnh Đình",
+    "type": "cavern"
+  },
+  "Longevous_Disciple": {
+    "id": "Longevous_Disciple",
+    "name": "Môn Đồ Trường Thọ",
+    "type": "cavern"
+  },
+  "Messenger_Traversing_Hackerspace": {
+    "id": "Messenger_Traversing_Hackerspace",
+    "name": "Tín Sứ Du Ngoạn Không Gian Hacker",
+    "type": "cavern"
+  },
+  "Musketeer_of_Wild_Wheat": {
+    "id": "Musketeer_of_Wild_Wheat",
+    "name": "Thiện Xạ Bông Lúa",
+    "type": "cavern"
+  },
+  "Passerby_of_Wandering_Cloud": {
+    "id": "Passerby_of_Wandering_Cloud",
+    "name": "Lãng Khách Âm Thầm",
+    "type": "cavern"
+  },
+  "Pioneer_Diver_of_Dead_Waters": {
+    "id": "Pioneer_Diver_of_Dead_Waters",
+    "name": "Tiên Phong Trong Nước Chết",
+    "type": "cavern"
+  },
+  "Poet_of_Mourning_Collapse": {
+    "id": "Poet_of_Mourning_Collapse",
+    "name": "Nhà Thơ Khúc Bi Ca Vong Quốc",
+    "type": "cavern"
+  },
+  "Prisoner_in_Deep_Confinement": {
+    "id": "Prisoner_in_Deep_Confinement",
+    "name": "Tù Nhân Ngục Tối",
+    "type": "cavern"
+  },
+  "Sacerdos_Relived_Ordeal": {
+    "id": "Sacerdos_Relived_Ordeal",
+    "name": "Lại Một Hành Trình Gian Khổ Của Linh Mục",
+    "type": "cavern"
+  },
+  "Scholar_Lost_in_Erudition": {
+    "id": "Scholar_Lost_in_Erudition",
+    "name": "Học Giả Lạc Lối Trong Biển Tri Thức",
+    "type": "cavern"
+  },
+  "The_Ashblazing_Grand_Duke": {
+    "id": "The_Ashblazing_Grand_Duke",
+    "name": "Đại Công Tước Tro Tàn",
+    "type": "cavern"
+  },
+  "The_Wind-Soaring_Valorous": {
+    "id": "The_Wind-Soaring_Valorous",
+    "name": "Dũng Khí Ngút Trời",
+    "type": "cavern"
+  },
+  "Thief_of_Shooting_Meteor": {
+    "id": "Thief_of_Shooting_Meteor",
+    "name": "Kẻ Cướp Vệt Sao Băng",
+    "type": "cavern"
+  },
+  "Warrior_Goddess_of_Sun_and_Thunder": {
+    "id": "Warrior_Goddess_of_Sun_and_Thunder",
+    "name": "Nữ Thần Chiến Binh Nắng Sấm",
+    "type": "cavern"
+  },
+  "Wastelander_of_Banditry_Desert": {
+    "id": "Wastelander_of_Banditry_Desert",
+    "name": "Kẻ Hoang Dã Sa Mạc",
+    "type": "cavern"
+  },
+  "Watchmaker_Master_of_Dream_Machinations": {
+    "id": "Watchmaker_Master_of_Dream_Machinations",
+    "name": "Thợ Đồng Hồ, Bậc Thầy Máy Móc",
+    "type": "cavern"
+  },
+  "Wavestrider_Captain": {
+    "id": "Wavestrider_Captain",
+    "name": "Thuyền Trưởng Đuổi Sóng Biển Sâu",
     "type": "cavern"
   },
   "Item_Belobog_of_the_Architects": {
@@ -144,89 +224,9 @@
     "name": "Công Viên Chuối Kỳ Ảo",
     "type": "planar"
   },
-  "Knight_of_Purity_Palace": {
-    "id": "Knight_of_Purity_Palace",
-    "name": "Thánh Kỵ Sĩ Giáo Hoàng Tịnh Đình",
-    "type": "cavern"
-  },
-  "Longevous_Disciple": {
-    "id": "Longevous_Disciple",
-    "name": "Môn Đồ Trường Thọ",
-    "type": "cavern"
-  },
-  "Messenger_Traversing_Hackerspace": {
-    "id": "Messenger_Traversing_Hackerspace",
-    "name": "Tín Sứ Du Ngoạn Không Gian Hacker",
-    "type": "cavern"
-  },
-  "Musketeer_of_Wild_Wheat": {
-    "id": "Musketeer_of_Wild_Wheat",
-    "name": "Thiện Xạ Bông Lúa",
-    "type": "cavern"
-  },
-  "Passerby_of_Wandering_Cloud": {
-    "id": "Passerby_of_Wandering_Cloud",
-    "name": "Lãng Khách Âm Thầm",
-    "type": "cavern"
-  },
-  "Pioneer_Diver_of_Dead_Waters": {
-    "id": "Pioneer_Diver_of_Dead_Waters",
-    "name": "Tiên Phong Trong Nước Chết",
-    "type": "cavern"
-  },
-  "Poet_of_Mourning_Collapse": {
-    "id": "Poet_of_Mourning_Collapse",
-    "name": "Nhà Thơ Khúc Bi Ca Vong Quốc",
-    "type": "cavern"
-  },
-  "Prisoner_in_Deep_Confinement": {
-    "id": "Prisoner_in_Deep_Confinement",
-    "name": "Tù Nhân Ngục Tối",
-    "type": "cavern"
-  },
-  "Sacerdos_Relived_Ordeal": {
-    "id": "Sacerdos_Relived_Ordeal",
-    "name": "Lại Một Hành Trình Gian Khổ Của Linh Mục",
-    "type": "cavern"
-  },
-  "Scholar_Lost_in_Erudition": {
-    "id": "Scholar_Lost_in_Erudition",
-    "name": "Học Giả Lạc Lối Trong Biển Tri Thức",
-    "type": "cavern"
-  },
-  "The_Ashblazing_Grand_Duke": {
-    "id": "The_Ashblazing_Grand_Duke",
-    "name": "Đại Công Tước Tro Tàn",
-    "type": "cavern"
-  },
-  "The_Wind-Soaring_Valorous": {
-    "id": "The_Wind-Soaring_Valorous",
-    "name": "Dũng Khí Ngút Trời",
-    "type": "cavern"
-  },
-  "Thief_of_Shooting_Meteor": {
-    "id": "Thief_of_Shooting_Meteor",
-    "name": "Kẻ Cướp Vệt Sao Băng",
-    "type": "cavern"
-  },
-  "Warrior_Goddess_of_Sun_and_Thunder": {
-    "id": "Warrior_Goddess_of_Sun_and_Thunder",
-    "name": "Nữ Thần Chiến Binh Nắng Sấm",
-    "type": "cavern"
-  },
-  "Wastelander_of_Banditry_Desert": {
-    "id": "Wastelander_of_Banditry_Desert",
-    "name": "Kẻ Hoang Dã Sa Mạc",
-    "type": "cavern"
-  },
-  "Watchmaker_Master_of_Dream_Machinations": {
-    "id": "Watchmaker_Master_of_Dream_Machinations",
-    "name": "Thợ Đồng Hồ, Bậc Thầy Máy Móc",
-    "type": "cavern"
-  },
-  "Wavestrider_Captain": {
-    "id": "Wavestrider_Captain",
-    "name": "Thuyền Trưởng Đuổi Sóng Biển Sâu",
-    "type": "cavern"
+  "Item_Bone_Collection_s_Serene_Demesne": {
+    "id": "Item_Bone_Collection_s_Serene_Demesne",
+    "name": "Vùng Đất Nhặt Hài Cốt Tĩnh Lặng",
+    "type": "planar"
   }
 }
