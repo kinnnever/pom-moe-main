@@ -6,6 +6,7 @@ module.exports = {
 			display: ['Rubik', 'sans-serif'],
 			body: ['Rubik', 'sans-serif'],
 			sans: ['Rubik', 'sans-serif'],
+			roboto: ['Roboto', 'sans-serif'],
 			monospace: ['monospace']
 		},
 		extend: {

@@ -72,7 +72,7 @@
 			Từ thánh địa được Lời Sấm Truyền Tam Thần ban phước, vị tín sứ tự chia mình thành hàng ngàn thân thể và bắt đầu bước lên cuộc hành trình xa xôi. Thánh nữ của Janusopolis, Tribios, Hậu Duệ Chrysos đã đánh cắp Ngọn Lửa của Cánh Cổng, bôn ba vì chúng sinh, mang thông điệp cứu thế đến muôn nơi. Tìm kiếm những người con mang dòng máu vàng thần thánh đó, phá vỡ bóng tối bao trùm thế gian, tiến tới một ngày mai trăng sao soi sáng.
   		</p>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-7 left-0">
+              absolute bottom-7 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">
                 Từ thánh địa được Lời Sấm Truyền Tam Thần ban phước, vị tín sứ tự chia mình thành hàng ngàn thân thể và bắt đầu bước lên cuộc hành trình xa xôi. Thánh nữ của Janusopolis, Tribios, Hậu Duệ Chrysos đã đánh cắp Ngọn Lửa của Cánh Cổng, bôn ba vì chúng sinh, mang thông điệp cứu thế đến muôn nơi. Tìm kiếm những người con mang dòng máu vàng thần thánh đó, phá vỡ bóng tối bao trùm thế gian, tiến tới một ngày mai trăng sao soi sáng.
             </p>
@@ -611,28 +611,18 @@
   			}}
   			tooltips={{
 				dps: {
-                    castorice: 'Castorice nên chơi cùng đồng đội nhiều HP để nạp Tuyệt Kỹ nhanh, Tribbie đáp ứng được yêu cầu đó. Không những vậy, Tribbie còn có các Buff và Debuff "hiếm" diện rộng, rất tốt để Linh Hồn Ký Ức của Castorice có thể Nuke.',
-                    therta: ' '
                 },
                 supportDps: {
-                    tribbie: 'Tương tác tốt với DPS chơi HP.',
-                    jade: '"Có thể" dùng nếu bạn muốn trải nghiệm trò mới.'
                 },
                 amplifier: {
-                    sunday: 'Khả năng khuếch đại Sát Thương không quá ấn tượng nhưng khả năng cải thiện vận hành với <span class="underline">Kéo Lượt</span> và <span class="underline">Hồi Năng Lượng</span> vẫn giúp Tribbie giải quyết rất nhiều nhu cầu trong chiến đấu.',
-                    'male-remembrance': 'Có khả năng khuếch đại Sát Thương tốt nhưng khả năng <span class="underline">Kéo Lượt</span> khó kiểm soát.',
-                    sparkle: 'Giúp Tribbie không cần build chỉ số Tốc Độ, vận hành đơn giản nhưng khuếch đại Sát Thương kém.',
-                    bronya: 'Ít được khuyến nghị vì chỉ là phiên bản <span class="underline">Kéo Lượt</span> của Sunday. Có thể đi cùng với Sunday trong team 3 nô.',
-                    'ruan-mei': 'Khuếch đại Sát Thương rất tốt nhưng đôi khi hơi bóp vì kẻ địch bị hạn chế, không thể tấn công Tribbie. Chỉ nên dùng trong Ảo Ảnh Tận Thế.'
                 },
                 sustain: {
-                    gallagher: 'Hồi HP khi Tribbie tấn công, gần như luôn duy trì HP Tribbie trên 50%.',
-                    lingsha: 'Mọi kỹ năng của Lighsha đều gây Sát Thương AoE, vừa kích nhiều Thiên Phú, vừa Hồi Năng Lượng cho Tribbie.'
                 }
 			}}
 			notes={{
                 dps: 'Tribbie là một Hòa Hợp với những Buff và Debuff hiếm, có kiêm luôn khả năng hỗ trợ gây Sát Thương nên Tribbie có thể đi được cùng hầu hết DPS chơi Crit thuần, đặc biệt tốt với những chủ lực có kỹ năng gây Sát Thương AoE.',
-                sustain: 'abcxyz'
+                amplifier: 'Buff toàn phe cho Tribbie hưởng ké.',
+				sustain: 'Cứ kỹ năng AoE là quất.'
 			}}
 		/>
 	</section>

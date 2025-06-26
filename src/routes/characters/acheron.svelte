@@ -75,7 +75,7 @@
 			<p>Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. </p><p>Đeo thanh đao dài trên người, độc hành trong ngân hà.
 		</div>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Lữ khách tự xưng là "Cảnh Binh Thiên Hà", tên thật không rõ. Đeo thanh đao dài trên người, độc hành trong ngân hà.</p>
   		</div>
 	</div>
@@ -671,7 +671,7 @@
 			Dùng cũng được nếu có sẵn bộ chỉ số tốt.</p>
 			`}
 			statDescriptions={[[
-    		'[CR]Crit Rate &nbsp;&nbsp;>= &nbsp;[CD]Crit Dmg',
+    		'[CR]Crit Rate &nbsp;&nbsp;&ge; &nbsp;[CD]Crit Dmg',
     		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[SPD]Tốc Độ',
     		'[ATK]Tấn Công &nbsp;&nbsp;> &nbsp;[lightning]<span style="color: #E26CFF">Tăng ST Lôi</span>',
     		'[ATK]Tấn Công'

@@ -1,6 +1,7 @@
 <script lang="ts">
   import relicsData from '$data/relics/vi.json';
   import { slide } from 'svelte/transition';
+  import {goto} from '$app/navigation';
 
   export let relicIds: string[] = [];
   export let planarIds: string[] = [];
@@ -36,10 +37,12 @@
     <div class="flex flex-wrap gap-4">
       {#each relics as relic}
         <div class="w-32 text-center text-white">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
           <img
             src={`/images/relics/${relic.id}.png`}
             alt={relic.name}
-            class="w-24 h-24 mx-auto mb-1 object-contain"
+            class="w-24 h-24 mx-auto mb-1 object-contain cursor-pointer hover:opacity-80 transition"
+            on:click={() => goto(`/relics/${relic.id}`)}
           />
           <div class="text-sm font-semibold leading-tight">
             {relic.name}
@@ -50,15 +53,19 @@
         {#if relicsData[pair[0]] && relicsData[pair[1]]}
           <div class="w-32 text-center text-white relative border border-white/10 rounded p-2 bg-white/5">
             <div class="flex justify-center gap-1">
+              <!-- svelte-ignore a11y-click-events-have-key-events -->
               <img
                 src={`/images/relics/${pair[0]}.png`}
                 alt={relicsData[pair[0]].name}
-                class="w-10 h-10 object-contain rounded"
+                class="w-10 h-10 object-contain rounded cursor-pointer hover:opacity-80 transition"
+                on:click={() => goto(`/relics/${pair[0]}`)}
               />
+              <!-- svelte-ignore a11y-click-events-have-key-events -->
               <img
                 src={`/images/relics/${pair[1]}.png`}
                 alt={relicsData[pair[1]].name}
-                class="w-10 h-10 object-contain rounded"
+                class="w-10 h-10 object-contain rounded cursor-pointer hover:opacity-80 transition"
+                on:click={() => goto(`/relics/${pair[1]}`)}
               />
             </div>
             <div class="text-xs mt-1 leading-tight">
@@ -87,10 +94,12 @@
     <div class="flex flex-wrap gap-4 mb-6">
       {#each planars as planar}
         <div class="w-32 text-center text-white">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
           <img
             src={`/images/relics/${planar.id}.png`}
             alt={planar.name}
-            class="w-24 h-24 mx-auto mb-1 object-contain"
+            class="w-24 h-24 mx-auto mb-1 object-contain cursor-pointer hover:opacity-80 transition"
+                on:click={() => goto(`/relics/${planar.id}`)}
           />
           <div class="text-sm font-semibold leading-tight">
             {planar.name}

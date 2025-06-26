@@ -77,7 +77,7 @@
 			Kremnos, thành bang chìm trong sương mù, thành bang của hỗn loạn và chiến tranh! Hoàng tộc của nó mang dòng máu sát hại thân thích, thần linh của nó mang tên gọi Tai Ương. Mydeimos bất tử, con sư tử xa bầy, Hậu Duệ Chrysos săn lùng Ngọn Lửa "Phân Tranh". Chịu đựng cái chết hàng vạn lần, tắm máu để trở về quê hương, một mình gánh vác số mệnh điên rồ — Giết vua để trở thành vua, diệt thần để trở thành thần. Vó sắt của chiến tranh đạp qua hoang mạc, cuối cùng cũng phải nhuốm máu quê hương.
   		</p>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Kremnos, thành bang chìm trong sương mù, thành bang của hỗn loạn và chiến tranh! Hoàng tộc của nó mang dòng máu sát hại thân thích, thần linh của nó mang tên gọi Tai Ương. Mydeimos bất tử, con sư tử xa bầy, Hậu Duệ Chrysos săn lùng Ngọn Lửa "Phân Tranh". Chịu đựng cái chết hàng vạn lần, tắm máu để trở về quê hương, một mình gánh vác số mệnh điên rồ — Giết vua để trở thành vua, diệt thần để trở thành thần. Vó sắt của chiến tranh đạp qua hoang mạc, cuối cùng cũng phải nhuốm máu quê hương.</p>
   		</div>
 	</div>

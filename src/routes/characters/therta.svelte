@@ -74,7 +74,7 @@
 			Thành viên tôn quý #83 của Câu Lạc Bộ Thiên Tài, loài người, giới tính nữ, trẻ tuổi, xinh đẹp, dễ thương. Người ta nói rằng cô ấy ẩn cư ở rìa vũ trụ, hầu như không bao giờ bước ra khỏi đó, lần xuất hiện này... Chắc chắn là vì một vấn đề nào đó buộc phải đích thân ra tay nhỉ?
 		</div>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Thành viên tôn quý #83 của Câu Lạc Bộ Thiên Tài, loài người, giới tính nữ, trẻ tuổi, xinh đẹp, dễ thương. Người ta nói rằng cô ấy ẩn cư ở rìa vũ trụ, hầu như không bao giờ bước ra khỏi đó, lần xuất hiện này... Chắc chắn là vì một vấn đề nào đó buộc phải đích thân ra tay nhỉ?</p>
   		</div>
 	</div>

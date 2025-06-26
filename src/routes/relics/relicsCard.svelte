@@ -13,20 +13,20 @@
 	};
 </script>
 
-<button class="relic relative cursor-pointer pb-6 {bgColors[relic.type]}">
+<a href={`/relics/${relic.id}`} class="relic relative block pb-6 {bgColors[relic.type]}">
 	<div class="background">
 		<div class="inner-border"></div>
 	</div>
 	<img
 		src={`/images/relics/${relic.id}.png`}
 		alt={relic.name}
-		class="relative h-auto w-28 md:w-32 {showTotal && total === 0 ? 'brightness-50' : ''} drop-shadow-[0_0_3px_rgba(0,0,0,1)]"
+		class="relative h-auto w-28 lg:w-32 {showTotal && total === 0 ? 'brightness-50' : ''}"
 		width={128}
 		height={128}
 	/>
 	<span
 		class="absolute bottom-1 left-0 right-0 px-1 text-center text-sm font-semibold leading-none text-white "
-		style="text-shadow: 1px 1px 3px black"
+		style="text-shadow: 1px 1px 2px black"
 	>
 		{relic.name}
 	</span>
@@ -35,7 +35,7 @@
 			<Icon class="mb-0.5 inline" icon={XIcon} />{total}
 		</span>
 	{/if}
-</button>
+</a>
 
 <style lang="postcss">
 	.background {

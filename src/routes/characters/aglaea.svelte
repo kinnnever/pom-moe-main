@@ -85,7 +85,7 @@
 			Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.
   		</p>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh. Hậu Duệ Chrysos gánh vác Ngọn Lửa "Lãng Mạn", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài ...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.</p>
   		</div>
 	</div>

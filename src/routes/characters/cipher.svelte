@@ -71,7 +71,7 @@
 			Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"
 		</div>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Tại Dolos - thành phố trộm cướp đã sụp đổ, 300 Hiệp Đạo đang mặc sức hoành hành. Cifera, ngôi sao trộm cắp có đôi chân thần tốc, Hậu Duệ Chrysos đùa giỡn với Ngọn Lửa "Mưu Kế", hãy chạy nhanh lên nào. Nguyện những lời dối trá của cô theo gió lan xa, thổi khắp thế gian này... "Ha, còn muốn lừa tôi sao? Mơ đi!"</p>
   		</div>
 	</div>

@@ -89,7 +89,7 @@
 			Thành bang giữa những tầng mây tan rã theo năm tháng, Đình Viện Hoàng Hôn một lần nữa mở rộng cánh cửa, mang đến ánh sáng le lói cho Đêm Vĩnh Hằng. Thầy Thuốc Hyacinthia, Hậu Duệ Chrysos canh giữ Ngọn Lửa "Bầu Trời". Kế thừa ý chí của tổ tiên, vá lại bình minh và hoàng hôn đã nứt vỡ. ...Mong ánh cầu vồng rọi xuống, xóa tan hận thù, đưa bình minh trở về với mặt đất.
 		</div>
 		<div class="hidden lg:block bg-gradient-to-l from-black/80 to-black/0 text-white text-base p-2 rounded-xl max-w-md
-              absolute bottom-24 left-0">
+              absolute bottom-24 left-0 select-none">
     		<p style="text-shadow: 1px 1px 1px black">Thành bang giữa những tầng mây tan rã theo năm tháng, Đình Viện Hoàng Hôn một lần nữa mở rộng cánh cửa, mang đến ánh sáng le lói cho Đêm Vĩnh Hằng. Thầy Thuốc Hyacinthia, Hậu Duệ Chrysos canh giữ Ngọn Lửa "Bầu Trời". Kế thừa ý chí của tổ tiên, vá lại bình minh và hoàng hôn đã nứt vỡ. ...Mong ánh cầu vồng rọi xuống, xóa tan hận thù, đưa bình minh trở về với mặt đất.</p>
   		</div>
 	</div>
@@ -309,7 +309,7 @@
 	</div>
 	<section>
 		<TielePet 
-			text="Nhọc Ica" 
+			text="Nhóc Ica" 
 			elementColor={character.elementColor} 
 			icon={`/images/skills/${character.id}/pet.png`}
 		/>
