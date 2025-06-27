@@ -1,6 +1,8 @@
 {
-  "character": "Characters",
-  "lightcone": "Light Cone",
-  "achievement": "Achievements",
-  "warp": "Warp"
+  "character": "Nhân Vật",
+  "lightcone": "Nón Ánh Sáng",
+  "relic": "Di Vật",
+  "achievement": "Thành Tựu",
+  "warp": "Bước Nhảy",
+  "database": "Túi Đồ"
 }
