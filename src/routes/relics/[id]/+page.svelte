@@ -7,7 +7,13 @@
 </script>
 
 <svelte:head>
-  <title>{data.relic.name} - Pom.moe</title>
+  <title>{data?.relic ? `${data.relic.name} - Pom.moe` : 'Di vật không tồn tại - Pom.moe'}</title>
 </svelte:head>
 
-<svelte:component this={Layout} relic={data.relic} />
+{#if Layout}
+  <svelte:component this={Layout} relic={data.relic} />
+{:else}
+  <div class="text-red-500 text-center mt-12 text-xl">
+    Di vật không tồn tại hoặc đường dẫn không hợp lệ.
+  </div>
+{/if}
