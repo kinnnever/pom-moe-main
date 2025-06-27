@@ -1,6 +1,6 @@
 {
   "Band_of_Sizzling_Thunder": {
-    "id": "Band_of_Sizzling_Thunder",
+    "id": "band_of_bizzling_thunder",
     "name": "Ban Nhạc Sizzling Thunder",
     "type": "cavern",
     "pieces": [
@@ -25,10 +25,15 @@
       "2": "Tăng Sát Thương <span style='color: #E26CFF' class='font-bold'>Lôi</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khi người trang bị thi triển Chiến Kỹ, tấn công của người đó tăng <span class='text-amber-400 font-bold'>20%</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp."
     },
-    "recommendedFor": ["jing-yuan","kafka","serval","arlan"]
+    "recommendedFor": [
+      "jing-yuan",
+      "kafka",
+      "serval",
+      "arlan"
+    ]
   },
   "Champion_of_Streetwise_Boxing": {
-    "id": "Champion_of_Streetwise_Boxing",
+    "id": "champion_of_streetwise_boxing",
     "name": "Quyền Vương Đường Phố",
     "type": "cavern",
     "pieces": [
@@ -53,10 +58,15 @@
       "2": "Sát Thương <span style='color: #CFCFCF' class='font-bold'>Vật Lý</span> tăng <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Sau khi người trang bị tấn công hoặc bị tấn công, tấn công của người trang bị trong trận này tăng <span class='text-amber-400 font-bold'>5%</span>, tối đa cộng dồn <span class='text-amber-400 font-bold'>5</span> lần"
     },
-    "recommendedFor": ["clara","argenti","sushang","luka"]
+    "recommendedFor": [
+      "clara",
+      "argenti",
+      "sushang",
+      "luka"
+    ]
   },
   "Eagle_of_Twilight_Line": {
-    "id": "Eagle_of_Twilight_Line",
+    "id": "eagle_of_twilight_line",
     "name": "Chim Ưng Ranh Giới Ngày Đêm",
     "type": "cavern",
     "pieces": [
@@ -81,10 +91,20 @@
       "2": "Tăng Sát Thương <span style='color: #1FE7A5' class='font-bold'>Phong</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Sau khi người trang bị thi triển Tuyệt Kỹ, khiến Hành Động của người đó ưu tiên <span class='text-amber-400 font-bold'>25%</span>."
     },
-    "recommendedFor": ["anaxa","feixiao","tribbie","sparkle","pela","tingyun","sampo","serval","dan-heng"]
+    "recommendedFor": [
+      "anaxa",
+      "feixiao",
+      "tribbie",
+      "sparkle",
+      "pela",
+      "tingyun",
+      "sampo",
+      "serval",
+      "dan-heng"
+    ]
   },
   "Firesmith_of_Lava_-_Forging": {
-    "id": "Firesmith_of_Lava_-_Forging",
+    "id": "firesmith_of_lava_-_forging",
     "name": "Thợ Rèn Lửa Dung Nham",
     "type": "cavern",
     "pieces": [
@@ -109,10 +129,15 @@
       "2": "Tăng Sát Thương <span style='color: #DA472D' class='font-bold'>Hỏa</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khiến sát thương Chiến Kỹ gây ra của người trang bị tăng <span class='text-amber-400 font-bold'>12%</span>, đồng thời tăng <span class='text-amber-400 font-bold'>12%</span> Sát Thương <span style='color: #DA472D' class='font-bold'>Hỏa</span> của lần tấn công kế tiếp sau khi thi triển Tuyệt Kỹ."
     },
-    "recommendedFor": ["himeko","topaz-numby","hook","guinaifen"]
+    "recommendedFor": [
+      "himeko",
+      "topaz-numby",
+      "hook",
+      "guinaifen"
+    ]
   },
   "Genius_of_Brilliant_Stars": {
-    "id": "Genius_of_Brilliant_Stars",
+    "id": "genius_of_brilliant_stars",
     "name": "Thiên Tài Xuất Chúng",
     "type": "cavern",
     "pieces": [
@@ -137,10 +162,18 @@
       "2": "Tăng Sát Thương <span style='color: #8CA6E6' class='font-bold'>Lượng Tử</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khi người trang bị gây sát thương lên mục tiêu địch, sẽ bỏ qua <span class='text-amber-400 font-bold'>10%</span> Phòng Thủ của địch. Nếu mục tiêu có Điểm Yếu <span style='color: #8CA6E6' class='font-bold'>Lượng Tử</span>, sẽ bỏ qua thêm <span class='text-amber-400 font-bold'>10%</span> Phòng Thủ của địch."
     },
-    "recommendedFor": ["seele","silver-wolf","jade","cipher","acheron","qingque","xueyi"]
+    "recommendedFor": [
+      "seele",
+      "silver-wolf",
+      "jade",
+      "cipher",
+      "acheron",
+      "qingque",
+      "xueyi"
+    ]
   },
   "Guard_of_Wuthering_Snow": {
-    "id": "Guard_of_Wuthering_Snow",
+    "id": "guard_of_wuthering_snow",
     "name": "Thiết Vệ Bão Tuyết",
     "type": "cavern",
     "pieces": [
@@ -165,10 +198,13 @@
       "2": "Sát thương phải chịu giảm <span class='text-amber-400 font-bold'>8%</span>.",
       "4": "Khi bắt đầu hiệp, nếu người trang bị có phần trăm HP hiện tại thấp hơn hoặc bằng <span class='text-amber-400 font-bold'>50%</span>, sẽ hồi HP bằng <span class='text-amber-400 font-bold'>8%</span> Giới Hạn HP của bản thân, và hồi <span class='text-amber-400 font-bold'>5</span> điểm Năng Lượng."
     },
-    "recommendedFor": ["fu-xuan","gepard"]
+    "recommendedFor": [
+      "fu-xuan",
+      "gepard"
+    ]
   },
   "Hero_of_Triumphant_Song": {
-    "id": "Hero_of_Triumphant_Song",
+    "id": "hero_of_triumphant_song",
     "name": "Anh Hùng Ca Khúc Khải Hoàn",
     "type": "cavern",
     "pieces": [
@@ -193,10 +229,12 @@
       "2": "Tấn Công tăng <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Khi Linh Hồn Ký Ức của người trang bị trong trận, Tốc Độ của người trang bị tăng <span class='text-amber-400 font-bold'>6%</span>, Khi Linh Hồn Ký Ức của người trang bị tấn công, Sát Thương Bạo Kích của Linh Hồn Ký Ức và người trang bị tăng <span class='text-amber-400 font-bold'>30%</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp."
     },
-    "recommendedFor": ["aglaea"]
+    "recommendedFor": [
+      "aglaea"
+    ]
   },
   "Hunter_of_Glacial_Forest": {
-    "id": "Hunter_of_Glacial_Forest",
+    "id": "hunter_of_glacial_forest",
     "name": "Thợ Săn Tuyết Phủ",
     "type": "cavern",
     "pieces": [
@@ -221,10 +259,14 @@
       "2": "Tăng Sát Thương <span style='color: #5CD6FF' class='font-bold'>Băng</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khi người trang bị thi triển Tuyệt Kỹ, Sát Thương Bạo Kích tăng <span class='text-amber-400 font-bold'>25%</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp."
     },
-    "recommendedFor": ["jingliu","yanqing","misha"]
+    "recommendedFor": [
+      "jingliu",
+      "yanqing",
+      "misha"
+    ]
   },
   "Iron_Cavalry_Against_the_Scourge": {
-    "id": "Iron_Cavalry_Against_the_Scourge",
+    "id": "iron_cavalry_against_the_scourge",
     "name": "Thiết Kỵ Diệt Trừ Tai Họa",
     "type": "cavern",
     "pieces": [
@@ -249,10 +291,17 @@
       "2": "Tấn Công Kích Phá tăng <span class='text-amber-400 font-bold'>16%</span>.",
       "4": "Khi Tấn Công Kích Phá của người trang bị lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>150%</span>, Sát Thương Phá Vỡ gây ra cho kẻ địch sẽ bỏ qua <span class='text-amber-400 font-bold'>10%</span> Phòng Thủ của kẻ đó. Khi Tấn Công Kích Phá của người trang bị lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>250%</span>, Siêu Sát Thương Phá Vỡ gây ra cho kẻ địch sẽ bỏ qua thêm <span class='text-amber-400 font-bold'>15%</span> Phòng Thủ của kẻ đó."
     },
-    "recommendedFor": ["firefly","boothill","rappa","fugue","lingsha","march-7th-the-hunt"]
+    "recommendedFor": [
+      "firefly",
+      "boothill",
+      "rappa",
+      "fugue",
+      "lingsha",
+      "march-7th-the-hunt"
+    ]
   },
   "Knight_of_Purity_Palace": {
-    "id": "Knight_of_Purity_Palace",
+    "id": "knight_of_purity_palace",
     "name": "Thánh Kỵ Sĩ Giáo Hoàng Tịnh Đình",
     "type": "cavern",
     "pieces": [
@@ -277,10 +326,14 @@
       "2": "Tăng Phòng Thủ <span class='text-amber-400 font-bold'>15%</span>.",
       "4": "Tăng <span class='text-amber-400 font-bold'>20%</span> Khiên mà người trang bị cung cấp."
     },
-    "recommendedFor": ["aventurine","gepard","march-7th"]
+    "recommendedFor": [
+      "aventurine",
+      "gepard",
+      "march-7th"
+    ]
   },
   "Longevous_Disciple": {
-    "id": "Longevous_Disciple",
+    "id": "longevous_disciple",
     "name": "Môn Đồ Trường Thọ",
     "type": "cavern",
     "pieces": [
@@ -305,10 +358,19 @@
       "2": "Tăng Giới Hạn HP <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Sau khi người trang bị chịu tấn công hoặc bị mục tiêu phe ta tiêu hao HP, Tỷ Lệ Bạo Kích tăng <span class='text-amber-400 font-bold'>8%</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp. Hiệu ứng này tối đa cộng dồn <span class='text-amber-400 font-bold'>2</span> tầng."
     },
-    "recommendedFor": ["blade","clara","fu-xuan","mydei","huohuo","bailu","luocha","lynx"]
+    "recommendedFor": [
+      "blade",
+      "clara",
+      "fu-xuan",
+      "mydei",
+      "huohuo",
+      "bailu",
+      "luocha",
+      "lynx"
+    ]
   },
   "Messenger_Traversing_Hackerspace": {
-    "id": "Messenger_Traversing_Hackerspace",
+    "id": "messenger_traversing_hackerspace",
     "name": "Tín Sứ Du Ngoạn Không Gian Hacker",
     "type": "cavern",
     "pieces": [
@@ -333,10 +395,22 @@
       "2": "Tăng Tốc Độ <span class='text-amber-400 font-bold'>6%</span>.",
       "4": "Khi người trang bị thi triển Tuyệt Kỹ lên mục tiêu phe ta, tốc độ toàn phe ta tăng <span class='text-amber-400 font-bold'>12%</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp, hiệu ứng này không thể cộng dồn."
     },
-    "recommendedFor": ["bronya","sparkle","cipher","ruan-mei","tingyun","asta","hanya","silver-wolf","jiaoqiu","welt","pela"]
+    "recommendedFor": [
+      "bronya",
+      "sparkle",
+      "cipher",
+      "ruan-mei",
+      "tingyun",
+      "asta",
+      "hanya",
+      "silver-wolf",
+      "jiaoqiu",
+      "welt",
+      "pela"
+    ]
   },
   "Musketeer_of_Wild_Wheat": {
-    "id": "Musketeer_of_Wild_Wheat",
+    "id": "musketeer_of_wild_wheat",
     "name": "Thiện Xạ Bông Lúa",
     "type": "cavern",
     "pieces": [
@@ -361,10 +435,15 @@
       "2": "Tăng Tấn Công <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Tăng <span class='text-amber-400 font-bold'>6%</span> tốc độ của người trang bị, sát thương Tấn Công Thường gây ra tăng <span class='text-amber-400 font-bold'>10%</span>."
     },
-    "recommendedFor": ["dan-heng-imbibitor-lunae","aglaea","march-7th-the-hunt","robin"]
+    "recommendedFor": [
+      "dan-heng-imbibitor-lunae",
+      "aglaea",
+      "march-7th-the-hunt",
+      "robin"
+    ]
   },
   "Passerby_of_Wandering_Cloud": {
-    "id": "Passerby_of_Wandering_Cloud",
+    "id": "passerby_of_wandering_cloud",
     "name": "Lãng Khách Âm Thầm",
     "type": "cavern",
     "pieces": [
@@ -389,10 +468,16 @@
       "2": "Tăng Lượng Trị Liệu <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khi bắt đầu chiến đấu sẽ hồi ngay cho phe ta 1 điểm Chiến Kỹ."
     },
-    "recommendedFor": ["huohuo","bailu","luocha","lynx","natasha"]
+    "recommendedFor": [
+      "huohuo",
+      "bailu",
+      "luocha",
+      "lynx",
+      "natasha"
+    ]
   },
   "Pioneer_Diver_of_Dead_Waters": {
-    "id": "Pioneer_Diver_of_Dead_Waters",
+    "id": "pioneer_diver_of_dead_waters",
     "name": "Tiên Phong Trong Nước Chết",
     "type": "cavern",
     "pieces": [
@@ -417,10 +502,13 @@
       "2": "Sát thương gây ra cho kẻ địch bị ảnh hưởng bởi Hiệu Ứng Xấu tăng <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Tăng <span class='text-amber-400 font-bold'>4%</span> Tỷ Lệ Bạo Kích, tăng <span class='text-amber-400 font-bold'>8%</span>/<span class='text-amber-400 font-bold'>12%</span> Sát Thương Bạo Kích mà người trang bị gây cho kẻ địch rơi vào không dưới <span class='text-amber-400 font-bold'>2</span>/<span class='text-amber-400 font-bold'>3</span> Hiệu Ứng Xấu. Sau khi người trang bị thi triển Hiệu Ứng Xấu lên kẻ địch, hiệu ứng nói trên tăng 100%, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp."
     },
-    "recommendedFor": ["acheron","dr-ratio"]
+    "recommendedFor": [
+      "acheron",
+      "dr-ratio"
+    ]
   },
   "Poet_of_Mourning_Collapse": {
-    "id": "Poet_of_Mourning_Collapse",
+    "id": "poet_of_mourning_collapse",
     "name": "Nhà Thơ Khúc Bi Ca Vong Quốc",
     "type": "cavern",
     "pieces": [
@@ -445,10 +533,16 @@
       "2": "Sát Thương <span style='color: #8CA6E6' class='font-bold'>Lượng Tử</span> tăng <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khiến Tốc Độ của người trang bị giảm <span class='text-amber-400 font-bold'>8%</span>. Trước khi vào chiến đấu, nếu Tốc Độ của người trang bị dưới <span class='text-amber-400 font-bold'>110</span>/<span class='text-amber-400 font-bold'>95</span>, sẽ khiến Tỷ Lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>20%</span>/<span class='text-amber-400 font-bold'>32%</span>. Hiệu ứng này đồng thời có hiệu lực với Linh Hồn Ký Ức của người trang bị."
     },
-    "recommendedFor": ["castorice","tribbie","therta","clara","qingque"]
+    "recommendedFor": [
+      "castorice",
+      "tribbie",
+      "therta",
+      "clara",
+      "qingque"
+    ]
   },
   "Prisoner_in_Deep_Confinement": {
-    "id": "Prisoner_in_Deep_Confinement",
+    "id": "prisoner_in_deep_confinement",
     "name": "Tù Nhân Ngục Tối",
     "type": "cavern",
     "pieces": [
@@ -473,10 +567,15 @@
       "2": "Tấn Công tăng <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Mỗi khi kẻ địch nhận phải 1 hiệu ứng Sát Thương Duy Trì, thì sát thương người trang bị gây ra cho kẻ đó sẽ bỏ qua <span class='text-amber-400 font-bold'>6%</span> Phòng Thủ của kẻ đó. Hiệu ứng này có hiệu lực với tối đa <span class='text-amber-400 font-bold'>3</span> hiệu ứng Sát Thương Duy Trì."
     },
-    "recommendedFor": ["kafka","black-swan","sampo","guinaifen"]
+    "recommendedFor": [
+      "kafka",
+      "black-swan",
+      "sampo",
+      "guinaifen"
+    ]
   },
   "Sacerdos_Relived_Ordeal": {
-    "id": "Sacerdos_Relived_Ordeal",
+    "id": "sacerdos_relived_ordeal",
     "name": "Lại Một Hành Trình Gian Khổ Của Linh Mục",
     "type": "cavern",
     "pieces": [
@@ -501,10 +600,15 @@
       "2": "Tốc Độ tăng <span class='text-amber-400 font-bold'>6%</span>.",
       "4": "Khi thi triển Chiến Kỹ hoặc Tuyệt Kỹ lên 1 mục tiêu phe ta, sẽ khiến Sát Thương Bạo Kích của mục tiêu kỹ năng tăng <span class='text-amber-400 font-bold'>18%</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp, hiệu ứng này tối đa cộng dồn <span class='text-amber-400 font-bold'>2</span> lần."
     },
-    "recommendedFor": ["sunday","bronya","sparkle","tingyun"]
+    "recommendedFor": [
+      "sunday",
+      "bronya",
+      "sparkle",
+      "tingyun"
+    ]
   },
   "Scholar_Lost_in_Erudition": {
-    "id": "Scholar_Lost_in_Erudition",
+    "id": "scholar_lost_in_erudition",
     "name": "Học Giả Lạc Lối Trong Biển Tri Thức",
     "type": "cavern",
     "pieces": [
@@ -529,10 +633,14 @@
       "2": "Tỷ Lệ Bạo Kích tăng <span class='text-amber-400 font-bold'>8%</span>.",
       "4": "Sát thương Chiến Kỹ và Tuyệt Kỹ gây ra tăng <span class='text-amber-400 font-bold'>20%</span>, sau khi thi triển Tuyệt Kỹ, sát thương gây ra trong lần thi triển Chiến Kỹ kế tiếp tăng thêm <span class='text-amber-400 font-bold'>8%</span>."
     },
-    "recommendedFor": ["therta","mydei","jingliu"]
+    "recommendedFor": [
+      "therta",
+      "mydei",
+      "jingliu"
+    ]
   },
   "The_Ashblazing_Grand_Duke": {
-    "id": "The_Ashblazing_Grand_Duke",
+    "id": "the_ashblazing_grand_duke",
     "name": "Đại Công Tước Tro Tàn",
     "type": "cavern",
     "pieces": [
@@ -557,10 +665,18 @@
       "2": "Sát thương Đòn Đánh Theo Sau gây ra tăng <span class='text-amber-400 font-bold'>20%</span>.",
       "4": "Khi người trang bị thi triển Đòn Đánh Theo Sau, mỗi lần gây sát thương sẽ tăng <span class='text-amber-400 font-bold'>6%</span> tấn công của người trang bị dựa theo số lần Đòn Đánh Theo Sau gây sát thương, tối đa cộng dồn <span class='text-amber-400 font-bold'>8</span> lần, duy trì <span class='text-amber-400 font-bold'>3</span> hiệp. Hiệu ứng này sẽ bị xóa khi người trang bị thi triển Đòn Đánh Theo Sau tiếp theo."
     },
-    "recommendedFor": ["jing-yuan","himeko","topaz-numby","jade","yunli","herta","clara"]
+    "recommendedFor": [
+      "jing-yuan",
+      "himeko",
+      "topaz-numby",
+      "jade",
+      "yunli",
+      "herta",
+      "clara"
+    ]
   },
   "The_Wind-Soaring_Valorous": {
-    "id": "The_Wind-Soaring_Valorous",
+    "id": "the_wind-soaring_valorous",
     "name": "Dũng Khí Ngút Trời",
     "type": "cavern",
     "pieces": [
@@ -585,10 +701,15 @@
       "2": "Tấn Công tăng <span class='text-amber-400 font-bold'>12%</span>.",
       "4": "Tăng <span class='text-amber-400 font-bold'>6%</span> Tỷ Lệ Bạo Kích cho người trang bị. Khi người trang bị thi triển Đòn Đánh Theo Sau, khiến sát thương Tuyệt Kỹ gây ra tăng <span class='text-amber-400 font-bold'>36%</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp."
     },
-    "recommendedFor": ["feixiao","yunli","moze","jade"]
+    "recommendedFor": [
+      "feixiao",
+      "yunli",
+      "moze",
+      "jade"
+    ]
   },
   "Thief_of_Shooting_Meteor": {
-    "id": "Thief_of_Shooting_Meteor",
+    "id": "thief_of_shooting_meteor",
     "name": "Kẻ Cướp Vệt Sao Băng",
     "type": "cavern",
     "pieces": [
@@ -613,10 +734,12 @@
       "2": "Tăng Tấn Công Kích Phá <span class='text-amber-400 font-bold'>16%</span>.",
       "4": "Tăng <span class='text-amber-400 font-bold'>16%</span> Tấn Công Kích Phá của người trang bị. Sau khi người trang bị phá vỡ điểm yếu của kẻ địch, sẽ hồi <span class='text-amber-400 font-bold'>3</span> điểm Năng Lượng."
     },
-    "recommendedFor": ["gallagher"]
+    "recommendedFor": [
+      "gallagher"
+    ]
   },
   "Warrior_Goddess_of_Sun_and_Thunder": {
-    "id": "Warrior_Goddess_of_Sun_and_Thunder",
+    "id": "warrior_goddess_of_sun_and_thunder",
     "name": "Nữ Thần Chiến Binh Nắng Sấm",
     "type": "cavern",
     "pieces": [
@@ -641,10 +764,12 @@
       "2": "Tốc Độ tăng <span class='text-amber-400 font-bold'>6%</span>.",
       "4": "Sau khi người trang bị và Linh Hồn Ký Ức của người trang bị cung cấp trị liệu cho mục tiêu phe ta ngoại trừ người trang bị và Linh Hồn Ký Ức của người đó, người trang bị sẽ nhận \"Cơn Mưa Ngọt Ngào\", mỗi hiệp kích hoạt tối đa 1 lần, kéo dài <span class='text-amber-400 font-bold'>2</span> hiệp. Khi người trang bị đang có \"Cơn Mưa Ngọt Ngào\", tốc độ tăng <span class='text-amber-400 font-bold'>6%</span>, sát thương bạo kích toàn phe ta tăng <span class='text-amber-400 font-bold'>15%</span>. Hiệu ứng này không thể cộng dồn."
     },
-    "recommendedFor": ["hyacine"]
+    "recommendedFor": [
+      "hyacine"
+    ]
   },
   "Wastelander_of_Banditry_Desert": {
-    "id": "Wastelander_of_Banditry_Desert",
+    "id": "wastelander_of_banditry_desert",
     "name": "Kẻ Hoang Dã Sa Mạc",
     "type": "cavern",
     "pieces": [
@@ -669,10 +794,15 @@
       "2": "Tăng Sát Thương <span style='color: #FADA7A' class='font-bold'>Số Ảo</span> <span class='text-amber-400 font-bold'>10%</span>.",
       "4": "Khi người trang bị gây sát thương lên mục tiêu địch rơi vào Hiệu Ứng Xấu, Tỷ Lệ Bạo Kích tăng <span class='text-amber-400 font-bold'>10%</span>, khi gây sát thương lên mục tiêu địch rơi vào trạng thái Giam Cầm, Sát Thương Bạo Kích tăng <span class='text-amber-400 font-bold'>20%</span>."
     },
-    "recommendedFor": ["welt","dr-ratio","dan-heng-imbibitor-lunae","march-7th-the-hunt"]
+    "recommendedFor": [
+      "welt",
+      "dr-ratio",
+      "dan-heng-imbibitor-lunae",
+      "march-7th-the-hunt"
+    ]
   },
   "Watchmaker_Master_of_Dream_Machinations": {
-    "id": "Watchmaker_Master_of_Dream_Machinations",
+    "id": "watchmaker_master_of_dream_machinations",
     "name": "Thợ Đồng Hồ, Bậc Thầy Máy Móc",
     "type": "cavern",
     "pieces": [
@@ -697,10 +827,12 @@
       "2": "Tấn Công Kích Phá tăng <span class='text-amber-400 font-bold'>16%</span>.",
       "4": "Khi người trang bị thi triển Tuyệt Kỹ lên mục tiêu phe ta, Tấn Công Kích Phá toàn phe ta tăng <span class='text-amber-400 font-bold'>30%</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp, hiệu ứng này không thể cộng dồn."
     },
-    "recommendedFor": ["ruan-mei"]
+    "recommendedFor": [
+      "ruan-mei"
+    ]
   },
   "Wavestrider_Captain": {
-    "id": "Wavestrider_Captain",
+    "id": "wavestrider_captain",
     "name": "Thuyền Trưởng Đuổi Sóng Biển Sâu",
     "type": "cavern",
     "pieces": [
@@ -725,10 +857,18 @@
       "2": "Sát Thương Bạo Kích tăng <span class='text-amber-400 font-bold'>16%</span>",
       "4": "Khi người trang bị trở thành mục tiêu kỹ năng của mục tiêu khác thuộc phe ta, sẽ nhận 1 tầng Trợ Lực, tối đa cộng dồn <span class='text-amber-400 font-bold'>2</span> tầng. Khi thi triển Tuyệt Kỹ, nếu có <span class='text-amber-400 font-bold'>2</span> tầng Trợ Lực sẽ tiêu hao tất cả Trợ Lực, tăng <span class='text-amber-400 font-bold'>48%</span> Tấn Công của người trang bị, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp."
     },
-    "recommendedFor": ["phainon","saber","aglaea","acheron","feixiao","seele","jingliu"]
+    "recommendedFor": [
+      "phainon",
+      "saber",
+      "aglaea",
+      "acheron",
+      "feixiao",
+      "seele",
+      "jingliu"
+    ]
   },
   "Item_Belobog_of_the_Architects": {
-    "id": "Item_Belobog_of_the_Architects",
+    "id": "item_belobog_of_the_architects",
     "name": "Belobog Của Đấng Kiến Tạo",
     "type": "planar",
     "pieces": [
@@ -744,10 +884,13 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>15%</span> Phòng Thủ của người trang bị. Khi Chính Xác Hiệu Ứng của người trang bị từ <span class='text-amber-400 font-bold'>50%</span> trở lên, Phòng Thủ tăng thêm <span class='text-amber-400 font-bold'>15%</span>."
     },
-    "recommendedFor": ["gepard","march-7th"]
+    "recommendedFor": [
+      "gepard",
+      "march-7th"
+    ]
   },
   "Item_Giant_Tree_of_Rapt_Brooding": {
-    "id": "Item_Giant_Tree_of_Rapt_Brooding",
+    "id": "item_giant_tree_of_rapt_brooding",
     "name": "Đại Thụ Trầm Tư",
     "type": "planar",
     "pieces": [
@@ -763,10 +906,14 @@
     "setEffects": {
       "2": "Khiến Tốc Độ của người trang bị tăng <span class='text-amber-400 font-bold'>6%</span>. Khi Tốc Độ của người trang bị từ <span class='text-amber-400 font-bold'>135</span>/<span class='text-amber-400 font-bold'>180</span> trở lên, thì Lượng Trị Liệu của người trang bị và Linh Hồn Ký Ức của người đó sẽ tăng <span class='text-amber-400 font-bold'>12%</span>/<span class='text-amber-400 font-bold'>20%</span>."
     },
-    "recommendedFor": ["hyacine","lingsha","gallagher"]
+    "recommendedFor": [
+      "hyacine",
+      "lingsha",
+      "gallagher"
+    ]
   },
   "Item_Broken_Keel": {
-    "id": "Item_Broken_Keel",
+    "id": "item_broken_keel",
     "name": "Bộ Khung Bị Gãy",
     "type": "planar",
     "pieces": [
@@ -782,10 +929,24 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>10%</span> Kháng Hiệu Ứng của người trang bị. Khi Kháng Hiệu Ứng của người trang bị từ <span class='text-amber-400 font-bold'>30%</span> trở lên, Sát Thương Bạo Kích của toàn bộ phe ta tăng <span class='text-amber-400 font-bold'>10%</span>."
     },
-    "recommendedFor": ["bronya","sparkle","tingyun","tribbie","hyacine","ruan-mei","aventurine","luocha","cipher","jiaoqiu","bailu","gallagher","pela"]
+    "recommendedFor": [
+      "bronya",
+      "sparkle",
+      "tingyun",
+      "tribbie",
+      "hyacine",
+      "ruan-mei",
+      "aventurine",
+      "luocha",
+      "cipher",
+      "jiaoqiu",
+      "bailu",
+      "gallagher",
+      "pela"
+    ]
   },
   "Item_Celestial_Differentiator": {
-    "id": "Item_Celestial_Differentiator",
+    "id": "item_celestial_differentiator",
     "name": "Máy Sai Lệch Hành Tinh",
     "type": "planar",
     "pieces": [
@@ -804,7 +965,7 @@
     "recommendedFor": []
   },
   "Item_Duran_Dynasty_of_Running_Wolves": {
-    "id": "Item_Duran_Dynasty_of_Running_Wolves",
+    "id": "item_duran_dynasty_of_running_wolves",
     "name": "Duran - Vương Triều Sói Hoang",
     "type": "planar",
     "pieces": [
@@ -820,10 +981,17 @@
     "setEffects": {
       "2": "Khi nhân vật phe ta thi triển Đòn Đánh Theo Sau, người trang bị sẽ nhận 1 tầng Công Huân, tối đa cộng dồn <span class='text-amber-400 font-bold'>5</span> tầng. Mỗi tầng Công Huân sẽ khiến sát thương Đòn Đánh Theo Sau của người trang bị gây ra tăng <span class='text-amber-400 font-bold'>5%</span>, khi cộng dồn đầy <span class='text-amber-400 font-bold'>5</span> tầng, tăng thêm <span class='text-amber-400 font-bold'>25%</span> Sát Thương Bạo Kích của người trang bị."
     },
-    "recommendedFor": ["feixiao","yunli","jade","dr-ratio","topaz-numby","clara"]
+    "recommendedFor": [
+      "feixiao",
+      "yunli",
+      "jade",
+      "dr-ratio",
+      "topaz-numby",
+      "clara"
+    ]
   },
   "Item_Firmament_Frontline_Glamoth": {
-    "id": "Item_Firmament_Frontline_Glamoth",
+    "id": "item_firmament_frontline_glamoth",
     "name": "Glamoth, Chiến Tuyến Không Trung",
     "type": "planar",
     "pieces": [
@@ -839,10 +1007,15 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>12%</span> Tấn Công của người trang bị. Khi tốc độ của người trang bị từ <span class='text-amber-400 font-bold'>135</span>/<span class='text-amber-400 font-bold'>160</span> trở lên, sát thương do người trang bị gây ra tăng <span class='text-amber-400 font-bold'>12%</span>/<span class='text-amber-400 font-bold'>18%</span>."
     },
-    "recommendedFor": ["seele","kafka","black-swan","aglaea"]
+    "recommendedFor": [
+      "seele",
+      "kafka",
+      "black-swan",
+      "aglaea"
+    ]
   },
   "Item_Fleet_of_the_Ageless": {
-    "id": "Item_Fleet_of_the_Ageless",
+    "id": "item_fleet_of_the_ageless",
     "name": "Xianzhou Không Có Tuổi",
     "type": "planar",
     "pieces": [
@@ -858,10 +1031,18 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>12%</span> Giới Hạn HP của người trang bị. Khi tốc độ của người trang bị từ <span class='text-amber-400 font-bold'>120</span> trở lên, Tấn Công của toàn phe ta tăng <span class='text-amber-400 font-bold'>8%</span>."
     },
-    "recommendedFor": ["fu-xuan","huohuo","jiaoqiu","robin","bronya","bailu","tingyun"]
+    "recommendedFor": [
+      "fu-xuan",
+      "huohuo",
+      "jiaoqiu",
+      "robin",
+      "bronya",
+      "bailu",
+      "tingyun"
+    ]
   },
   "Item_Forge_of_the_Kalpagni_Lantern": {
-    "id": "Item_Forge_of_the_Kalpagni_Lantern",
+    "id": "item_forge_of_the_kalpagni_lantern",
     "name": "Cung Điện Rèn Đúc Kiếp Hỏa Liên Đăng",
     "type": "planar",
     "pieces": [
@@ -877,10 +1058,15 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>6%</span> Tốc Độ của người trang bị. Khi người trang bị đánh trúng kẻ địch có Điểm Yếu <span style='color: #DA472D' class='font-bold'>Hỏa</span>, Tấn Công Kích Phá tăng <span class='text-amber-400 font-bold'>40%</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp."
     },
-    "recommendedFor": ["firefly","lingsha","fugue","gallagher"]
+    "recommendedFor": [
+      "firefly",
+      "lingsha",
+      "fugue",
+      "gallagher"
+    ]
   },
   "Item_Inert_Salsotto": {
-    "id": "Item_Inert_Salsotto",
+    "id": "item_inert_salsotto",
     "name": "Salsotto Dừng Xoay",
     "type": "planar",
     "pieces": [
@@ -896,10 +1082,22 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>8%</span> Tỷ Lệ Bạo Kích của người trang bị. Khi Tỷ Lệ Bạo Kích của người đó từ <span class='text-amber-400 font-bold'>50%</span> trở lên, sẽ tăng <span class='text-amber-400 font-bold'>15%</span> sát thương của Tuyệt Kỹ và Đòn Đánh Theo Sau gây ra."
     },
-    "recommendedFor": ["yunli","feixiao","tribbie","jade","dr-ratio","aventurine","jing-yuan","blade","clara","moze","xueyi"]
+    "recommendedFor": [
+      "yunli",
+      "feixiao",
+      "tribbie",
+      "jade",
+      "dr-ratio",
+      "aventurine",
+      "jing-yuan",
+      "blade",
+      "clara",
+      "moze",
+      "xueyi"
+    ]
   },
   "Item_Izumo_Gensei_and_Takama_Divine_Realm": {
-    "id": "Item_Izumo_Gensei_and_Takama_Divine_Realm",
+    "id": "item_izumo_gensei_and_takama_divine_realm",
     "name": "Izumo Hiện Thế Và Thần Quốc Cõi Trời",
     "type": "planar",
     "pieces": [
@@ -915,10 +1113,16 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>12%</span> Tấn Công của người trang bị. Khi vào chiến đấu, nếu có ít nhất 1 đồng đội cùng Vận Mệnh với người trang bị, thì Tỷ Lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>12%</span>."
     },
-    "recommendedFor": ["acheron","therta","feixiao","march-7th-the-hunt","moze"]
+    "recommendedFor": [
+      "acheron",
+      "therta",
+      "feixiao",
+      "march-7th-the-hunt",
+      "moze"
+    ]
   },
   "Item_Lushaka_the_Sunken_Seas": {
-    "id": "Item_Lushaka_the_Sunken_Seas",
+    "id": "item_lushaka_the_sunken_seas",
     "name": "Biển Lục Địa Chìm Lushaka",
     "type": "planar",
     "pieces": [
@@ -934,10 +1138,20 @@
     "setEffects": {
       "2": "Khiến Hiệu Suất Hồi Năng Lượng của người trang bị tăng <span class='text-amber-400 font-bold'>5%</span>, nếu người trang bị không phải nhân vật vị trí đầu tiên trong đội, thì sẽ khiến Tấn Công của nhân vật ở vị trí đầu tiên trong đội tăng <span class='text-amber-400 font-bold'>12%</span>."
     },
-    "recommendedFor": ["sunday","robin","tribbie","ruan-mei","sparkle","bronya","tingyun","hanya","asta"]
+    "recommendedFor": [
+      "sunday",
+      "robin",
+      "tribbie",
+      "ruan-mei",
+      "sparkle",
+      "bronya",
+      "tingyun",
+      "hanya",
+      "asta"
+    ]
   },
   "Item_Pan-Cosmic_Commercial_Enterprise": {
-    "id": "Item_Pan-Cosmic_Commercial_Enterprise",
+    "id": "item_pan-cosmic_commercial_enterprise",
     "name": "Công Ty Kinh Doanh Liên Ngân Hà",
     "type": "planar",
     "pieces": [
@@ -953,10 +1167,15 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>10%</span> Chính Xác Hiệu Ứng của người trang bị. Đồng thời tăng Tấn Công bằng <span class='text-amber-400 font-bold'>25%</span> Chính Xác Hiệu Ứng hiện tại của người trang bị, tối đa tăng <span class='text-amber-400 font-bold'>25%</span>."
     },
-    "recommendedFor": ["black-swan","jiaoqiu","welt","silver-wolf"]
+    "recommendedFor": [
+      "black-swan",
+      "jiaoqiu",
+      "welt",
+      "silver-wolf"
+    ]
   },
   "Item_Penacony_Land_of_the_Dreams": {
-    "id": "Item_Penacony_Land_of_the_Dreams",
+    "id": "item_penacony_land_of_the_dreams",
     "name": "Penacony, Vùng Đất Của Những Giấc Mơ",
     "type": "planar",
     "pieces": [
@@ -972,10 +1191,20 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>5%</span> hiệu suất hồi Năng Lượng của người trang bị. Khiến nhân vật khác trong đội của phe ta có cùng thuộc tính với người trang bị tăng <span class='text-amber-400 font-bold'>10%</span> sát thương gây ra."
     },
-    "recommendedFor": ["sparkle","tribbie","silver-wolf","cipher","huohuo","ruan-mei","hanya","tingyun","pela"]
+    "recommendedFor": [
+      "sparkle",
+      "tribbie",
+      "silver-wolf",
+      "cipher",
+      "huohuo",
+      "ruan-mei",
+      "hanya",
+      "tingyun",
+      "pela"
+    ]
   },
   "Item_Rutilant_Arena": {
-    "id": "Item_Rutilant_Arena",
+    "id": "item_rutilant_arena",
     "name": "Đấu Trường Ngôi Sao",
     "type": "planar",
     "pieces": [
@@ -991,10 +1220,15 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>8%</span> Tỷ Lệ Bạo Kích của người trang bị. Khi Tỷ Lệ Bạo Kích của người đó từ <span class='text-amber-400 font-bold'>70%</span> trở lên, sẽ tăng <span class='text-amber-400 font-bold'>20%</span> sát thương gây ra khi thi triển Tấn Công Thường hoặc Chiến Kỹ."
     },
-    "recommendedFor": ["dan-heng-imbibitor-lunae","blade","mydei","march-7th-the-hunt"]
+    "recommendedFor": [
+      "dan-heng-imbibitor-lunae",
+      "blade",
+      "mydei",
+      "march-7th-the-hunt"
+    ]
   },
   "Item_Sigonia_the_Unclaimed_Desolation": {
-    "id": "Item_Sigonia_the_Unclaimed_Desolation",
+    "id": "item_sigonia_the_unclaimed_desolation",
     "name": "Hành Tinh Vô Chủ Sigonia",
     "type": "planar",
     "pieces": [
@@ -1010,10 +1244,18 @@
     "setEffects": {
       "2": "Khiến tỷ lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>4%</span>. Khi kẻ địch bị tiêu diệt, Sát Thương Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>4%</span>, tối đa cộng dồn <span class='text-amber-400 font-bold'>10</span> tầng."
     },
-    "recommendedFor": ["jade","herta","clara","yunli","argenti","therta","himeko"]
+    "recommendedFor": [
+      "jade",
+      "herta",
+      "clara",
+      "yunli",
+      "argenti",
+      "therta",
+      "himeko"
+    ]
   },
   "Item_Space_Sealing_Station": {
-    "id": "Item_Space_Sealing_Station",
+    "id": "item_space_sealing_station",
     "name": "Trạm Phong Ấn Không Gian",
     "type": "planar",
     "pieces": [
@@ -1029,10 +1271,13 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>12%</span> Tấn Công của người trang bị. Khi tốc độ của người trang bị từ <span class='text-amber-400 font-bold'>120</span> trở lên, Tấn Công tăng thêm <span class='text-amber-400 font-bold'>12%</span>."
     },
-    "recommendedFor": ["robin","tingyun"]
+    "recommendedFor": [
+      "robin",
+      "tingyun"
+    ]
   },
   "Item_Sprightly_Vonwacq": {
-    "id": "Item_Sprightly_Vonwacq",
+    "id": "item_sprightly_vonwacq",
     "name": "Vonwacq Hoạt Bát",
     "type": "planar",
     "pieces": [
@@ -1048,10 +1293,25 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>5%</span> hiệu suất hồi Năng Lượng của người trang bị. Khi tốc độ của người trang bị từ <span class='text-amber-400 font-bold'>120</span> trở lên, vào chiến đấu sẽ lập tức Ưu Tiên Hành Động <span class='text-amber-400 font-bold'>40%</span>."
     },
-    "recommendedFor": ["robin","hyacine","cipher","anaxa","fugue","ruan-mei","jiaoqiu","huohuo","welt","silver-wolf","hanya","tingyun","pela","asta"]
+    "recommendedFor": [
+      "robin",
+      "hyacine",
+      "cipher",
+      "anaxa",
+      "fugue",
+      "ruan-mei",
+      "jiaoqiu",
+      "huohuo",
+      "welt",
+      "silver-wolf",
+      "hanya",
+      "tingyun",
+      "pela",
+      "asta"
+    ]
   },
   "Item_Talia_Kingdom_of_Banditry": {
-    "id": "Item_Talia_Kingdom_of_Banditry",
+    "id": "item_talia_kingdom_of_banditry",
     "name": "Talia - Vương Quốc Trộm Cướp",
     "type": "planar",
     "pieces": [
@@ -1067,10 +1327,21 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>16%</span> Tấn Công Kích Phá của người trang bị. Khi tốc độ của người trang bị từ <span class='text-amber-400 font-bold'>145</span> trở lên, Tấn Công Kích Phá tăng thêm <span class='text-amber-400 font-bold'>20%</span>."
     },
-    "recommendedFor": ["rappa","boothill","ruan-mei","firefly","lingsha","fugue","gallagher","luka","xueyi","march-7th-the-hunt"]
+    "recommendedFor": [
+      "rappa",
+      "boothill",
+      "ruan-mei",
+      "firefly",
+      "lingsha",
+      "fugue",
+      "gallagher",
+      "luka",
+      "xueyi",
+      "march-7th-the-hunt"
+    ]
   },
   "Item_The_Wondrous_BananAmusement_Park": {
-    "id": "Item_The_Wondrous_BananAmusement_Park",
+    "id": "item_the_wondrous_bananamusement_park",
     "name": "Công Viên Chuối Kỳ Ảo",
     "type": "planar",
     "pieces": [
@@ -1086,10 +1357,15 @@
     "setEffects": {
       "2": "Khiến Sát Thương Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>16%</span>, khi tồn tại mục tiêu mà người trang bị triệu hồi, Sát Thương Bạo Kích sẽ tăng thêm <span class='text-amber-400 font-bold'>32%</span>."
     },
-    "recommendedFor": ["aglaea","jing-yuan","topaz-numby","castorice"]
+    "recommendedFor": [
+      "aglaea",
+      "jing-yuan",
+      "topaz-numby",
+      "castorice"
+    ]
   },
   "Item_Bone_Collection_s_Serene_Demesne": {
-    "id": "Item_Bone_Collection_s_Serene_Demesne",
+    "id": "item_bone_collection_s_serene_demesne",
     "name": "Vùng Đất Nhặt Hài Cốt Tĩnh Lặng",
     "type": "planar",
     "pieces": [
@@ -1105,6 +1381,11 @@
     "setEffects": {
       "2": "Tăng <span class='text-amber-400 font-bold'>12%</span> Giới Hạn HP của người trang bị. Khi Giới Hạn HP của người trang bị lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>5000</span>, sẽ tăng <span class='text-amber-400 font-bold'>28%</span> Sát Thương Bạo Kích của người trang bị và Linh Hồn Ký Ức của người đó."
     },
-    "recommendedFor": ["castorice","mydei","tribbie","blade"]
+    "recommendedFor": [
+      "castorice",
+      "mydei",
+      "tribbie",
+      "blade"
+    ]
   }
 }

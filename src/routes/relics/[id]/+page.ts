@@ -3,6 +3,7 @@ import relicsData from '$data/relics/vi.json';
 import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = ({ params }) => {
+	const id = params.id.toLowerCase();
 	const relic = relicsData[params.id];
 
 	if (!relic) {
