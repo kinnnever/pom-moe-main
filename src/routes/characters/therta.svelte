@@ -585,9 +585,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Scholar_Lost_in_Erudition','Hunter_of_Glacial_Forest']}
-			mixSets={[['Scholar_Lost_in_Erudition','Hunter_of_Glacial_Forest']]}
-  			planarIds={['Item_Izumo_Gensei_and_Takama_Divine_Realm','Item_Rutilant_Arena','Item_Sigonia_the_Unclaimed_Desolation']}
+			relicIds={['scholar_lost_in_erudition','hunter_of_glacial_forest']}
+			mixSets={[['scholar_lost_in_erudition','hunter_of_glacial_forest']]}
+  			planarIds={['item_izumo_gensei_and_takama_divine_realm','item_rutilant_arena','item_sigonia_the_unclaimed_desolation']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Học Giả Lạc Lối Trong Biển Tri Thức</span>: 
 			Bộ di vật tốt nhất cho Đại Herta nhờ cung cấp Tỷ Lệ Bạo Kích (chỉ số tốt nhất của cô) và lượng % Sát Thương cực lớn cho các kỹ năng gây Sát Thương chính của cô ấy.</p>

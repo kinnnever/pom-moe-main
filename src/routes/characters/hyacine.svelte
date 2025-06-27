@@ -638,9 +638,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Warrior_Goddess_of_Sun_and_Thunder']}
-			mixSets={[['Warrior_Goddess_of_Sun_and_Thunder','Messenger_Traversing_Hackerspace']]}
-  			planarIds={['Item_Giant_Tree_of_Rapt_Brooding','Item_Lushaka_the_Sunken_Seas','Item_Sprightly_Vonwacq','Item_Broken_Keel']}
+			relicIds={['warrior_goddess_of_sun_and_thunder']}
+			mixSets={[['warrior_goddess_of_sun_and_thunder','messenger_traversing_hackerspace']]}
+  			planarIds={['item_giant_tree_of_rapt_brooding','item_lushaka_the_sunken_seas','item_sprightly_vonwacq','item_broken_keel']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Nữ Thần Chiến Binh Nắng Sấm</span>: 
 			Bộ di vật phù hợp nhất với bộ kit của Hyacine. Vừa tăng Tốc cho bản thân, vừa tăng Sát Thương Bạo cho toàn đội.</p>

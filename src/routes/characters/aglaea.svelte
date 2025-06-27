@@ -674,9 +674,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Hero_of_Triumphant_Song','Musketeer_of_Wild_Wheat']}
+			relicIds={['hero_of_triumphant_song','musketeer_of_wild_wheat']}
 			mixSets={[[]]}
-  			planarIds={['Item_The_Wondrous_BananAmusement_Park','Item_Rutilant_Arena','Item_Firmament_Frontline_Glamoth']}
+  			planarIds={['item_the_wondrous_bananamusement_park','item_rutilant_arena','item_firmament_frontline_glamoth']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Anh Hùng Ca Khúc Khải Hoàn</span>: 
 			Bộ di vật phù hợp với bộ kit của Aglaea.</p>

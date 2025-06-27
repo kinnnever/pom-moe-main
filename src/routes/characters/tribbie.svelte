@@ -552,9 +552,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Poet_of_Mourning_Collapse','Longevous_Disciple','Eagle_of_Twilight_Line']}
-			mixSets={[['Scholar_Lost_in_Erudition','Longevous_Disciple'],['Scholar_Lost_in_Erudition','Poet_of_Mourning_Collapse'],['Scholar_Lost_in_Erudition','Messenger_Traversing_Hackerspace']]}
-  			planarIds={['Item_Bone_Collection_s_Serene_Demesne','Item_Inert_Salsotto','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Fleet_of_the_Ageless','Item_Sprightly_Vonwacq']}
+			relicIds={['poet_of_mourning_collapse','longevous_disciple','eagle_of_twilight_line']}
+			mixSets={[['scholar_lost_in_erudition','longevous_disciple'],['scholar_lost_in_erudition','poet_of_mourning_collapse'],['scholar_lost_in_erudition','messenger_traversing_hackerspace']]}
+  			planarIds={['item_bone_collection_s_serene_demesne','item_inert_salsotto','item_lushaka_the_sunken_seas','item_penacony_land_of_the_dreams','item_fleet_of_the_ageless','item_sprightly_vonwacq']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Nhà Thơ Khúc Bi Ca Vong Quốc</span>: 
 			Bộ tập trung vào khả năng Sát Thương tốt nhất cho Tribbie nhưng buộc cô ấy phải chơi chậm. Điều này rất đáng để đánh đổi, vì đóng góp Sát Thương của Tribbie lên các mục tiêu ưu tiên trong giao tranh là đáng kể và chắc chắn đáng để đầu tư.</p>

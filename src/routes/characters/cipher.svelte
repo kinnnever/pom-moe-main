@@ -587,9 +587,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Genius_of_Brilliant_Stars','Pioneer_Diver_of_Dead_Waters']}
-			mixSets={[['Messenger_Traversing_Hackerspace','Sacerdos_Relived_Ordeal'],['Messenger_Traversing_Hackerspace','Genius_of_Brilliant_Stars']]}
-  			planarIds={['Item_Firmament_Frontline_Glamoth','Item_Duran_Dynasty_of_Running_Wolves','Item_Inert_Salsotto','Item_Sprightly_Vonwacq','Item_Lushaka_the_Sunken_Seas','Item_Penacony_Land_of_the_Dreams','Item_Broken_Keel','Item_Fleet_of_the_Ageless']}
+			relicIds={['genius_of_brilliant_stars','pioneer_diver_of_dead_waters']}
+			mixSets={[['messenger_traversing_hackerspace','sacerdos_relived_ordeal'],['messenger_traversing_hackerspace','genius_of_brilliant_stars']]}
+  			planarIds={['item_firmament_frontline_glamoth','item_duran_dynasty_of_running_wolves','item_inert_salsotto','item_sprightly_vonwacq','item_lushaka_the_sunken_seas','item_penacony_land_of_the_dreams','item_broken_keel','item_fleet_of_the_ageless']}
 			relicAnalysis={`
 			<p class="text-xl font-bold pl-3" style="color: #EC4D37">Build Sub-DPS</p>
 			<p><span class="text-amber-300 font-semibold">Thiên Tài Xuất Chúng</span>: 

@@ -647,9 +647,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-  			relicIds={['Pioneer_Diver_of_Dead_Waters', 'Scholar_Lost_in_Erudition', 'Genius_of_Brilliant_Stars']}
+  			relicIds={['pioneer_diver_of_dead_waters', 'scholar_lost_in_erudition', 'genius_of_brilliant_stars']}
 			mixSets={[[],[]]}
-  			planarIds={['Item_Izumo_Gensei_and_Takama_Divine_Realm', 'Item_Inert_Salsotto']}
+  			planarIds={['item_izumo_gensei_and_takama_divine_realm', 'item_inert_salsotto']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Tiên Phong Trong Nước Chết</span>: 
 			Cung cấp rất nhiều CV cho Acheron khi kích đủ hiệu ứng xấu - một điều mà Team Acheron luôn thừa.</p>

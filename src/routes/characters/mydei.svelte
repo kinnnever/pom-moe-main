@@ -594,9 +594,9 @@
 	<section>
 		<Title>DI VẬT & PHỤ KIỆN VỊ DIỆN</Title>
 		<RelicsBlock
-			relicIds={['Scholar_Lost_in_Erudition','Longevous_Disciple']}
-			mixSets={[['Scholar_Lost_in_Erudition','Longevous_Disciple']]}
-  			planarIds={['Item_Bone_Collection_s_Serene_Demesne','Item_Rutilant_Arena']}
+			relicIds={['scholar_lost_in_erudition','longevous_disciple']}
+			mixSets={[['scholar_lost_in_erudition','longevous_disciple']]}
+  			planarIds={['item_bone_collection_s_serene_demesne','item_rutilant_arena']}
 			relicAnalysis={`
 			<p><span class="text-amber-300 font-semibold">Học Giả Lạc Lối Trong Biển Tri Thức</span>: 
 			Bộ di vật tốt nhất cho Mydei nhờ cung cấp Tỷ Lệ Bạo Kích và khả năng khuếch đại Sát Thương Chiến Kỹ.</p>
