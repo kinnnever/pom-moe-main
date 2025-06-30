@@ -12,13 +12,13 @@
 
 <a
 	href={target}
-	class="relative flex w-fit select-none items-center rounded-md py-1 pl-6 duration-150 hover:opacity-100 {active
+	class="relative flex w-fit select-none items-center rounded-md py-1 pl-4 duration-150 hover:opacity-100 {active
 		? 'opacity-100'
 		: 'opacity-70'}"
 	on:click={close}
 >
 	<img src="/icons/{icon}" alt="" class="h-8 w-8" />
-	<span class="whitespace-nowrap pl-2 font-semibold text-white">{label}</span>
+	<span class="block md:hidden lg:block whitespace-nowrap pl-2 font-semibold text-white">{label}</span>
 	{#if active && !iconOnly}
 		<div class="absolute -right-2 bottom-2 h-4 w-[1px] rounded-full bg-yellow-100" />
 		<div

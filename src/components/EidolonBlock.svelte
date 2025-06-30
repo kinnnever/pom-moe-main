@@ -6,7 +6,7 @@
   export let description = '';
 </script>
 
-<div class="eidolon-block relative flex flex-col gap-2 p-4 border rounded-lg bg-black/20 mb-4">
+<div class="eidolon-block relative flex flex-col gap-2 p-4 border rounded-lg bg-black/20">
   <div class="flex items-start gap-4">
     <!-- Hình ảnh tinh hồn -->
     <div class="flex-none">

@@ -1,5 +1,5 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
+import { onMount } from 'svelte';
 	import HeaderButton from './HeaderButton.svelte';
 	import LocalePicker from './LocalePicker.svelte';
 	import ChevronDown from '@iconify-icons/mdi/chevron-down';
@@ -27,6 +27,20 @@
 			window.removeEventListener('scroll', checkScroll);
 		};
 	});
+$: pathname = $page.url.pathname;
+
+function getParentPath(path: string) {
+  const segments = path.split('/').filter(Boolean);
+  if (segments.length <= 1) return '/';
+  segments.pop();
+  return '/' + segments.join('/') + '/';
+}
+
+const rootPages = ['lightcones', 'relics', 'characters'];
+$: parentPath = getParentPath(pathname);
+$: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
+              pathname.split('/').filter(Boolean).length > 1;
+
 </script>
 
 <div
@@ -43,11 +57,17 @@
 				class="absolute -bottom-1 left-3.5 whitespace-nowrap bg-gradient-to-r from-blue-300 via-purple-300 to-yellow-100 bg-clip-text text-transparent"
 				>.moe</span
 			>
-			<span
-				class="absolute -right-14 top-2 z-20 ml-5 rounded-md bg-yellow-100 px-1 text-xs text-black"
-				>BETA</span
-			>
+			<span class="absolute -right-14 top-2 z-20 ml-5 rounded-md bg-yellow-100 px-1 text-xs text-black">BETA</span>
 		</a>
+		{#if showBack}
+			<a href={parentPath} class="text-white/80 hover:text-white font-medium text-sm inline-flex items-center ml-16">
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+				</svg>
+				<span>Back</span>
+			</a>
+		{/if}
+
 		<div class="flex-1" />
 		<HeaderButton label={$t('common.warp')} icon="warp.png" target="/warp" />
 		<HeaderButton label={$t('common.character')} icon="character.png" target="/characters" />
@@ -81,7 +101,7 @@
 			>
 		</div>
 		<LocalePicker />
-		<!-- <HeaderButton iconOnly icon="settings.png" target="/settings" /> -->
+		<HeaderButton iconOnly icon="settings.png" target="/settings" />
 	</div>
 </div>
 <div class="fixed top-0 z-50 flex h-16 w-full items-center justify-between md:hidden">
@@ -96,10 +116,21 @@
 			class="absolute -right-14 top-4 z-20 ml-5 rounded-md bg-yellow-100 px-1 text-xs text-black"
 			>BETA</span
 		>
+		
 	</a>
-	<button class="mr-4 rounded-md p-3" on:click={() => (open = !open)}>
-		<Icon class="text-white" icon={open ? XIcon : MenuIcon} height={24} />
-	</button>
+	<div class="flex flex-col items-start">
+		<button class="rounded-md p-3" on:click={() => (open = !open)}>
+			<Icon class="text-white" icon={open ? XIcon : MenuIcon} height={24} />
+		</button>
+		{#if showBack}
+			<a href={parentPath} class="text-white/80 hover:text-white font-medium text-sm inline-flex items-center gap-1 ml-[-5px] mb-2 mt-[-3px]">
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+				</svg>
+				<span class="leading-none translate-y-[1px] translate-x-[-4px]">Back</span>
+			</a>
+		{/if}
+	</div>
 </div>
 {#if open}
 	<div class="fixed top-24 z-50 flex flex-col justify-start gap-4 px-8">
