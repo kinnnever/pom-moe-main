@@ -92,8 +92,8 @@
 				class="inline-block h-8 w-8 border md:border-none rounded-md"
 				width={32}
 				height={32}
-				src="/images/rarity{rarity}.png"
-				alt="Rarity {rarity}"
+				src={`/images/rarity${rarity}.png`}
+				alt={`Rarity ${rarity}`}
 			/>
 			</button>
 		{/each}
