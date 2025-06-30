@@ -14,3 +14,4 @@ export const load: PageLoad = ({ params }) => {
 		relic
 	};
 };
+export const prerender = false;
