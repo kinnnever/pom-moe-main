@@ -3,10 +3,15 @@
 	import { t } from '$utils/translation';
 	import Icon from '@iconify/svelte';
 	import XIcon from '@iconify-icons/mdi/multiply';
+	import {goto} from '$app/navigation';
 
 	export let lightcone: Lightcone;
 	export let showTotal = false;
 	export let total = 0;
+
+	function navigateToLightcone(id) {
+		goto(`/lightcones/${id}`);
+	}
 
 	const bgColors: KeyValueObject = {
 		3: 'rarity-3',
@@ -15,7 +20,9 @@
 	};
 </script>
 
-<button class="rarity relative cursor-pointer pb-6 {bgColors[lightcone.rarity]}">
+<button 
+class="rarity relative cursor-pointer pb-6 {bgColors[lightcone.rarity]}"
+on:click={() => navigateToLightcone(lightcone.id)}>
 	<div class="background" />
 	<img
 		src={`/images/lightcones/${lightcone.id}.png`}
@@ -29,9 +36,9 @@
 		>{lightcone.name}</span
 	>
 	<img
-		src="/images/paths/{lightcone.path}.png"
+		src="/images/paths/{lightcone.path}-mini.png"
 		alt={lightcone.path}
-		class="absolute left-1 top-1 h-8 w-8 rounded-full bg-black/20"
+		class="absolute left-1 top-1 h-6 w-6 rounded-full bg-black/20"
 	/>
 	{#if total > 0}
 		<span class="absolute right-1 top-1 font-medium leading-none text-white/80"

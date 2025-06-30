@@ -166,7 +166,6 @@
             alt={getCharacter(hoveredCharacterId).name}
             class="absolute h-full object-contain pointer-events-none" 
             in:fly={{ x: -50, duration: 200}}
-            
           />
         {/if}
       {/key}

@@ -12,7 +12,7 @@
 	let filter: { 
 			elements: { [key: string]: boolean }; 
 			paths: { [key: string]: boolean } 
-			rarity: { [key: string]: boolean };
+			rarities: { [key: munber]: boolean };
 	} = {
 		elements: {
 			...$elements.reduce<{ [key: string]: boolean }>((prev, cur) => {
@@ -26,7 +26,7 @@
 				return prev;
 			}, {})
 		},
-		rarity: {
+		rarities: {
 			4: true,
 			5: true
 		}
@@ -40,37 +40,15 @@
 	function filterList() {
 		list = $characters.filter(
 			(c) => (
-				filter.rarity[c.rarity.toString()] &&
+				filter.rarities[c.rarity] &&
 				filter.elements[c.element] && 
 				filter.paths[c.path]
 			)
 		);
 	}
 
-	function toggleRarity(r: string) {
-		const others = r === '5' ? '4' : '5';
 
-		// Nếu đang bật cả hai → bật riêng cái vừa click, tắt cái còn lại
-		if (filter.rarity['4'] && filter.rarity['5']) {
-			filter.rarity[r] = true;
-			filter.rarity[others] = false;
-		}
-		// Nếu chỉ đang bật cái vừa click → bật lại cả hai
-		else if (filter.rarity[r] && !filter.rarity[others]) {
-			filter.rarity['4'] = true;
-			filter.rarity['5'] = true;
-		}
-		// Nếu đang bật cái còn lại → bật cái vừa click, tắt cái kia
-		else {
-			filter.rarity[r] = true;
-			filter.rarity[others] = false;
-		}
-
-		filterList();
-	}
-
-
-	function toggleFilter(type: 'elements' | 'paths' | 'rarity', id: string) {
+	function toggleFilter(type: 'elements' | 'paths' | 'rarities', id: string | number) {
 		const current = Object.values(filter[type]);
 		const trueCount = current.filter((e) => e).length;
 
@@ -78,7 +56,7 @@
 
 		if (trueCount === current.length) {
 			for (const key in filter[type]) {
-				filter[type][key] = false || key === id;
+				filter[type][key] = key == id;
 			}
 		} else if (trueCount === 1 && !filter[type][id]) {
 			for (const key in filter[type]) {
@@ -116,15 +94,15 @@
 <Title>{$t('common.character')}</Title>
 <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-4">
 	<div class="flex justify-center gap-2 md:justify-normal">
-		{#each ['5', '4'] as r}
+		{#each ['5', '4'] as rarity}
 			<button
-				class="duration-150 hover:opacity-80 border md:border-0 border-white/60 rounded-md {filter.rarity[r] ? '' : 'opacity-30'}"
-				on:click={() => toggleRarity(r)}
+				class="duration-150 hover:opacity-80 border md:border-0 border-white/60 rounded-md {filter.rarities[rarity] ? '' : 'opacity-30'}"
+				on:click={() => toggleFilter('rarities', rarity)}
 			>
 				<img
 					class="inline-block h-8 w-8"
-					src={`/images/rarity${r}.png`}
-					alt="Rarity {r}"
+					src={`/images/rarity${rarity}.png`}
+					alt="Rarity {rarity}"
 					width={32}
 					height={32}
 				/>

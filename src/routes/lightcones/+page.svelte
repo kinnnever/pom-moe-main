@@ -11,18 +11,27 @@
 
 	let list: Array<Lightcone[]> = [[], [], []];
 
-	let filter: { paths: { [key: string]: boolean } } = {
+	let filter: { 
+		rarities: { [key: number]: boolean};
+		paths: { [key: string]: boolean }
+	} = {
 		paths: {
 			...$paths.reduce<{ [key: string]: boolean }>((prev, cur) => {
 				prev[cur.id] = true;
 				return prev;
 			}, {})
+		},
+		rarities: {
+			3: true,
+			4: true,
+			5: true
 		}
 	};
 
 	function filterList() {
 		list = [[], [], []];
 		for (const lightcone of $lightcones) {
+			if (!filter.rarities[lightcone.rarity]) continue;
 			if (!filter.paths[lightcone.path]) continue;
 			list[5 - lightcone.rarity].push(lightcone);
 		}
@@ -33,7 +42,7 @@
 	let showTotal = false;
 	let total: Record<string, number> = {};
 
-	function toggleFilter(type: 'paths', id: string) {
+	function toggleFilter(type: 'rarities' | 'paths', id: number | string) {
 		const current = Object.values(filter[type]);
 		const trueCount = current.filter((e) => e).length;
 
@@ -41,7 +50,7 @@
 
 		if (trueCount === current.length) {
 			for (const key in filter[type]) {
-				filter[type][key] = false || key === id;
+				filter[type][key] =  key == id;
 			}
 		} else if (trueCount === 1 && !filter[type][id]) {
 			for (const key in filter[type]) {
@@ -72,22 +81,41 @@
 </svelte:head>
 
 <Title>Nón Ánh Sáng</Title>
-<div class="mb-8 flex flex-wrap justify-center gap-3 md:justify-normal">
-	{#each $paths as path}
-		<button
-			class="duration-150 hover:opacity-80 {filter.paths[path.id] ? '' : 'opacity-30'}"
-			on:click={() => toggleFilter('paths', path.id)}
-		>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-8">
+	<div class="flex flex-wrap justify-center gap-2 md:justify-normal">
+		{#each [5, 4, 3] as rarity}
+			<button
+			class="duration-150 hover:opacity-80 {filter.rarities[rarity] ? '' : 'opacity-30'}"
+			on:click={() => toggleFilter('rarities', rarity)}
+			>
 			<img
-				class="inline-block h-8 w-8"
+				class="inline-block h-8 w-8 border md:border-none rounded-md"
 				width={32}
 				height={32}
-				src="/images/paths/{path.id}.png"
-				alt={path.name}
+				src="/images/rarity{rarity}.png"
+				alt="Rarity {rarity}"
 			/>
-			<span class="inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
-		</button>
-	{/each}
+			</button>
+		{/each}
+	</div>
+
+	<div class="flex flex-wrap justify-center gap-3 md:justify-normal">
+		{#each $paths as path}
+			<button
+				class="duration-150 hover:opacity-80 {filter.paths[path.id] ? '' : 'opacity-30'}"
+				on:click={() => toggleFilter('paths', path.id)}
+			>
+				<img
+					class="inline-block h-8 w-8"
+					width={32}
+					height={32}
+					src="/images/paths/{path.id}.png"
+					alt={path.name}
+				/>
+				<span class="inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
+			</button>
+		{/each}
+	</div>
 </div>
 <div class="flex flex-col gap-3">
 	{#each list as lightcones}

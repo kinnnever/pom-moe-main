@@ -81,7 +81,7 @@
 			>
 		</div>
 		<LocalePicker />
-		<HeaderButton iconOnly icon="settings.png" target="/settings" />
+		<!-- <HeaderButton iconOnly icon="settings.png" target="/settings" /> -->
 	</div>
 </div>
 <div class="fixed top-0 z-50 flex h-16 w-full items-center justify-between md:hidden">
