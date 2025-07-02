@@ -514,7 +514,7 @@
     ],
     "effname": "Ngoái Đầu Nhìn",
     "effect": "Khi người trang bị đánh trúng mục tiêu địch, nếu mục tiêu này không ở trạng thái Đánh Hạ, sẽ có <span class='text-amber-400 font-bold'>{0}</span> xác suất cơ bản khiến địch rơi vào trạng thái Đánh Hạ. Kẻ địch ở trạng thái Đánh Hạ sẽ giảm <span class='text-amber-400 font-bold'>{1}</span> Phòng Thủ, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp.",
-    "recommendedFor": ["cipher","jiaoqiu","welt","pela","guinaifen","fugue"]
+    "recommendedFor": ["cipher","jiaoqiu","fugue","welt","pela","guinaifen","fugue"]
   },
   "trend-of-the-universal-market": {
     "id": "trend-of-the-universal-market",
@@ -1814,7 +1814,7 @@
   },
   "a-thankless-coronation": {
     "id": "a-thankless-coronation",
-    "name": "a-thankless-coronation",
+    "name": "Lễ Đăng Quang Không Hồi Đáp",
     "path": "destruction",
     "rarity": 5,
     "lv": [952, 582, 539],
@@ -1822,8 +1822,162 @@
       ["36%","45%","54%","63%","72%"],
       ["40%","50%","60%","70%","80%"]
     ],
-    "effname": "",
-    "effect": "",
-    "recommendedFor": []
+    "effname": "Vua Kỵ Sĩ",
+    "effect": "Khiến Sát Thương Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Khi thi triển Tuyệt Kỹ, sẽ khiến Tấn Công của người trang bị tăng <span class='text-amber-400 font-bold'>{1}</span>, nếu giới hạn Năng Lượng của người trang bị lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>300</span> điểm, sẽ cố định hồi cho người trang bị Năng Lượng bằng <span class='text-amber-400 font-bold'>10%</span> Giới Hạn Năng Lượng của người trang bị, đồng thời khiến Tấn Công của người trang bị tăng <span class='text-amber-400 font-bold'>{1}</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp.",
+    "recommendedFor": ["saber"]
+  },
+  "thus-burns-the-dawn": {
+    "id": "thus-burns-the-dawn",
+    "name": "Bình Minh Rực Cháy",
+    "path": "destruction",
+    "rarity": 5,
+    "lv": [952, 687, 396],
+    "stat": [
+      ["12","14","16","18","20"],
+      ["18%","22.5%","27%","31.5%","36%"],
+      ["60%","78%","96%","114%","132%"]
+    ],
+    "effname": "Mất Mát",
+    "effect": "Khiến Tốc Độ cơ bản của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>, khi gây sát thương sẽ bỏ qua <span class='text-amber-400 font-bold'>{1}</span> Phòng Thủ của mục tiêu. Sau khi người trang bị thi triển Tuyệt Kỹ sẽ nhận được \"Mặt Trời Rực Lửa\", khi bắt đầu hiệp sẽ xóa. Khi có \"Mặt Trời Rực Lửa\", sát thương do người trang bị gây ra tăng <span class='text-amber-400 font-bold'>{2}</span>.",
+    "recommendedFor": ["phainon"]
+  },
+  "the-hell-where-ideals-burn": {
+    "id": "the-hell-where-ideals-burn",
+    "name": "Địa Ngục Thiêu Đốt Lý Tưởng",
+    "path": "the-hunt",
+    "rarity": 5,
+    "lv": [952, 582, 529],
+    "stat": [
+      ["16%","20%","24%","28%","32%"],
+      ["40%","50%","60%","70%","80%"],
+      ["10%","12.5%","15%","17.5%","20%"]
+    ],
+    "effname": "Hrunting",
+    "effect": "Khiến Tỷ Lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Khi vào chiến đấu, nếu giới hạn Điểm Chiến Kỹ phe ta lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>6</span>, sẽ khiến Tấn Công của người trang bị tăng <span class='text-amber-400 font-bold'>{1}</span>. Sau mỗi lần người trang bị thi triển Chiến Kỹ, sẽ khiến Tấn Công của người trang bị tăng <span class='text-amber-400 font-bold'>{2}</span>, tối đa cộng dồn <span class='text-amber-400 font-bold'>4</span> lần.",
+    "recommendedFor": ["archer","seele"]
+  },
+  "see-you-at-the-end": {
+    "id": "see-you-at-the-end",
+    "name": "Gặp Lại Ở Điểm Cuối Cùng",
+    "path": "the-hunt",
+    "rarity": 4,
+    "lv": [952, 582, 529],
+    "stat": [
+      ["24%","28%","32%","36%","40%"]
+    ],
+    "effname": "Cố Chấp",
+    "effect": "Khiến Sát Thương Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sát thương Chiến Kỹ và Đòn Đánh Theo Sau của người trang bị gây ra tăng <span class='text-amber-400 font-bold'>{0}</span>.",
+    "recommendedFor": ["dr-ratio","archer","topaz-numby"]
+  },
+  "holiday-thermae-escapade": {
+    "id": "holiday-thermae-escapade",
+    "name": "Kỳ Nghỉ Phiêu Lưu Nhà Tắm Hơi",
+    "path": "nihility",
+    "rarity": 4,
+    "lv": [1058, 529, 330],
+    "stat": [
+      ["16%","20%","24%","28%","32%"],
+      ["10%","11.5%","13%","14.5%","16%"]
+    ],
+    "effname": "Bình Tĩnh",
+    "effect": "Khiến sát thương của người trang bị gây ra tăng <span class='text-amber-400 font-bold'>{0}</span>. Sau khi người trang bị tấn công, có <span class='text-amber-400 font-bold'>100%</span> xác suất cơ bản khiến mục tiêu bị tấn công rơi vào trạng thái Trọng Thương, sát thương phải chịu tăng <span class='text-amber-400 font-bold'>{1}</span>, duy trì <span class='text-amber-400 font-bold'>2</span> hiệp. Hiệu ứng cùng loại không thể cộng dồn.",
+    "recommendedFor": ["cipher","fugue","jiaoqiu","silver-wolf","welt","guinaifen","pela"]
+  },
+  "a-dream-scented-in-wheat": {
+    "id": "a-dream-scented-in-wheat",
+    "name": "Giấc Mơ Vấn Vương Hương Húa",
+    "path": "erudition",
+    "rarity": 4,
+    "lv": [952, 529, 396],
+    "stat": [
+      ["12%","14%","16%","18%","20%"],
+      ["24%","28%","32%","36%","40%"]
+    ],
+    "effname": "Khát Khao",
+    "effect": "Khiến Tỷ Lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sát thương Tuyệt Kỹ và Đòn Đánh Theo Sau của người trang bị gây ra tăng <span class='text-amber-400 font-bold'>{1}</span>.",
+    "recommendedFor": ["jing-yuan","jade","himeko","herta","argenti"]
+  },
+  "a-trail-of-bygone-blood": {
+    "id": "a-trail-of-bygone-blood",
+    "name": "Vệt Máu Ngày Cũ",
+    "path": "destruction",
+    "rarity": 4,
+    "lv": [1058, 529, 330],
+    "stat": [
+      ["12%","14%","16%","18%","20%"],
+      ["24%","28%","32%","36%","40%"]
+    ],
+    "effname": "Thảm Sát",
+    "effect": "Khiến Tỷ Lệ Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sát thương Chiến Kỹ và Tuyệt Kỹ do người trang bị gây ra tăng <span class='text-amber-400 font-bold'>{1}</span>.",
+    "recommendedFor": ["mydei","phainon","jingliu","saber","female-destruction","misha","hook","arlan"]
+  },
+  "in-pursuit-of-the-wind": {
+    "id": "in-pursuit-of-the-wind",
+    "name": "Khi Đuổi Theo Gió",
+    "path": "harmony",
+    "rarity": 4,
+    "lv": [1058, 476, 396],
+    "stat": [
+      ["16%","18%","20%","22%","24%"]
+    ],
+    "effname": "Hoang Mang",
+    "effect": "Sau khi vào chiến đấu, khiến Sát Thương Phá Vỡ của toàn bộ phe ta gây ra tăng <span class='text-amber-400 font-bold'>{0}</span>. Kỹ năng cùng loại sẽ không có hiệu lực trùng lặp.",
+    "recommendedFor": ["ruan-mei","female-harmony"]
+  },
+  "journey-forever-peaceful": {
+    "id": "journey-forever-peaceful",
+    "name": "Mong Hành Trình Mãi Mãi Bình An",
+    "path": "preservation",
+    "rarity": 4,
+    "lv": [1058, 370, 529],
+    "stat": [
+      ["12%","15%","18%","21%","24%"],
+      ["12%","14%","16%","18%","20%"]
+    ],
+    "effname": "Giấc Mơ Ngọt Ngào",
+    "effect": "Khiến lượng Khiên mà người trang bị cung cấp tăng <span class='text-amber-400 font-bold'>{0}</span>, khi mục tiêu phe ta có Khiên, sát thương gây ra tăng <span class='text-amber-400 font-bold'>{1}</span>.",
+    "recommendedFor": ["aventurine","gepard","female-preservation","march-7th"]
+  },
+  "unto-tomorrow-s-morrow": {
+    "id": "unto-tomorrow-s-morrow",
+    "name": "Cho Đến Ngày Mai Của Ngày Mai",
+    "path": "abundance",
+    "rarity": 4,
+    "lv": [1058, 476, 396],
+    "stat": [
+      ["12%","15%","18%","21%","24%"],
+      ["12%","14%","16%","18%","20%"]
+    ],
+    "effname": "Ly Biệt",
+    "effect": "Khiến Lượng Trị Liệu của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Khi Phần Trăm HP hiện tại của mục tiêu phe ta lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>50%</span>, sát thương gây ra tăng <span class='text-amber-400 font-bold'>{1}</span>.",
+    "recommendedFor": ["lingsha","huohuo","luocha","gallagher"]
+  },
+  "the-flower-remembers": {
+    "id": "the-flower-remembers",
+    "name": "Hoa Sẽ Không Quên",
+    "path": "remembrance",
+    "rarity": 4,
+    "lv": [1058, 529, 330],
+    "stat": [
+      ["24%","28%","32%","36%","40%"],
+      ["24%","30%","36%","42%","48%"]
+    ],
+    "effname": "Phụ Thuộc",
+    "effect": "Khiến Sát Thương Bạo Kích của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sát Thương Bạo Kích do Linh Hồn Ký Ức của người trang bị gây ra tăng thêm <span class='text-amber-400 font-bold'>{1}</span>.",
+    "recommendedFor": ["castorice","aglaea"]
+  },
+  "the-story-s-next-page": {
+    "id": "the-story-s-next-page",
+    "name": "Trang Tiếp Theo Của Câu Chuyện",
+    "path": "remembrance",
+    "rarity": 4,
+    "lv": [1058, 370, 396],
+    "stat": [
+      ["16%","20%","24%","28%","32%"],
+      ["12%","15%","18%","21%","24%"]
+    ],
+    "effname": "Viết",
+    "effect": "Khiến Giới Hạn HP của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sau khi Linh Hồn Ký Ức của người trang bị tấn công, sẽ khiến Lượng Trị Liệu của người trang bị và Linh Hồn Ký Ức tăng <span class='text-amber-400 font-bold'>{1}</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp.",
+    "recommendedFor": ["hyacine"]
   }
 }

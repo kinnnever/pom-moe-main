@@ -636,7 +636,7 @@
     "recommendedFor": [
       "therta",
       "mydei",
-      "jingliu"
+      "jingliu", "phainon"
     ]
   },
   "the_ashblazing_grand_duke": {
@@ -1224,7 +1224,7 @@
       "dan-heng-imbibitor-lunae",
       "blade",
       "mydei",
-      "march-7th-the-hunt"
+      "march-7th-the-hunt", "phainon"
     ]
   },
   "item_sigonia_the_unclaimed_desolation": {
@@ -1387,5 +1387,43 @@
       "tribbie",
       "blade"
     ]
+  },
+  "item_arcadia_of_woven_dreams": {
+    "id": "item_arcadia_of_woven_dreams",
+    "name": "Thiên Đường Yêu Tinh Dệt Mộng",
+    "type": "planar",
+    "pieces": [
+      {
+        "slot": "sphere",
+        "name": "Nhà Cây An Yên Ở Khu Rừng Lạc Lối"
+      },
+      {
+        "slot": "rope",
+        "name": "Còi Cầu Nguyện Của Khu Rừng Lạc Lối"
+      }
+    ],
+    "setEffects": {
+      "2": "Khi số lượng mục tiêu của đội ngũ phe ta ở trong trận hiện tại không bằng 4, mỗi khi thêm/mất 1 mục tiêu phe ta, sẽ khiến sát thương gây ra bởi người trang bị và Linh Hồn Ký Ức của người đó tăng <span class='text-amber-400 font-bold'>9%</span>/<span class='text-amber-400 font-bold'>12%</span>, tối đa cộng dồn <span class='text-amber-400 font-bold'>4</span>/<span class='text-amber-400 font-bold'>3</span> tầng."
+    },
+    "recommendedFor": ["phainon","castorice","aglaea"]
+  },
+  "item_revelry_by_the_sea": {
+    "id": "item_revelry_by_the_sea",
+    "name": "Thiên Đường Yêu Tinh Dệt Mộng",
+    "type": "planar",
+    "pieces": [
+      {
+        "slot": "sphere",
+        "name": "Ngọn Hải Đăng Nơi Biển Cả Rền Vang"
+      },
+      {
+        "slot": "rope",
+        "name": "Nhịp Bước Hát Ca Nơi Biển Cả Rền Vang"
+      }
+    ],
+    "setEffects": {
+      "2": "Khiến Tấn Công của người trang bị tăng <span class='text-amber-400 font-bold'>12%</span>. Khi Tấn Công của người trang bị lớn hơn hoặc bằng <span class='text-amber-400 font-bold'>2400</span>/<span class='text-amber-400 font-bold'>3600</span>, sẽ khiến Sát Thương Duy Trì gây ra tăng thêm <span class='text-amber-400 font-bold'>12%</span>/<span class='text-amber-400 font-bold'>24%</span>."
+    },
+    "recommendedFor": ["kafka","black-swan","cerydra"]
   }
 }

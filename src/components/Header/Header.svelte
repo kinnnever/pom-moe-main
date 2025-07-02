@@ -72,7 +72,7 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 		<HeaderButton label={$t('common.warp')} icon="warp.png" target="/warp" />
 		<HeaderButton label={$t('common.character')} icon="character.png" target="/characters" />
 		<HeaderButton label="Timeline" icon="timeline.png" target="/timeline" />
-		<div class="group relative cursor-pointer py-1 pl-6">
+		<div class="group relative cursor-pointer py-1 pl-4">
 			<div class="flex items-center opacity-70 duration-150 hover:opacity-100">
 				<img class="h-8 w-8" src="/icons/database.png" alt="" />
 				<span class="pl-2 font-semibold text-white">Database</span>
@@ -93,12 +93,6 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 					<HeaderButton label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
 				</div>
 			</div>
-		</div>
-		<div class="relative">
-			<HeaderButton label='Kế Hoạch' icon="planner.png" target="/planner" />
-			<span class="absolute right-0 top-0 rounded-sm bg-yellow-100/70 px-1 text-xs leading-none"
-				>SOON</span
-			>
 		</div>
 		<LocalePicker />
 		<HeaderButton iconOnly icon="settings.png" target="/settings" />
@@ -140,7 +134,6 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 		<HeaderButton {close} label={$t('common.lightcone')} icon="lightcone.png" target="/lightcones" />
 		<HeaderButton {close} label={$t('common.relic')} icon="relics.png" target="/relics" />
 		<HeaderButton {close} label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
-		<HeaderButton {close} label='Kế Hoạch' icon="planner.png" target="/planner" />
 		<HeaderButton {close} label='Settings' icon="settings.png" target="/settings" />
 		<LocalePicker />
 	</div>
