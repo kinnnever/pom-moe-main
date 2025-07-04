@@ -84,8 +84,8 @@
 	</div>
 	<div class="sticky inline-flex h-full items-center" style="left: {offset}px;">
 		<span
-			class="name left-0 overflow-hidden whitespace-nowrap pl-4 pr-4 font-medium text-black/90 md:pl-10"
-			style:--color="{event.color}dd"
+			class="name left-0 font-sans overflow-hidden whitespace-nowrap pl-4 pr-4 font-semibold text-black/90 md:pl-10"
+			style:--color="#f8f4ec"
 		>
 			{event.name}
 		</span>
@@ -131,7 +131,11 @@
 	}
 
 	.name {
-		text-shadow: var(--color) -1px -1px 4px, var(--color) 1px -1px 4px, var(--color) -1px 1px 4px,
-			var(--color) 1px 1px 4px, var(--color) 0 0 10px;
+		text-shadow: 
+			var(--color) -1px -1px 1px, 
+			var(--color) 1px -1px 1px, 
+			var(--color) -1px 1px 1px,
+			var(--color) 1px 1px 1px, 
+			var(--color) 0 0 1px;
 	}
 </style>

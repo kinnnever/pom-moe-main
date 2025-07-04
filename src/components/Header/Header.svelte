@@ -90,7 +90,7 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 				>
 					<HeaderButton label={$t('common.lightcone')} icon="lightcone.png" target="/lightcones" />
 					<HeaderButton label={$t('common.relic')} icon="relics.png" target="/relics" />
-					<HeaderButton label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
+					<!-- <HeaderButton label={$t('common.achievement')} icon="achievement.png" target="/achievements" /> -->
 				</div>
 			</div>
 		</div>
@@ -133,7 +133,7 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 		<HeaderButton {close} label={$t('menu.timeline')} icon="timeline.png" target="/timeline" />
 		<HeaderButton {close} label={$t('common.lightcone')} icon="lightcone.png" target="/lightcones" />
 		<HeaderButton {close} label={$t('common.relic')} icon="relics.png" target="/relics" />
-		<HeaderButton {close} label={$t('common.achievement')} icon="achievement.png" target="/achievements" />
+		<!-- <HeaderButton {close} label={$t('common.achievement')} icon="achievement.png" target="/achievements" /> -->
 		<HeaderButton {close} label='Settings' icon="settings.png" target="/settings" />
 		<LocalePicker />
 	</div>

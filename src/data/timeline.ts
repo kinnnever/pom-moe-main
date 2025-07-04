@@ -3,304 +3,176 @@ import type { Timeline } from '$types';
 const timeline: Array<Timeline[]> = [
 	[
 		{
-			name: 'The Legend of Galactic Baseballer',
-			start: '2024-05-29 12:00:00',
-			end: '2024-06-17 03:59:00',
-			image: 'The Legend of Galactic Baseballer.png',
-			color: '#edce76',
-			pos: '30%, -25%',
+			name: 'Chim Giấy Đại Chiến - Bản Chính Thức',
+			start: '2025-07-2 10:00:00',
+			end: '2025-08-11 03:59:00',
+			image: 'event1.png',
+			color: '#39A59E',
+			pos: '20%, -50%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/27977689',
+			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		},
+		
+	],
+	[
 		{
-			name: 'Planar Fissure',
-			start: '2024-06-28 04:00:00',
-			end: '2024-04-05 03:59:00',
+			name: 'x2 Phụ Kiện Vị Diện',
+			start: '2025-07-16 04:00:00',
+			end: '2025-07-28 03:59:00',
 			image: 'Planar Fissure.png',
 			color: '#6262ff',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29896988',
+			pos: '40%, -40%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		},
 		{
-			name: 'Realm of the Strange',
-			start: '2024-07-19 04:00:00',
-			end: '2024-07-26 03:59:00',
+			name: 'x2 Di Vật Hang Động',
+			start: '2025-07-31 4:00:00',
+			end: '2025-08-11 03:59:00',
 			image: 'Realm of the Strange.png',
 			color: '#6262ff',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29896988',
-			show: true
-		}
-	],
-	[
-		{
-			name: 'All About Boothill...',
-			start: '2024-05-17 04:00:00',
-			end: '2024-06-03 03:59:00',
-			image: 'AllAboutBoothill.png',
-			color: '#466cf1',
-			pos: '30%, -25%',
-			zoom: 1.5,
-			url: 'https://www.hoyolab.com/article/27977689',
-			timezoneDependent: true,
-			show: true
-		},
-		{
-			name: 'Stellar Shimmer',
-			start: '2024-07-05 12:00:00',
-			end: '2024-07-29 03:59:00',
-			image: 'Stellar Shimmer.png',
-			color: '#466cf1',
-			pos: '30%, -25%',
-			zoom: 1.5,
-			url: 'https://www.hoyolab.com/article/29896988',
-			show: true
-		}
-	],
-	[
-		{
-			name: 'Clockie: Dreamjoy Memoir',
-			start: '2024-05-08 06:00:00',
-			end: '2024-06-17 03:59:00',
-			image: 'Clockie Dreamjoy Memoir.png',
-			color: '#d5d3d2',
-			pos: '30%, -25%',
-			zoom: 1.5,
-			url: 'https://www.hoyolab.com/article/28207325',
-			timezoneDependent: true,
-			show: true
-		},
-		{
-			name: 'Origami Bird Clash',
-			start: '2024-06-21 12:00:00',
-			end: '2024-07-29 03:59:00',
-			image: 'Origami Bird Clash.png',
-			color: '#6daffb',
-			pos: '30%, -50%',
+			pos: '40%, -60%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/29896988',
+			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		}
 	],
 	[
 		{
-			name: 'Sunset Clause - Topaz & Numby Warp Event',
-			start: '2024-05-08 06:00:00',
-			end: '2024-05-29 11:59:00',
-			image: 'Sunset Clause 2030.jpg',
-			color: '#c1c4f8',
-			pos: '0%, -5%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/28251947',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Foreseen, Foreknown, Foretold - Fu Xuan Warp Event',
-			start: '2024-05-29 12:00:00',
-			end: '2024-06-18 15:00:00',
-			image: 'Foreseen, Foreknown, Foretold 2032.jpg',
-			color: '#e2a6cc',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29127114',
+			name: 'Fate/stay night',
+			start: '2025-07-11 03:00:00',
+			end: '2025-08-11 03:59:00',
+			image: 'fate.png',
+			color: '#F2B247',
+			pos: '20%, -50%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		},
+	],
+	[
 		{
-			name: 'Floral Triptych - Ruan Mei Warp Event',
-			start: '2024-06-19 06:00:00',
-			end: '2024-07-10 11:59:00',
-			image: 'Floral Triptych 2034.jpg',
-			color: '#ccdde1',
-			pos: '0%, 0%',
+			name: 'Banner Saber và Archer',
+			start: '2025-07-11 03:00:00',
+			end: '2025-09-23 03:59:00',
+			image: 'collab fate.png',
+			color: '#4C83E5',
+			pos: '20%, -25%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
+		},
+	],
+	[
+		{
+			name: 'Banner Phainon',
+			start: '2025-07-02 10:00:00',
+			end: '2025-07-23 11:59:00',
+			image: 'phainon.png',
+			color: '#B2ECF5',
+			pos: '30%, 7%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29992036',
+			url: 'https://www.hoyolab.com/article/39701941',
 			show: true,
-			timezoneDependent: true
+		},
+		// {
+		// 	name: 'Banner Hysilens',
+		// 	start: '2025-08-12 10:00:00',
+		// 	end: '2025-09-3 11:59:00',
+		// 	image: 'show.png',
+		// 	color: '#B2ECF5',
+		// 	pos: '30%, 7%',
+		// 	zoom: 2,
+		// 	url: 'https://www.hoyolab.com/article/39701941',
+		// 	show: false,
+		// }
+	],
+	[
+		{
+			name: 'Banner Tribbie, Sunday, Sparkel',
+			start: '2025-07-02 10:00:00',
+			end: '2025-07-23 11:59:00',
+			image: 'banner2.png',
+			color: '#D3D6FF',
+			pos: '50%, -75%',
+			zoom: 0.5,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true,
 		},
 		{
-			name: 'Thorns of Scented Crown - Argenti Warp Event',
-			start: '2024-07-10 12:00:00',
-			end: '2024-07-30 15:00:00',
-			image: 'Thorns of Scented Crown 2036.jpg',
-			color: '#e97762',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29896988',
-			show: true
+			name: 'Banner Firefly, Jingliu, Blade',
+			start: '2025-07-23 12:00:00',
+			end: '2025-08-12 14:59:00',
+			image: 'banner3.png',
+			color: '#D3D6FF',
+			pos: '50%, -75%',
+			zoom: 0.5,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true,
 		}
 	],
 	[
 		{
-			name: 'Just Intonation - Robin Warp Event',
-			start: '2024-05-08 06:00:00',
-			end: '2024-05-29 11:59:00',
-			image: 'Just Intonation 2029.jpg',
-			color: '#ff6934',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/28251947',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: "Dusty Trail's Lone Star - Boothill Warp Event",
-			start: '2024-05-29 12:00:00',
-			end: '2024-06-18 15:00:00',
-			image: "Dusty Trail's Lone Star 2031.jpg",
-			color: '#f1f1ef',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29127114',
-			show: true
-		},
-		{
-			name: 'Firefull Flyshine - Firefly Warp Event',
-			start: '2024-06-19 06:00:00',
-			end: '2024-07-10 11:59:00',
-			image: 'Firefull Flyshine 2033.jpg',
-			color: '#dcffe5',
-			pos: '-5%, -2%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29992036',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Lien on Life, Lease on Fate - Jade Warp Event',
-			start: '2024-07-10 12:00:00',
-			end: '2024-07-30 15:00:00',
-			image: 'Lien on Life, Lease on Fate 2035.jpg',
-			color: '#d89bde',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29896988',
-			show: true
-		}
-	],
-	[
-		{
-			name: 'Brilliant Fixation - Light Cone Warp Event',
-			start: '2024-05-08 06:00:00',
-			end: '2024-05-29 11:59:00',
-			image: 'Brilliant Fixation 3029.jpg',
-			color: '#c99ae4',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/28252074',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Brilliant Fixation - Light Cone Warp Event',
-			start: '2024-05-29 12:00:00',
-			end: '2024-06-18 15:00:00',
-			image: 'Brilliant Fixation 3031.jpg',
-			color: '#cac3bb',
-			pos: '0%, 10%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29127114',
-			show: true
-		},
-		{
-			name: 'Brilliant Fixation - Light Cone Warp Event',
-			start: '2024-06-19 06:00:00',
-			end: '2024-07-10 11:59:00',
-			image: 'Brilliant Fixation 3033.jpg',
-			color: '#a3d1aa',
-			pos: '0%, 10%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29992142',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Brilliant Fixation - Light Cone Warp Event',
-			start: '2024-07-10 12:00:00',
-			end: '2024-07-30 15:00:00',
-			image: 'Brilliant Fixation 3035.jpg',
-			color: '#d89bde',
-			pos: '0%, 10%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29992142',
-			show: true
-		}
-	],
-	[
-		{
-			name: 'Bygone Reminiscence - Light Cone Warp Event',
-			start: '2024-05-08 06:00:00',
-			end: '2024-05-29 11:59:00',
-			image: 'Bygone Reminiscence 3030.jpg',
-			color: '#f7f6fd',
-			pos: '0%, 10%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/28252074',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Bygone Reminiscence - Light Cone Warp Event',
-			start: '2024-05-29 12:00:00',
-			end: '2024-06-18 15:00:00',
-			image: 'Bygone Reminiscence 3032.jpg',
-			color: '#fbc6e6',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29127114',
-			show: true
-		},
-		{
-			name: 'Bygone Reminiscence - Light Cone Warp Event',
-			start: '2024-06-19 06:00:00',
-			end: '2024-07-10 11:59:00',
-			image: 'Bygone Reminiscence 3034.jpg',
-			color: '#e9e9e9',
-			pos: '0%, -10%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29992142',
-			show: true,
-			timezoneDependent: true
-		},
-		{
-			name: 'Bygone Reminiscence - Light Cone Warp Event',
-			start: '2024-07-10 12:00:00',
-			end: '2024-07-30 15:00:00',
-			image: 'Bygone Reminiscence 3036.jpg',
-			color: '#e97762',
-			pos: '0%, 0%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29127114',
-			show: true
-		}
-	],
-	[
-		{
-			name: 'Nameless Honor - Battle Pass',
-			start: '2024-05-08 06:00:00',
-			end: '2024-06-17 03:59:00',
-			image: 'Nameless Honor.png',
+			name: 'Vinh Dự Vô Danh - Battle Pass',
+			start: '2025-07-2 10:00:00',
+			end: '2025-08-11 2:59:59',
+			image: 'Event_Nameless_Honor.png',
 			color: '#ff9d92',
 			pos: '30%, -5%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/28163838',
-			timezoneDependent: true,
+			url: 'https://www.hoyolab.com/article/39501469',
+			show: true
+		}
+	],
+	[
+		{
+			name: 'Hồi Ức Hỗn Độn',
+			start: '2025-06-23 04:00:00',
+			end: '2025-08-04 03:59:59',
+			image: 'MOC.png',
+			color: '#302757',
+			pos: '10%, -25%',
+			zoom: 1,
+			url: '',
 			show: true
 		},
 		{
-			name: 'Nameless Honor - Battle Pass',
-			start: '2024-06-19 06:00:00',
-			end: '2024-07-29 03:59:00',
-			image: 'Nameless Honor.png',
-			color: '#ff9d92',
-			pos: '30%, -5%',
-			zoom: 2,
-			url: 'https://www.hoyolab.com/article/29897602',
-			timezoneDependent: true,
+			name: 'Hồi Ức Hỗn Độn',
+			start: '2025-08-4 04:00:00',
+			end: '2025-09-15 03:59:59',
+			image: 'MOC.png',
+			color: '#302757',
+			pos: '10%, -25%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39686660',
+			show: true
+		}
+	],
+	[
+		{
+			name: 'Ảo Ảnh Tận Thế',
+			start: '2025-07-07 04:00:00',
+			end: '2025-08-18 03:59:59',
+			image: 'AS.png',
+			color: '#4A459B',
+			pos: '20%, -40%',
+			zoom: 0.9,
+			url: 'https://www.hoyolab.com/article/39686660',
+			show: true
+		}
+	],
+	[
+		{
+			name: 'Kể Chuyện Hư Cấu',
+			start: '2025-07-21 04:00:00',
+			end: '2025-09-1 03:59:59',
+			image: 'PF.png',
+			color: '#D8E8F1',
+			pos: '-10%, 5%',
+			zoom: 1.5,
+			url: 'https://www.hoyolab.com/article/39686660',
 			show: true
 		}
 	]

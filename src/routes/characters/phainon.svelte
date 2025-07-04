@@ -635,7 +635,7 @@
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">3300+</span> &nbsp;<span class="text-white/70">(Có thể dùng Giày <span class="text-yellow-400">ATK</span> trong một số trường hợp nhất định)</span></p>
 			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">100%</span> &nbsp;<span class="text-white/70">(Hãy cân bằng để cố gắng đạt được chỉ số này trong chiến trận)</span></p>
-			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">200%+</span></p>
+			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">200%</span></p>
 			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">136</span> &nbsp;<span class="text-white/70">(Hiện tại Phainon ổn nhất với chiến thuật 2 sp đi theo đẩy lượt, nên 136 để kẹp cùng Sunday/Bronya 134/135 là ok nhất)</span></p>
 			`}
 		/>
