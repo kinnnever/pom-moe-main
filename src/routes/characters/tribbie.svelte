@@ -182,7 +182,7 @@
 			<span class="text-sm text-white/80 mt-2">Chiến Kỹ</span>
 		</div>
 		<div class="flex-1">
-  		<h3 class="text-lg font-bold mb-1">Quà Tặng Đâu Hết Cả Rồin</h3>
+  		<h3 class="text-lg font-bold mb-1">Quà Tặng Đâu Hết Cả Rồi</h3>
   		<p class="text-sm mb-1">
  		    <span class="text-amber-400 italic">Hỗ Trợ</span> |
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">30</span> |
@@ -540,7 +540,7 @@
 			Bù Mana để duy trì Tuyệt Kỹ.
   			</li>
 			<li>
-			<strong class="text-amber-300">{lightconeNames[2]}</strong>: 
+			<strong class="text-amber-300">{lightconeNames[3]}</strong>: 
 			Như cái trên nhưng 3 Sao.
 			</li>
 		  </ol>
@@ -596,6 +596,7 @@
 			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">90%+</span> &nbsp;<span class="text-white/70">(Nếu dùng bộ di vật Nhà Thơ thì chỉ cần build 60%+ và Tốc Base)</span></p>
 			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">180%+</span> &nbsp;<span class="text-white/70">(Build được càng cao càng tốt)</span></p>
 			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">?</span> &nbsp;<span class="text-white/70">(Có thể build Tốc chậm 95- cùng bộ di vật Nhà Thơ, hoặc build Tốc cao 120~160+ như các Hòa Hợp khác)</span></p>
+			<p><span class="text-white/70">Hiệu Suất Hồi Năng Lượng:</span>&nbsp; <span class="font-bold">119.44%+</span> &nbsp;<span class="text-white/70">(Đôi khi trong nhiều trận chiến, Tribbie có thể thiếu hụt vài năng lượng, nên hãy build cho cô giáo một chút)</span></p>
 			`}
 		/>
 	</section>
@@ -611,12 +612,23 @@
   			}}
   			tooltips={{
 				dps: {
+					castorice: 'Castorice có thể tận dụng tối đa mọi chỉ số mà Tribbie mang lại, từ HP đến Xuyên Kháng và Tăng Sát Thương Phải Chịu.',
+					therta: '2 nhân vật này có thể hỗ trợ nhau nạp năng lượng như một dạng cộng sinh.',
+					aglaea: 'Đòn đánh của Aglaea được tính là 2 đòn, tức là nạp năng lượng gấp đôi cho Tribbie.',
+					feixiao: 'Đòn đánh theo sau của Tribbie rất nhiều và điều này cũng giúp Feixiao tích Stack cho Tuyệt Kỹ'
                 },
                 supportDps: {
+					tribbie: 'Một hòa hợp nhưng có khả năng hỗ trợ thêm Sát Thương cho đội hình.'
                 },
                 amplifier: {
+					robin: 'Tăng Sát Tương mà Tribbie có thể gây ra từ đòn đánh theo sau hoặc Tuyệt Kỹ',
+					'ruan-mei': 'Thứ gì mạnh hơn 1 cái Xuyên Kháng, đó là 2 cái Xuyên Kháng.'
                 },
                 sustain: {
+					gallagher: 'Slave hồi năng lượng cho Tribbie.',
+					aventurine: 'Slave hồi năng lượng cho Tribbie nhưng có thêm Sát Thương.',
+					hyacine: 'Giống thằng Aventurine.',
+					lingsha: 'Slave hồi năng lượng cho Tribbie.'
                 }
 			}}
 			notes={{
@@ -644,7 +656,6 @@
 			cons='
 				Cần đầu tư nhiều vào farm đồ để có khả năng gây Sát Thương cao.
 				Hơi phụ thuộc vào đồng mình có kỹ năng AoE để hồi Năng Lượng cho Tuyệt Kỹ.
-				
 			'
 		/>
 

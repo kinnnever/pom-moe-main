@@ -652,7 +652,7 @@
   			}}
   			tooltips={{
 				dps: {
-					Phainon: 'DPS chủ lực, cần đi cùng đồng đội có khả năng chọn mục tiêu là đồng minh.',
+					phainon: 'DPS chủ lực, cần đi cùng đồng đội có khả năng chọn mục tiêu là đồng minh.',
 				},
 				supportDps: {
 				},
