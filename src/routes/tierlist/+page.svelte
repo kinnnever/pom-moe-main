@@ -6,5 +6,6 @@
 </script>
 
 <svelte:head>
-	<title>Pom.moe - Setting</title>
+	<title>Pom.moe - Tier List</title>
 </svelte:head>
+<div class="w-full text-center text-white">Khu vực đang phát triển</div>

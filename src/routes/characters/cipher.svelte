@@ -77,8 +77,8 @@
 	</div>
 
 	<!-- Thông tin nhân vật -->
-	<div class="lg:w-2/4 space-y-6">
-		<div class="flex justify-center lg:justify-start gap-4 mb-4">
+	<div class="lg:w-2/4">
+		<div class="flex justify-center lg:justify-start gap-4 mb-3 flex-wrap lg:flex-nowrap">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img

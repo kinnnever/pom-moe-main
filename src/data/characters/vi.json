@@ -601,5 +601,41 @@
     "path": "the-hunt",
     "element": "quantum",
     "rarity": 5
+  },
+  "jingliu-enhanced": {
+    "id": "jingliu-enhanced",
+    "name": "Jingliu",
+    "path": "destruction",
+    "element": "ice",
+    "rarity": 5,
+    "hidden": true,
+    "enhancedOnly": true
+  },
+  "blade-enhanced": {
+    "id": "blade-enhanced",
+    "name": "Blade",
+    "path": "destruction",
+    "element": "wind",
+    "rarity": 5,
+    "hidden": true,
+    "enhancedOnly": true
+  },
+  "kafka-enhanced": {
+    "id": "kafka-enhanced",
+    "name": "Kafka",
+    "path": "nihility",
+    "element": "lightning",
+    "rarity": 5,
+    "hidden": true,
+    "enhancedOnly": true
+  },
+  "silver-wolf-enhanced": {
+    "id": "silver-wolf-enhanced",
+    "name": "Sói Bạc",
+    "path": "nihility",
+    "element": "quantum",
+    "rarity": 5,
+    "hidden": true,
+    "enhancedOnly": true
   }
 }

@@ -80,8 +80,8 @@
 	</div>
 
 	<!-- Thông tin nhân vật -->
-	<div class="lg:w-2/4 space-y-">
-		<div class="flex justify-center lg:justify-start gap-4 mb-4">
+	<div class="lg:w-2/4">
+		<div class="flex justify-center lg:justify-start gap-4 mb-3 flex-wrap lg:flex-nowrap">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img
@@ -289,7 +289,7 @@
 	
 	<div class="space-y-3 bg-black/20 p-4 rounded-lg border border-white/10">
 		<h2 class="text-3xl font-semibold mt-2 mb-4">Ưu tiên nâng cấp Kỹ Năng</h2>
-		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Chiến Kỹ = Tuyệt Kỹ = Thiên Phú &gt; Tấn Công Thường</p>
+		<p style="color: {character.elementColor}" class="text-xl font-bold mt-2 mb-5">Chiến Kỹ = Tuyệt Kỹ &ge; Thiên Phú &gt; Tấn Công Thường</p>
   		<div class="space-y-3 bg-black/40 p-4 rounded-lg border border-white/30">
    			<p class="font-bold text-white">Chiến Kỹ</p>
   			<p class="text-white/80 text-sm">Buff tăng Sát Thương gây ra, gần như mọi DPS từ ATK đến HP, từ Crit truyền thống đến DoT đều có thể dùng.</p>

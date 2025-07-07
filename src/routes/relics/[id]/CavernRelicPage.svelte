@@ -29,10 +29,10 @@
     <img src={`/images/relics/${relic.id}.png`} alt={relic.name} class="w-24 h-24" />
       <div class="relative inline-block">
         <span
-          class="absolute text-5xl font-bold mb-2 pointer-events-none select-none"
+          class="absolute text-3xl md:text-5xl font-bold mb-2 pointer-events-none select-none mr-[3px]"
           style="
-            left: -3px;
-            top: 3px;
+            left: -2.5px;
+            top: 2.5px;
             color: transparent;
             background: linear-gradient(to right, #82b4ed, #cb9dfc, #994d3d);
             -webkit-background-clip: text;
@@ -41,7 +41,7 @@
           ">
           {relic.name}
         </span>
-        <h1 class="relative text-5xl font-bold text-white mb-2 z-20">{relic.name}</h1>
+        <h1 class="relative text-3xl md:text-5xl font-bold text-white mb-2 z-20 mr-[1px]">{relic.name}</h1>
       </div>
   </div>
 

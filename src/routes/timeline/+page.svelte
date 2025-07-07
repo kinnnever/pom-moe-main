@@ -33,8 +33,8 @@
 	let loading = true;
 
 	let browserTimezone = '';
-	let browserUtcOffset = 7;
-	let utcOffset = 7;
+	let browserUtcOffset = 8;
+	let utcOffset = 8;
 	let server = '';
 	let hourDiffFromAsia = 0;
 	let hourDiffLocal = 0;
@@ -97,7 +97,7 @@
 		browserUtcOffset = now.utcOffset() / 60;
 		[utcOffset, server] = getServer();
 
-		hourDiffFromAsia = 7 - utcOffset;
+		hourDiffFromAsia = 8 - utcOffset;
 		hourDiffLocal = utcOffset - browserUtcOffset;
 
 		offset = centeredDiv.offsetLeft;

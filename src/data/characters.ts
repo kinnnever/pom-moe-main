@@ -13,7 +13,9 @@ const characters = writable<Character[]>([]);
 let currentLocale = 'vi';
 
 function load(json: CharacterJson, locale: string) {
-	const list = Object.values(json).sort((a, b) => a.name.localeCompare(b.name));
+	const list = Object.values(json)
+		.filter((char) => !char.enhancedOnly)
+		.sort((a, b) => a.name.localeCompare(b.name));
 	characters.set(list);
 
 	const names = list.reduce((acc: { [key: string]: string }, item) => {

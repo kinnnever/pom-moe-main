@@ -40,6 +40,7 @@
 	function filterList() {
 		list = $characters.filter(
 			(c) => (
+				!c.hidden &&
 				filter.rarities[c.rarity] &&
 				filter.elements[c.element] && 
 				filter.paths[c.path]

@@ -86,8 +86,8 @@
 	</div>
 
 	<!-- Thông tin nhân vật -->
-	<div class="lg:w-2/4 space-y-6">
-		<div class="flex justify-center lg:justify-start gap-4 mb-4">
+	<div class="lg:w-2/4">
+		<div class="flex justify-center lg:justify-start gap-4 mb-3 flex-wrap lg:flex-nowrap">
 			<Title>{character.name}</Title>
 		<div class="flex gap-2 items-center">
     		<img
@@ -173,9 +173,9 @@
 			<span class="text-amber-400 italic">Hồi năng lượng </span><span style="color: {character.elementColor}">0</span>
 		</p>
 		<p>Nhận <span class="text-yellow-400 font-semibold">2</span> điểm
-			<span class="underline">Phá Hủy</span>, gây Sát Thương <span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span class="underline">Phá Hủy</span>, gây Sát Thương <span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{normalAttack[1][NormalLevel - 1]}</span> Tấn Công của Khaslana cho 1 kẻ địch chỉ định, gây Sát Thương 
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{normalAttack[2][NormalLevel - 1]}</span> Tấn Công của Khaslana cho mục tiêu lân cận.
 		</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
@@ -206,9 +206,9 @@
 			<span class="text-amber-400 italic">Tiêu hao Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p>Nhận <span class="text-yellow-400 font-semibold">2</span> điểm "Ngọn Lửa", gây Sát Thương
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[0][SkillLevel - 1]}</span> Tấn Công của Phainon cho 1 kẻ địch chỉ định, gây Sát Thương 
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[1][SkillLevel - 1]}</span> Tấn Công của Phainon cho mục tiêu lân cận.
  		</p>
 
@@ -220,9 +220,9 @@
   		</p>
   		<p>Nhận <span class="underline">Phá Hủy</span> bằng với số lượng toàn bộ phe địch và 1 tầng Ngọn Lửa Diệt Hồn, sau đó khiến toàn bộ phe địch lập tức hành động.</p>
 		<p>Ở trạng thái "Ngọn Lửa Diệt Hồn", sát thương Khaslana phải chịu giảm	<span class="text-yellow-400 font-semibold">75%</span>, sau khi mục tiêu phe địch tấn công hoặc hành động sẽ cộng dồn 1 tầng "Ngọn Lửa Diệt Hồn". Sau khi mục tiêu phe địch nêu trên hành động xong sẽ lập tức phát động Phản Kích, gây Sát Thương
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[2][SkillLevel - 1]}</span> Tấn Công của Khaslana cho toàn bộ phe địch, đồng thời gây thêm
-			<span class="text-yellow-400 font-semibold">4</span> lần sát thương, mỗi lần gây Sát Thương <span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span class="text-yellow-400 font-semibold">4</span> lần sát thương, mỗi lần gây Sát Thương <span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[3][SkillLevel - 1]}</span> Tấn Công của Khaslana cho 1 kẻ địch ngẫu nhiên, sau đó giải trừ "Ngọn Lửa Diệt Hồn". Mỗi tầng "Ngọn Lửa Diệt Hồn" khiến Bội Số Sát Thương của lần
 			<span class="underline">Phản Kích</span> này tăng 20% của bội số gốc.</p>
 		<p>Khi gây sát thương thông qua kỹ năng này, sẽ được xem là gây sát thương Chiến Kỹ. Nếu khi <span class="underline">hiệp tăng thêm của Khaslana</span> bắt đầu mà vẫn còn "Ngọn Lửa Diệt Hồn", sẽ lập tức phát động <span class="underline">Phản Kích</span>.</p>
@@ -234,13 +234,13 @@
 			<span class="text-amber-400 italic">sức bền/hit</span>
   		</p>
 		<p>Giải trừ tất cả <span class="underline">Hiệu Ứng Xấu</span> của bản thân, sau đó gây Sát Thương
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng 
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 			<span class="text-yellow-400 font-semibold">{skillAttack[4][SkillLevel - 1]}</span> Tấn Công của Khaslana.
 		</p>
 		<p>Trong đó, mỗi khi tiêu hao 1 điểm <span class="underline">Phá Hủy</span> sẽ gây <span class="text-yellow-400 font-semibold">4</span> lần sát thương, mỗi lần gây Sát Thương 
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">{skillAttack[5][SkillLevel - 1]}</span> Tấn Công của Khaslana cho 1 kẻ địch ngẫu nhiên. Khi tiêu hao
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">{skillAttack[5][SkillLevel - 1]}</span> Tấn Công của Khaslana cho 1 kẻ địch ngẫu nhiên. Khi tiêu hao
 			<span class="text-yellow-400 font-semibold">4</span> điểm <span class="underline">Phá Hủy</span>, sẽ gây thêm Sát Thương 
-			<span style="color: {character.elementColor}">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">{skillAttack[6][SkillLevel - 1]}</span> Tấn Công của Khaslana, chia đều cho toàn bộ phe địch.
+			<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">{skillAttack[6][SkillLevel - 1]}</span> Tấn Công của Khaslana, chia đều cho toàn bộ phe địch.
 		</p>
 		
 		<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
@@ -276,12 +276,12 @@
   			<p>Biến thân thành Khaslana, triển khai 
 				<span class=" underline">Vùng Lãnh Thổ</span> "Irontomb Tàn Phá" trong thời gian biến thân. Đồng đội khác trong
 				<span class=" underline">Vùng Lãnh Thổ</span> <span class=" underline">Rời Trận</span> và không thể hành động, toàn bộ phe địch từ đầu đến cuối sẽ luôn mang Điểm Yếu
-				<span style="color: {character.elementColor}">Vật Lý</span>.
+				<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span>.
  			</p>
 			<p>Khaslana sẽ không vào hiệp của bản thân, nhưng có 
 				<span class="text-yellow-400 font-semibold">8</span> <span class=" underline">Hiệp Tăng Thêm Của Khaslana</span>, Tốc Độ cố định là
 				<span class="text-yellow-400 font-semibold">60%</span> Tốc Độ cơ bản của Khaslana. Khi <span class=" underline">hiệp tăng thêm cuối cùng của Khaslana</span>
-				bắt đầu, sẽ lập tức phát động Đòn Đánh Cuối Cùng, gây Sát Thương Tuyệt Kỹ <span style="color: {character.elementColor}">Vật Lý</span> bằng 
+				bắt đầu, sẽ lập tức phát động Đòn Đánh Cuối Cùng, gây Sát Thương Tuyệt Kỹ <span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng 
 				<span class="text-yellow-400 font-semibold">{ultimateAttack[0][UltimateLevel - 1]}</span> Tấn Công của Khaslana, chia đều cho toàn bộ phe địch.
 			</p>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-4 mb-2 mt-2">
@@ -353,7 +353,7 @@
   			<p>Chủ động thi triển Bí Kỹ tiêu hao 2 điểm Bí Kỹ, lập tức tấn công tất cả kẻ địch trong phạm vi nhất định. Sau khi vào chiến đấu, hồi
 				<span class="text-yellow-400 font-semibold">25</span> điểm Năng Lượng cho đồng đội, nhận 
 				<span class="text-yellow-400 font-semibold">2</span> điểm <span class="underline">Phá Hủy</span> và 1 Điểm Chiến Kỹ, đồng thời khi bắt đầu mỗi đợt sẽ gây Sát Thương 
-				<span style="color: {character.elementColor}">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">200%</span> Tấn Công của Phainon cho toàn bộ phe địch.
+				<span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> bằng <span class="text-yellow-400 font-semibold">200%</span> Tấn Công của Phainon cho toàn bộ phe địch.
 			</p>
 			<p>Nếu tấn công kẻ địch bình thường sẽ lập tức tiêu diệt kẻ đó, không vào chiến đấu. Khi chưa đánh trúng địch sẽ không tiêu hao Điểm Bí Kỹ.
 			</p>
@@ -505,7 +505,7 @@
   				number={2}
   				name="Trời Và Đất, Bọt Bóng Của Thế Gian"
   				elementColor={character.elementColor}
-  				description='<span class="underline">Xuyên Kháng</span> <span style="color: {character.elementColor}">Vật Lý</span> của Khaslana tăng
+  				description='<span class="underline">Xuyên Kháng</span> <span style="color: {character.elementColor}" class="font-bold">Vật Lý</span> của Khaslana tăng
 				<span class="text-yellow-400 font-semibold">20%</span>. Thi triển 1 lần "Trụ Cột - Phán Quyết Tử Tinh" tiêu hao điểm <span class="underline">Phá Hủy</span> đạt
 				<span class="text-yellow-400 font-semibold">4</span> điểm sẽ nhận 1 <span class="underline">hiệp tăng thêm</span>.'
 			/>
@@ -623,7 +623,7 @@
 			`}
 			statDescriptions={[[
     		'[CR]Crit Rate &nbsp;&nbsp;&gt; &nbsp;[CD]Crit Dmg',
-    		'[SPD]Tốc Độ &nbsp;&nbsp;> &nbsp;[ATK]Tấn Công ',
+    		'[SPD]Tốc Độ &nbsp;&nbsp;> &nbsp;[ATK]Tấn Công',
     		'[physical]<span style="color: #CFCFCF">Tăng ST Vật Lý</span> &nbsp;&nbsp;> &nbsp;[ATK]Tấn Công ',
     		'[ATK]Tấn Công'
 			]]}
