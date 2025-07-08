@@ -184,7 +184,7 @@
 			<span class="text-amber-400 italic">Tiêu hao Điểm Chiến Kỹ </span><span style="color: {character.elementColor}">1</span>
   		</p>
   		<p class="text-base">Có <span class="text-yellow-400 font-semibold">120%</span> 
-			<span class="underline">xác suất cơ bản</span>khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
+			<span class="underline">xác suất cơ bản</span> khiến 1 kẻ địch chỉ định và mục tiêu lân cận rơi vào trạng thái Suy Yếu (sát thương gây ra giảm 
 			<span class="text-yellow-400 font-semibold">10%</span>), khiến tấn công của Cipher tăng  
 			<span class="text-yellow-400 font-semibold">30%</span>, duy trì 
 			<span class="text-yellow-400 font-semibold">2</span> hiệp,  đồng thời gây sát thương 

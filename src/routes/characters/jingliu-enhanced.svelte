@@ -8,8 +8,7 @@
 	import RelicsBlock from '$components/relicsBlock.svelte';
 	import TeamBlock from '$components/TeamBlock.svelte';
 	import ProsConsBlock from  '$components/ProsConsBlock.svelte';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import EnhancedSwitch from '$components/EnhancedSwitch.svelte';
 
   const character = {
     id: 'jingliu',
@@ -19,20 +18,7 @@
 	elementColor: '#5CD6FF'
   };
 
-  let isEnhanced = true;
-
-  $: {
-  		const id = $page.params.id;
-  		isEnhanced = id === `${character.id}-enhanced`;
-	}
-
-  function toggleEnhanced() {
-	const next = isEnhanced ? `${character.id}` : `${character.id}-enhanced`;
-    goto(`/characters/${next}`);
-  }
-
   let lightconeNames: string[] = [];
-  let revealed = false;
 
   const normalAttack = [
     ['25%', '30%', '35%', '40%', '45%', '50%', '55%', '60%', '65%', '70%']
@@ -109,26 +95,7 @@
 				/>
 			</div>
 			<div class="w-full lg:w-auto flex justify-center lg:justify-end lg:ml-auto">
-				<div class="flex flex-row items-center gap-1 md:gap-2">
-					<!-- svelte-ignore a11y-interactive-supports-focus -->
-					<!-- svelte-ignore a11y-click-events-have-key-events -->
-					<div
-						role="switch"
-						aria-checked={isEnhanced}
-						class="relative inline-flex h-6 w-11 items-center rounded-full cursor-pointer bg-emerald-500 transition-colors duration-200 ease-in-out"
-						class:bg-emerald-600={isEnhanced}
-						on:click={toggleEnhanced}
-					>
-					<span
-						class="inline-block h-4 w-4 transform rounded-full bg-white transition duration-200 ease-in-out"
-						class:translate-x-6={isEnhanced}
-						class:translate-x-1={!isEnhanced}
-					/>
-					</div>
-					<span class="text-white text-sm md:text-base">
-						Enhanced
-					</span>
-				</div>
+				<EnhancedSwitch characterId={character.id} />
 			</div>
 		</div>
 		<!-- Bảng chỉ số -->
