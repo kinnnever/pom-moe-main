@@ -2,6 +2,8 @@
   import relicsData from '$data/relics/vi.json';
   import { slide } from 'svelte/transition';
   import {goto} from '$app/navigation';
+  import { onMount } from 'svelte';
+  import { tick } from 'svelte';
 
   export let relicIds: string[] = [];
   export let planarIds: string[] = [];
@@ -14,6 +16,20 @@
 
   let showRelicAnalysis = false;
   let showPlanarAnalysis = false;
+  let isNavigatingAway = false;
+  
+  onMount(() => {
+    showRelicAnalysis = false;
+    showPlanarAnalysis = false;
+    isNavigatingAway = false;
+  });
+
+  async function safeGoto(path: string) {
+    showRelicAnalysis = false;
+    showPlanarAnalysis = false;
+    await tick();
+    goto(path);
+  }
 
   const relics = relicIds
     .map((id) => relicsData[id])
@@ -42,7 +58,7 @@
             src={`/images/relics/${relic.id}.png`}
             alt={relic.name}
             class="w-24 h-24 mx-auto mb-1 object-contain cursor-pointer hover:opacity-80 transition"
-            on:click={() => goto(`/relics/${relic.id}`)}
+            on:click={() => safeGoto(`/relics/${relic.id}`)}
           />
           <div class="text-sm font-semibold leading-tight">
             {relic.name}
@@ -58,14 +74,14 @@
                 src={`/images/relics/${pair[0]}.png`}
                 alt={relicsData[pair[0]].name}
                 class="w-10 h-10 object-contain rounded cursor-pointer hover:opacity-80 transition"
-                on:click={() => goto(`/relics/${pair[0]}`)}
+                on:click={() => safeGoto(`/relics/${pair[0]}`)}
               />
               <!-- svelte-ignore a11y-click-events-have-key-events -->
               <img
                 src={`/images/relics/${pair[1]}.png`}
                 alt={relicsData[pair[1]].name}
                 class="w-10 h-10 object-contain rounded cursor-pointer hover:opacity-80 transition"
-                on:click={() => goto(`/relics/${pair[1]}`)}
+                on:click={() => safeGoto(`/relics/${pair[1]}`)}
               />
             </div>
             <div class="text-xs mt-1 leading-tight">
@@ -83,7 +99,7 @@
        {showRelicAnalysis ? 'Ẩn phân tích' : 'Hiện phân tích'}
      </button>
     {#if showRelicAnalysis}
-      <div class="text-sm text-white/80 mt-3" transition:slide>
+      <div class="text-sm text-white/80 mt-3" transition:slide={!isNavigatingAway && slide}>
         {@html relicAnalysis}
       </div>
     {/if}
@@ -99,7 +115,7 @@
             src={`/images/relics/${planar.id}.png`}
             alt={planar.name}
             class="w-24 h-24 mx-auto mb-1 object-contain cursor-pointer hover:opacity-80 transition"
-                on:click={() => goto(`/relics/${planar.id}`)}
+                on:click={() => safeGoto(`/relics/${planar.id}`)}
           />
           <div class="text-sm font-semibold leading-tight">
             {planar.name}
@@ -114,7 +130,7 @@
        {showPlanarAnalysis ? 'Ẩn phân tích' : 'Hiện phân tích'}
      </button>
     {#if showPlanarAnalysis}
-      <div class="text-sm text-white/80 mt-3" transition:slide>
+      <div class="text-sm text-white/80 mt-3" transition:slide={!isNavigatingAway && slide}>
         {@html planarAnalysis}
       </div>
     {/if}
