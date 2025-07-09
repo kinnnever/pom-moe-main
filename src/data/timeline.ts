@@ -29,7 +29,7 @@ const timeline: Array<Timeline[]> = [
 		},
 		{
 			name: 'x2 Di Vật Hang Động',
-			start: '2025-07-31 4:00:00',
+			start: '2025-07-31 04:00:00',
 			end: '2025-08-11 03:59:00',
 			image: 'Realm of the Strange.png',
 			color: '#6262ff',
@@ -42,7 +42,7 @@ const timeline: Array<Timeline[]> = [
 	[
 		{
 			name: 'Fate/stay night',
-			start: '2025-07-11 04:00:00',
+			start: '2025-07-11 12:00:00',
 			end: '2025-08-11 03:59:00',
 			image: 'fate.png',
 			color: '#F2B247',
@@ -55,7 +55,7 @@ const timeline: Array<Timeline[]> = [
 	[
 		{
 			name: 'Banner Saber và Archer',
-			start: '2025-07-11 04:00:00',
+			start: '2025-07-11 12:00:00',
 			end: '2025-09-23 03:59:00',
 			image: 'collab fate.png',
 			color: '#4C83E5',

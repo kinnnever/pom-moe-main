@@ -28,7 +28,7 @@
       }
     } catch (e) {
       if (loadId === currentLoadId) {
-        error = 'Pom không tìm thấy nhân vật cho bạn rồi...';
+        error = 'Pom không tìm thấy cho bạn rồi...';
         loading = false;
       }
     }
