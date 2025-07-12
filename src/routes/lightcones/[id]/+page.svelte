@@ -73,8 +73,6 @@
       </div>
   </div>
 
-
-  
   <div class="flex items-center text-xl gap-1 select-none">
     <img src={`/images/paths/${lightcone.path}-mini.png`} alt={lightcone.name} class="w-8 h-8 md:mr-1" />
     <span>{pathLabels[lightcone.path]}</span> 
@@ -83,7 +81,7 @@
   </div>
 
   {#if lightcone.effect}
-    <div class="mt-6">
+    <div class="mt-3">
       <h2 class="sm:flex">
         <span 
           class="text-xl mb-2 font-semibold"
@@ -124,9 +122,29 @@
         </p>
       {/key}
 
+      <div class="flex justify-center md:justify-start mt-4">
+        <div class="inline-block border border-white/20 md:border-white/0 rounded-lg overflow-hidden text-sm text-white/90">
+          <!-- Hàng tiêu đề -->
+          <div class="grid grid-cols-4 font-bold text-center divide-x divide-white/30">
+            <div class="px-3 py-1">LV</div>
+            <div class="px-3 py-1">HP</div>
+            <div class="px-3 py-1">ATK</div>
+            <div class="px-3 py-1">DEF</div>
+          </div>
+
+          <!-- Hàng dữ liệu -->
+          <div class="grid grid-cols-4 text-center divide-x divide-y divide-white/30">
+            <div class="px-3 py-1 font-bold">80</div>
+            <div class="px-3 py-1">{lightcone.lv[0]}</div>
+            <div class="px-3 py-1">{lightcone.lv[1]}</div>
+            <div class="px-3 py-1">{lightcone.lv[2]}</div>
+          </div>
+        </div>
+      </div>
+
       {#if lightcone.recommendedFor && lightcone.recommendedFor.length}
         <div class="text-center md:text-start">
-          <h2 class="not-prose text-xl font-semibold mt-8 inline-block mx-auto md:mx-0"
+          <h2 class="not-prose text-xl font-semibold mt-6 inline-block mx-auto md:mx-0"
               style="
                   background: linear-gradient(to right, #994d3d, #ECAC5D, #FFF7D1);
                   -webkit-background-clip: text;

@@ -1727,8 +1727,8 @@
     "effect": "Khiến tấn công của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Mỗi khi mục tiêu phe địch có 1 Điểm Yếu thuộc tính khác nhau, thì sát thương người trang bị gây ra cho kẻ đó tăng <span class='text-amber-400 font-bold'>{1}</span>, tối đa tính 7 Điểm Yếu.",
     "recommendedFor": ["anaxa"]
   },
-  "a-greounded-ascent": {
-    "id": "a-greounded-ascent",
+  "a-grounded-ascent": {
+    "id": "a-grounded-ascent",
     "name": "Chuyến Bay Trở Về Mặt Đất",
     "path": "harmony",
     "rarity": 5,

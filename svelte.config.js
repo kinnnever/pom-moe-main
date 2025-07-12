@@ -6,17 +6,13 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		// Sử dụng adapter-static để build dạng SPA tĩnh
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: '200.html', // ⚠️ Quan trọng: Cho phép load các route như /characters/acheron
+			fallback: '200.html', 
 			precompress: false,
 			strict: true
 		}),
-
-		// KHÔNG cần "prerender.entries" vì bạn dùng SPA
-		// Các route như /characters/acheron sẽ được load client-side
 
 		alias: {
 			$components: 'src/components',
