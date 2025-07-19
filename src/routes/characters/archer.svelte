@@ -563,7 +563,7 @@
 			endgameStats={`
 			<p><span class="text-white/70">HP:</span>&nbsp; <span class="font-bold">BASE</span></p>
 			<p><span class="text-white/70">DEF:</span>&nbsp; <span class="font-bold">BASE</span></p>
-			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">3800+</span> &nbsp;<span class="text-white/70">(Đây là chỉ số quan trọng của Archer, nên hãy build càng cao càng tốt)</span></p>
+			<p><span class="text-white/70">ATK:</span>&nbsp; <span class="font-bold">3500+</span> &nbsp;<span class="text-white/70">(Đây là chỉ số quan trọng của Archer, nên hãy build càng cao càng tốt)</span></p>
 			<p><span class="text-white/70">CRIT RATE:</span>&nbsp; <span class="font-bold">100%</span> &nbsp;<span class="text-white/70">(Tính toán sao cho cân bằng với buff của đồng minh trong trận chiến)</span></p>
 			<p><span class="text-white/70">CRIT DMG:</span>&nbsp; <span class="font-bold">150%+</span> &nbsp;<span class="text-white/70">(Acher có tự buff rất nhiều Crit Dmg và cũng rất nhiều từ sp rồi, nên hãy ưu tiên cho Crit Rate và ATK trước)</span></p>
 			<p><span class="text-white/70">SPD:</span>&nbsp; <span class="font-bold">BASE</span></p>

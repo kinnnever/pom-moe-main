@@ -73,11 +73,32 @@
       </div>
   </div>
 
-  <div class="flex items-center text-xl gap-1 select-none">
+  <div class="flex flex-wrap items-center text-xl gap-1 select-none">
     <img src={`/images/paths/${lightcone.path}-mini.png`} alt={lightcone.name} class="w-8 h-8 md:mr-1" />
     <span>{pathLabels[lightcone.path]}</span> 
     <span class={`${textColorClass} font-bold ml-4`}>{lightcone.rarity}</span> 
-    <img src={`/images/rarity${lightcone.rarity}.png`} alt={lightcone.name} class="w-6 h-6" />
+    <img src={`/images/rarity${lightcone.rarity}.png`} alt={lightcone.name} class="w-6 h-6 mr-2" />
+
+    
+      <div class="flex justify-center md:justify-start">
+        <div class="inline-block border border-white/20 md:border-white/0 rounded-lg overflow-hidden text-sm text-white/90">
+          <!-- Hàng tiêu đề -->
+          <div class="grid grid-cols-4 font-bold text-center divide-x divide-white/30">
+            <div class="px-3 py-1">LV</div>
+            <div class="px-3 py-1">HP</div>
+            <div class="px-3 py-1">ATK</div>
+            <div class="px-3 py-1">DEF</div>
+          </div>
+
+          <!-- Hàng dữ liệu -->
+          <div class="grid grid-cols-4 text-center divide-x divide-y divide-white/30">
+            <div class="px-3 py-1 font-bold">80</div>
+            <div class="px-3 py-1">{lightcone.lv[0]}</div>
+            <div class="px-3 py-1">{lightcone.lv[1]}</div>
+            <div class="px-3 py-1">{lightcone.lv[2]}</div>
+          </div>
+        </div>
+      </div>
   </div>
 
   {#if lightcone.effect}
@@ -121,26 +142,6 @@
           {@html lightcone.effect.replace(/{(\d+)}/g, (_, i) => lightcone.stat?.[+i]?.[level] ?? '-')}
         </p>
       {/key}
-
-      <div class="flex justify-center md:justify-start mt-4">
-        <div class="inline-block border border-white/20 md:border-white/0 rounded-lg overflow-hidden text-sm text-white/90">
-          <!-- Hàng tiêu đề -->
-          <div class="grid grid-cols-4 font-bold text-center divide-x divide-white/30">
-            <div class="px-3 py-1">LV</div>
-            <div class="px-3 py-1">HP</div>
-            <div class="px-3 py-1">ATK</div>
-            <div class="px-3 py-1">DEF</div>
-          </div>
-
-          <!-- Hàng dữ liệu -->
-          <div class="grid grid-cols-4 text-center divide-x divide-y divide-white/30">
-            <div class="px-3 py-1 font-bold">80</div>
-            <div class="px-3 py-1">{lightcone.lv[0]}</div>
-            <div class="px-3 py-1">{lightcone.lv[1]}</div>
-            <div class="px-3 py-1">{lightcone.lv[2]}</div>
-          </div>
-        </div>
-      </div>
 
       {#if lightcone.recommendedFor && lightcone.recommendedFor.length}
         <div class="text-center md:text-start">

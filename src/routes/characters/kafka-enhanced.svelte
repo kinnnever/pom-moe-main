@@ -370,21 +370,21 @@
 
 		nodes={[
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+3",
-      		  	label: "Tốc Độ",
+				icon: "/images/icons-vestige/ATK.png",
+      	  	  	value: "+6%",
+      		  	label: "Tấn Công",
       		  	unlock: "A4"
 			},
 			{
-				icon: "/images/icons-vestige/quantum.png",
+				icon: "/images/icons-vestige/lightning.png",
       	  	  	value: "+4.8%",
       		  	label: "Tăng Sát Thương <span style='color:#E26CFF'>Lôi</span>",
       		  	unlock: "A5"
 			},
 			{
-				icon: "/images/icons-vestige/SPD.png",
-      	  	  	value: "+3",
-      		  	label: "Tốc Độ",
+				icon: "/images/icons-vestige/ATK.png",
+      	  	  	value: "+6%",
+      		  	label: "Tấn Công",
       		  	unlock: "A5"
 			}
 		]}

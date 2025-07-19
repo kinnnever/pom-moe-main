@@ -624,7 +624,7 @@
                 },
                 supportDps: {
 					cipher: 'Debuff ổn, tích Dmg Saber gây ra được nhưng phải spam liên tục cho Saber hồi năng lượng Tuyệt Kỹ.',
-					Tribbie: 'Buff và Debuff khỏe, có E1 nữa thì Excalibur cứ phải gọi là một bổ bình thiên hạ.',
+					tribbie: 'Buff và Debuff khỏe, có E1 nữa thì Excalibur cứ phải gọi là một bổ bình thiên hạ.',
 					jiaoqiu: 'Bạn biết DMG của Saber rất nhiều đến từ Tuyệt Kỹ chứ, và Jiaoqiu sẽ đưa lượng DMG đó lên một tầm cao mới.'
                 },
                 amplifier: {
