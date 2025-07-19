@@ -2,7 +2,7 @@
   import Title from '$components/Title.svelte';
   import Icon from '@iconify/svelte';
   import TierTable from '$components/TierTable.svelte';
-  import tierList from '$data/tierList';
+  import tierList from '$data/tierlist';
 
   type GameMode = 'Memory of Chaos' | 'Pure Fiction' | 'Apocalyptic Shadow';
 
