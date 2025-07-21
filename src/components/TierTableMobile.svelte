@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CharacterCard from '../routes/characters/characterCard.svelte';
+  import CharacterCard from '../routes/characters/CharacterCard.svelte';
   import charactersStore from '$data/characters';
   import { get } from 'svelte/store';
   import { createEventDispatcher, onMount } from 'svelte';
