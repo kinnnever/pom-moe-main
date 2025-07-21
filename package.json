@@ -43,5 +43,9 @@
 		"typescript": "^5.3.3",
 		"vite": "^4.5.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"dom-to-image-more": "^3.6.0",
+		"html-to-image": "^1.11.13"
+	}
 }

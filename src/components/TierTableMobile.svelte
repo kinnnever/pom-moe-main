@@ -1,8 +1,8 @@
 <script lang="ts">
   import CharacterCard from '../routes/characters/characterCard.svelte';
   import charactersStore from '$data/characters';
-  import { createEventDispatcher, onMount } from 'svelte';
   import { get } from 'svelte/store';
+  import { createEventDispatcher, onMount } from 'svelte';
 
   export let data: Record<string, Record<string, string[]>>;
   export let isVisible: (id: string) => boolean;
@@ -20,24 +20,27 @@
     Sustain: 'text-green-500',
   };
 
-  let stickyTop = 0;
-  onMount(() => {
-    const headerEl = document.getElementById('layout-header');
-    if (headerEl) {
-      stickyTop = headerEl.getBoundingClientRect().height;
-    }
-  });
-
   const tierColors = {
-    T0: 'bg-red-600',
-    T0_5: 'bg-red-500',
-    T1: 'bg-orange-400',
-    T1_5: 'bg-orange-300',
-    T2: 'bg-orange-200',
-    T3: 'bg-green-400',
-    T4: 'bg-green-300',
-    T5: 'bg-blue-200'
+    T0: 'red-600',
+    T0_5: 'red-500',
+    T1: 'orange-400',
+    T1_5: 'orange-300',
+    T2: 'orange-200',
+    T3: 'green-400',
+    T4: 'green-300',
+    T5: 'blue-200'
   };
+  const BorderTierColors = {
+    T0: 'border-red-600',
+    T0_5: 'border-red-500',
+    T1: 'border-orange-400',
+    T1_5: 'border-orange-300',
+    T2: 'border-orange-200',
+    T3: 'border-green-400',
+    T4: 'border-green-300',
+    T5: 'border-blue-200'
+  };
+
   const formatTier = (tier: string) =>
     tier === 'T0_5' ? 'T0.5' :
     tier === 'T1_5' ? 'T1.5' :
@@ -73,50 +76,35 @@
   }
 </script>
 
-<div class="hidden md:block relative overflow-x-auto px-2 pb-16" id="tierlist-desktop">
-  <!-- HEADER: vai trò -->
-  <div class="z-20" style="position: sticky; top: {stickyTop}px;">
-    <div class="grid grid-cols-[80px_repeat(4,1fr)]">
-      <div class="w-20"></div>
-      {#each roles as role}
-        <div class="py-2 text-base font-bold text-center uppercase border border-white/10 first:border-l-0 {roleColors[role]} bg-dark">
-          {role}
-        </div>
-      {/each}
-    </div>
-  </div>
+<div class="block md:hidden space-y-6 px-4" id="tierlist-mobile">
+  {#each Object.entries(data) as [tier, rolesMap]}
+    <div class={`bg-dark border ${BorderTierColors[tier]} rounded-lg`}>
+      <!-- Tier title -->
+      <h2 class="text-black text-2xl font-bold text-center mb-2 rounded-t-lg bg-{tierColors[tier] ?? 'bg-white'}">{formatTier(tier)}</h2>
 
-  <!-- DANH SÁCH -->
-  <div>
-    {#each Object.entries(data) as [tier, rolesMap]}
-      <div class="grid grid-cols-[80px_repeat(4,1fr)] border-t border-white/10 mt-3">
-        <!-- Cột T -->
-        <div class="flex items-center justify-center font-bold text-black text-xl h-full min-h-[80px] px-2 py-2 whitespace-nowrap {tierColors[tier] ?? 'bg-white'}">
-          {formatTier(tier)}
-        </div>
+      {#each roles as role, i (role)}
+        <div class="mb-1">
+          <!-- Role name -->
+          <div class="text-xl font-semibold text-center mb-2 {roleColors[role]}">{role}</div>
 
-        <!-- Các cột vai trò -->
-        {#each roles as role}
+          <!-- Characters -->
           <div
-            class="border-r border-b border-white/10 bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
+            class="flex flex-wrap gap-3 justify-start px-3 border-b {BorderTierColors[tier]} {i === roles.length - 1 ? 'border-b-0' : ''}"
             on:dragover|preventDefault
             on:drop={() => editMode && onDrop(tier, role)}
           >
             {#each rolesMap[role]?.filter(id => isVisible(id)) ?? [] as id}
               <div
-                class=""
+                class="items-center w-22 h-40"
                 draggable={editMode}
                 on:dragstart={() => editMode && onDragStart(id)}
               >
-                <CharacterCard
-                  character={getCharacter(id)}
-                  {editMode}
-                />
+                <CharacterCard character={getCharacter(id)} {editMode} />
               </div>
             {/each}
           </div>
-        {/each}
-      </div>
-    {/each}
-  </div>
+        </div>
+      {/each}
+    </div>
+  {/each}
 </div>
