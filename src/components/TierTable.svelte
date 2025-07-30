@@ -43,6 +43,18 @@
     T4: 'green-300',
     T5: 'blue-200'
   };
+
+  const bgtierColors = {
+    T0: 'bg-red-600',
+    T0_5: 'bg-red-500',
+    T1: 'bg-orange-400',
+    T1_5: 'bg-orange-300',
+    T2: 'bg-orange-200',
+    T3: 'bg-green-400',
+    T4: 'bg-green-300',
+    T5: 'bg-blue-200'
+  };
+
   const formatTier = (tier: string) =>
     tier === 'T0_5' ? 'T0.5' :
     tier === 'T1_5' ? 'T1.5' :
@@ -131,7 +143,7 @@
     {#each Object.entries(data) as [tier, rolesMap]}
       <div class="grid grid-cols-[60px_repeat(4,1fr)] border-t border-white/10 mt-3">
         <!-- Cột T -->
-        <div class="flex items-center justify-center font-bold text-black text-xl h-full min-h-[80px] px-2 py-2 whitespace-nowrap bg-{tierColors[tier] ?? 'bg-white'}">
+        <div class={`flex items-center justify-center font-bold text-black text-xl h-full min-h-[80px] px-2 py-2 whitespace-nowrap ${bgtierColors[tier] ?? 'bg-white'}`}>
           {formatTier(tier)}
         </div>
 

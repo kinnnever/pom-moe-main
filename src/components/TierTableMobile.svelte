@@ -40,6 +40,16 @@
     T4: 'border-green-300',
     T5: 'border-blue-200'
   };
+  const BgTierColors = {
+    T0: 'bg-red-600',
+    T0_5: 'bg-red-500',
+    T1: 'bg-orange-400',
+    T1_5: 'bg-orange-300',
+    T2: 'bg-orange-200',
+    T3: 'bg-green-400',
+    T4: 'bg-green-300',
+    T5: 'bg-blue-200'
+  };
 
   const formatTier = (tier: string) =>
     tier === 'T0_5' ? 'T0.5' :
@@ -116,7 +126,7 @@
   {#each Object.entries(data) as [tier, rolesMap]}
     <div class={`bg-dark border ${BorderTierColors[tier]} rounded-lg`}>
       <!-- Tier title -->
-      <h2 class="text-black text-2xl font-bold text-center mb-2 rounded-t-lg bg-{tierColors[tier] ?? 'bg-white'}">{formatTier(tier)}</h2>
+      <h2 class="text-black text-2xl font-bold text-center mb-2 rounded-t-lg {BgTierColors[tier] ?? 'bg-white'}">{formatTier(tier)}</h2>
 
       {#each roles as role, i (role)}
         <div class="mb-1">
