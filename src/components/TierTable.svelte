@@ -26,17 +26,22 @@
     if (headerEl) {
       stickyTop = headerEl.getBoundingClientRect().height;
     }
+
+    // Auto-scroll event listeners
+    window.addEventListener('dragover', handleAutoScroll);
+    window.addEventListener('drop', stopAutoScroll);
+    window.addEventListener('dragend', stopAutoScroll);
   });
 
   const tierColors = {
-    T0: 'bg-red-600',
-    T0_5: 'bg-red-500',
-    T1: 'bg-orange-400',
-    T1_5: 'bg-orange-300',
-    T2: 'bg-orange-200',
-    T3: 'bg-green-400',
-    T4: 'bg-green-300',
-    T5: 'bg-blue-200'
+    T0: 'red-600',
+    T0_5: 'red-500',
+    T1: 'orange-400',
+    T1_5: 'orange-300',
+    T2: 'orange-200',
+    T3: 'green-400',
+    T4: 'green-300',
+    T5: 'blue-200'
   };
   const formatTier = (tier: string) =>
     tier === 'T0_5' ? 'T0.5' :
@@ -71,15 +76,50 @@
     dispatch('update', newData);
     draggedId = null;
   }
+
+  // Auto-scroll logic
+  let autoScrollInterval: number | null = null;
+
+  function handleAutoScroll(e: DragEvent) {
+    const edgeThreshold = 200;    
+    const scrollSpeed = 10;
+    const scrollDelay = 16;
+    const y = e.clientY;
+    const viewportHeight = window.innerHeight;
+
+    if (y < edgeThreshold) {
+      if (autoScrollInterval) clearInterval(autoScrollInterval);
+      autoScrollInterval = window.setInterval(() => {
+        window.scrollBy(0, -scrollSpeed);
+      }, scrollDelay);
+    } else if (y > viewportHeight - edgeThreshold) {
+      if (autoScrollInterval) clearInterval(autoScrollInterval);
+      autoScrollInterval = window.setInterval(() => {
+        window.scrollBy(0, scrollSpeed);
+      }, scrollDelay);
+    } else {
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+      }
+    }
+  }
+
+  function stopAutoScroll() {
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = null;
+    }
+  }
 </script>
 
 <div class="hidden md:block relative overflow-x-auto px-2 pb-16" id="tierlist-desktop">
   <!-- HEADER: vai trò -->
   <div class="z-20" style="position: sticky; top: {stickyTop}px;">
-    <div class="grid grid-cols-[80px_repeat(4,1fr)]">
+    <div class="grid grid-cols-[60px_repeat(4,1fr)]">
       <div class="w-20"></div>
       {#each roles as role}
-        <div class="py-2 text-base font-bold text-center uppercase border border-white/10 first:border-l-0 {roleColors[role]} bg-dark">
+        <div class="py-2 text-base font-bold text-center uppercase border border-white/60 first:border-l-0 {roleColors[role]} bg-dark">
           {role}
         </div>
       {/each}
@@ -89,22 +129,21 @@
   <!-- DANH SÁCH -->
   <div>
     {#each Object.entries(data) as [tier, rolesMap]}
-      <div class="grid grid-cols-[80px_repeat(4,1fr)] border-t border-white/10 mt-3">
+      <div class="grid grid-cols-[60px_repeat(4,1fr)] border-t border-white/10 mt-3">
         <!-- Cột T -->
-        <div class="flex items-center justify-center font-bold text-black text-xl h-full min-h-[80px] px-2 py-2 whitespace-nowrap {tierColors[tier] ?? 'bg-white'}">
+        <div class="flex items-center justify-center font-bold text-black text-xl h-full min-h-[80px] px-2 py-2 whitespace-nowrap bg-{tierColors[tier] ?? 'bg-white'}">
           {formatTier(tier)}
         </div>
 
         <!-- Các cột vai trò -->
         {#each roles as role}
           <div
-            class="border-r border-b border-white/10 bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
+            class="border-t border-r border-b border-white/60 bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
             on:dragover|preventDefault
             on:drop={() => editMode && onDrop(tier, role)}
           >
             {#each rolesMap[role]?.filter(id => isVisible(id)) ?? [] as id}
               <div
-                class=""
                 draggable={editMode}
                 on:dragstart={() => editMode && onDragStart(id)}
               >

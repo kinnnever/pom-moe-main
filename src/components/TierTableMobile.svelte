@@ -2,7 +2,7 @@
   import CharacterCard from '../routes/characters/CharacterCard.svelte';
   import charactersStore from '$data/characters';
   import { get } from 'svelte/store';
-  import { createEventDispatcher, onMount } from 'svelte';
+  import { createEventDispatcher } from 'svelte';
 
   export let data: Record<string, Record<string, string[]>>;
   export let isVisible: (id: string) => boolean;
@@ -74,6 +74,42 @@
     dispatch('update', newData);
     draggedId = null;
   }
+
+  let selectedCharacterId: string | null = null;
+  let moveStep: 'tier' | 'role' | null = null;
+  let targetTier: string | null = null;
+
+  function handleCardClick(id: string) {
+    if (!editMode) return;
+    selectedCharacterId = id;
+    moveStep = 'tier';
+  }
+
+  function moveCharacterTo(tier: string, role: string) {
+    if (!selectedCharacterId) return;
+
+    const newData = structuredClone(data);
+
+    // Remove character from all slots
+    for (const t in newData) {
+      for (const r in newData[t]) {
+        newData[t][r] = newData[t][r].filter(c => c !== selectedCharacterId);
+      }
+    }
+
+    // Add to new tier/role
+    if (!newData[tier]) newData[tier] = {};
+    if (!newData[tier][role]) newData[tier][role] = [];
+    newData[tier][role].push(selectedCharacterId);
+
+    // Dispatch update
+    dispatch('update', newData);
+
+    // Reset state
+    selectedCharacterId = null;
+    moveStep = null;
+    targetTier = null;
+  }
 </script>
 
 <div class="block md:hidden space-y-6 px-4" id="tierlist-mobile">
@@ -94,10 +130,12 @@
             on:drop={() => editMode && onDrop(tier, role)}
           >
             {#each rolesMap[role]?.filter(id => isVisible(id)) ?? [] as id}
+              <!-- svelte-ignore a11y-click-events-have-key-events -->
               <div
                 class="items-center w-22 h-40"
                 draggable={editMode}
                 on:dragstart={() => editMode && onDragStart(id)}
+                on:click={() => handleCardClick(id)}
               >
                 <CharacterCard character={getCharacter(id)} {editMode} />
               </div>
@@ -108,3 +146,59 @@
     </div>
   {/each}
 </div>
+
+<!-- Popup chọn Tier -->
+{#if selectedCharacterId && moveStep === 'tier'}
+  <div class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center ">
+    <div class="bg-neutral-800 p-4 rounded-xl space-y-2 w-64 border border-white/100">
+      <div class="text-white text-lg font-bold text-center">Chọn Tier</div>
+      {#each Object.keys(data) as t}
+        <button
+          class={`w-full py-2 bg-${tierColors[t]} hover:opacity-60 text-black rounded font-extrabold`}
+          on:click={() => {
+            targetTier = t;
+            moveStep = 'role';
+          }}
+        >
+          {formatTier(t)}
+        </button>
+      {/each}
+      <button
+        class="text-blue-400 underline text-sm mt-2"
+        on:click={() => {
+          selectedCharacterId = null;
+          moveStep = null;
+        }}
+      >
+        Hủy
+      </button>
+    </div>
+  </div>
+{/if}
+
+<!-- Popup chọn Role -->
+{#if selectedCharacterId && moveStep === 'role' && targetTier}
+  <div class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
+    <div class="bg-neutral-800 p-4 rounded-xl space-y-2 w-64 border border-white/100">
+      <div class="text-white text-lg font-bold text-center">Chọn Role</div>
+      {#each roles as r}
+        <button
+          class={`w-full py-2 bg-neutral-700 hover:bg-neutral-600 ${roleColors[r]} font-extrabold rounded`}
+          on:click={() => moveCharacterTo(targetTier, r)}
+        >
+          {r}
+        </button>
+      {/each}
+      <button
+        class="text-blue-400 underline text-sm mt-2"
+        on:click={() => {
+          selectedCharacterId = null;
+          moveStep = null;
+          targetTier = null;
+        }}
+      >
+        Hủy
+      </button>
+    </div>
+  </div>
+{/if}

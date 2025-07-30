@@ -1,6 +1,6 @@
 import * as htmlToImage from 'html-to-image';
 
-export async function exportTierListImage(node: HTMLElement, filename: string) {
+export async function exportTierListImage(node: HTMLElement, filename: string, label: string) {
   if (!node) {
     console.error('Không tìm thấy node để xuất ảnh');
     return;
@@ -12,7 +12,7 @@ export async function exportTierListImage(node: HTMLElement, filename: string) {
   iframe.style.top = '-9999px';
   iframe.style.left = '-9999px';
   iframe.style.width = `${node.offsetWidth}px`;
-  iframe.style.height = `${node.offsetHeight}px`;
+  iframe.style.height = `${node.offsetHeight + 100}px`; // dư ra cho tiêu đề
   iframe.style.visibility = 'hidden';
   document.body.appendChild(iframe);
 
@@ -22,6 +22,20 @@ export async function exportTierListImage(node: HTMLElement, filename: string) {
 
     // Tạo bản sao HTML của node
     const clone = node.cloneNode(true) as HTMLElement;
+
+    // Tạo tiêu đề
+    const title = document.createElement('h2');
+    title.textContent = `Tier List ${label}`;
+    title.className = 'my-4 inline-block bg-space bg-clip-text font-bold leading-tight text-transparent text-5xl w-full text-center';
+    doc.body.appendChild(title);
+    doc.body.appendChild(clone);
+
+    // Tạo wrapper bao cả title và content
+    const wrapper = document.createElement('div');
+    wrapper.style.padding = '0 24px';
+    wrapper.style.background = 'black';
+    wrapper.appendChild(title);
+    wrapper.appendChild(clone);
 
     // Nhúng style nếu cần (bắt buộc nếu dùng Tailwind hoặc CSS module)
     const styleSheets = Array.from(document.styleSheets);
@@ -33,7 +47,7 @@ export async function exportTierListImage(node: HTMLElement, filename: string) {
         const css = Array.from(rules).map(rule => rule.cssText).join('\n');
         styleTags.push(`<style>${css}</style>`);
       } catch {
-        // Cross-origin style sheets sẽ lỗi, bỏ qua
+        // Bỏ qua nếu là cross-origin stylesheet
       }
     }
 
@@ -44,23 +58,23 @@ export async function exportTierListImage(node: HTMLElement, filename: string) {
           ${styleTags.join('\n')}
         </head>
         <body style="margin:0; background: black;">
-          ${clone.outerHTML}
         </body>
       </html>
     `);
+    doc.body.appendChild(wrapper);
     doc.close();
 
-    // Chờ iframe render xong
+    // Chờ render đầy đủ
     await new Promise(resolve => setTimeout(resolve, 500));
 
     const target = doc.body.firstElementChild as HTMLElement;
 
-    // CORS fix trong iframe (ảnh đã có `crossorigin="anonymous"` là đủ)
+    // Đợi ảnh tải xong
     await waitForImagesToLoad(target);
 
     const dataUrl = await htmlToImage.toPng(target, {
       pixelRatio: 2,
-      backgroundColor: '#000000'
+      backgroundColor: '#000000',
     });
 
     // Tải ảnh
@@ -90,7 +104,7 @@ function waitForImagesToLoad(container: HTMLElement): Promise<void> {
       img.addEventListener('load', () => resolve(), { once: true });
       img.addEventListener('error', () => resolve(), { once: true });
 
-      // Timeout tránh kẹt
+      // Timeout dự phòng
       setTimeout(() => resolve(), 5000);
     });
   });

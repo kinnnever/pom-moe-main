@@ -88,7 +88,7 @@
 
   async function downloadImage() {
     if (!tableRef) return;
-    await exportTierListImage(tableRef, `${selectedMode.replace(/\s+/g, '_')}-TierList.png`);
+    await exportTierListImage(tableRef, `${selectedMode.replace(/\s+/g, '_')}-TierList.png`, selectedLabel);
   }
 </script>
 
