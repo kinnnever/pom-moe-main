@@ -127,11 +127,11 @@
 
 <div class="hidden md:block relative overflow-x-auto px-2 pb-16" id="tierlist-desktop">
   <!-- HEADER: vai trò -->
-  <div class="z-20" style="position: sticky; top: {stickyTop}px;">
+  <div class="z-20 sticky">
     <div class="grid grid-cols-[60px_repeat(4,1fr)]">
       <div class="w-20"></div>
       {#each roles as role}
-        <div class="py-2 text-base font-bold text-center uppercase border border-white/60 first:border-l-0 {roleColors[role]} bg-dark">
+        <div class="py-2 text-base font-bold text-center uppercase border border-white first:border-l-0 {roleColors[role]} bg-dark">
           {role}
         </div>
       {/each}
@@ -150,7 +150,7 @@
         <!-- Các cột vai trò -->
         {#each roles as role}
           <div
-            class="border-t border-r border-b border-white/60 bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
+            class="border border-{tierColors[tier]} bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
             on:dragover|preventDefault
             on:drop={() => editMode && onDrop(tier, role)}
           >

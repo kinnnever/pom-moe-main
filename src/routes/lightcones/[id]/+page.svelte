@@ -157,7 +157,7 @@
         <div class="flex gap-2">
           <div
             class="
-              mt-2 p-3 md:p2 bg-dark rounded-xl border border-white/20
+              mt-2 p-3 md:p2 bg-dark rounded-xl border border-white/80
               overflow-x-auto md:overflow-visible
               w-full
               flex md:grid
@@ -166,7 +166,7 @@
             "
             style="
             grid-template-columns: repeat(auto-fit, minmax(7rem, max-content));
-            justify-content: 'center';
+            justify-content: center;
           "
           >
             {#each lightcone.recommendedFor as id}

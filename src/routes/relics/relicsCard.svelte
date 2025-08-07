@@ -20,7 +20,7 @@
 	<img
 		src={`/images/relics/${relic.id}.png`}
 		alt={relic.name}
-		class="relative h-auto w-28 lg:w-32 {showTotal && total === 0 ? 'brightness-50' : ''}"
+		class="relative h-auto w-28 lg:w-32 p-1 {showTotal && total === 0 ? 'brightness-50' : ''}"
 		width={128}
 		height={128}
 	/>
