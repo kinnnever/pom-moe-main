@@ -13,6 +13,17 @@ const timeline: Array<Timeline[]> = [
 			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		},
+		{
+			name: 'Nhà Hàng Khu Rừng Lạc Lối Hoàng Kim',
+			start: '2025-08-13 10:00:00',
+			end: '2025-09-22 3:59:00',
+			image: 'event6.png',
+			color: '#D7A631',
+			pos: '20%, -36%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
+		}
 		
 	],
 	[
@@ -37,6 +48,28 @@ const timeline: Array<Timeline[]> = [
 			zoom: 1,
 			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
+		},
+		{
+			name: 'Vị Diện Nứt Vỡ',
+			start: '2025-08-27 04:00:00',
+			end: '2025-09-8 03:59:00',
+			image: 'Planar Fissure.png',
+			color: '#6262ff',
+			pos: '40%, -40%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
+		},
+		{
+			name: 'Thinh Vượng Trong Hoa',
+			start: '2025-09-12 04:00:00',
+			end: '2025-09-22 03:59:00',
+			image: 'Garden of Plenty.png',
+			color: '#2D211A',
+			pos: '45%, -35%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
 		}
 	],
 	[
@@ -51,12 +84,34 @@ const timeline: Array<Timeline[]> = [
 			url: 'https://www.hoyolab.com/article/39701941',
 			show: true
 		},
+		{
+			name: 'Fate/stay night',
+			start: '2025-08-20 4:00:00',
+			end: '2025-09-1 03:59:00',
+			image: 'event001.png',
+			color: '#466cf1',
+			pos: '30%, -40%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
+		},
+		{
+			name: 'Bình Cũ Bạn Mới',
+			start: '2025-09-2 12:00:00',
+			end: '2025-09-22 03:59:00',
+			image: 'event2.png',
+			color: '#FBF5EF',
+			pos: '20%, -30%',
+			zoom: 0.9,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true
+		}
 	],
 	[
 		{
 			name: 'Banner Saber và Archer',
 			start: '2025-07-11 12:00:00',
-			end: '2025-09-23 03:59:00',
+			end: '2025-09-23 11:59:00',
 			image: 'collab fate.png',
 			color: '#4C83E5',
 			pos: '20%, -25%',
@@ -77,17 +132,28 @@ const timeline: Array<Timeline[]> = [
 			url: 'https://www.hoyolab.com/article/39701941',
 			show: true,
 		},
-		// {
-		// 	name: 'Banner Hysilens',
-		// 	start: '2025-08-12 10:00:00',
-		// 	end: '2025-09-3 11:59:00',
-		// 	image: 'show.png',
-		// 	color: '#B2ECF5',
-		// 	pos: '30%, 7%',
-		// 	zoom: 2,
-		// 	url: 'https://www.hoyolab.com/article/39701941',
-		// 	show: false,
-		// }
+		{
+			name: 'Banner Hysilens',
+			start: '2025-08-13 10:00:00',
+			end: '2025-09-3 11:59:00',
+			image: 'banner0.png',
+			color: '#356ab4',
+			pos: '30%, -10%',
+			zoom: 2,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: false,
+		},
+		{
+			name: 'Banner Cerydra',
+			start: '2025-09-3 12:00:00',
+			end: '2025-09-23 11:59:00',
+			image: 'banner5.png',
+			color: '#C6EFFB',
+			pos: '30%, -9%',
+			zoom: 2,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: false,
+		}
 	],
 	[
 		{
@@ -111,6 +177,28 @@ const timeline: Array<Timeline[]> = [
 			zoom: 0.5,
 			url: 'https://www.hoyolab.com/article/39701941',
 			show: true,
+		},
+		{
+			name: 'Banner Kafka',
+			start: '2025-08-13 10:00:00',
+			end: '2025-09-3 11:59:00',
+			image: 'banner4.png',
+			color: '#8E3E69',
+			pos: '30%, -5%',
+			zoom: 2,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true,
+		},
+		{
+			name: 'Banner Silver Wolf',
+			start: '2025-09-3 12:00:00',
+			end: '2025-09-23 11:59:00',
+			image: 'banner6.png',
+			color: '#B9B3C8',
+			pos: '30%, -10%',
+			zoom: 2,
+			url: 'https://www.hoyolab.com/article/39701941',
+			show: true,
 		}
 	],
 	[
@@ -124,20 +212,20 @@ const timeline: Array<Timeline[]> = [
 			zoom: 2,
 			url: 'https://www.hoyolab.com/article/39501469',
 			show: true
+		},
+		{
+			name: 'Vinh Dự Vô Danh - Battle Pass',
+			start: '2025-08-13 10:00:00',
+			end: '2025-09-22 2:59:59',
+			image: 'Event_Nameless_Honor.png',
+			color: '#ff9d92',
+			pos: '30%, -5%',
+			zoom: 2,
+			url: 'https://www.hoyolab.com/article/39501469',
+			show: true
 		}
 	],
 	[
-		{
-			name: 'Hồi Ức Hỗn Độn',
-			start: '2025-06-23 04:00:00',
-			end: '2025-08-04 03:59:59',
-			image: 'MOC.png',
-			color: '#302757',
-			pos: '10%, -25%',
-			zoom: 1,
-			url: '',
-			show: true
-		},
 		{
 			name: 'Hồi Ức Hỗn Độn',
 			start: '2025-08-4 04:00:00',
@@ -147,6 +235,17 @@ const timeline: Array<Timeline[]> = [
 			pos: '10%, -25%',
 			zoom: 1,
 			url: 'https://www.hoyolab.com/article/39686660',
+			show: true
+		},
+		{
+			name: 'Hồi Ức Hỗn Độn',
+			start: '2025-09-15 04:00:00',
+			end: '2025-10-27 03:59:59',
+			image: 'MOC.png',
+			color: '#302757',
+			pos: '10%, -25%',
+			zoom: 1,
+			url: 'https://www.hoyolab.com/article/40427770',
 			show: true
 		}
 	],
@@ -161,6 +260,17 @@ const timeline: Array<Timeline[]> = [
 			zoom: 0.9,
 			url: 'https://www.hoyolab.com/article/39686660',
 			show: true
+		},
+		{
+			name: 'Ảo Ảnh Tận Thế',
+			start: '2025-08-18 04:00:00',
+			end: '2025-09-29 03:59:59',
+			image: 'AS.png',
+			color: '#4A459B',
+			pos: '20%, -40%',
+			zoom: 0.9,
+			url: 'https://www.hoyolab.com/article/40427770',
+			show: true
 		}
 	],
 	[
@@ -173,6 +283,17 @@ const timeline: Array<Timeline[]> = [
 			pos: '-10%, 5%',
 			zoom: 1.5,
 			url: 'https://www.hoyolab.com/article/39686660',
+			show: true
+		},
+		{
+			name: 'Kể Chuyện Hư Cấu',
+			start: '2025-09-1 04:00:00',
+			end: '2025-10-13 03:59:59',
+			image: 'PF.png',
+			color: '#D8E8F1',
+			pos: '-10%, 5%',
+			zoom: 1.5,
+			url: 'https://www.hoyolab.com/article/40427770',
 			show: true
 		}
 	]
