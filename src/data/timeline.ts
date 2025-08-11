@@ -21,7 +21,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#D7A631',
 			pos: '20%, -36%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		}
 		
@@ -57,7 +57,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#6262ff',
 			pos: '40%, -40%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		},
 		{
@@ -68,7 +68,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#2D211A',
 			pos: '45%, -35%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		}
 	],
@@ -85,14 +85,14 @@ const timeline: Array<Timeline[]> = [
 			show: true
 		},
 		{
-			name: 'Fate/stay night',
+			name: 'Ủy Thác Đặc Biệt Trạm Không Gian',
 			start: '2025-08-20 4:00:00',
 			end: '2025-09-1 03:59:00',
 			image: 'event001.png',
 			color: '#466cf1',
 			pos: '30%, -40%',
 			zoom: 1,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		},
 		{
@@ -103,7 +103,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#FBF5EF',
 			pos: '20%, -30%',
 			zoom: 0.9,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		}
 	],
@@ -140,7 +140,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#356ab4',
 			pos: '30%, -10%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: false,
 		},
 		{
@@ -151,7 +151,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#C6EFFB',
 			pos: '30%, -9%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: false,
 		}
 	],
@@ -186,7 +186,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#8E3E69',
 			pos: '30%, -5%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true,
 		},
 		{
@@ -197,7 +197,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#B9B3C8',
 			pos: '30%, -10%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/39701941',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true,
 		}
 	],
@@ -221,7 +221,7 @@ const timeline: Array<Timeline[]> = [
 			color: '#ff9d92',
 			pos: '30%, -5%',
 			zoom: 2,
-			url: 'https://www.hoyolab.com/article/39501469',
+			url: 'https://www.hoyolab.com/article/40391235',
 			show: true
 		}
 	],
