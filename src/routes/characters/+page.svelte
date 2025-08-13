@@ -8,11 +8,20 @@
 	import { onMount } from 'svelte';
 	import { db } from '$utils/db';
 
+	let searchQuery = '';
+
+	function removeVietnameseTones(str: string) {
+		return str
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase();
+	}
+
 	let list = $characters;
 	let filter: { 
-			elements: { [key: string]: boolean }; 
-			paths: { [key: string]: boolean } 
-			rarities: { [key: munber]: boolean };
+		elements: { [key: string]: boolean }; 
+		paths: { [key: string]: boolean };
+		rarities: { [key: number]: boolean };
 	} = {
 		elements: {
 			...$elements.reduce<{ [key: string]: boolean }>((prev, cur) => {
@@ -33,21 +42,20 @@
 	};
 
 	let showTotal = false;
-	let total: Record<string, number> = {
-		
-	};
+	let total: Record<string, number> = {};
 
 	function filterList() {
+		const q = removeVietnameseTones(searchQuery.trim());
 		list = $characters.filter(
 			(c) => (
 				!c.hidden &&
 				filter.rarities[c.rarity] &&
 				filter.elements[c.element] && 
-				filter.paths[c.path]
+				filter.paths[c.path] &&
+				(q === '' || removeVietnameseTones(c.name).includes(q))
 			)
 		);
 	}
-
 
 	function toggleFilter(type: 'elements' | 'paths' | 'rarities', id: string | number) {
 		const current = Object.values(filter[type]);
@@ -67,7 +75,6 @@
 		
 		filterList();
 	}
-	
 
 	async function getCount() {
 		const count = await db.items.toArray();
@@ -93,6 +100,14 @@
 </svelte:head>
 
 <Title>{$t('common.character')}</Title>
+
+<div class="form__group field  mb-2">
+    <input type="input" class="form__field" placeholder="Name" required=""
+		bind:value={searchQuery}
+		on:input={filterList}>
+    <label for="name" class="form__label">Tìm Kiếm</label>
+</div>
+
 <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-4">
 	<div class="flex justify-center gap-2 md:justify-normal">
 		{#each ['5', '4'] as rarity}
@@ -140,13 +155,80 @@
 					src="/images/paths/{path.id}.png"
 					alt={path.name}
 				/>
-				<span class="block inline-block pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
+				<span class="pl-0.5 text-sm leading-none text-white/80">{path.name}</span>
 			</button>
 		{/each}
 	</div>
-	</div>
+</div>
+
 <div class="flex flex-wrap justify-center gap-2 md:gap-3 md:justify-normal">
 	{#each list as character (character.id)}
 		<CharacterCard {character} {showTotal} total={total[character.id] ?? 0} />
 	{/each}
 </div>
+
+<style>
+
+	.form__group {
+	position: relative;
+	padding: 20px 0 0;
+	width: 100%;
+	max-width: 180px;
+	}
+
+	.form__field {
+	font-family: inherit;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 17px;
+	color: #fff;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+	}
+
+	.form__field::placeholder {
+	color: transparent;
+	}
+
+	.form__field:placeholder-shown ~ .form__label {
+	font-size: 17px;
+	cursor: text;
+	top: 30px;
+	}
+
+	.form__label {
+	position: absolute;
+	top: 30px;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	color: #9b9b9b;
+	pointer-events: none;
+	}
+
+	.form__field:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #116399, #38caef);
+	border-image-slice: 1;
+	}
+
+	.form__field:focus ~ .form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	color: #38caef;
+	font-weight: 700;
+	}
+
+	/* reset input */
+	.form__field:required, .form__field:invalid {
+	box-shadow: none;
+	}
+</style>

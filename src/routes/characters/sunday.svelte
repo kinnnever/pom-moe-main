@@ -640,7 +640,7 @@
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p>
 				<span class="font-semibold text-amber-400">S1</span>: Sunday khá là bó trấn nên hãy đầu tư cho anh chàng 1 cái nón Chuyến Bay Trở Về Mặt Đất trước đã.
 			</p>

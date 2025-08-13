@@ -692,7 +692,7 @@
 				<span class="text-white/70 text-2xl">(Hoặc)</span> &nbsp Skip
 				
 			</span>
-		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p>
 				<span class="font-semibold text-amber-400">S1</span>: Tăng khả năng vận hành và tăng Sát Thương đầu ra.
 			</p>

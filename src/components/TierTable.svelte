@@ -131,7 +131,7 @@
     <div class="grid grid-cols-[60px_repeat(4,1fr)]">
       <div class="w-20"></div>
       {#each roles as role}
-        <div class="py-2 text-base font-bold text-center uppercase border border-white first:border-l-0 {roleColors[role]} bg-dark">
+        <div class="py-2 text-base font-bold text-center uppercase border border-white first:border-l-0 {roleColors[role]} bg-dark/50">
           {role}
         </div>
       {/each}
@@ -150,7 +150,7 @@
         <!-- Các cột vai trò -->
         {#each roles as role}
           <div
-            class="border border-{tierColors[tier]} bg-dark p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
+            class="border border-{tierColors[tier]} bg-dark/50 p-3 grid grid-cols-2 gap-3 content-start min-h-[80px] overflow-visible"
             on:dragover|preventDefault
             on:drop={() => editMode && onDrop(tier, role)}
           >

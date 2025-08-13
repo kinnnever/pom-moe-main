@@ -115,7 +115,7 @@
           ">{@html lightcone.effname}</span>
         {#if lightcone.stat?.length}
           <div class="flex items-center gap-4 sm:ml-4 w-full max-w-xs">
-            <div class="flex items-center mb-2 whitespace-nowrap mb-0 select-none">
+            <div class="flex items-center mb-2 whitespace-nowrap select-none">
               Tích Tầng bậc: 
               <span class={`${textColorClass} text-lg font-bold ml-1`}>{level + 1}</span>
             </div>
@@ -157,7 +157,7 @@
         <div class="flex gap-2">
           <div
             class="
-              mt-2 p-3 md:p2 bg-dark rounded-xl border border-white/80
+              mt-2 p-3 md:p2 bg-dark/50 rounded-xl border border-white/80
               overflow-x-auto md:overflow-visible
               w-full
               flex md:grid

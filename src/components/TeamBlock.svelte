@@ -101,7 +101,7 @@
       </div>
 
       {#if notes[role.key]}
-        <p class="mt-3 text-sm text-white/70 text-center mt-6">
+        <p class="text-sm text-white/70 text-center mt-6">
           {@html notes[role.key]}
         </p>
       {/if}

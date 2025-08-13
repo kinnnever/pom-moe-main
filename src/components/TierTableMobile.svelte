@@ -124,7 +124,7 @@
 
 <div class="block md:hidden space-y-6 px-4" id="tierlist-mobile">
   {#each Object.entries(data) as [tier, rolesMap]}
-    <div class={`bg-dark border ${BorderTierColors[tier]} rounded-lg`}>
+    <div class={`bg-dark/50 border ${BorderTierColors[tier]} rounded-lg`}>
       <!-- Tier title -->
       <h2 class="text-black text-2xl font-bold text-center mb-2 rounded-t-lg {BgTierColors[tier] ?? 'bg-white'}">{formatTier(tier)}</h2>
 

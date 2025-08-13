@@ -679,7 +679,7 @@
 				<span class="text-white/70">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p class="text-lg mt-2 mb-1">
 				<span class="font-bold text-white/80 pl-4">S1: </span>Cải thiện vận hành.
 			</p>

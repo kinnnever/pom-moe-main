@@ -704,7 +704,7 @@
 				<span class="text-white/70 text-2xl">(skip)</span> 
 				
 			</span>
-		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3 p-4">
+		<div class="grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3 ">
 			<p class="text-lg ">Nói thật nhé, nếu bạn không đủ khả năng roll E2 thì bạn nên skip luôn cho lành.</p>
 			<p class="text-lg ">Còn nếu bạn simp thì tôi không cản.</p>
 		</div>

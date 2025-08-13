@@ -54,7 +54,7 @@ on:click={() => navigateToLightcone(lightcone.id)}>
 	}
 
 	.rarity:hover > .background {
-		opacity: 50%;
+		opacity: 60%;
 	}
 
 	.rarity-5 > .background {
@@ -65,7 +65,7 @@ on:click={() => navigateToLightcone(lightcone.id)}>
 			theme(colors.5) 40%,
 			transparent 80%
 		);
-		opacity: 30%;
+		opacity: 40%;
 	}
 
 	.rarity-4 > .background {
@@ -76,7 +76,7 @@ on:click={() => navigateToLightcone(lightcone.id)}>
 			theme(colors.4) 40%,
 			transparent 80%
 		);
-		opacity: 30%;
+		opacity: 40%;
 	}
 
 	.rarity-3 > .background {
@@ -87,6 +87,6 @@ on:click={() => navigateToLightcone(lightcone.id)}>
 			theme(colors.3) 40%,
 			transparent 80%
 		);
-		opacity: 30%;
+		opacity: 40%;
 	}
 </style>

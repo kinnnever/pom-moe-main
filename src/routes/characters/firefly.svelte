@@ -658,7 +658,7 @@
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p>
 				<span class="font-semibold text-amber-400">Ruan Mei</span>: Nhân vật hỗ trợ tốt thứ 2 trong đội Firefly, sau nhân vật chính chúng ta.
 			</p>	

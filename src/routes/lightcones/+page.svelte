@@ -10,6 +10,14 @@
 	import { onMount } from 'svelte';
 
 	let list: Array<Lightcone[]> = [[], [], []];
+	let searchQuery = '';
+
+	function removeVietnameseTones(str: string) {
+		return str
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase();
+	}
 
 	let filter: { 
 		rarities: { [key: number]: boolean};
@@ -29,14 +37,14 @@
 	};
 
 	function filterList() {
+		const q = removeVietnameseTones(searchQuery.trim());
 		list = [[], [], []];
 		for (const lightcone of $lightcones) {
 			if (!filter.rarities[lightcone.rarity]) continue;
 			if (!filter.paths[lightcone.path]) continue;
+			if (q !== '' && !removeVietnameseTones(lightcone.name).includes(q)) continue;
 			list[5 - lightcone.rarity].push(lightcone);
 		}
-
-		list = list;
 	}
 
 	let showTotal = false;
@@ -81,6 +89,15 @@
 </svelte:head>
 
 <Title>Nón Ánh Sáng</Title>
+
+<!-- Ô tìm kiếm -->
+<div class="form__group field mb-4">
+    <input type="text" class="form__field" placeholder="Name"
+		bind:value={searchQuery}
+		on:input={filterList}>
+    <label for="name" class="form__label">Tìm kiếm</label>
+</div>
+
 <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-8">
 	<div class="flex flex-wrap justify-center gap-2 md:justify-normal">
 		{#each [5, 4, 3] as rarity}
@@ -117,6 +134,7 @@
 		{/each}
 	</div>
 </div>
+
 <div class="flex flex-col gap-3">
 	{#each list as lightcones}
 		<div class="mb-8 flex flex-wrap justify-center gap-3 md:justify-normal">
@@ -126,3 +144,68 @@
 		</div>
 	{/each}
 </div>
+
+<style>
+	.form__group {
+		position: relative;
+		padding: 20px 0 0;
+		width: 100%;
+		max-width: 180px;
+	}
+
+	.form__field {
+		font-family: inherit;
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid #9b9b9b;
+		outline: 0;
+		font-size: 17px;
+		color: #fff;
+		padding: 7px 0;
+		background: transparent;
+		transition: border-color 0.2s;
+	}
+
+	.form__field::placeholder {
+		color: transparent;
+	}
+
+	.form__field:placeholder-shown ~ .form__label {
+		font-size: 17px;
+		cursor: text;
+		top: 30px;
+	}
+
+	.form__label {
+		position: absolute;
+		top: 30px;
+		display: block;
+		transition: 0.2s;
+		font-size: 17px;
+		color: #9b9b9b;
+		pointer-events: none;
+	}
+
+	.form__field:focus {
+		padding-bottom: 6px;
+		font-weight: 700;
+		border-width: 3px;
+		border-image: linear-gradient(to right, #116399, #38caef);
+		border-image-slice: 1;
+	}
+
+	.form__field:focus ~ .form__label {
+		position: absolute;
+		top: 0;
+		display: block;
+		transition: 0.2s;
+		font-size: 17px;
+		color: #38caef;
+		font-weight: 700;
+	}
+
+	/* reset input */
+	.form__field:required, .form__field:invalid {
+		box-shadow: none;
+	}
+</style>

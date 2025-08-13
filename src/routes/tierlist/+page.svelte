@@ -139,10 +139,10 @@
 
 <!-- EDIT TOOLS -->
 <div class="flex justify-center gap-4 mb-10">
-  <button on:click={() => editMode = !editMode} class="border border-white/50 px-4 py-2 rounded bg-blue-500 text-white rounded-md hover:bg-blue-600">
+  <button on:click={() => editMode = !editMode} class="border border-white/50 px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">
     {editMode ? 'Tắt chỉnh sửa' : 'Chỉnh sửa'}
   </button>
-  <button on:click={downloadImage} class="border border-white/50 px-4 py-2 rounded bg-blue-500 text-white rounded-md hover:bg-blue-600">
+  <button on:click={downloadImage} class="border border-white/50 px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">
     Tải bảng Tier List
   </button>
 </div>

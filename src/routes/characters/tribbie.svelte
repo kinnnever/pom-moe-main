@@ -666,7 +666,7 @@
 				<span class="text-white/70 text-2xl">(Những Thứ Khác)</span> 
 				
 			</span>
-		<div class="grid grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
+		<div class="grid p-2 bg-black/20 border border-white/50 rounded-lg mt-3">
 			<p>
 				<span class="font-semibold text-amber-400">E1</span>: Sát Thương Chuẩn siêu phá game.
 			</p>

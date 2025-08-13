@@ -100,7 +100,7 @@
   {#if activePiece}
     {#each relic.pieces.filter(p => p.slot === activePiece) as piece}
     
-      <div class="md:hidden mt-4 p-3 border border-zinc-500 rounded-xl bg-dark flex items-center justify-center gap-3" in:slide>
+      <div class="md:hidden mt-4 p-3 border border-zinc-500 rounded-xl bg-dark/50 flex items-center justify-center gap-3" in:slide>
         
         <img src={`/images/relics/${relic.id}/${piece.slot}.png`} alt={piece.name} class="w-16 h-16" />
         <span class="text-lg font-bold">{piece.name}</span>
@@ -122,7 +122,7 @@
   <div class="flex gap-2">
     <div
       class="
-        mt-2 p-3 md:p2 bg-dark rounded-xl md:border border-white/20
+        mt-2 p-3 md:p2 bg-dark/50 rounded-xl md:border border-white/20
         w-full md:w-1/2
         overflow-x-auto md:overflow-visible
         flex md:grid
@@ -148,7 +148,7 @@
     </div>
 
 
-    <div class="hidden md:flex w-1/2 relative h-[512px] flex items-center justify-center overflow-hidden">
+    <div class="hidden md:flex w-1/2 relative h-[512px] items-center justify-center overflow-hidden">
       {#key hoveredCharacterId}
         {#if hoveredCharacterId}
           <img

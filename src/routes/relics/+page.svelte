@@ -7,6 +7,15 @@
 	import { db } from '$utils/db';
 	import { onMount } from 'svelte';
 
+	let searchQuery = '';
+
+	function removeVietnameseTones(str: string) {
+		return str
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase();
+	}
+
 	// Danh sách phân loại relics theo type
 	let list: Record<'cavern' | 'planar', Relic[]> = { cavern: [], planar: [] };
 
@@ -21,12 +30,13 @@
 	let total: Record<string, number> = {};
 
 	function filterList() {
+		const q = removeVietnameseTones(searchQuery.trim());
 		const categorized: Record<'cavern' | 'planar', Relic[]> = { cavern: [], planar: [] };
 
 		for (const relic of $relics) {
-			if (filter[relic.type]) {
-				categorized[relic.type].push(relic);
-			}
+			if (!filter[relic.type]) continue;
+			if (q !== '' && !removeVietnameseTones(relic.name).includes(q)) continue;
+			categorized[relic.type].push(relic);
 		}
 
 		list = categorized;
@@ -74,6 +84,14 @@
 
 <Title>Di Vật</Title>
 
+<!-- Ô tìm kiếm -->
+<div class="form__group field mb-4">
+    <input type="text" class="form__field" placeholder="Name"
+		bind:value={searchQuery}
+		on:input={filterList}>
+    <label for="name" class="form__label">Tìm kiếm</label>
+</div>
+
 <!-- Bộ lọc -->
 <div class="mb-8 flex flex-wrap justify-center gap-3 md:justify-normal">
 	{#each Object.entries(filter) as [type, isEnabled]}
@@ -82,7 +100,7 @@
 			on:click={() => toggleFilter(type)}
 		>
 			<img
-				class="inline-block h-12 w-12 md:h-10 md:w-10 rounded-md border border-white/20 bg-white/10 bg-transparent"
+				class="inline-block h-12 w-12 md:h-10 md:w-10 rounded-md border border-white/20"
 				width={32}
 				height={32}
 				src={`/images/${type}.png`}
@@ -107,3 +125,68 @@
 		{/if}
 	{/each}
 </div>
+
+<style>
+	.form__group {
+		position: relative;
+		padding: 20px 0 0;
+		width: 100%;
+		max-width: 180px;
+	}
+
+	.form__field {
+		font-family: inherit;
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid #9b9b9b;
+		outline: 0;
+		font-size: 17px;
+		color: #fff;
+		padding: 7px 0;
+		background: transparent;
+		transition: border-color 0.2s;
+	}
+
+	.form__field::placeholder {
+		color: transparent;
+	}
+
+	.form__field:placeholder-shown ~ .form__label {
+		font-size: 17px;
+		cursor: text;
+		top: 30px;
+	}
+
+	.form__label {
+		position: absolute;
+		top: 30px;
+		display: block;
+		transition: 0.2s;
+		font-size: 17px;
+		color: #9b9b9b;
+		pointer-events: none;
+	}
+
+	.form__field:focus {
+		padding-bottom: 6px;
+		font-weight: 700;
+		border-width: 3px;
+		border-image: linear-gradient(to right, #116399, #38caef);
+		border-image-slice: 1;
+	}
+
+	.form__field:focus ~ .form__label {
+		position: absolute;
+		top: 0;
+		display: block;
+		transition: 0.2s;
+		font-size: 17px;
+		color: #38caef;
+		font-weight: 700;
+	}
+
+	/* reset input */
+	.form__field:required, .form__field:invalid {
+		box-shadow: none;
+	}
+</style>

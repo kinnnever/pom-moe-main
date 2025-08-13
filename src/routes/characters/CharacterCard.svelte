@@ -97,16 +97,16 @@
   }
 
   .rarity:hover > .background {
-    opacity: 50%;
+    opacity: 60%;
   }
 
   .rarity-5 > .background {
     background: linear-gradient(to top, transparent 0%, theme(colors.5) 30%, theme(colors.5) 40%, transparent 80%);
-    opacity: 30%;
+    opacity: 40%;
   }
 
   .rarity-4 > .background {
     background: linear-gradient(to top, transparent 0%, theme(colors.4) 30%, theme(colors.4) 40%, transparent 80%);
-    opacity: 30%;
+    opacity: 40%;
   }
 </style>
