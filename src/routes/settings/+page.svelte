@@ -39,6 +39,7 @@
 			objectUrl = null;
 		}
 
+		localStorage.setItem("customBackground", webImageUrl.trim());
 		setBackground(webImageUrl.trim());
 		webImageUrl = "";
 	}
@@ -49,6 +50,7 @@
 			URL.revokeObjectURL(objectUrl);
 			objectUrl = null;
 		}
+		localStorage.removeItem("customBackground");
 		resetBackground();
 	}
 
@@ -59,7 +61,10 @@
 	onMount(() => {
 		if (!browser) return;
 
-		// Focus / blur animation cho thanh URL
+		const savedBg = localStorage.getItem("customBackground");
+		if (savedBg) {
+			setBackground(savedBg);
+		}
 
 	});
 </script>
