@@ -22,6 +22,20 @@
   const getCharacter = (id: string) => characters.find(c => c.id === id);
   const isFewCharacters = relic.recommendedFor.filter(getCharacter).length <= 3;
 
+  let container: HTMLElement;
+
+	const handleMouseMove = (e: MouseEvent) => {
+		const rect = container.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+		container.style.setProperty('--x', `${x}px`);
+		container.style.setProperty('--y', `${y}px`);
+	};
+  const handleMouseLeave = () => {
+		container.style.setProperty('--x', `50%`);
+		container.style.setProperty('--y', `50%`);
+	};
+
 </script>
 
 <div class="text-white max-w-none">
@@ -132,17 +146,20 @@
   <div class="flex gap-2">
     <div
       class="
-        mt-2 p-3 md:p2 bg-dark/50 rounded-xl md:border border-white/20
+        mt-2 p-3 md:p-1 bg-dark/50 rounded-xl border-gradient
         w-full md:w-1/2
         overflow-x-auto md:overflow-visible
         flex md:grid
         flex-nowrap md:flex-wrap
-        gap-x-3 md:gap-x-2 gap-y-4 self-start
+        gap-x-3 md:gap-x-1 gap-y-4 self-start
       "
       style="
         grid-template-columns: repeat(auto-fit, minmax(7rem, max-content));
         justify-content: {isFewCharacters ? 'center' : 'space-between'};
       "
+      bind:this={container}
+    	on:mousemove={handleMouseMove}
+      on:mouseleave={handleMouseLeave}
     >
       {#each relic.recommendedFor as id}
         {#if getCharacter(id)}
@@ -174,3 +191,17 @@
   {/if}
 </div>
 
+<style>
+  .border-gradient {
+		--x: 50%;
+		--y: 50%;
+
+		border: 3px solid transparent;
+		border-radius: 12px;
+		padding: 1rem;
+		background:
+			linear-gradient(#000, #000) padding-box,
+			radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+		transition: background-position .15s;
+	}
+</style>

@@ -637,5 +637,19 @@
     "rarity": 5,
     "hidden": true,
     "enhancedOnly": true
+  },
+  "cerydra": {
+    "id": "cerydra",
+    "name": "Cerydra",
+    "path": "harmony",
+    "element": "wind",
+    "rarity": 5
+  },
+  "hysilens": {
+    "id": "hysilens",
+    "name": "Hysilens",
+    "path": "nihility",
+    "element": "physical",
+    "rarity": 5
   }
 }

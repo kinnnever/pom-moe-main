@@ -1979,5 +1979,48 @@
     "effname": "Viết",
     "effect": "Khiến Giới Hạn HP của người trang bị tăng <span class='text-amber-400 font-bold'>{0}</span>. Sau khi Linh Hồn Ký Ức của người trang bị tấn công, sẽ khiến Lượng Trị Liệu của người trang bị và Linh Hồn Ký Ức tăng <span class='text-amber-400 font-bold'>{1}</span>, duy trì <span class='text-amber-400 font-bold'>1</span> hiệp.",
     "recommendedFor": ["hyacine"]
+  },
+  "the-forever-victual": {
+    "id": "the-forever-victual",
+    "name": "Món Ăn Vĩnh Hằng",
+    "path": "harmony",
+    "rarity": 4,
+    "lv": [952, 476, 330],
+    "stat": [
+      ["16%","20%","24%","28%","32%"],
+      ["8%","10%","12%","14%","16%"]
+    ],
+  "effname": "Thơm Quá!",
+  "effect": "Tăng <b class='text-amber-400'>{0}</b> Tấn Công của người trang bị. Sau khi người trang bị thi triển Chiến Kỹ, Tấn Công tăng <b class='text-amber-400'>{1}</b>, hiệu ứng này tối đa cộng dồn <b class='text-amber-400'>3</b> tầng.",
+  "recommendedFor": []
+  },
+  "why-does-the-ocean-sing": {
+    "id": "why-does-the-ocean-sing",
+    "name": "Vì Sao Biển Cả Ca Vang",
+    "path": "nihility",
+    "rarity": 5,
+    "lv": [952, 635, 463],
+    "stat": [
+      ["40%","45%","50%","55%","60%"],
+      ["5%","6.25%","7.5%","8.75%","10%"],
+      ["10%","12.5%","15%","17.5%","20%"]
+    ],
+  "effname": "Độc Tấu",
+  "effect": "Khiến Chính Xác Hiệu Ứng của người trang bị tăng <b class='text-amber-400'>{0}</b>, khi mục tiêu phe địch rơi vào Hiệu Ứng Xấu do người trang bị thi triển, có <b class='text-amber-400'>80%</b> xác suất cơ bản khiến kẻ đó rơi vào trạng thái Mê Hồn, duy trì <b class='text-amber-400'>3</b> hiệp, hiệu ứng cùng loại không thể cộng dồn. Trong trạng thái Mê Hồn, cứ mỗi Hiệu Ứng Xấu do người trang bị thi triển, Sát Thương Duy Trì phải chịu tăng <b class='text-amber-400'>{1}</b>, hiệu ứng này tối đa cộng dồn <b class='text-amber-400'>6</b> tầng, khi bị mục tiêu phe ta tấn công, Tốc Độ của người tấn công tăng <b class='text-amber-400'>{2}</b>, duy trì <b class='text-amber-400'>3</b> hiệp. Khi người trang bị rơi vào trạng thái không thể chiến đấu, sẽ xóa tất cả \"Mê Hồn\".",
+  "recommendedFor": ["hysilens"]
+  },
+  "epoch-etched-in-golden-blood": {
+    "id": "epoch-etched-in-golden-blood",
+    "name": "Vì Sao Biển Cả Ca Vang",
+    "path": "harmony",
+    "rarity": 5,
+    "lv": [952, 635, 463],
+    "stat": [
+      ["64%","80%","96%","112%","128%"],
+      ["54%","67.5%","81%","94.5%","108%"]
+    ],
+  "effname": "Chinh Phục",
+  "effect": "Tăng <b class='text-amber-400'>{0}</b> Tấn Công của người trang bị. Sau khi thi triển Tuyệt Kỹ tấn công, sẽ hồi <b class='text-amber-400'>1</b> Điểm Chiến Kỹ, sau khi người trang bị thi triển Chiến Kỹ lên 1 nhân vật phe ta, sẽ khiến sát thương Chiến Kỹ mục tiêu gây ra tăng <b class='text-amber-400'>{1}</b>, duy trì <b class='text-amber-400'>3</b> hiệp.",
+  "recommendedFor": ["cerydra"]
   }
 }

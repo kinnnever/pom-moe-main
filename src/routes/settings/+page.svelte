@@ -4,6 +4,8 @@
 	import { onMount } from 'svelte';
 	import { backgroundUrl, setBackground, resetBackground } from '$utils/background';
 	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+
 
 	let webImageUrl = "";
 	let currentBg = '';
@@ -15,25 +17,45 @@
 	let objectUrl: string | null = null;
 
 	// Upload ảnh
-	function handleImageUpload(event: Event) {
+	async function handleImageUpload(event: Event) {
 		const file = (event.target as HTMLInputElement).files?.[0];
 		if (!file) return;
 
-		// Revoke URL cũ nếu có
-		if (objectUrl) URL.revokeObjectURL(objectUrl);
+		// Đọc file thành base64
+		const reader = new FileReader();
+		reader.onload = () => {
+			const base64 = reader.result as string;
 
-		// Tạo Object URL mới
-		objectUrl = URL.createObjectURL(file);
+			// Lưu vào localStorage
+			localStorage.setItem("customBackground", base64);
 
-		// Update store global
-		setBackground(objectUrl);
+			// Update store global
+			setBackground(base64);
+
+			// nếu có objectUrl tạm thì bỏ đi
+			if (objectUrl) {
+				URL.revokeObjectURL(objectUrl);
+				objectUrl = null;
+			}
+		};
+		reader.readAsDataURL(file);
 	}
 
 	// Dùng URL từ web
 	function useWebImage() {
 		if (!webImageUrl.trim()) return;
 
-		// Nếu là URL ngoài, revoke Object URL cũ
+		if (webImageUrl.trim().toLowerCase() === 'iloveyou') {
+			goto('/dont_read_me');
+			return;
+		}
+
+		if (!isValid) {
+			isFocused = false;
+			return;
+		}
+
+
 		if (objectUrl) {
 			URL.revokeObjectURL(objectUrl);
 			objectUrl = null;
@@ -78,9 +100,9 @@
 
 <div class="flex flex-wrap gap-x-8 gap-y-4 justify-start mb-5">
 	<div class="flex flex-wrap justify-start gap-6">
-		<label for="imageUpload" class="relative cursor-pointer flex justify-center items-center w-36 h-12">
-			<span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-black"></span>
-			<span class="fold-bold text-center relative inline-flex items-center justify-center h-full w-full rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-space hover:text-gray-900">
+		<label for="imageUpload" class="group relative cursor-pointer flex justify-center items-center w-36 h-12">
+			<span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-3 transition-colors duration-300 group-hover:bg-4"></span>
+			<span class="fold-bold text-center relative inline-flex items-center justify-center h-full w-full rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition-colors duration-300 hover:bg-space hover:text-gray-900">
 				Tải ảnh lên
 			</span>
 		</label>
@@ -102,11 +124,16 @@
 				bind:value={webImageUrl}
 				on:focus={() => (isFocused = true)}
 				on:blur={() => (isFocused = false)}
+				on:keydown={(e) => {
+					if (e.key === 'Enter' && isValid) {
+						useWebImage();
+					}
+				}}
 				class="email--input"
 			/>
 			<button
 				class="email--button"
-				on:click={() => isValid && useWebImage()}
+				on:click={() => useWebImage()}
 			>
 				Dùng
 			</button>
@@ -117,7 +144,7 @@
 
 	<!-- Reset -->
 	<button
-		class=" px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+		class="px-4 py-2 text-white rounded text-base cursor-pointer bg-red-500 hover:bg-red-700"
 		on:click={resetBackground}
 	>
 		Reset
@@ -144,8 +171,12 @@
   align-items: center;
   background-color: #222222;
   border-radius: 5px;
-  transition: background-color 0.1s cubic-bezier(0.33,1,0.68,1);
+  transition: background-color 0.2s cubic-bezier(0.33,1,0.68,1);
   padding: 2px;
+}
+
+.email:hover {
+	background-color: #fbcd74;
 }
 
 /* Input */
@@ -153,6 +184,7 @@
   height: 50px;
   width: 200px;
   padding: 0 20px;
+  margin-left: 1px;
   border: 2px solid #222222;
   border-radius: 5px;
   font-weight: bold;
@@ -214,4 +246,5 @@
   font-weight: bold;
   font-family: system-ui;
 }
+
 </style>

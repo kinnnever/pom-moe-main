@@ -157,7 +157,7 @@
         <div class="flex gap-2">
           <div
             class="
-              mt-2 p-3 md:p2 bg-dark/50 rounded-xl border border-white/80
+              mt-2 p-3 md:p2 bg-dark/50 rounded-xl box
               overflow-x-auto md:overflow-visible
               w-full
               flex md:grid
@@ -231,5 +231,46 @@ input[type="range"].range-gradient::-moz-range-thumb {
   border-radius: 50%;
   cursor: pointer;
 }
+
+  .box {
+
+		display: grid;
+		place-content: center;
+		color: #fff;
+		text-shadow: 0 1px 0 #000;
+		
+		--border-angle: 0turn; /* for animation */
+		--main-bg: conic-gradient(from var(--border-angle), #000);
+
+		border: solid 2px transparent;
+		border-radius: 1em;
+		
+		--gradient-border: conic-gradient(
+			from var(--border-angle),
+			transparent 0%,
+			#4f78be,
+			#b087ff 50%,
+      #fbcd74 100%,
+			transparent
+		);
+
+		background:
+			var(--main-bg) padding-box,            /* fill content */
+			var(--gradient-border) border-box,    /* gradient border */
+			var(--main-bg) border-box;            /* fallback */
+
+		background-position: center;
+		animation: bg-spin 8s linear infinite;
+	}
+
+	@property --border-angle {
+		syntax: "<angle>";
+		inherits: true;
+		initial-value: 0turn;
+	}
+
+	@keyframes bg-spin {
+		to { --border-angle: 1turn; }
+	}
 
 </style>
