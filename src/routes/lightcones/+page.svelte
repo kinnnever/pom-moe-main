@@ -95,7 +95,7 @@
     <input type="text" class="form__field" placeholder="Name"
 		bind:value={searchQuery}
 		on:input={filterList}>
-    <label for="name" class="form__label">Tìm kiếm</label>
+    <label for="name" class="form__label">Tìm Kiếm</label>
 </div>
 
 <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:justify-start mb-8">

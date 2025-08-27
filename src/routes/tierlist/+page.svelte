@@ -101,23 +101,26 @@
   {#each gameModes as mode}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div
-      class={`relative h-20 md:h-40 border rounded-lg shadow-lg cursor-pointer overflow-hidden group transition duration-300 ${
-        selectedMode === mode.id ? 'border-white/100 brightness-100' : 'border-white/20 brightness-75 hover:brightness-90'
-      }`}
+      class="mode-card"
+      class:selected={selectedMode === mode.id}
+      class:unselected={selectedMode !== mode.id}
       on:click={() => (selectedMode = mode.id)}
     >
-      <img
-        src={mode.image}
-        alt={mode.label}
-        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-      />
-      <div class="absolute inset-0 bg-black/40" />
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-white text-2xl font-bold" style="text-shadow: 1.5px 1.5px 1.5px black">{mode.label}</span>
+      <div class="mode-card-content">
+        <img
+          src={mode.image}
+          alt={mode.label}
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/40" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="mode-label">{mode.label}</span>
+        </div>
       </div>
     </div>
   {/each}
 </div>
+
 
 <!-- Title -->
 <h2 class="text-2xl font-bold text-center mb-2">
@@ -193,3 +196,109 @@
   <TierTableMobile data={tierList[selectedMode]} isVisible={isVisibleFn} {editMode} 
     on:update={(e) => tierList[selectedMode] = e.detail} />
 </div>
+
+<style>
+  .mode-card {
+    position: relative;
+    border-radius: 0.75em;
+    cursor: pointer;
+    height: 80px;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  @media (min-width: 768px) {
+    .mode-card {
+      height: 160px;
+    }
+  }
+
+  /* Viền gradient dày hơn */
+  .mode-card::before {
+    content: "";
+    position: absolute;
+    inset: -3px; /* tăng độ dày */
+    border-radius: inherit;
+    background: linear-gradient(
+      50deg,
+      transparent 5%,
+      rgb(255, 222, 156) 50%,
+      transparent 99%
+    );
+    opacity: 0;
+    transition: opacity 400ms;
+    z-index: 0;
+  }
+
+  .mode-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Card được chọn */
+  .mode-card.selected::before {
+    opacity: 1;
+    box-shadow: 
+      0 0 20px rgba(255, 200, 120, 0.9),
+      0 0 40px rgba(255, 200, 120, 0.7),
+      0 0 80px rgba(255, 200, 120, 0.5),
+      0 0 120px rgba(255, 200, 120, 0.3);
+    filter: drop-shadow(0 0 25px rgba(255, 200, 120, 0.3));
+  }
+
+  /* Nội dung */
+  .mode-card-content {
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background-color: rgba(20, 20, 20, 0.8);
+    overflow: hidden;
+    z-index: 1;
+    transition: filter 0.3s;
+  }
+
+  .mode-label {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow: 1.5px 1.5px 1.5px black;
+    transition: opacity 0.3s, filter 0.3s;
+  }
+
+  @media (min-width: 768px) {
+    .mode-label {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Chưa được chọn → tối hơn */
+  .mode-card.unselected img {
+    filter: brightness(60%);
+  }
+
+  .mode-card.unselected .mode-label {
+    opacity: 0.6;
+  }
+
+  /* Hover làm sáng hơn một chút */
+  .mode-card.unselected:hover img {
+    filter: brightness(75%);
+  }
+
+  /* Selected luôn sáng rõ */
+  .mode-card.selected img {
+    filter: brightness(100%);
+  }
+
+  .mode-card.selected .mode-label {
+    opacity: 1;
+  }
+
+  /* Zoom nhẹ khi hover */
+  .mode-card img {
+    transition: transform 300ms, filter 300ms;
+  }
+  .mode-card:hover img {
+    transform: scale(1.1);
+  }
+</style>

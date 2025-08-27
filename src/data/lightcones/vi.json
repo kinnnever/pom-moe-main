@@ -323,7 +323,7 @@
     ],
     "effname": "Kẻ Gian Khổ",
     "effect": "Mỗi khi kẻ địch nhận phải 1 Hiệu Ứng Xấu, thì sát thương người trang bị gây ra cho kẻ đó sẽ tăng <span class='text-amber-400 font-bold'>{0}</span>, tối đa cộng dồn <span class='text-amber-400 font-bold'>3</span> tầng. Hiệu ứng này cũng có hiệu lực với sát thương duy trì.",
-    "recommendedFor": ["acheron","kafka","black-swan"]
+    "recommendedFor": ["acheron","kafka","black-swan","hysilens"]
   },
   "day-one-of-my-new-life": {
     "id": "day-one-of-my-new-life",
@@ -419,7 +419,7 @@
     ],
     "effname": "Tự Tin",
     "effect": "Tăng <span class='text-amber-400 font-bold'>{0}</span> Chính Xác Hiệu Ứng cho người trang bị, đồng thời sát thương duy trì gây ra sẽ tăng <span class='text-amber-400 font-bold'>{1}</span>.",
-    "recommendedFor": ["kafka","black-swan","jiaoqiu","sampo","guinaifen"]
+    "recommendedFor": ["kafka","black-swan","hysilens","jiaoqiu","sampo","guinaifen"]
   },
   "landaus-choice": {
     "id": "landaus-choice",
@@ -1348,7 +1348,7 @@
     ],
     "effname": "Kết Tinh",
     "effect": "Tăng <span class='text-amber-400 font-bold'>{0}</span> Chính Xác Hiệu Ứng của người trang bị. Khi người trang bị gây sát thương cho kẻ địch đang trong trạng thái Bào Mòn, Thiêu Đốt, Sốc Điện, Chảy Máu, sẽ lần lượt nhận 1 tầng Tiên Tri, tối đa cộng dồn <span class='text-amber-400 font-bold'>4</span> tầng. Trong 1 trận đấu, mỗi loại trạng thái Sát Thương Duy Trì chỉ có thể cộng dồn hiệu ứng Tiên Tri 1 lần. Mỗi tầng Tiên Tri tăng <span class='text-amber-400 font-bold'>{1}</span> Tấn Công của người trang bị, Sát Thương Duy Trì gây ra bỏ qua <span class='text-amber-400 font-bold'>{2}</span> Phòng Thủ của mục tiêu.",
-    "recommendedFor": ["black-swan","kafka","guinaifen"]
+    "recommendedFor": ["black-swan","kafka","hysilens","guinaifen"]
   },
   "inherently-unjust-destiny": {
     "id": "inherently-unjust-destiny",

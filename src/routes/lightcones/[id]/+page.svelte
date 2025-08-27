@@ -50,6 +50,20 @@
     abundance: 'Trù Phú',
     remembrance: 'Ký Ức'
   }
+
+  let container: HTMLElement;
+
+	const handleMouseMove = (e: MouseEvent) => {
+		const rect = container.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+		container.style.setProperty('--x', `${x}px`);
+		container.style.setProperty('--y', `${y}px`);
+	};
+  const handleMouseLeave = () => {
+		container.style.setProperty('--x', `50%`);
+		container.style.setProperty('--y', `50%`);
+	};
 </script>
 
 <section class="text-white">
@@ -157,7 +171,7 @@
         <div class="flex gap-2">
           <div
             class="
-              mt-2 p-3 md:p2 bg-dark/50 rounded-xl box
+              mt-2 p-3 md:p2 bg-dark/50 rounded-xl border-gradient
               overflow-x-auto md:overflow-visible
               w-full
               flex md:grid
@@ -168,6 +182,9 @@
             grid-template-columns: repeat(auto-fit, minmax(7rem, max-content));
             justify-content: center;
           "
+          bind:this={container}
+          on:mousemove={handleMouseMove}
+          on:mouseleave={handleMouseLeave}
           >
             {#each lightcone.recommendedFor as id}
               {#if getCharacter(id)}
@@ -232,45 +249,17 @@ input[type="range"].range-gradient::-moz-range-thumb {
   cursor: pointer;
 }
 
-  .box {
+  .border-gradient {
+		--x: 50%;
+		--y: 50%;
 
-		display: grid;
-		place-content: center;
-		color: #fff;
-		text-shadow: 0 1px 0 #000;
-		
-		--border-angle: 0turn; /* for animation */
-		--main-bg: conic-gradient(from var(--border-angle), #000);
-
-		border: solid 2px transparent;
-		border-radius: 1em;
-		
-		--gradient-border: conic-gradient(
-			from var(--border-angle),
-			transparent 0%,
-			#4f78be,
-			#b087ff 50%,
-      #fbcd74 100%,
-			transparent
-		);
-
+		border: 3px solid transparent;
+		border-radius: 12px;
+		padding: 1rem;
 		background:
-			var(--main-bg) padding-box,            /* fill content */
-			var(--gradient-border) border-box,    /* gradient border */
-			var(--main-bg) border-box;            /* fallback */
-
-		background-position: center;
-		animation: bg-spin 8s linear infinite;
-	}
-
-	@property --border-angle {
-		syntax: "<angle>";
-		inherits: true;
-		initial-value: 0turn;
-	}
-
-	@keyframes bg-spin {
-		to { --border-angle: 1turn; }
+			linear-gradient(#000, #000) padding-box,
+			radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+		transition: background-position .15s;
 	}
 
 </style>
