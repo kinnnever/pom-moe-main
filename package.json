@@ -47,6 +47,7 @@
 	"dependencies": {
 		"dom-to-image-more": "^3.6.0",
 		"html-to-image": "^1.11.13",
+		"starrail.js": "^1.9.6",
 		"svelte-dnd-action": "^0.9.64"
 	}
 }

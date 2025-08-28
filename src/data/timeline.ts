@@ -135,7 +135,7 @@ const timeline: Array<Timeline[]> = [
 		{
 			name: 'Banner Hysilens',
 			start: '2025-08-13 10:00:00',
-			end: '2025-09-3 11:59:00',
+			end: '2025-09-2 11:59:00',
 			image: 'banner0.png',
 			color: '#356ab4',
 			pos: '30%, -10%',
@@ -145,7 +145,7 @@ const timeline: Array<Timeline[]> = [
 		},
 		{
 			name: 'Banner Cerydra',
-			start: '2025-09-3 12:00:00',
+			start: '2025-09-2 12:00:00',
 			end: '2025-09-23 11:59:00',
 			image: 'banner5.png',
 			color: '#C6EFFB',
@@ -181,7 +181,7 @@ const timeline: Array<Timeline[]> = [
 		{
 			name: 'Banner Kafka',
 			start: '2025-08-13 10:00:00',
-			end: '2025-09-3 11:59:00',
+			end: '2025-09-2 11:59:00',
 			image: 'banner4.png',
 			color: '#8E3E69',
 			pos: '30%, -5%',
@@ -191,7 +191,7 @@ const timeline: Array<Timeline[]> = [
 		},
 		{
 			name: 'Banner Silver Wolf',
-			start: '2025-09-3 12:00:00',
+			start: '2025-09-2 12:00:00',
 			end: '2025-09-23 11:59:00',
 			image: 'banner6.png',
 			color: '#B9B3C8',

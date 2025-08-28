@@ -1,8 +1,15 @@
-<script lang="ts"></script>
+<script lang="ts">
 
-<div class="text-white text-3xl">
-	
-</div>
+</script>
+
+<svelte:head>
+	<title>Pom.moe - Nơi Bí Mật Của Tôi</title>
+</svelte:head>
+<h3 class="text-white text-3xl">
+	chào
+</h3>
+
+
 
 <style>
 
