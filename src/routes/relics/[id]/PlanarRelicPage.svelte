@@ -184,15 +184,15 @@
 
 <style>
   .border-gradient {
-		--x: 50%;
-		--y: 50%;
+    --x: 50%;
+    --y: 50%;
 
-		border: 3px solid transparent;
-		border-radius: 12px;
-		padding: 1rem;
-		background:
-			linear-gradient(#000, #000) padding-box,
-			radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
-		transition: background-position .15s;
-	}
+    border: 3px solid transparent;
+    border-radius: 12px;
+    padding: 1rem;
+    background: 
+      linear-gradient(#000, #000) padding-box,
+      radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+    transition: background-position .15s;
+  }
 </style>
