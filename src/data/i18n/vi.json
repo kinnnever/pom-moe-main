@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "hello": "Chào,",
+    "intro": "Đây là",
+    "role": ", Tôi là một",
+    "job": "Lập trình viên Fullstack"
+  },
+
+  "about": [
+    "Tôi là một lập trình viên đam mê với kinh nghiệm xây dựng các ứng dụng web bằng các công nghệ hiện đại.",
+    "Trong thời gian rảnh, tôi thích khám phá các ngôn ngữ lập trình mới, đóng góp vào các dự án mã nguồn mở và cập nhật các xu hướng mới nhất trong ngành công nghệ.",
+    "Hãy liên hệ với tôi nếu bạn muốn hợp tác hoặc đơn giản chỉ muốn chào hỏi!"
+  ],
+
+  "timeline": [
+    { "year": "2022", "content": "Lần đầu tiếp xúc với máy tính, không có kiến thức lập trình." },
+    { "year": "2023", "content": "Học C, C++, phát triển tư duy logic và thuật toán cơ bản." },
+    { "year": "2024", "content": "Làm việc với C#, WinForms, SQL Server, xây dựng các ứng dụng học tập nhỏ." },
+    { "year": "2025", "content": "Chuyển sang lĩnh vực Web: HTML, CSS, JS, ASP.NET." },
+    { "year": "2026", "content": "Khám phá Svelte, React, Tailwind, xây dựng các dự án cá nhân." },
+    { "year": "Hiện tại", "content": "Tập trung vào việc cải thiện tư duy và kỹ năng thực tế." }
+  ],
+
+  "quotes": [
+    {
+		"text": "Mỗi người đều lấy giới hạn của tầm nhìn của chính mình làm giới hạn của thế giới.",
+		"author": "Arthur Schopenhauer"
+	},
+	{
+		"text": "Sự khôn ngoan duy nhất là biết rằng mình không biết gì.",
+		"author": "Socrates"
+	},
+	{
+		"text": "Đừng quá coi trọng cuộc sống. Bạn sẽ không bao giờ thoát ra khỏi nó.",
+		"author": "Elbert Hubbard"
+	},
+	{
+		"text": "Trong khó khăn luôn ẩn chứa cơ hội.",
+		"author": "Albert Einstein"
+	},
+	{
+		"text": "Sự lo lắng là cơn chóng mặt của tự do.",
+		"author": "Soren Kierkegaard"
+	},
+	{
+		"text": "Thinking outside the box.",
+		"author": "Vô danh"
+	},
+	{
+		"text": "Đôi khi bạn dựng lên những bức tường không phải để ngăn người khác bước vào, mà là để xem ai đủ quan tâm để phá vỡ chúng.",
+		"author": "Socrates"
+	},
+	{
+		"text": "Cách tốt nhất để dự đoán tương lai là tự tạo ra nó.",
+		"author": "Alan Kay"
+	}
+  ],
+  "sections": {
+    "skills": "Kỹ năng",
+    "timeline": "Dòng thời gian",
+    "epilogue": "Lời kết"
+  }
+}

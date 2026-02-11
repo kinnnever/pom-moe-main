@@ -651,5 +651,26 @@
     "path": "nihility",
     "element": "physical",
     "rarity": 5
+  },
+  "evernight": {
+    "id": "evernight",
+    "name": "Evernight",
+    "path": "remembrance",
+    "element": "ice",
+    "rarity": 5
+  },
+  "dan-heng-permansor-terrae": {
+    "id": "dan-heng-permansor-terrae",
+    "name": "Dan Heng - Permansor Terrae",
+    "path": "preservation",
+    "element": "physical",
+    "rarity": 5
+  },
+  "cyrene": {
+    "id": "cyrene",
+    "name": "Cyrene",
+    "path": "remembrance",
+    "element": "ice",
+    "rarity": 5
   }
 }

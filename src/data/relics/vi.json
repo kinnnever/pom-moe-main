@@ -831,6 +831,68 @@
       "ruan-mei"
     ]
   },
+  "world_remaking_deliverer": {
+    "id": "world_remaking_deliverer",
+    "name": "Đấng Cứu Thế Tái Tạo Trời Đất",
+    "type": "cavern",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mũ Trùm Hành Trình Của Đấng Cứu Thế"
+      },
+      {
+        "slot": "hands",
+        "name": "Găng Tay Cầm Kiếm Của Đấng Cứu Thế"
+      },
+      {
+        "slot": "body",
+        "name": "Chiến Bào Kế Thừa Của Đấng Cứu Thế"
+      },
+      {
+        "slot": "feet",
+        "name": "Ủng Khai Hoang Của Đấng Cứu Thế"
+      }
+    ],
+    "setEffects": {
+      "2": "Tỷ Lệ Bạo Kích tăng <b class='text-amber-400'>8%</b>.",
+      "4": "Sau khi người trang bị thi triển Tấn Công Thường hoặc Chiến Kỹ, nếu Linh Hồn Ký Ức của người trang bị trong trận, sẽ khiến Giới Hạn HP của người trang bị và Linh Hồn Ký Ức của người đó tăng <b class='text-amber-400'>24%</b>, sát thương toàn bộ phe ta gây ra tăng <b class='text-amber-400'>15%</b>, duy trì đến sau khi người trang bị thi triển Tấn Công Thường hoặc Chiến Kỹ tiếp theo."
+    },
+    "recommendedFor": []
+  },
+  "self_enshrouded_recluse": {
+    "id": "self_enshrouded_recluse",
+    "name": "Ẩn Sĩ Ẩn Mình Dưới Ánh Sao",
+    "type": "cavern",
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "Mũ Nỉ Vành Rộng Của Ẩn Sĩ"
+      },
+      {
+        "slot": "hands",
+        "name": "Đồng Hồ Thanh Lịch Của Ẩn Sĩ"
+      },
+      {
+        "slot": "body",
+        "name": "Áo Khoác Nâu Của Ẩn Sĩ"
+      },
+      {
+        "slot": "feet",
+        "name": "Giày Da Lộn Của Ẩn Sĩ"
+      }
+    ],
+    "setEffects": {
+      "2": "Lượng khiên cung cấp tăng <b class='text-amber-400'>10%</b>.",
+      "4": "Khiến lượng Khiên mà người trang bị cung cấp tăng <b class='text-amber-400'>12%</b>, khi mục tiêu phe ta có Khiên do người trang bị cung cấp, Sát Thương Bạo Kích tăng <b class='text-amber-400'>15%</b>."
+    },
+    "recommendedFor": [
+      "dan-heng-permansor-terrae",
+      "aventurine",
+      "male-preservation",
+      "gepard",
+      "march-7th"
+    ]
+  },
   "wavestrider_captain": {
     "id": "wavestrider_captain",
     "name": "Thuyền Trưởng Đuổi Sóng Biển Sâu",

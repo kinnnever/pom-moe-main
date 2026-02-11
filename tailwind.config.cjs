@@ -17,9 +17,11 @@ module.exports = {
 				3: '#4f78be'
 			},
 			backgroundImage: (theme) => ({
-				space: `linear-gradient(90deg, ${theme('colors.blue.300')}, ${theme(
-					'colors.purple.300'
-				)}, ${theme('colors.yellow.100')})`
+				space: `linear-gradient(90deg, 
+					${theme('colors.blue.300')}, 
+					${theme('colors.purple.300')}, 
+					${theme('colors.yellow.100')}
+					)`
 			})
 		}
 	},

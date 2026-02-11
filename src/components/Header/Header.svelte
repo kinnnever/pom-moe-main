@@ -8,6 +8,7 @@ import { onMount } from 'svelte';
 	import { t } from '$utils/translation';
 	import Icon from '@iconify/svelte';
 	import { page } from '$app/stores';
+	import { locale } from '$utils/locale';
 
 	let showBorder = false;
 	let open = false;
@@ -95,7 +96,33 @@ $: showBack = rootPages.some((base) => pathname.startsWith(`/${base}/`)) &&
 				</div>
 			</div>
 		</div>
-		<LocalePicker />
+		{#if $page.url.pathname === '/profile'}
+			<div class="group top-5 md:top-0 right-12 md:right-0 z-50 cursor-pointer">
+				<div class="flex items-center opacity-70 duration-150 hover:opacity-100 ml-2">
+					<img class="h-6 w-6" src="/icons/language.png" alt="Language" />
+				</div>
+
+				<div class="absolute hidden origin-top pt-5 group-hover:block">
+					<div
+						class="grid w-48 grid-cols-2 gap-2 rounded-md border border-white/5 bg-dark/30 px-3 py-2 font-semibold backdrop-blur-md text-white"
+					>
+						<button
+							on:click={() => locale.set('vi')}
+							class="rounded py-1 text-white/70 hover:bg-white/10 hover:text-white"
+						>
+							Tiếng Việt
+						</button>
+
+						<button
+							on:click={() => locale.set('en')}
+							class="rounded py-1 text-white/70 hover:bg-white/10 hover:text-white"
+						>
+							English
+						</button>
+					</div>
+				</div>
+			</div>
+		{/if}
 		<HeaderButton iconOnly icon="settings.png" target="/settings" />
 	</div>
 </div>

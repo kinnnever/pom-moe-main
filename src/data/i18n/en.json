@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "hello": "Hello,",
+    "intro": "This is",
+    "role": ", I'm a",
+    "job": "Fullstack Developer"
+  },
+
+  "about": [
+    "I'm a passionate developer with experience in building web applications using modern technologies.",
+    "In my free time, I enjoy exploring new programming languages, contributing to open-source projects, and staying updated with the latest trends in the tech industry.",
+    "Feel free to reach out to me for collaboration or just to say hi!"
+  ],
+
+  "timeline": [
+    { "year": "2022", "content": "First exposure to computers, no programming knowledge." },
+    { "year": "2023", "content": "Learned C, C++, built logical thinking and basic algorithms." },
+    { "year": "2024", "content": "Worked with C#, WinForms, SQL Server, built small study apps." },
+    { "year": "2025", "content": "Moved into Web: HTML, CSS, JS, ASP.NET." },
+    { "year": "2026", "content": "Exploring Svelte, React, Tailwind, building personal projects." },
+    { "year": "Now", "content": "Focusing on improving mindset and practical skills." }
+  ],
+
+  "quotes": [
+    {
+		"text": "Every person takes the limit of their own field of vision for the limits of the world.",
+		"author": "Arthur Schopenhauer"
+	},
+	{
+		"text": "The only true wisdom is in knowing you know nothing.",
+		"author": "Socrates"
+	},
+	{
+		"text": "Do not take life too seriously. You will never get out of it alive.",
+		"author": "Elbert Hubbard"
+	},
+	{
+		"text": "In the middle of difficulty lies opportunity.",
+		"author": "Albert Einstein"
+	},
+	{
+		"text": "Anxiety is the dizziness of freedom.",
+		"author": "Soren Kierkegaard"
+	},
+	{
+		"text": "Thinking outside the box.",
+		"author": "Unknown"
+	},
+	{
+		"text": "Sometimes you build walls not to keep people out, but to see who cares enough to break them down.",
+		"author": "Socrates"
+	},
+	{
+		"text": "The best way to predict the future is to invent it.",
+		"author": "Alan Kay"
+	}
+  ],
+  "sections": {
+    "skills": "Skills",
+    "timeline": "Timeline",
+    "epilogue": "Epilogue"
+  }
+}

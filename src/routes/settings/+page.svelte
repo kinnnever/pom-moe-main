@@ -5,6 +5,46 @@
 	import { backgroundUrl, setBackground, resetBackground } from '$utils/background';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
+	import { onDestroy } from 'svelte';
+
+	type PlaceholderState = 'web' | 'love';
+
+	let currentPlaceholder = 'Ảnh Web';
+	let placeholderVisible = true;
+
+	let timeout1: ReturnType<typeof setTimeout>;
+	let timeout2: ReturnType<typeof setTimeout>;
+
+	function startPlaceholderCycle() {
+		// Ảnh Web tồn tại lâu (4s)
+		timeout1 = setTimeout(() => {
+			placeholderVisible = false; // fade out
+
+			// đợi fade out xong
+			setTimeout(() => {
+				currentPlaceholder = 'iloveyou';
+				placeholderVisible = true; // fade in
+
+				// iloveyou chỉ tồn tại 0.5s
+				timeout2 = setTimeout(() => {
+					placeholderVisible = false;
+
+					setTimeout(() => {
+						currentPlaceholder = 'Ảnh Web';
+						placeholderVisible = true;
+						startPlaceholderCycle(); // lặp lại
+					}, 200);
+				}, 200);
+			}, 200);
+		}, 5000);
+	}
+
+	startPlaceholderCycle();
+
+	onDestroy(() => {
+		clearTimeout(timeout1);
+		clearTimeout(timeout2);
+	});
 
 
 	let webImageUrl = "";
@@ -46,7 +86,7 @@
 		if (!webImageUrl.trim()) return;
 
 		if (webImageUrl.trim().toLowerCase() === 'iloveyou') {
-			goto('/dont_read_me');
+			goto('/profile');
 			return;
 		}
 
@@ -120,7 +160,8 @@
 		<div class="email {(!isValid && !isFocused && webImageUrl) ? 'invalid' : ''} {isFocused ? 'focused' : ''}">
 			<input
 				type="url"
-				placeholder="Ảnh Web"
+				placeholder={currentPlaceholder}
+				class="email--input {placeholderVisible ? 'ph-show' : 'ph-hide'}"
 				bind:value={webImageUrl}
 				on:focus={() => (isFocused = true)}
 				on:blur={() => (isFocused = false)}
@@ -129,7 +170,6 @@
 						useWebImage();
 					}
 				}}
-				class="email--input"
 			/>
 			<button
 				class="email--button"
@@ -245,6 +285,11 @@
   color: #646464;
   font-weight: bold;
   font-family: system-ui;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.email--input.ph-hide::placeholder {
+	opacity: 0;
 }
 
 </style>

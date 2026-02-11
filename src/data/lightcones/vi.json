@@ -2011,7 +2011,7 @@
   },
   "epoch-etched-in-golden-blood": {
     "id": "epoch-etched-in-golden-blood",
-    "name": "Vì Sao Biển Cả Ca Vang",
+    "name": "Thời Đại Máu Vàng Khắc Ghi",
     "path": "harmony",
     "rarity": 5,
     "lv": [952, 635, 463],
@@ -2022,5 +2022,21 @@
   "effname": "Chinh Phục",
   "effect": "Tăng <b class='text-amber-400'>{0}</b> Tấn Công của người trang bị. Sau khi thi triển Tuyệt Kỹ tấn công, sẽ hồi <b class='text-amber-400'>1</b> Điểm Chiến Kỹ, sau khi người trang bị thi triển Chiến Kỹ lên 1 nhân vật phe ta, sẽ khiến sát thương Chiến Kỹ mục tiêu gây ra tăng <b class='text-amber-400'>{1}</b>, duy trì <b class='text-amber-400'>3</b> hiệp.",
   "recommendedFor": ["cerydra"]
+  },
+  "though-worlds-apart": {
+    "id": "though-worlds-apart",
+    "name": "Dù Núi Sông Vạn Dặm",
+    "path": "preservation",
+    "rarity": 5,
+    "lv": [952, 635, 463],
+    "stat": [
+      ["64%","80%","96%","112%","128%"],
+      ["10%","12.5%","15%","17.5%","20%"],
+      ["24%","30%","36%","42%","48%"],
+      ["12%","15%","18%","21%","24%"]
+    ],
+  "effname": "Vảy Mới",
+  "effect": "Khiến tấn công của người trang bị tăng <b class='text-amber-400'>{0}</b>. Khi người trang bị thi triển Tuyệt Kỹ, sẽ hồi phục HP tương đương với <b class='text-amber-400'>{1}</b> Tấn Công của người trang bị cho toàn bộ phe ta, hồi thêm HP tương đương với <b class='text-amber-400'>{1}</b> Tấn Công của người trang bị cho nhân vật có HP thấp nhất hiện tại, đồng thời khiến toàn bộ phe ta nhận được \"Cảnh Vệ\", \"Cảnh Vệ\" duy trì <b class='text-amber-400'>3</b> hiệp. Sát thương của mục tiêu nhận được \"Cảnh Vệ\" gây ra tăng <b class='text-amber-400'>{2}</b>, nếu mục tiêu có Vật Triệu Hồi thì sát thương gây ra tăng thêm <b class='text-amber-400'>{3}</b>.",
+  "recommendedFor": ["dan-heng-permansor-terrae"]
   }
 }
