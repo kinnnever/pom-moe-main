@@ -9,8 +9,9 @@
   import charactersStore from '$data/characters';
   import { writable, derived } from 'svelte/store';
   import { onDestroy, onMount } from 'svelte';
-  import * as htmlToImage from 'dom-to-image-more';
   import { exportTierListImage } from '$utils/exportTierImage.ts';
+
+  export const prerender = false;
 
   type GameMode = 'Memory of Chaos' | 'Pure Fiction' | 'Apocalyptic Shadow';
 
