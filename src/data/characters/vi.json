@@ -672,5 +672,12 @@
     "path": "remembrance",
     "element": "ice",
     "rarity": 5
+  },
+  "dahlia": {
+    "id": "dahlia",
+    "name": "Dahlia",
+    "path": "nihility",
+    "element": "fire",
+    "rarity": 5
   }
 }

@@ -2038,5 +2038,19 @@
   "effname": "Vảy Mới",
   "effect": "Khiến tấn công của người trang bị tăng <b class='text-amber-400'>{0}</b>. Khi người trang bị thi triển Tuyệt Kỹ, sẽ hồi phục HP tương đương với <b class='text-amber-400'>{1}</b> Tấn Công của người trang bị cho toàn bộ phe ta, hồi thêm HP tương đương với <b class='text-amber-400'>{1}</b> Tấn Công của người trang bị cho nhân vật có HP thấp nhất hiện tại, đồng thời khiến toàn bộ phe ta nhận được \"Cảnh Vệ\", \"Cảnh Vệ\" duy trì <b class='text-amber-400'>3</b> hiệp. Sát thương của mục tiêu nhận được \"Cảnh Vệ\" gây ra tăng <b class='text-amber-400'>{2}</b>, nếu mục tiêu có Vật Triệu Hồi thì sát thương gây ra tăng thêm <b class='text-amber-400'>{3}</b>.",
   "recommendedFor": ["dan-heng-permansor-terrae"]
+  },
+  "never-forget-her-flame": {
+    "id": "never-forget-her-flame",
+    "name": "Đừng Quên Ngọn Lửa Của Cô Ấy",
+    "path": "nihility",
+    "rarity": 5,
+    "lv": [1164, 529, 463],
+    "stat": [
+      ["60%","75%","90%","105%","120%"],
+      ["32%","42%","52%","62%","72%"]
+    ],
+  "effname": "Thiêu Thân",
+  "effect": "Khiến Tấn Công Kích Phá của người trang bị tăng <b class='text-amber-400'>{0}</b>. Khi vào chiến đấu, khiến Sát Thương Phá Vỡ của người trang bị và một đồng đội khai chiến khác gây ra tăng <b class='text-amber-400'>{1}</b>. Nếu không có đồng đội khai chiến, thì sẽ có hiệu lực với người trang bị và đồng đội có chỉ số Tấn Công Kích Phá cao nhất. Hiệu ứng cùng loại không thể cộng dồn. Khi người trang bị gắn Điểm Yếu cho mục tiêu phe địch, sẽ hồi phục 1 Điểm Chiến Kỹ. Hiệu ứng này chỉ kích hoạt tối đa 1 lần, khi thi triển Tuyệt Kỹ sẽ làm mới số lần có thể kích hoạt.",
+  "recommendedFor": ["dahlia"]
   }
 }

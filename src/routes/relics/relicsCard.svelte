@@ -25,7 +25,7 @@
 		height={128}
 	/>
 	<span
-		class="absolute bottom-1 left-0 right-0 px-1 text-center text-sm font-semibold leading-none text-white "
+		class="absolute bottom-1 left-0 right-0 px-1 text-center text-sm font-semibold leading-none text-white break-words"
 		style="text-shadow: 1px 1px 2px black"
 	>
 		{relic.name}
